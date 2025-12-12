@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAZINGA Lambda System Visualization</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin-bottom: 5px;
+        }
+        .header p {
+            color: #666;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hypercube {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            perspective: 1000px;
+            height: 400px;
+        }
+        .cube {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: rotate 30s infinite linear;
+        }
+        .face {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .face.front {
+            transform: translateZ(150px);
+            background-color: rgba(255, 100, 100, 0.7);
+        }
+        .face.back {
+            transform: rotateY(180deg) translateZ(150px);
+            background-color: rgba(100, 255, 100, 0.7);
+        }
+        .face.right {
+            transform: rotateY(90deg) translateZ(150px);
+            background-color: rgba(100, 100, 255, 0.7);
+        }
+        .face.left {
+            transform: rotateY(-90deg) translateZ(150px);
+            background-color: rgba(255, 255, 100, 0.7);
+        }
+        .face.top {
+            transform: rotateX(90deg) translateZ(150px);
+            background-color: rgba(255, 100, 255, 0.7);
+        }
+        .face.bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+            background-color: rgba(100, 255, 255, 0.7);
+        }
+        @keyframes rotate {
+            0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        .dimensions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .dimension {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .dimension h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .patterns {
+            margin-top: 20px;
+        }
+        .pattern {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #ddd;
+        }
+        .pattern-code {
+            font-family: monospace;
+            font-weight: bold;
+        }
+        .pattern-name {
+            color: #555;
+            margin-left: 10px;
+            font-style: italic;
+        }
+        .pattern-lambda {
+            margin-top: 5px;
+            font-family: monospace;
+            color: #0066cc;
+        }
+        .bit {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 3px;
+            margin-right: 2px;
+        }
+        .bit-1 {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .bit-0 {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        .pattern:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .function-result {
+            margin-top: 10px;
+            font-family: monospace;
+            color: #666;
+        }
+        .controls {
+            text-align: center;
+            margin: 30px 0;
+        }
+        input, button, select {
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result-panel {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .result-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .result-value {
+            font-family: monospace;
+            font-size: 18px;
+            color: #0066cc;
+        }
+        .trust-dimension {
+            background-color: #f9f9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BAZINGA Lambda System Visualization</h1>
+            <p>DODO Framework (5.1.1.2.3.4.5.1) - 5-Dimensional Hypercube</p>
+        </div>
+
+        <div class="hypercube">
+            <div class="cube">
+                <div class="face front">X-Dimension<br>Structure</div>
+                <div class="face back">Y-Dimension<br>Temporality</div>
+                <div class="face right">Z-Dimension<br>Contextuality</div>
+                <div class="face left">W-Dimension<br>Emergence</div>
+                <div class="face top">V-Dimension<br>Trust</div>
+                <div class="face bottom">DODO<br>5.1.1.2.3.4.5.1</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <label for="input-value">Input Value:</label>
+            <input type="number" id="input-value" value="5">
+            <button id="calculate-btn">Calculate All Patterns</button>
+        </div>
+
+        <div class="result-panel">
+            <div class="result-title">Selected Pattern Result:</div>
+            <div class="result-value" id="result-display">Select a pattern to see its result</div>
+        </div>
+
+        <div class="dimensions">
+            <div class="dimension">
+                <h2>X-Dimension: Structure</h2>
+                <p>Physical arrangement and structural transformation in the system.</p>
+                <div class="patterns" id="x-patterns">
+                    <div class="pattern" data-pattern="10101">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">Divergence/Growth</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x + 1</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="11010">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="pattern-name">Convergence/Synthesis</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x * 2</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="01011">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">Balance/Refinement</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x - 3</div>
+                        <div class="function-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension">
+                <h2>Y-Dimension: Temporality</h2>
+                <p>Temporal relationships and time-based transformations.</p>
+                <div class="patterns" id="y-patterns">
+                    <div class="pattern" data-pattern="10111">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">Recency/Distribution</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x / 5</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="01100">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="pattern-name">BigPicture/Cycling</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x % 7</div>
+                        <div class="function-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension">
+                <h2>Z-Dimension: Contextuality</h2>
+                <p>Contextual relationships and framing transformations.</p>
+                <div class="patterns" id="z-patterns">
+                    <div class="pattern" data-pattern="11100">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="pattern-name">Context/Framing</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x^2</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="00111">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">Relation/Binding</span>
+                        </div>
+                        <div class="pattern-lambda">λx. sqrt(|x|)</div>
+                        <div class="function-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension">
+                <h2>W-Dimension: Emergence</h2>
+                <p>Emergent properties and transformative operations.</p>
+                <div class="patterns" id="w-patterns">
+                    <div class="pattern" data-pattern="10110">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="pattern-name">Transform/Emergence</span>
+                        </div>
+                        <div class="pattern-lambda">λx. sin(πx/4)</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="01101">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">Pattern/Recognition</span>
+                        </div>
+                        <div class="pattern-lambda">λx. log(|x|+1)</div>
+                        <div class="function-result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dimension trust-dimension">
+                <h2>V-Dimension: Trust</h2>
+                <p>Trust relationships and trust-bounded transformations.</p>
+                <div class="patterns" id="v-patterns">
+                    <div class="pattern" data-pattern="11111">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">AbsoluteTrust</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="10001">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">ConditionedTrust</span>
+                        </div>
+                        <div class="pattern-lambda">λx. x ≥ 0 ? x : -x</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="01110">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="pattern-name">TimeBoundTrust</span>
+                        </div>
+                        <div class="pattern-lambda">λx. min(x, 1000)</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="11011">
+                        <div class="pattern-code">
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">VerifiableTrust</span>
+                        </div>
+                        <div class="pattern-lambda">λx. round(x*100)/100</div>
+                        <div class="function-result"></div>
+                    </div>
+                    <div class="pattern" data-pattern="00101">
+                        <div class="pattern-code">
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="bit bit-0">0</span>
+                            <span class="bit bit-1">1</span>
+                            <span class="pattern-name">TrustlessPattern</span>
+                        </div>
+                        <div class="pattern-lambda">λx. isFinite(x) ? x : 0</div>
+                        <div class="function-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const patterns = document.querySelectorAll('.pattern');
+            const calculateBtn = document.getElementById('calculate-btn');
+            const inputValue = document.getElementById('input-value');
+            const resultDisplay = document.getElementById('result-display');
+            
+            // Apply a lambda function based on pattern
+            function applyLambda(pattern, value) {
+                const x = parseFloat(value);
+                switch(pattern) {
+                    // X-Dimension
+                    case '10101': return x + 1; // Divergence/Growth
+                    case '11010': return x * 2; // Convergence/Synthesis
+                    case '01011': return x - 3; // Balance/Refinement
+                    
+                    // Y-Dimension
+                    case '10111': return x / 5; // Recency/Distribution
+                    case '01100': return x % 7; // BigPicture/Cycling
+                    
+                    // Z-Dimension
+                    case '11100': return Math.pow(x, 2); // Context/Framing
+                    case '00111': return Math.sqrt(Math.abs(x)); // Relation/Binding
+                    
+                    // W-Dimension
+                    case '10110': return Math.sin(x * Math.PI / 4); // Transform/Emergence
+                    case '01101': return Math.log(Math.abs(x) + 1); // Pattern/Recognition
+                    
+                    // V-Dimension
+                    case '11111': return x; // AbsoluteTrust
+                    case '10001': return x >= 0 ? x : -x; // ConditionedTrust
+                    case '01110': return Math.min(x, 1000); // TimeBoundTrust
+                    case '11011': return Math.round(x * 100) / 100; // VerifiableTrust
+                    case '00101': return isFinite(x) ? x : 0; // TrustlessPattern
+                    
+                    default: return 'Unknown pattern';
+                }
+            }
+            
+            // Calculate all patterns
+            function calculateAll() {
+                const value = inputValue.value;
+                patterns.forEach(pattern => {
+                    const patternCode = pattern.getAttribute('data-pattern');
+                    const result = applyLambda(patternCode, value);
+                    pattern.querySelector('.function-result').textContent = `f(${value}) = ${result}`;
+                });
+            }
+            
+            // Add click event to each pattern
+            patterns.forEach(pattern => {
+                pattern.addEventListener('click', function() {
+                    const patternCode = this.getAttribute('data-pattern');
+                    const value = inputValue.value;
+                    const result = applyLambda(patternCode, value);
+                    resultDisplay.textContent = `Pattern ${patternCode}: f(${value}) = ${result}`;
+                    
+                    // Highlight selected pattern
+                    patterns.forEach(p => p.style.backgroundColor = '#f9f9f9');
+                    this.style.backgroundColor = '#e3f2fd';
+                });
+            });
+            
+            // Calculate button click event
+            calculateBtn.addEventListener('click', calculateAll);
+            
+            // Initial calculation
+            calculateAll();
+        });
+    </script>
+</body>
+</html>

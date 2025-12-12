@@ -1,0 +1,9 @@
+#!/bin/bash
+# Source this file to load BAZINGA configuration
+
+if [ -f "$HOME/AmsyPycharm/BAZINGA/config/bazinga.conf" ]; then
+    source "$HOME/AmsyPycharm/BAZINGA/config/bazinga.conf"
+else
+    echo "Error: BAZINGA configuration not found"
+    exit 1
+fi

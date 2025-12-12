@@ -1,0 +1,4 @@
+[
+{"repo":"federated-vault-monitoring-migration","path":"/Users/abhissrivasta/GolandProjects/federated-vault-monitoring-migration","branch":"kubefed-to-argocd-migration","lastCommit":"2c7dfffd29a725826ca8c07028fa4952cb2c0211","lastCommitDate":"2025-03-26 12:07:43","lastCommitMessage":"Add ArgoCD migration documentation","uncommittedChanges":4},
+{"repo":"federated-prisma-operator","path":"/Users/abhissrivasta/GolandProjects/federated-prisma-operator","branch":"kubefed-to-argocd-migration","lastCommit":"ec16a3438cba74230cf1f62d6bbc2c623695b07e","lastCommitDate":"2025-03-26 15:02:24","lastCommitMessage":"Migrate federated-prisma-operator from KubeFed to ArgoCD","uncommittedChanges":0}
+]

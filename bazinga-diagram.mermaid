@@ -1,0 +1,52 @@
+flowchart TD
+    classDef core fill:#FFD700,stroke:#333,stroke-width:2px
+    classDef component fill:#A7C7E7,stroke:#333,stroke-width:1px
+    classDef integrator fill:#FFFF99,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+    classDef data fill:#90EE90,stroke:#333,stroke-width:1px
+    classDef tool fill:#FFB6C1,stroke:#333,stroke-width:1px
+
+    BAZINGA["BAZINGA Core Project"]:::core
+    SSRI["SSRI Framework"]:::component
+    WhatsApp["WhatsApp Analysis"]:::component
+    Pattern["Pattern Recognition"]:::component
+    Viz["Visualization"]:::component
+    
+    Scripts["Bash Scripts"]:::tool
+    PythonCode["Python Core"]:::component
+    TypeScript["TypeScript Components"]:::component
+    
+    IntegratorSystem["BAZINGA Integrator System"]:::integrator
+    Diagnostics["System Diagnostics"]:::tool
+    FixUtils["Fix Utilities"]:::tool
+    Dashboard["Web Dashboard"]:::tool
+    DependencyGraph["Dependency Graph"]:::tool
+    
+    DataStore["Data Store"]:::data
+    Reports["Reports & Analysis"]:::data
+    
+    BAZINGA --> SSRI
+    BAZINGA --> WhatsApp
+    BAZINGA --> Pattern
+    
+    SSRI --> Viz
+    WhatsApp --> Viz
+    Pattern --> Viz
+    
+    BAZINGA --> Scripts
+    BAZINGA --> PythonCode
+    BAZINGA --> TypeScript
+    
+    IntegratorSystem --> Diagnostics
+    IntegratorSystem --> FixUtils
+    IntegratorSystem --> Dashboard
+    IntegratorSystem --> DependencyGraph
+    
+    IntegratorSystem -.-> BAZINGA
+    IntegratorSystem -.-> SSRI
+    IntegratorSystem -.-> WhatsApp
+    IntegratorSystem -.-> Pattern
+    IntegratorSystem -.-> Viz
+    
+    Diagnostics --> Reports
+    FixUtils --> Scripts
+    Dashboard --> DataStore

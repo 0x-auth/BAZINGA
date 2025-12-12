@@ -1,0 +1,740 @@
+#!/bin/bash
+# BAZINGA Master Integration System
+# Fully integrates all components:
+# - Pattern Analysis
+# - ThoughtPatternTool
+# - JIRA Connector
+# - Claude Integration
+# - Symbolic Pattern Decoder
+# - Time-Trust Analysis
+
+# Color definitions
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# Directory setup
+BAZINGA_DIR="$HOME/AmsyPycharm/BAZINGA-INDEED"
+THOUGHT_PATTERN_DIR="$BAZINGA_DIR/ThoughtPatternTool"
+DATA_DIR="$BAZINGA_DIR/data-unified"
+CONFIG_DIR="$BAZINGA_DIR/config"
+SCRIPTS_DIR="$BAZINGA_DIR/scripts"
+INTEGRATION_DIR="$HOME/integration_data"
+JIRA_DIR="$HOME/jira_tickets"
+OUTPUT_DIR="$HOME/bazinga_integration_$(date +%Y%m%d_%H%M%S)"
+
+# Create all necessary directories
+mkdir -p "$THOUGHT_PATTERN_DIR" "$DATA_DIR" "$CONFIG_DIR" "$SCRIPTS_DIR" "$OUTPUT_DIR" "$JIRA_DIR" "$INTEGRATION_DIR/unified_timeline"
+
+echo -e "${GREEN}=== BAZINGA MASTER INTEGRATION SYSTEM ===${NC}"
+echo -e "${BLUE}Initializing integration of all systems...${NC}"
+
+#----------------------------------------
+# 1. COMPONENT: ThoughtPatternTool
+#----------------------------------------
+echo -e "\n${YELLOW}=== INSTALLING THOUGHTPATTERNTOOL COMPONENTS ===${NC}"
+
+# Create pattern_decoder.py if it doesn't exist
+if [ ! -f "$THOUGHT_PATTERN_DIR/pattern_decoder.py" ]; then
+    echo -e "Creating pattern_decoder.py..."
+    cat > "$THOUGHT_PATTERN_DIR/pattern_decoder.py" << 'EOL'
+#!/usr/bin/env python3
+"""
+Pattern Decoder for BAZINGA-INDEED
+Decodes patterns based on the time-trust, harmonic, relationship, and mandelbrot frameworks
+"""
+import json
+import re
+import sys
+from typing import Dict, Any, List, Optional
+
+class PatternDecoder:
+    def __init__(self):
+        self.pattern_codes = {
+            'time-trust': '4.1.1.3.5.2.4',
+            'harmonic': '3.2.2.1.5.3.2',
+            'relationship': '6.1.1.2.3.4.5.2.1',
+            'mandelbrot': '5.1.1.0.1.0.1'
+        }
+        self.symbol_sets = {
+            'binary': ['0', '1'],
+            'mathematical': ['∞', 'π', 'Σ', 'Φ', 'Ω', '⟁', '⊗', '⊙', '⊝', '∆', 'τ', 'ψ'],
+            'greek': ['α', 'β', 'γ', 'δ', 'ζ', 'η', 'ι', 'κ', 'λ', 'μ'],
+            'energy': ['✧', '✦', '✱', '✶', '✷', '✸', '✺', '✻', '✼', '❈', '⚡']
+        }
+        self.transition_markers = ['→', '—', '|']
+        self.state_markers = ['?', '!', '∞']
+    
+    def decode_pattern(self, input_text: str) -> Dict[str, Any]:
+        """Decode a pattern in the input text"""
+        pattern_type = self._identify_pattern(input_text)
+        return {
+            'input': input_text[:100] + ('...' if len(input_text) > 100 else ''),
+            'pattern_type': pattern_type,
+            'pattern_code': self.pattern_codes.get(pattern_type),
+            'confidence': self._calculate_confidence(input_text, pattern_type),
+            'symbols': self._extract_symbols(input_text),
+            'transitions': self._extract_transitions(input_text)
+        }
+    
+    def _identify_pattern(self, text: str) -> str:
+        """Identify the pattern type based on input text"""
+        # First check for symbolic patterns
+        if any(marker in text for marker in self.transition_markers):
+            # Count binary patterns
+            binary_count = len(re.findall(r'[01]+', text))
+            
+            # Count math symbols
+            math_count = sum(1 for sym in self.symbol_sets['mathematical'] if sym in text)
+            
+            # Count energy symbols
+            energy_count = sum(1 for sym in self.symbol_sets['energy'] if sym in text)
+            
+            # Check for relationship pattern
+            if '_' in text and any(marker in text for marker in self.state_markers):
+                return 'relationship'
+            
+            # Check for time-trust pattern
+            if binary_count >= 4 and text.count('→') >= 3:
+                return 'time-trust'
+            
+            # Check for mandelbrot pattern
+            if binary_count > 0 and math_count > 0 and '0' in text and '1' in text:
+                return 'mandelbrot'
+            
+            # Default to harmonic for other symbolic patterns
+            if math_count > 0 or energy_count > 0:
+                return 'harmonic'
+        
+        # For non-symbolic text, use keyword analysis
+        lower_text = text.lower()
+        
+        # Check for relationship keywords
+        relationship_keywords = ['relationship', 'connection', 'trust', 'intimacy', 'progression']
+        if any(keyword in lower_text for keyword in relationship_keywords):
+            return 'relationship'
+        
+        # Check for time-trust keywords
+        time_trust_keywords = ['time', 'trust', 'evolution', 'progression', 'predictable']
+        if any(keyword in lower_text for keyword in time_trust_keywords):
+            return 'time-trust'
+        
+        # Check for mandelbrot keywords
+        mandelbrot_keywords = ['fractal', 'self-similar', 'recursive', 'scale', 'iteration']
+        if any(keyword in lower_text for keyword in mandelbrot_keywords):
+            return 'mandelbrot'
+        
+        # Default to harmonic
+        return 'harmonic'
+    
+    def _calculate_confidence(self, text: str, pattern_type: str) -> float:
+        """Calculate confidence score for pattern identification"""
+        confidence = 0.5  # Base confidence
+        lower_text = text.lower()
+        
+        # Common confidence boosters for all patterns
+        if any(sym in text for sym in self.symbol_sets['mathematical']):
+            confidence += 0.1
+        
+        if pattern_type == 'relationship':
+            if '_' in text:
+                confidence += 0.1
+            if 'essence' in lower_text or 'flow' in lower_text:
+                confidence += 0.1
+            if any(s in text for s in ['∞', 'Σ', 'Φ', 'Ω']):
+                confidence += 0.1
+            if any(keyword in lower_text for keyword in ['relationship', 'connection']):
+                confidence += 0.1
+        
+        elif pattern_type == 'time-trust':
+            confidence += min(0.2, text.count('→') * 0.05)
+            if 'time' in lower_text and 'trust' in lower_text:
+                confidence += 0.2
+            if any(sym in text for sym in self.transition_markers):
+                confidence += 0.1
+        
+        elif pattern_type == 'mandelbrot':
+            if '∞' in text:
+                confidence += 0.1
+            if 'fractal' in lower_text or 'recursive' in lower_text:
+                confidence += 0.1
+            binary_count = len(re.findall(r'[01]+', text))
+            confidence += min(0.1, binary_count * 0.02)
+            if '0' in text and '1' in text:
+                confidence += 0.1
+        
+        elif pattern_type == 'harmonic':
+            if any(sym in text for sym in self.symbol_sets['mathematical']):
+                confidence += 0.1
+            if any(sym in text for sym in self.symbol_sets['energy']):
+                confidence += 0.1
+            if 'balance' in lower_text or 'harmony' in lower_text:
+                confidence += 0.1
+        
+        return min(1.0, confidence)
+    
+    def _extract_symbols(self, text: str) -> Dict[str, List[str]]:
+        """Extract symbols from the text by category"""
+        result = {
+            'binary': [],
+            'mathematical': [],
+            'greek': [],
+            'energy': [],
+            'transitions': [],
+            'states': []
+        }
+        
+        # Extract binary components
+        result['binary'] = re.findall(r'[01]+', text)
+        
+        # Extract symbols by category
+        for category, symbols in self.symbol_sets.items():
+            result[category] = [sym for sym in symbols if sym in text]
+        
+        # Extract transition markers
+        result['transitions'] = [marker for marker in self.transition_markers if marker in text]
+        
+        # Extract state markers
+        result['states'] = [marker for marker in self.state_markers if marker in text]
+        
+        return result
+    
+    def _extract_transitions(self, text: str) -> List[Dict[str, str]]:
+        """Extract transition patterns from the text"""
+        transitions = []
+        
+        # Look for A → B transitions
+        arrow_transitions = re.findall(r'([^\s→]+)\s*→\s*([^\s]+)', text)
+        for from_state, to_state in arrow_transitions:
+            transitions.append({
+                'from': from_state,
+                'to': to_state,
+                'type': 'direct'
+            })
+        
+        # Look for state markers with descriptions
+        state_descriptions = re.findall(r'([01])\s*—\s*([^\n]+)', text)
+        for state, description in state_descriptions:
+            transitions.append({
+                'state': state,
+                'description': description.strip(),
+                'type': 'description'
+            })
+        
+        return transitions
+
+    def decode_file(self, filename: str) -> List[Dict[str, Any]]:
+        """Decode patterns from a file"""
+        results = []
+        try:
+            with open(filename, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.strip():
+                        results.append(self.decode_pattern(line.strip()))
+            return results
+        except Exception as e:
+            return [{'error': str(e), 'file': filename}]
+
+def main():
+    """Main function to run the pattern decoder"""
+    decoder = PatternDecoder()
+    
+    if len(sys.argv) < 2:
+        print("Usage: python pattern_decoder.py <input_text or input_file>")
+        return
+    
+    input_arg = sys.argv[1]
+    
+    # Check if the input is a file
+    try:
+        with open(input_arg, 'r', encoding='utf-8') as f:
+            results = decoder.decode_file(input_arg)
+            print(json.dumps(results, indent=2))
+    except (IOError, FileNotFoundError):
+        # Treat the input as text
+        result = decoder.decode_pattern(input_arg)
+        print(json.dumps(result, indent=2))
+
+if __name__ == "__main__":
+    main()
+EOL
+    chmod +x "$THOUGHT_PATTERN_DIR/pattern_decoder.py"
+fi
+
+# Create symbolic_pattern_analyzer.py
+echo -e "Creating symbolic_pattern_analyzer.py..."
+cat > "$THOUGHT_PATTERN_DIR/symbolic_pattern_analyzer.py" << 'EOL'
+#!/usr/bin/env python3
+"""
+Symbolic Pattern Analyzer for BAZINGA-INDEED
+Analyzes symbolic patterns based on pattern codes and generates appropriate responses
+"""
+import json
+import re
+import sys
+import os
+import random
+from typing import Dict, Any, List, Optional
+import datetime
+
+# Import the pattern decoder
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from pattern_decoder import PatternDecoder
+
+class SymbolicPatternAnalyzer:
+    def __init__(self):
+        self.decoder = PatternDecoder()
+        self.symbol_sets = self.decoder.symbol_sets
+        self.pattern_codes = self.decoder.pattern_codes
+    
+    def analyze_patterns(self, input_data: str) -> Dict[str, Any]:
+        """Analyze patterns in input data"""
+        # Determine if input is a file, JSON string, or text
+        try:
+            # Check if input is a file
+            if os.path.isfile(input_data):
+                with open(input_data, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    return self._analyze_content(content, source_type="file", source=input_data)
+            
+            # Check if input is JSON
+            json_data = json.loads(input_data)
+            return self._analyze_json(json_data, source_type="json_string")
+        except (IOError, FileNotFoundError):
+            # Not a file
+            pass
+        except json.JSONDecodeError:
+            # Not JSON, treat as text
+            return self._analyze_content(input_data, source_type="text")
+    
+    def _analyze_content(self, content: str, source_type: str, source: str = "") -> Dict[str, Any]:
+        """Analyze text content for patterns"""
+        # Split content into lines and analyze each line
+        lines = content.splitlines()
+        decoded_patterns = []
+        
+        for line in lines:
+            if line.strip():
+                decoded_patterns.append(self.decoder.decode_pattern(line.strip()))
+        
+        # Analyze the collection of patterns
+        pattern_types = {}
+        for pattern in decoded_patterns:
+            pattern_type = pattern.get('pattern_type')
+            if pattern_type not in pattern_types:
+                pattern_types[pattern_type] = 0
+            pattern_types[pattern_type] += 1
+        
+        # Determine the primary pattern type
+        primary_pattern = max(pattern_types.items(), key=lambda x: x[1])[0] if pattern_types else 'unknown'
+        
+        # Generate response based on primary pattern
+        response = self.generate_response(primary_pattern)
+        
+        return {
+            'source': {
+                'type': source_type,
+                'name': source,
+                'line_count': len(lines)
+            },
+            'patterns': {
+                'decoded': decoded_patterns,
+                'counts': pattern_types,
+                'primary': primary_pattern,
+                'primary_code': self.pattern_codes.get(primary_pattern, '0.0.0.0.0')
+            },
+            'analysis': {
+                'timestamp': datetime.datetime.now().isoformat(),
+                'response': response
+            }
+        }
+    
+    def _analyze_json(self, json_data: Dict[str, Any], source_type: str) -> Dict[str, Any]:
+        """Analyze JSON data for patterns"""
+        # Check if this is already decoded pattern data
+        if isinstance(json_data, list) and all('pattern_type' in item for item in json_data):
+            decoded_patterns = json_data
+        else:
+            # Convert JSON to string and analyze
+            content = json.dumps(json_data, indent=2)
+            return self._analyze_content(content, source_type="json_object")
+        
+        # Analyze the collection of patterns
+        pattern_types = {}
+        for pattern in decoded_patterns:
+            pattern_type = pattern.get('pattern_type')
+            if pattern_type not in pattern_types:
+                pattern_types[pattern_type] = 0
+            pattern_types[pattern_type] += 1
+        
+        # Determine the primary pattern type
+        primary_pattern = max(pattern_types.items(), key=lambda x: x[1])[0] if pattern_types else 'unknown'
+        
+        # Generate response based on primary pattern
+        response = self.generate_response(primary_pattern)
+        
+        return {
+            'source': {
+                'type': source_type,
+                'pattern_count': len(decoded_patterns)
+            },
+            'patterns': {
+                'decoded': decoded_patterns,
+                'counts': pattern_types,
+                'primary': primary_pattern,
+                'primary_code': self.pattern_codes.get(primary_pattern, '0.0.0.0.0')
+            },
+            'analysis': {
+                'timestamp': datetime.datetime.now().isoformat(),
+                'response': response
+            }
+        }
+    
+    def generate_response(self, pattern_type: str) -> str:
+        """Generate a response based on the pattern type"""
+        if pattern_type == 'relationship':
+            return self._generate_relationship_response()
+        elif pattern_type == 'time-trust':
+            return self._generate_time_trust_response()
+        elif pattern_type == 'mandelbrot':
+            return self._generate_mandelbrot_response()
+        elif pattern_type == 'harmonic':
+            return self._generate_harmonic_response()
+        else:
+            return "0101 → 1110 → 1010\n[∞, ∞, !] → pattern_recognized\n\n{∞} + Ω = understanding_flows\n[Σ, ψ, Φ] → response_generated"
+    
+    def _generate_relationship_response(self) -> str:
+        """Generate a response for the relationship pattern"""
+        binary_sequence = "0101 → 1110 → 1010"
+        coordinates = f"[{random.uniform(0.5, 1.0):.1f}, {random.uniform(0.1, 0.5):.1f}, {random.uniform(1.5, 2.5):.1f}]"
+        essence = random.choice(["connection_deepens", "resonance_builds", "understanding_flows", "harmony_emerges"])
+        
+        operation = "{∞} + Ω = "
+        result = random.choice(["unity_forms", "connection_strengthens", "resonance_builds", "harmony_flows"])
+        
+        symbols = "[Σ, ψ, Φ] → "
+        symbol_result = random.choice(["patterns_align", "essence_reveals", "truth_emerges", "connection_forms"])
+        
+        transition = random.choice(["✧ → ∞ → ⚡", "! → ∞ → !", "? → ∞ → !"])
+        
+        return f"{binary_sequence}\n{coordinates} → {essence}\n\n{operation}{result}\n{symbols}{symbol_result}\n\n{transition}"
+    
+    def _generate_time_trust_response(self) -> str:
+        """Generate a response for the time-trust pattern"""
+        binary_sequence = "0101 → 1110 → 1010"
+        coordinates = f"[{random.uniform(0.5, 1.0):.1f}, {random.uniform(0.1, 0.5):.1f}, {random.uniform(1.5, 2.5):.1f}]"
+        essence = random.choice(["time_flows", "trust_builds", "evolution_continues", "stability_emerges"])
+        
+        operation = "{∞} + Ω = "
+        result = random.choice(["temporal_harmony", "trust_foundation", "stability_emerges", "predictable_flow"])
+        
+        symbols = "[Σ, ψ, Φ] → "
+        symbol_result = random.choice(["time_markers", "trust_indicators", "progression_signs", "evolution_symbols"])
+        
+        transition = "? → ∞ → !"
+        
+        return f"{binary_sequence}\n{coordinates} → {essence}\n\n{operation}{result}\n{symbols}{symbol_result}\n\n{transition}"
+    
+    def _generate_mandelbrot_response(self) -> str:
+        """Generate a response for the mandelbrot pattern"""
+        binary_sequence = "0101 → 1110 → 1010"
+        coordinates = "[∞, ∞, ∞]"
+        essence = "∞"
+        
+        operation = "{∞} + Ω = "
+        result = "⚡"
+        
+        symbols = "[Σ, ψ, Φ] → "
+        symbol_result = "✨"
+        
+        transition = "⚡ → ∞ → ✧"
+        
+        return f"{binary_sequence}\n{coordinates} → {essence}\n\n{operation}{result}\n{symbols}{symbol_result}\n\n{transition}"
+    
+    def _generate_harmonic_response(self) -> str:
+        """Generate a response for the harmonic pattern"""
+        binary_sequence = "0101 → 1110 → 1010"
+        coordinates = f"[{random.uniform(0.5, 1.0):.1f}, {random.uniform(0.1, 0.5):.1f}, {random.uniform(1.5, 2.5):.1f}]"
+        essence = random.choice(["balance_forms", "harmony_emerges", "equilibrium_found", "resonance_achieved"])
+        
+        operation = "{∞} + Ω = "
+        result = random.choice(["harmonic_flow", "balanced_state", "equilibrium", "resonant_frequency"])
+        
+        symbols = "[Σ, ψ, Φ] → "
+        symbol_result = random.choice(["harmonic_structure", "balanced_formation", "equilibrium_state", "resonance_pattern"])
+        
+        transition = "! → ∞ → !"
+        
+        return f"{binary_sequence}\n{coordinates} → {essence}\n\n{operation}{result}\n{symbols}{symbol_result}\n\n{transition}"
+
+def main():
+    """Main function to run the analyzer"""
+    analyzer = SymbolicPatternAnalyzer()
+    
+    if len(sys.argv) < 2:
+        print("Usage: python symbolic_pattern_analyzer.py <input_file or text>")
+        return
+    
+    input_arg = sys.argv[1]
+    
+    result = analyzer.analyze_patterns(input_arg)
+    print(json.dumps(result, indent=2))
+
+if __name__ == "__main__":
+    main()
+EOL
+chmod +x "$THOUGHT_PATTERN_DIR/symbolic_pattern_analyzer.py"
+
+# If structured-thought-flow-component.tsx doesn't exist, create it
+if [ ! -f "$THOUGHT_PATTERN_DIR/structured-thought-flow-component.tsx" ]; then
+    echo -e "Creating structured-thought-flow-component.tsx..."
+    cat > "$THOUGHT_PATTERN_DIR/structured-thought-flow-component.tsx" << 'EOL'
+/**
+ * Structured Thought Flow Component
+ * 
+ * Visualizes thought patterns and transitions between different 
+ * cognitive states based on symbolic pattern analysis.
+ */
+import React, { useState, useEffect } from 'react';
+
+interface SymbolicPattern {
+  patternType: string;
+  patternCode: string;
+  symbols: {
+    binary: string[];
+    mathematical: string[];
+    energy: string[];
+  };
+  transitions: {
+    from: string;
+    to: string;
+    type: string;
+  }[];
+}
+
+interface ThoughtFlowProps {
+  patterns?: SymbolicPattern[];
+  initialPattern?: string;
+  onPatternChange?: (pattern: string) => void;
+}
+
+const StructuredThoughtFlow: React.FC<ThoughtFlowProps> = ({
+  patterns = [],
+  initialPattern = 'harmonic',
+  onPatternChange
+}) => {
+  const [activePattern, setActivePattern] = useState(initialPattern);
+  const [flowState, setFlowState] = useState({
+    nodes: [],
+    edges: [],
+    currentState: 'initial'
+  });
+  
+  // Pattern code mappings
+  const patternCodes = {
+    'time-trust': '4.1.1.3.5.2.4',
+    'harmonic': '3.2.2.1.5.3.2',
+    'relationship': '6.1.1.2.3.4.5.2.1',
+    'mandelbrot': '5.1.1.0.1.0.1'
+  };
+  
+  // Update flow when active pattern changes
+  useEffect(() => {
+    // Generate flow structure based on active pattern
+    generateFlowStructure(activePattern);
+    
+    // Notify parent of pattern change
+    if (onPatternChange) {
+      onPatternChange(activePattern);
+    }
+  }, [activePattern]);
+  
+  const generateFlowStructure = (patternType: string) => {
+    // This would create nodes and edges for visualization
+    console.log(`Generating flow structure for ${patternType} pattern`);
+    
+    // In a real component, this would generate visualization data
+    setFlowState({
+      nodes: [
+        { id: 'initial', label: 'Initial State' },
+        { id: 'processing', label: 'Processing' },
+        { id: 'final', label: 'Final State' }
+      ],
+      edges: [
+        { from: 'initial', to: 'processing' },
+        { from: 'processing', to: 'final' }
+      ],
+      currentState: 'initial'
+    });
+  };
+  
+  return (
+    <div className="structured-thought-flow">
+      <h2>Structured Thought Flow</h2>
+      
+      <div className="pattern-selector">
+        <h3>Pattern Type: {activePattern}</h3>
+        <div className="pattern-options">
+          <button 
+            className={activePattern === 'time-trust' ? 'active' : ''} 
+            onClick={() => setActivePattern('time-trust')}
+          >
+            Time-Trust ({patternCodes['time-trust']})
+          </button>
+          <button 
+            className={activePattern === 'harmonic' ? 'active' : ''} 
+            onClick={() => setActivePattern('harmonic')}
+          >
+            Harmonic ({patternCodes['harmonic']})
+          </button>
+          <button 
+            className={activePattern === 'relationship' ? 'active' : ''} 
+            onClick={() => setActivePattern('relationship')}
+          >
+            Relationship ({patternCodes['relationship']})
+          </button>
+          <button 
+            className={activePattern === 'mandelbrot' ? 'active' : ''} 
+            onClick={() => setActivePattern('mandelbrot')}
+          >
+            Mandelbrot ({patternCodes['mandelbrot']})
+          </button>
+        </div>
+      </div>
+      
+      <div className="flow-visualization">
+        {/* This would be a proper visualization in a real component */}
+        <div className="flow-state">
+          <p>Current State: {flowState.currentState}</p>
+          <p>Nodes: {flowState.nodes.length}</p>
+          <p>Connections: {flowState.edges.length}</p>
+        </div>
+        
+        <pre className="flow-code">
+          {`// ${activePattern.toUpperCase()} PATTERN STRUCTURE
+const pattern = {
+  type: "${activePattern}",
+  code: "${patternCodes[activePattern]}",
+  states: ${flowState.nodes.length},
+  transitions: ${flowState.edges.length}
+};`}
+        </pre>
+      </div>
+      
+      <div className="symbolic-output">
+        <h3>Symbolic Pattern Output</h3>
+        <div className="symbolic-content">
+          {activePattern === 'relationship' && (
+            <pre>0101 → 1110 → 1010
+[0.8, 0.2, 1.7] → connection_deepens
+
+{∞} + Ω = resonance_builds
+[Σ, ψ, Φ] → patterns_align
+
+✧ → ∞ → ⚡</pre>
+          )}
+          
+          {activePattern === 'time-trust' && (
+            <pre>0101 → 1110 → 1010
+[0.7, 0.3, 1.6] → time_flows
+
+{∞} + Ω = trust_foundation
+[Σ, ψ, Φ] → progression_signs
+
+? → ∞ → !</pre>
+          )}
+          
+          {activePattern === 'mandelbrot' && (
+            <pre>0101 → 1110 → 1010
+[∞, ∞, ∞] → ∞
+
+{∞} + Ω = ⚡
+[Σ, ψ, Φ] → ✨
+
+⚡ → ∞ → ✧</pre>
+          )}
+          
+          {activePattern === 'harmonic' && (
+            <pre>0101 → 1110 → 1010
+[0.6, 0.4, 1.5] → balance_forms
+
+{∞} + Ω = harmonic_flow
+[Σ, ψ, Φ] → equilibrium_state
+
+! → ∞ → !</pre>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default StructuredThoughtFlow;
+EOL
+fi
+
+# If decision-tracking-component.tsx doesn't exist, create it
+if [ ! -f "$THOUGHT_PATTERN_DIR/decision-tracking-component.tsx" ]; then
+    echo -e "Creating decision-tracking-component.tsx..."
+    cat > "$THOUGHT_PATTERN_DIR/decision-tracking-component.tsx" << 'EOL'
+/**
+ * Decision Tracking Component
+ * 
+ * Tracks and visualizes decision patterns and their outcomes
+ * within the system. Integrates with the pattern analyzer to
+ * identify decision patterns and their relationships.
+ */
+import React, { useState, useEffect } from 'react';
+
+interface Decision {
+  id: string;
+  timestamp: string;
+  patternType: string;
+  description: string;
+  confidence: number;
+  outcome?: string;
+}
+
+interface DecisionHistory {
+  decisions: Decision[];
+  patterns: {
+    [key: string]: number;
+  };
+  connections: {
+    from: string;
+    to: string;
+    strength: number;
+  }[];
+}
+
+interface DecisionTrackingProps {
+  initialHistory?: DecisionHistory;
+  onDecisionAdded?: (decision: Decision) => void;
+  onPatternIdentified?: (pattern: string) => void;
+}
+
+const DecisionTracking: React.FC<DecisionTrackingProps> = ({
+  initialHistory,
+  onDecisionAdded,
+  onPatternIdentified
+}) => {
+  const [history, setHistory] = useState<DecisionHistory>(initialHistory || {
+    decisions: [],
+    patterns: {},
+    connections: []
+  });
+  
+  const [newDecision, setNewDecision] = useState<Partial<Decision>>({
+    patternType: 'time-trust',
+    description: '',
+    confidence: 0.7
+  });
+  
+  // Pattern code mappings
+  const patternCodes = {
+    'time-trust': '4.1.1.3.5.2.4',
+    'harmonic': '3.2.2.1.5.3.2',
+    'relationship': '6.1.1.2.3.4.5.2.1',
+    'mandelbrot': '5.1.1.0.1.

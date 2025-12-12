@@ -1,0 +1,1128 @@
+,Timestamp,Activity,Activity Delay,Activity Type
+2114,2025-02-19 15:28:29,"[2025-02-19 15:28:29] # Paste the code into this file,True,False,False,False,False,False,False,False,False,False,False",3057.5666666666666,Other
+12114,2025-02-25 05:33:15,"[2025-02-25 05:33:15] bash,True,False,False,False,False,False,False,False,False,False,False",2708.4166666666665,Other
+14010,2025-02-27 08:29:37,"[2025-02-27 08:29:37] bazinga chat pricess,True,False,False,False,False,False,False,False,False,False,False",2357.15,Other
+381,2025-02-20 23:46:50,"[2025-02-20 23:46:50] vi setup-dodo.sh,True,False,False,False,False,False,False,False,False,False,False",1916.45,Other
+20236,2025-03-07 10:42:31,"[2025-03-07 10:42:31] bash,True,False,False,False,False,False,False,False,False,False,False",1778.1666666666667,Other
+13782,2025-02-28 11:40:58,"[2025-02-28 11:40:58] bash,True,False,False,False,False,False,False,False,False,False,False",1631.1,Other
+1185,2025-02-17 12:30:55,"[2025-02-17 12:30:55]     </Router>,True,False,False,False,False,False,False,False,False,False,False",1530.0666666666666,Other
+22202,2025-03-11 10:01:20,"[2025-03-11 10:01:20] cd ~/GolandProjects/,True,False,False,False,False,False,False,False,False,False,False",1200.25,Other
+18576,2025-03-04 01:45:01,"[2025-03-04 01:45:01] projstat,True,False,False,False,False,False,False,False,False,False,False",1182.3833333333334,Other
+22570,2025-03-13 10:05:16,"[2025-03-13 10:05:16] bash,True,False,False,False,False,False,False,False,False,False,False",980.9166666666666,Other
+21335,2025-03-09 13:11:24,"[2025-03-09 13:11:24] cd pwd,True,False,False,False,False,False,False,False,False,False,False",939.6666666666666,Other
+22432,2025-03-12 03:14:15,"[2025-03-12 03:14:15] cat ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",827.6166666666667,Other
+8895,2025-02-22 12:37:17,"[2025-02-22 12:37:17] vi setup.sh,True,False,False,False,False,False,False,False,False,False,False",825.9333333333333,Other
+13859,2025-03-01 17:00:37,"[2025-03-01 17:00:37] pwd,True,False,False,False,False,False,False,False,False,False,False",741.45,Other
+19622,2025-03-05 05:10:14,"[2025-03-05 05:10:14] tree,True,False,False,False,False,False,False,False,False,False,False",663.8166666666667,Other
+8694,2025-02-21 20:55:50,"[2025-02-21 20:55:50] cd ~/Down,True,False,False,False,False,False,False,False,False,False,False",576.0333333333333,Other
+3567,2025-02-16 07:59:05,"[2025-02-16 07:59:05] npm run dev,True,False,False,False,False,False,False,False,False,False,False",565.2166666666667,Other
+19638,2025-03-06 03:44:38,"[2025-03-06 03:44:38] gs,True,False,False,False,False,False,False,False,False,False,False",560.5166666666667,Other
+12130,2025-02-23 06:26:01,"[2025-02-23 06:26:01] bash,True,False,False,False,False,False,False,False,False,False,False",424.18333333333334,Other
+13829,2025-02-28 22:40:14,"[2025-02-28 22:40:14] mongod,True,False,False,False,False,False,False,True,False,False,False",415.8833333333333,Other
+18669,2025-03-02 19:31:41,"[2025-03-02 19:31:41] projstat,True,False,False,False,False,False,False,False,False,False,False",402.53333333333336,Other
+19005,2025-03-04 11:46:50,"[2025-03-04 11:46:50]     # Add the middleware configuration after app = FastAPI(),True,False,False,False,False,False,False,False,False,False,False",380.31666666666666,Other
+19974,2025-03-08 03:40:32,"[2025-03-08 03:40:32] cd ~,True,False,False,False,False,False,False,False,False,False,False",370.81666666666666,Other
+21362,2025-03-09 22:42:03,"[2025-03-09 22:42:03] cd ~/Downloads/extracted_takeout/,True,False,False,False,False,False,False,False,False,False,False",365.93333333333334,Other
+22505,2025-03-12 10:16:34,"[2025-03-12 10:16:34] cd ~/Downloads/window\ closing/,True,False,False,False,False,False,False,False,False,False,False",303.7,Other
+2197,2025-02-15 12:43:06,"[2025-02-15 12:43:06] touch src/server.js,True,True,False,False,False,False,False,False,False,False,False",294.6333333333333,Other
+19419,2025-03-05 15:37:42,"[2025-03-05 15:37:42] curl -O https://expedia.service-now.com/api/now/attachment/download/ExpediaRoot2015.crt,True,False,False,False,True,False,False,False,False,False,False",258.6333333333333,Other
+11974,2025-02-25 10:41:37,"[2025-02-25 10:41:37] bash,True,False,False,False,False,False,False,False,False,False,False",249.01666666666668,Other
+1,2025-02-15 19:28:12,"[2025-02-15 19:28:12] npm install -D vite,True,False,False,True,False,False,False,False,False,False,False",242.51666666666668,Other
+14349,2025-03-02 01:48:32,"[2025-03-02 01:48:32] 2to3-3.1clear,True,False,False,False,False,False,False,False,False,False,False",232.4,Other
+19855,2025-03-07 20:31:12,"[2025-03-07 20:31:12] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",225.2,Other
+12118,2025-02-22 23:15:27,"[2025-02-22 23:15:27] bash,True,False,False,False,False,False,False,False,False,False,False",215.53333333333333,Other
+15150,2025-02-28 15:28:13,"[2025-02-28 15:28:13] touch fix-script.sh,True,True,False,False,False,False,False,False,False,False,False",194.81666666666666,Other
+18555,2025-03-04 04:38:34,"[2025-03-04 04:38:34] cd ..,True,False,False,False,False,False,False,False,False,False,False",173.55,Other
+22485,2025-03-13 15:20:47,"[2025-03-13 15:20:47] history grep |,True,False,False,False,False,False,False,False,True,False,False",173.23333333333332,Other
+19179,2025-03-04 14:26:46,"[2025-03-04 14:26:46] bash,True,False,False,False,False,False,False,False,False,False,False",156.61666666666667,Other
+2201,2025-02-15 14:41:20,"[2025-02-15 14:41:20] npm install nodemon express mongoose cors,True,False,False,True,False,False,False,False,False,False,False",118.23333333333333,Other
+20496,2025-03-08 16:22:46,"[2025-03-08 16:22:46] cd ..,True,False,False,False,False,False,False,False,False,False,False",107.7,Other
+18670,2025-03-01 19:05:38,"[2025-03-01 19:05:38] ll scripts/,True,False,False,False,False,False,False,False,False,False,False",105.48333333333333,Other
+19417,2025-03-05 11:18:42,"[2025-03-05 11:18:42] bash,True,False,False,False,False,False,False,False,False,False,False",101.96666666666667,Other
+13877,2025-03-01 20:46:28,"[2025-03-01 20:46:28] ls ~/Downloads/,True,True,False,False,False,False,False,False,False,False,False",98.1,Other
+14988,2025-03-02 21:31:24,"[2025-03-02 21:31:24] ll,True,False,False,False,False,False,False,False,False,False,False",97.55,Other
+22213,2025-03-12 11:59:44,"[2025-03-12 11:59:44] bash,True,False,False,False,False,False,False,False,False,False,False",97.28333333333333,Other
+19342,2025-03-05 17:09:39,"""[2025-03-05 17:09:39]     find $DOWNLOADS -maxdepth 1 -type f -name """"*.md""""     -not -path """"*/claude-artifacts/*"""" -exec mv {} $ARTIFACTS_DIR/uncategorized/ \;; }"",True,True,False,False,False,False,False,False,True,False,False",91.95,Other
+14989,2025-03-02 23:04:55,"[2025-03-02 23:04:55] ll backend/,True,False,False,False,False,False,False,False,False,False,False",90.08333333333333,Other
+22605,2025-03-12 15:58:56,"[2025-03-12 15:58:56] bash,True,False,False,False,False,False,False,False,False,False,False",88.71666666666667,Other
+5326,2025-02-16 10:45:44,"[2025-02-16 10:45:44] npm install,True,False,False,True,False,False,False,False,False,False,False",87.66666666666667,Other
+21366,2025-03-10 00:10:47,"[2025-03-10 00:10:47] cd ~,True,False,False,False,False,False,False,False,False,False,False",83.08333333333333,Other
+21372,2025-03-10 01:42:14,"[2025-03-10 01:42:14] cd ~/Downloads/ai-chat-capametabilities.md,True,False,False,False,False,False,False,False,False,False,False",82.21666666666667,Other
+21356,2025-03-09 16:01:14,"[2025-03-09 16:01:14] CLEAR,True,False,False,False,False,False,False,False,False,False,False",81.3,Other
+19177,2025-03-04 15:47:54,"[2025-03-04 15:47:54] history -d 33778,True,False,False,False,False,False,False,False,False,False,False",81.13333333333334,Other
+22634,2025-03-12 17:28:54,"[2025-03-12 17:28:54] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",77.11666666666666,Other
+15166,2025-02-28 23:54:51,"[2025-02-28 23:54:51] tree backend,True,False,False,False,False,False,False,False,False,False,False",74.61666666666666,Other
+8913,2025-02-21 05:52:16,"[2025-02-21 05:52:16] bash,True,False,False,False,False,False,False,False,False,False,False",69.71666666666667,Other
+18391,2025-03-02 10:29:17,"[2025-03-02 10:29:17] bash,True,False,False,False,False,False,False,False,False,False,False",61.15,Other
+20262,2025-03-08 11:08:43,"[2025-03-08 11:08:43] pw,True,False,False,False,False,False,False,False,False,False,False",60.5,Other
+2873,2025-02-15 21:02:50,"[2025-02-15 21:02:50] vi src/components/BilingualShayariDisplay.js,True,False,False,False,False,False,False,False,False,False,False",59.93333333333333,Other
+15105,2025-03-03 00:56:53,"[2025-03-03 00:56:53] pip install python-multipart,True,False,False,True,False,True,False,False,False,False,False",58.85,Other
+22060,2025-03-10 13:14:45,"[2025-03-10 13:14:45] # Create backup dir,True,False,False,False,False,False,False,False,False,False,False",58.75,Other
+21098,2025-03-10 04:23:56,"[2025-03-10 04:23:56] # Claude history aggregator for Mac and Android,True,False,False,False,False,False,False,False,False,False,False",55.88333333333333,Other
+22309,2025-03-11 11:41:07,"""[2025-03-11 11:41:07] if [ -z """"$VAULT_PATHS"""" ]; then   echo """"No Vault binaries found on system"""";   exit 1; fi"",True,False,False,False,False,False,False,False,False,False,False",55.28333333333333,Other
+22492,2025-03-12 14:29:24,"[2025-03-12 14:29:24] bash,True,False,False,False,False,False,False,False,False,False,False",52.0,Other
+20033,2025-03-08 06:32:36,"[2025-03-08 06:32:36] cd ~/PycharmProjects/prism-landing/,True,False,False,False,False,False,False,False,False,False,False",50.516666666666666,Other
+20178,2025-03-08 05:41:19,"[2025-03-08 05:41:19] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",47.733333333333334,Other
+12135,2025-02-25 06:20:48,"""[2025-02-25 06:20:48] mkdir -p ~/workspace/BAZINGA/{code,docs,visualization,analysis,symbols}"",True,True,False,False,False,False,False,False,False,False,False",47.4,Other
+20535,2025-03-08 17:08:04,"[2025-03-08 17:08:04] bash,True,False,False,False,False,False,False,False,False,False,False",44.333333333333336,Other
+22049,2025-03-10 11:13:32,"[2025-03-10 11:13:32] cd..,True,False,False,False,False,False,False,False,False,False,False",43.05,Other
+19141,2025-03-02 04:43:58,"[2025-03-02 04:43:58] tree,True,False,False,False,False,False,False,False,False,False,False",41.13333333333333,Other
+18222,2025-03-02 06:24:49,"[2025-03-02 06:24:49] touch bazinga-installer.sh,True,True,False,False,False,False,False,False,False,False,False",40.45,Other
+21094,2025-03-10 03:26:19,"[2025-03-10 03:26:19] vi claude.sh,True,False,False,False,False,False,False,False,False,False,False",38.666666666666664,Other
+18368,2025-03-03 03:34:09,"[2025-03-03 03:34:09] kill -9 87093,True,False,False,False,False,False,False,False,False,False,False",37.96666666666667,Other
+22333,2025-03-11 13:25:14,"[2025-03-11 13:25:14] vault version,True,False,False,False,False,False,False,False,False,False,False",37.61666666666667,Other
+14979,2025-03-02 03:57:34,"[2025-03-02 03:57:34] git add .,True,False,True,False,False,False,False,False,False,False,False",36.18333333333333,Other
+19382,2025-03-05 17:52:42,"[2025-03-05 17:52:42] sshp,True,False,False,False,False,False,False,False,False,False,False",35.93333333333333,Other
+2134,2025-02-15 15:24:06,"[2025-02-15 15:24:06] cat > src/stories/index.js << 'EOF',True,False,False,False,False,False,False,False,False,False,False",35.61666666666667,Other
+20631,2025-03-08 13:46:53,"[2025-03-08 13:46:53] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",35.38333333333333,Other
+19244,2025-03-04 18:06:25,"[2025-03-04 18:06:25] ll BAZINGA,True,False,False,False,False,False,False,False,False,False,False",32.88333333333333,Other
+21359,2025-03-09 16:35:51,"[2025-03-09 16:35:51] ~/Downloads/ultimatesolution-claude\&Rest/,True,False,False,False,False,False,False,False,False,False,False",32.43333333333333,Other
+19549,2025-03-05 06:38:04,"[2025-03-05 06:38:04] vi src/core/lambda.ts,True,False,False,False,False,False,False,False,False,False,False",32.35,Other
+19317,2025-03-05 07:29:38,"[2025-03-05 07:29:38] bash,True,False,False,False,False,False,False,False,False,False,False",31.166666666666668,Other
+20029,2025-03-07 11:18:55,"[2025-03-07 11:18:55] bash,True,False,False,False,False,False,False,False,False,False,False",30.95,Other
+22325,2025-03-11 12:24:49,"[2025-03-11 12:24:49] chmod +x vault-go-vulnerability-scanner.sh,True,False,False,False,False,False,False,False,False,False,False",29.833333333333332,Other
+5481,2025-02-21 03:14:52,"""[2025-02-21 03:14:52] whisper --model tiny --language en """"test_audio.mp3"""""",True,False,False,False,False,False,False,False,False,False,False",29.383333333333333,Other
+18547,2025-03-02 12:11:59,"[2025-03-02 12:11:59] bash,True,False,False,False,False,False,False,False,False,False,False",28.15,Other
+20401,2025-03-08 07:27:06,"[2025-03-08 07:27:06] cd ~/relationship-analyzer/,True,False,False,False,False,False,False,False,False,False,False",27.583333333333332,Other
+8615,2025-02-21 22:35:26,"[2025-02-21 22:35:26] ./fix.sh,True,False,False,False,False,False,False,False,False,False,False",27.033333333333335,Other
+22132,2025-03-10 12:09:56,"[2025-03-10 12:09:56] cd GolandProjects/,True,False,False,False,False,False,False,False,False,False,False",26.966666666666665,Other
+21743,2025-03-10 07:28:29,"[2025-03-10 07:28:29] npm install --save prettier,True,False,False,True,False,False,False,False,False,False,False",26.95,Other
+8947,2025-02-21 04:24:33,"[2025-02-21 04:24:33] sisper,True,False,False,False,False,False,False,False,False,False,False",26.883333333333333,Other
+19558,2025-03-05 09:05:10,"[2025-03-05 09:05:10] tree -L3,True,False,False,False,False,False,False,False,False,False,False",26.25,Other
+19239,2025-03-04 17:31:18,"[2025-03-04 17:31:18] cd ~/AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",26.183333333333334,Other
+22433,2025-03-12 03:40:07,"[2025-03-12 03:40:07] bazinga,True,False,False,False,False,False,False,False,False,False,False",25.866666666666667,Other
+20136,2025-03-08 08:44:25,"[2025-03-08 08:44:25] cat > BAZINGA-DODO-SUMMARY.md << 'EOF',True,False,False,False,False,False,False,False,False,False,False",25.616666666666667,Other
+22533,2025-03-13 10:55:10,"[2025-03-13 10:55:10] pd,True,False,False,False,False,False,False,False,False,False,False",25.15,Other
+1571,2025-02-21 02:13:47,"[2025-02-21 02:13:47] brew install ollama,True,False,False,True,False,False,False,False,False,False,False",24.9,Other
+15174,2025-03-01 00:31:02,"[2025-03-01 00:31:02] # Create service worker file,True,False,False,False,False,False,False,False,False,False,False",24.716666666666665,Other
+18546,2025-03-03 04:23:23,"[2025-03-03 04:23:23] bash,True,False,False,False,False,False,False,False,False,False,False",24.483333333333334,Other
+8380,2025-02-21 09:57:27,"[2025-02-21 09:57:27] @tailwind utilities;,True,False,False,False,False,False,False,False,False,False,False",23.766666666666666,Other
+15047,2025-03-02 23:32:59,"[2025-03-02 23:32:59] pwd],True,False,False,False,False,False,False,False,False,False,False",23.7,Other
+22409,2025-03-12 05:12:47,"[2025-03-12 05:12:47] cd ~/claude_integration,True,False,False,False,False,False,False,False,False,False,False",23.15,Other
+21344,2025-03-09 13:55:52,"[2025-03-09 13:55:52] fil *,True,False,False,False,False,False,False,False,False,False,False",23.083333333333332,Other
+20057,2025-03-08 04:51:18,"[2025-03-08 04:51:18] rm integrate-all-projects.sh run_comprehensive_analysis.sh run_comprehensive_analysis.sha,True,True,False,False,False,False,False,False,False,False,False",21.75,Other
+15481,2025-02-25 14:16:39,"[2025-02-25 14:16:39] tree,True,False,False,False,False,False,False,False,False,False,False",21.683333333333334,Other
+22330,2025-03-11 12:47:14,"[2025-03-11 12:47:14] cd ..,True,False,False,False,False,False,False,False,False,False,False",21.35,Other
+14052,2025-02-23 07:24:36,"[2025-02-23 07:24:36] pip install pandas numpy matplotlib seaborn,True,False,False,True,False,True,False,False,False,False,False",21.35,Other
+11230,2025-02-23 08:19:38,"[2025-02-23 08:19:38] python scripts/main.py  # Running on port 8080,True,False,False,False,False,True,False,False,False,False,False",21.3,Other
+22481,2025-03-13 12:26:52,"[2025-03-13 12:26:52] bash,True,False,False,False,False,False,False,False,False,False,False",21.083333333333332,Other
+18578,2025-03-02 07:43:44,"[2025-03-02 07:43:44] git remote -v,True,False,False,False,False,False,False,False,False,False,False",19.8,Other
+21346,2025-03-09 14:15:47,"[2025-03-09 14:15:47] cd ultimatesolution-claude\&Rest/,True,False,False,False,False,False,False,False,False,False,False",19.7,Other
+19716,2025-03-07 13:29:20,"[2025-03-07 13:29:20] which tree,True,False,False,False,False,False,False,False,False,False,False",18.916666666666668,Other
+21351,2025-03-09 14:35:39,"[2025-03-09 14:35:39] cd .,True,False,False,False,False,False,False,False,False,False,False",18.783333333333335,Other
+16292,2025-03-01 03:18:06,"""[2025-03-01 03:18:06] if [ -f """"src/context/AppContext.jsx"""" ]; then   echo -e """"${YELLOW}Fixing AppContext.jsx...${NC}"""";   cp src/context/AppContext.jsx """"$BACKUP_DIR/AppContext.jsx.bak"""";"",True,True,False,False,False,False,False,False,False,False,False",18.683333333333334,Other
+21310,2025-03-08 17:44:30,"[2025-03-08 17:44:30] touch src/core/bazinga/RealityCode.ts,True,True,False,False,False,False,False,False,False,False,False",18.583333333333332,Other
+71,2025-02-15 22:30:08,"[2025-02-15 22:30:08] cat > public/data/current-shayari.json << 'EOL',True,False,False,False,False,False,False,False,False,False,False",18.483333333333334,Other
+22447,2025-03-12 13:30:35,"[2025-03-12 13:30:35] bash,True,False,False,False,False,False,False,False,False,False,False",18.266666666666666,Other
+18323,2025-03-02 09:25:40,"""[2025-03-02 09:25:40] netlify env:set MONGODB_URI """"mongodb+srv://bitsabhi:bnPFG1Llu6vjWzB4@cluster0.yeabr.mongodb.net/thought-processor?retryWrites=true&w=majority"""" --scope runtime"",True,False,False,False,False,False,False,False,False,False,False",17.8,Other
+18246,2025-02-21 10:59:01,"[2025-02-21 10:59:01] git remote -v,True,False,False,False,False,False,False,False,False,False,False",17.683333333333334,Other
+18571,2025-03-04 05:26:31,"[2025-03-04 05:26:31] cat setyome.sh | pbcopy,True,False,False,False,False,False,False,False,False,False,False",17.566666666666666,Other
+18209,2025-03-02 05:02:22,"[2025-03-02 05:02:22] bash,True,False,False,False,False,False,False,False,False,False,False",17.55,Other
+21082,2025-03-08 19:05:19,"[2025-03-08 19:05:19] source venv_bazinga/,True,False,False,False,False,False,False,False,False,False,False",17.316666666666666,Other
+13709,2025-03-01 04:06:31,"[2025-03-01 04:06:31] cleare,True,False,False,False,False,False,False,False,False,False,False",17.15,Other
+13157,2025-02-25 13:34:51,"[2025-02-25 13:34:51] bash,True,False,False,False,False,False,False,False,False,False,False",17.083333333333332,Other
+19237,2025-03-04 16:54:51,"[2025-03-04 16:54:51] chmod +x mtimeline.sh,True,False,False,False,False,False,False,False,False,False,False",16.883333333333333,Other
+20030,2025-03-07 13:04:43,"[2025-03-07 13:04:43] bash,True,False,False,False,False,False,False,False,False,False,False",16.733333333333334,Other
+1569,2025-02-21 01:48:49,"[2025-02-21 01:48:49] ll clear\clear,True,False,False,False,False,False,False,False,False,False,False",16.566666666666666,Other
+14987,2025-03-02 19:53:51,"[2025-03-02 19:53:51] tree,True,False,False,False,False,False,False,False,False,False,False",16.5,Other
+14775,2025-03-02 05:19:37,"[2025-03-02 05:19:37] cd ../AmsyPycharm/BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",16.483333333333334,Other
+22604,2025-03-13 12:05:47,"[2025-03-13 12:05:47] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",16.483333333333334,Other
+14879,2025-03-02 07:23:56,"""[2025-03-02 07:23:56] for site in shayari-dil-se fgmc dodoman thought-process dodoman-duh 2dodo some-sort-of-truth totemalign amps-prism abhishek-life todoaa aa20moon health-montor kshama-pathak; do   echo """"Checking: https://$site.netlify.app"""";   curl -o /dev/null -s -w """"%{http_code}\n"""" https://$site.netlify.app; done"",True,False,False,False,True,False,False,False,False,False,False",16.433333333333334,Other
+392,2025-02-21 00:07:55,"[2025-02-21 00:07:55] mkdir audio,True,True,False,False,False,False,False,False,False,False,False",16.316666666666666,Other
+18554,2025-03-03 02:20:01,"[2025-03-03 02:20:01] bash,True,False,False,False,False,False,False,False,False,False,False",16.316666666666666,Other
+18686,2025-03-03 02:36:10,"[2025-03-03 02:36:10] ..,True,False,False,False,False,False,False,False,False,False,False",16.15,Other
+21921,2025-03-08 20:41:08,"[2025-03-08 20:41:08] vi fractal_bazinga_integration.py,True,False,False,False,False,False,False,False,False,False,False",16.116666666666667,Other
+20200,2025-03-08 09:58:56,"[2025-03-08 09:58:56] bash,True,False,False,False,False,False,False,False,False,False,False",16.116666666666667,Other
+13879,2025-03-01 21:03:19,"[2025-03-01 21:03:19] which npm node firebase gcloud heroku netlify,True,False,False,False,False,False,False,False,False,False,False",16.116666666666667,Other
+20639,2025-03-08 14:06:11,"[2025-03-08 14:06:11] cd amu-call/,True,False,False,False,False,False,False,False,False,False,False",15.9,Other
+14053,2025-02-23 07:40:29,"[2025-02-23 07:40:29] python scripts/api_service.py,True,False,False,False,False,True,False,False,False,False,False",15.883333333333333,Other
+19616,2025-03-07 12:17:56,"[2025-03-07 12:17:56] ./security/vault-toolkit/scripts/check-status.sh,True,False,False,False,False,False,False,False,False,False,False",15.583333333333334,Other
+21013,2025-03-08 21:31:44,"""[2025-03-08 21:31:44] echo -e """"Creating output directory: $OUTPUT_DIR"""""",True,False,False,False,False,False,False,False,False,False,False",15.55,Other
+15264,2025-03-01 04:23:02,"[2025-03-01 04:23:02] gs,True,False,False,False,False,False,False,False,False,False,False",15.5,Other
+19206,2025-03-04 16:11:51,"[2025-03-04 16:11:51] bash,True,False,False,False,False,False,False,False,False,False,False",15.316666666666666,Other
+250,2025-02-19 15:43:29,"[2025-02-19 15:43:29] # Main menu,True,False,False,False,False,False,False,False,False,False,False",15.0,Other
+19589,2025-03-05 18:23:41,"[2025-03-05 18:23:41] ls src/,True,True,False,False,False,False,False,False,False,False,False",14.95,Other
+19606,2025-03-06 04:36:47,"[2025-03-06 04:36:47] tree _l4,True,False,False,False,False,False,False,False,False,False,False",14.85,Other
+18644,2025-03-03 04:46:55,"[2025-03-03 04:46:55] // Connect to MongoDB,True,False,False,False,False,False,False,False,False,False,False",14.816666666666666,Other
+18540,2025-03-02 12:48:23,"[2025-03-02 12:48:23] sudo launchctl unload /Library/LaunchDaemons/com.zscaler.service.plist,True,False,False,False,False,False,False,False,False,False,False",14.733333333333333,Other
+8972,2025-02-22 14:16:57,"[2025-02-22 14:16:57] bash,True,False,False,False,False,False,False,False,False,False,False",14.616666666666667,Other
+14779,2025-03-02 05:44:01,"""[2025-03-02 05:44:01] find ~/Downloads -type f -name """"*.svg"""""",True,True,False,False,False,False,False,False,True,False,False",14.533333333333333,Other
+19874,2025-03-07 20:48:43,"[2025-03-07 20:48:43] vi setup_enhancements.sh,True,False,False,False,False,False,False,False,False,False,False",14.45,Other
+13820,2025-02-28 12:00:51,"[2025-02-28 12:00:51] vi integrate_artifacts.sh,True,False,False,False,False,False,False,False,False,False,False",14.433333333333334,Other
+312,2025-02-21 01:24:41,"[2025-02-21 01:24:41] },True,False,False,False,False,False,False,False,False,False,False",14.316666666666666,Other
+16541,2025-03-01 03:38:24,"[2025-03-01 03:38:24] cleare,True,False,False,False,False,False,False,False,False,False,False",14.3,Other
+18707,2025-03-03 05:09:25,"[2025-03-03 05:09:25] chmod +x fix-websocket.sh,True,False,False,False,False,False,False,False,False,False,False",14.233333333333333,Other
+6075,2025-02-21 07:19:31,"[2025-02-21 07:19:31] tree -L3 public/,True,False,False,False,False,False,False,False,False,False,False",14.216666666666667,Other
+22085,2025-03-10 13:39:28,"""[2025-03-10 13:39:28] find . -name """"*.md"""" -type f -exec sh -c '[[ $(wc -l < """"$1"""") -eq 1 ]]' _ {} \; -print"",True,True,False,False,False,False,False,False,True,False,False",14.083333333333334,Other
+18383,2025-03-03 03:58:54,"[2025-03-03 03:58:54] ./stop-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",14.05,Other
+11973,2025-02-22 18:46:46,"[2025-02-22 18:46:46] npm run dev,True,False,False,False,False,False,False,False,False,False,False",14.0,Other
+3922,2025-02-16 08:34:42,"[2025-02-16 08:34:42] tree src -L3,True,False,False,False,False,False,False,False,False,False,False",13.916666666666666,Other
+22262,2025-03-10 10:21:32,"[2025-03-10 10:21:32] bash,True,False,False,False,False,False,False,False,False,False,False",13.9,Other
+18352,2025-03-03 02:51:13,"[2025-03-03 02:51:13] mkdir docs,True,True,False,False,False,False,False,False,False,False,False",13.866666666666667,Other
+21667,2025-03-10 09:59:31,"[2025-03-10 09:59:31] killall pboard,True,False,False,False,False,False,False,False,False,False,False",13.833333333333334,Other
+19482,2025-03-05 18:08:44,"[2025-03-05 18:08:44] tree src -L3,True,False,False,False,False,False,False,False,False,False,False",13.733333333333333,Other
+18175,2025-02-25 15:25:16,"[2025-02-25 15:25:16] bazinga,True,False,False,False,False,False,False,False,False,False,False",13.683333333333334,Other
+20042,2025-03-08 11:22:24,"[2025-03-08 11:22:24] bash,True,False,False,False,False,False,False,False,False,False,False",13.683333333333334,Other
+19408,2025-03-05 09:35:20,"[2025-03-05 09:35:20] whois yourdom.com,True,False,False,False,False,False,False,False,False,False,False",13.633333333333333,Other
+20742,2025-03-07 16:05:06,"[2025-03-07 16:05:06] # Option 1: Direct build,True,False,False,False,False,False,False,False,False,False,False",13.633333333333333,Other
+13925,2025-02-25 16:06:36,"[2025-02-25 16:06:36] llclear,True,False,False,False,False,False,False,False,False,False,False",13.616666666666667,Other
+22636,2025-03-12 04:29:18,"[2025-03-12 04:29:18] ll  > ~/Downloads/bazingall,True,False,False,False,False,False,False,False,False,False,False",13.433333333333334,Other
+14033,2025-02-23 06:45:51,"[2025-02-23 06:45:51] chmod +x scripts/call_analysis.py,True,False,False,False,False,False,False,False,False,False,False",13.366666666666667,Other
+8006,2025-02-16 10:58:58,"[2025-02-16 10:58:58] npm install & npm  run dev,True,False,False,True,False,False,False,False,False,False,False",13.233333333333333,Other
+22312,2025-03-11 11:54:16,"[2025-03-11 11:54:16] cleare,True,False,False,False,False,False,False,False,False,False,False",13.133333333333333,Other
+20867,2025-03-08 18:01:04,"[2025-03-08 18:01:04] tree src -L2,True,False,False,False,False,False,False,False,False,False,False",12.983333333333333,Other
+8919,2025-02-21 03:28:49,"[2025-02-21 03:28:49] clearclea,True,False,False,False,False,False,False,False,False,False,False",12.95,Other
+21870,2025-03-10 06:40:36,"[2025-03-10 06:40:36] touch ~/AmsyPycharm/BAZINGA/docs/multilayer_integration.md,True,True,False,False,False,False,False,False,False,False,False",12.95,Other
+347,2025-02-21 02:31:04,"[2025-02-21 02:31:04] bazinga,True,False,False,False,False,False,False,False,False,False,False",12.65,Other
+14898,2025-03-02 08:00:51,"[2025-03-02 08:00:51] # Create a simple README,True,False,False,False,False,False,False,False,False,False,False",12.5,Other
+20151,2025-03-08 09:12:13,"[2025-03-08 09:12:13] touch BAZINGA-ENCODING.md,True,True,False,False,False,False,False,False,False,False,False",12.35,Other
+19402,2025-03-05 09:21:01,"[2025-03-05 09:21:01] LL,True,False,False,False,False,False,False,False,False,False,False",12.316666666666666,Other
+22639,2025-03-12 04:49:29,"[2025-03-12 04:49:29] ll >,True,False,False,False,False,False,False,False,False,False,False",12.25,Other
+22540,2025-03-13 11:15:08,"[2025-03-13 11:15:08] open .,True,False,False,False,False,False,False,False,False,False,False",12.116666666666667,Other
+22264,2025-03-10 11:37:37,"[2025-03-10 11:37:37] bash,True,False,False,False,False,False,False,False,False,False,False",12.116666666666667,Other
+20897,2025-03-08 18:13:09,"""[2025-03-08 18:13:09] find /Users/abhissrivasta/AmsyPycharm/BAZINGA -type f \( -name """"*.py"""" -o -name """"*.json"""" -o -name """"*.ts"""" \) -size 0"",True,True,False,False,False,False,False,False,True,False,False",12.083333333333334,Other
+19391,2025-03-05 08:29:41,"[2025-03-05 08:29:41] bash,True,False,False,False,False,False,False,False,False,False,False",11.983333333333333,Other
+22431,2025-03-10 11:25:30,"[2025-03-10 11:25:30] bash,True,False,False,False,False,False,False,False,False,False,False",11.966666666666667,Other
+20737,2025-03-07 15:32:45,"[2025-03-07 15:32:45] treeclean -L4,True,False,False,False,False,False,False,False,False,False,False",11.8,Other
+21342,2025-03-09 13:32:38,"[2025-03-09 13:32:38] cd artifacts/,True,False,False,False,False,False,False,False,False,False,False",11.783333333333333,Other
+19595,2025-03-06 04:12:53,"[2025-03-06 04:12:53] gh_stats.sh,True,False,False,False,False,False,False,False,False,False,False",11.716666666666667,Other
+8925,2025-02-21 03:43:19,"[2025-02-21 03:43:19] # 1. First check project readiness,True,False,False,False,False,False,False,False,False,False,False",11.716666666666667,Other
+18095,2025-03-03 01:43:29,"[2025-03-03 01:43:29] ./setup-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",11.716666666666667,Other
+15049,2025-03-02 23:44:47,"[2025-03-02 23:44:47] chmod +x run-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",11.683333333333334,Other
+13849,2025-03-01 02:48:12,"[2025-03-01 02:48:12] ls -la artifacts/fixed-components.txt,True,True,False,False,False,False,False,False,False,False,False",11.483333333333333,Other
+68,2025-02-15 21:33:22,"""[2025-02-15 21:33:22] find . -type f -name """"*.jsx"""" -exec cat {} + | pbcopy"",True,True,False,False,False,False,False,False,True,False,False",11.433333333333334,Other
+10912,2025-02-22 18:58:10,"[2025-02-22 18:58:10] source venv/bin/activate,True,False,False,False,False,True,False,False,False,False,False",11.4,Other
+20733,2025-03-07 15:20:24,"[2025-03-07 15:20:24] git add .,True,False,True,False,False,False,False,False,False,False,False",11.233333333333333,Other
+22489,2025-03-13 15:37:17,"""[2025-03-13 15:37:17] history | grep -i """"file """"| """"hcom""""|  grep -n """""""" | tail -20"",True,False,False,False,False,False,False,False,True,False,False",10.983333333333333,Other
+20152,2025-03-08 09:22:58,"[2025-03-08 09:22:58] touch src/core/bazinga/__init__.py,True,True,False,False,False,False,False,False,False,False,False",10.75,Other
+18560,2025-03-04 04:49:58,"[2025-03-04 04:49:58] $ pstree -p,True,False,False,False,False,False,False,False,False,False,False",10.6,Other
+3469,2025-02-15 22:09:56,"[2025-02-15 22:09:56] # Colors for output,True,False,False,False,False,False,False,False,False,False,False",10.516666666666667,Other
+9744,2025-02-22 17:00:02,"[2025-02-22 17:00:02] bash,True,False,False,False,False,False,False,False,False,False,False",10.5,Other
+21323,2025-03-08 18:39:03,"[2025-03-08 18:39:03] touch data/comparison.json,True,True,False,False,False,False,False,False,False,False,False",10.4,Other
+9458,2025-02-22 15:45:26,"[2025-02-22 15:45:26] wscat -c ws://localhost:8000/ws,True,False,False,False,False,False,False,False,False,False,False",10.383333333333333,Other
+22230,2025-03-12 12:12:35,"[2025-03-12 12:12:35] 1,True,False,False,False,False,False,False,False,False,False,False",10.333333333333334,Other
+22308,2025-03-11 10:42:55,"""[2025-03-11 10:42:55] ./vault-vulnerability-scanner.py --vault-addr=""""https://vault-enterprise.us-west-2.secrets."",True,False,False,False,False,False,False,False,False,False,False",10.316666666666666,Other
+21785,2025-03-08 19:28:42,"[2025-03-08 19:28:42] treeclean -L3,True,False,False,False,False,False,False,False,False,False,False",10.216666666666667,Other
+19219,2025-03-04 17:05:07,"[2025-03-04 17:05:07] ls ~/Downloads/greatsync/,True,True,False,False,False,False,False,False,False,False,False",10.216666666666667,Other
+20741,2025-03-07 15:48:01,"[2025-03-07 15:48:01] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",10.2,Other
+18570,2025-03-04 05:04:59,"""[2025-03-04 05:04:59] sudo log stream --predicate 'subsystem == """"com.apple.p2p""""' --info"",True,False,False,False,False,False,False,False,False,False,False",10.15,Other
+21700,2025-03-08 17:25:53,"[2025-03-08 17:25:53] bash,True,False,False,False,False,False,False,False,False,False,False",10.033333333333333,Other
+416,2025-02-21 00:26:43,"[2025-02-21 00:26:43] cat > js/audio.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",10.033333333333333,Other
+2237,2025-02-15 19:41:13,"[2025-02-15 19:41:13] ll,True,False,False,False,False,False,False,False,False,False,False",9.966666666666667,Other
+22566,2025-03-13 11:48:39,"[2025-03-13 11:48:39] vi ~/complete-migration-files.sh,True,False,False,False,False,False,False,False,False,False,False",9.9,Other
+14083,2025-02-23 07:54:25,"""[2025-02-23 07:54:25] pkill -f """"python scripts/api_service.py"""""",True,False,False,False,False,True,False,False,False,False,False",9.866666666666667,Other
+20901,2025-03-10 05:17:16,"""[2025-03-10 05:17:16] find ~/Library -name """"History"""" -type f | xargs grep -l """"claude.ai"""" > ~/claude_data/claude_urls.txt"",True,True,False,False,False,False,False,False,True,False,False",9.85,Other
+21761,2025-03-10 07:38:27,"[2025-03-10 07:38:27] python3 bazinga_dashboard_generator.py,True,False,False,False,False,True,False,False,False,False,False",9.833333333333334,Other
+18179,2025-02-25 15:37:39,"[2025-02-25 15:37:39] tt,True,False,False,False,False,False,False,False,False,False,False",9.833333333333334,Other
+11972,2025-02-22 18:32:46,"[2025-02-22 18:32:46] cd src/frontend/,True,False,False,False,False,False,False,False,False,False,False",9.833333333333334,Other
+8616,2025-02-21 22:45:15,"[2025-02-21 22:45:15] 'npm start',True,False,False,False,False,False,False,False,False,False,False",9.816666666666666,Other
+20099,2025-03-08 04:29:33,"[2025-03-08 04:29:33] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",9.783333333333333,Other
+19455,2025-03-05 08:00:17,"[2025-03-05 08:00:17] find ~/ -type f -exec md5sum {} + | sort | uniq -D -w32 | awk '{print $2}' | xargs ls -lh,True,True,False,False,False,False,False,False,True,False,False",9.766666666666667,Other
+21496,2025-03-08 20:17:48,"[2025-03-08 20:17:48] mkdir -p data/patterns/relationship,True,True,False,False,False,False,False,False,False,False,False",9.7,Other
+8984,2025-02-21 03:57:08,"[2025-02-21 03:57:08] cd pwd,True,False,False,False,False,False,False,False,False,False,False",9.683333333333334,Other
+21375,2025-03-10 01:56:07,"[2025-03-10 01:56:07] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",9.633333333333333,Other
+20372,2025-03-07 11:56:59,"[2025-03-07 11:56:59] bash,True,False,False,False,False,False,False,False,False,False,False",9.633333333333333,Other
+18685,2025-02-25 16:41:38,"[2025-02-25 16:41:38] tree,True,False,False,False,False,False,False,False,False,False,False",9.6,Other
+20162,2025-03-08 06:47:54,"[2025-03-08 06:47:54] cd ~/PycharmProjects/prism-landing/,True,False,False,False,False,False,False,False,False,False,False",9.566666666666666,Other
+14539,2025-03-02 05:29:21,"[2025-03-02 05:29:21] bazinga,True,False,False,False,False,False,False,False,False,False,False",9.466666666666667,Other
+18682,2025-02-25 16:16:42,"[2025-02-25 16:16:42] bazinga chat,True,False,False,False,False,False,False,False,False,False,False",9.45,Other
+2880,2025-02-15 21:12:17,"[2025-02-15 21:12:17] cat > public/data/current-shayari.json << 'EOL',True,False,False,False,False,False,False,False,False,False,False",9.45,Other
+12524,2025-02-25 13:54:36,"""[2025-02-25 13:54:36] bazinga chat update 3 """"started-thought-pattern-tool"""""",True,False,False,False,False,False,False,False,False,False,False",9.116666666666667,Other
+21531,2025-03-10 08:17:47,"""[2025-03-10 08:17:47] grep -r """"ModuleNotFoundError"""" /Users/abhissrivasta/AmsyPycharm/BAZINGA 2>/dev/null"",True,False,False,False,False,False,False,False,True,False,False",9.1,Other
+6019,2025-02-21 02:41:57,"[2025-02-21 02:41:57] ps aux | grep bash,True,False,False,False,False,False,False,False,True,False,False",9.066666666666666,Other
+20418,2025-03-08 08:02:54,"""[2025-03-08 08:02:54] # First, make a backup"",True,False,False,False,False,False,False,False,False,False,False",9.05,Other
+22403,2025-03-12 04:14:55,"[2025-03-12 04:14:55] bash,True,False,False,False,False,False,False,False,False,False,False",9.05,Other
+13164,2025-02-25 13:44:16,"[2025-02-25 13:44:16] bazinga chat,True,False,False,False,False,False,False,False,False,False,False",9.033333333333333,Other
+3385,2025-02-15 21:53:35,"[2025-02-15 21:53:35] npm install --save-dev   @babel/plugin-proposal-private-property-in-object@latest   autoprefixer@latest   postcss@latest   svgo@latest   tailwindcss@latest   webpack-dev-middleware@latest   yargs-parser@latest,True,False,False,True,False,False,False,False,False,False,False",9.016666666666667,Other
+21237,2025-03-10 07:47:28,"[2025-03-10 07:47:28] treeclean -L3,True,False,False,False,False,False,False,False,False,False,False",9.0,Other
+21437,2025-03-07 14:53:49,"[2025-03-07 14:53:49] ls security/,True,True,False,False,False,False,False,False,False,False,False",9.0,Other
+19710,2025-03-07 11:43:39,"[2025-03-07 11:43:39] vi check-status.sh,True,False,False,False,False,False,False,False,False,False,False",8.95,Other
+22465,2025-03-12 13:04:58,"[2025-03-12 13:04:58] bash,True,False,False,False,False,False,False,False,False,False,False",8.933333333333334,Other
+21450,2025-03-08 18:47:59,"[2025-03-08 18:47:59] mv output-type-generator.ts src/utils/,True,True,False,False,False,False,False,False,False,False,False",8.866666666666667,Other
+19281,2025-03-05 05:49:12,"[2025-03-05 05:49:12] gs,True,False,False,False,False,False,False,False,False,False,False",8.866666666666667,Other
+19225,2025-03-04 16:30:20,"[2025-03-04 16:30:20] vi ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",8.666666666666666,Other
+20477,2025-03-08 14:30:31,"[2025-03-08 14:30:31] ls -la public/audio/revelation.mp3 \,True,True,False,False,False,False,False,False,False,False,False",8.616666666666667,Other
+20726,2025-03-07 15:08:08,"[2025-03-07 15:08:08] ./scripts/enhanced-scanner.sh,True,False,False,False,False,False,False,False,False,False,False",8.6,Other
+21368,2025-03-10 00:19:42,"[2025-03-10 00:19:42] file *,True,False,False,False,False,False,False,False,False,False,False",8.583333333333334,Other
+20353,2025-03-08 12:17:18,"[2025-03-08 12:17:18] touch d1.sh d2.sh,True,True,False,False,False,False,False,False,False,False,False",8.433333333333334,Other
+20404,2025-03-08 07:35:54,"[2025-03-08 07:35:54] cd ../AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",8.4,Other
+21786,2025-03-08 19:37:01,"[2025-03-08 19:37:01] vi fix.sh,True,False,False,False,False,False,False,False,False,False,False",8.316666666666666,Other
+13844,2025-03-01 01:11:17,"[2025-03-01 01:11:17] ./project-stats.sh,True,False,False,False,False,False,False,False,False,False,False",8.283333333333333,Other
+13670,2025-03-01 03:47:07,"[2025-03-01 03:47:07] node verify_components.mjs,True,False,False,False,False,False,False,False,False,False,False",8.266666666666667,Other
+19064,2025-03-03 05:52:58,"[2025-03-03 05:52:58] cleare,True,False,False,False,False,False,False,False,False,False,False",8.233333333333333,Other
+8967,2025-02-21 06:21:11,"[2025-02-21 06:21:11] cd AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",8.216666666666667,Other
+8374,2025-02-21 09:33:02,"""[2025-02-21 09:33:02] cfind . -type f -name """"*.js"""" ! -path """"*/node_modules/*"""" -exec grep -L """"."""" {} \;"",True,False,False,False,False,False,False,False,True,False,False",8.216666666666667,Other
+15249,2025-03-01 00:47:30,"[2025-03-01 00:47:30] touch frontend/src/services/__tests__/SimilarityDetectionService.test.js,True,True,False,False,False,False,False,False,False,False,False",8.2,Other
+18545,2025-03-02 08:11:25,"[2025-03-02 08:11:25] bash,True,False,False,False,False,False,False,False,False,False,False",8.183333333333334,Other
+14050,2025-02-23 07:03:00,"[2025-02-23 07:03:00] cat emotional_analysis.log,True,False,False,False,False,False,False,False,False,False,False",8.133333333333333,Other
+16290,2025-03-01 02:59:18,"[2025-03-01 02:59:18] cd front,True,False,False,False,False,False,False,False,False,False,False",8.1,Other
+18521,2025-03-02 12:24:43,"[2025-03-02 12:24:43] gcloud help,True,False,False,False,False,False,False,False,False,False,False",8.083333333333334,Other
+19511,2025-03-05 06:47:54,"[2025-03-05 06:47:54] vi aa.sh,True,False,False,False,False,False,False,False,False,False,False",8.066666666666666,Other
+12201,2025-02-25 06:32:36,"[2025-02-25 06:32:36] ll -R,True,False,False,False,False,False,False,False,False,False,False",8.0,Other
+19708,2025-03-07 11:34:33,"[2025-03-07 11:34:33] ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",7.95,Other
+8412,2025-02-21 10:28:09,"[2025-02-21 10:28:09] npm install eslint-plugin-react-hooks --save-dev,True,False,False,True,False,False,False,False,False,False,False",7.933333333333334,Other
+22080,2025-03-10 13:23:40,"[2025-03-10 13:23:40] ll vault-security-toolkit/docs,True,False,False,False,False,False,False,False,False,False,False",7.85,Other
+13863,2025-03-01 17:17:44,"""[2025-03-01 17:17:44] # First, let's move to the backend directory"",True,False,False,False,False,False,False,False,False,False,False",7.816666666666666,Other
+15250,2025-03-01 00:55:16,"[2025-03-01 00:55:16] touch frontend/src/services/ExecutionService.js,True,True,False,False,False,False,False,False,False,False,False",7.766666666666667,Other
+20536,2025-03-08 17:15:43,"[2025-03-08 17:15:43] kiiiall pboard,True,False,False,False,False,False,False,False,False,False,False",7.65,Other
+21814,2025-03-08 20:07:23,"[2025-03-08 20:07:23] vi bazinga_dashboard_generator.py,True,False,False,False,False,False,False,False,False,False,False",7.65,Other
+8898,2025-02-22 12:53:24,"[2025-02-22 12:53:24] cd ~/Downloads/Amrita\'s\ Office\ Automation\ Project/,True,False,False,False,False,False,False,False,False,False,False",7.633333333333334,Other
+19752,2025-03-07 13:58:23,"[2025-03-07 13:58:23] alias llclean,True,False,False,False,False,False,False,False,False,False,False",7.466666666666667,Other
+9087,2025-02-22 13:59:23,"[2025-02-22 13:59:23] mkdir -p frontend_dev,True,True,False,False,False,False,False,False,False,False,False",7.466666666666667,Other
+20410,2025-03-08 07:48:17,"[2025-03-08 07:48:17] chmod +x fix_bazinga.sh,True,False,False,False,False,False,False,False,False,False,False",7.383333333333334,Other
+14590,2025-03-02 10:45:02,"[2025-03-02 10:45:02] ./generate_video.sh scripts/talentorbit.txt en-US-Wavenet-F 0.95,True,False,False,False,False,False,False,False,False,False,False",7.183333333333334,Other
+8424,2025-02-21 21:12:32,"[2025-02-21 21:12:32] cat > src/components/Experience/MainPortal.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",7.166666666666667,Other
+2203,2025-02-15 14:48:29,"[2025-02-15 14:48:29] cd ../frontend/,True,False,False,False,False,False,False,False,False,False,False",7.133333333333334,Other
+19672,2025-03-07 11:26:02,"[2025-03-07 11:26:02] bash,True,False,False,False,False,False,False,False,False,False,False",7.116666666666666,Other
+18684,2025-02-25 16:32:02,"[2025-02-25 16:32:02] bazinga healingspace status,True,False,False,False,False,False,False,False,False,False,False",7.116666666666666,Other
+13408,2025-03-01 01:59:01,"""[2025-03-01 01:59:01] echo -e """"${BLUE}Now restart your frontend application:${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",7.066666666666666,Other
+19914,2025-03-07 20:58:06,"[2025-03-07 20:58:06] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",7.05,Other
+22297,2025-03-11 10:29:34,"[2025-03-11 10:29:34] vi vault-vulnerability-scanner.py,True,False,False,False,False,False,False,False,False,False,False",7.016666666666667,Other
+21540,2025-03-10 08:36:20,"[2025-03-10 08:36:20] open /Users/abhissrivasta/AmsyPycharm/BAZINGA/analysis,True,False,False,False,False,False,False,False,False,False,False",6.9,Other
+21541,2025-03-10 08:43:09,"""[2025-03-10 08:43:09] chmod +x """"$OUTPUT_DIR/run_visualization.sh"""""",True,False,False,False,False,False,False,False,False,False,False",6.816666666666666,Other
+21791,2025-03-08 19:44:23,"[2025-03-08 19:44:23] # Navigate to your project directory,True,False,False,False,False,False,False,False,False,False,False",6.783333333333333,Other
+395,2025-02-21 00:14:57,"[2025-02-21 00:14:57] ...,True,False,False,False,False,False,False,False,False,False,False",6.783333333333333,Other
+13846,2025-03-01 01:28:50,"[2025-03-01 01:28:50] ./project-stats.sh,True,False,False,False,False,False,False,False,False,False,False",6.716666666666667,Other
+21995,2025-03-08 21:12:59,"[2025-03-08 21:12:59] vi HarmonicMemoryGarden.js,True,False,False,False,False,False,False,False,False,False,False",6.7,Other
+7662,2025-02-21 21:48:55,"[2025-02-21 21:48:55] $,True,False,False,False,False,False,False,False,False,False,False",6.633333333333334,Other
+18573,2025-03-03 04:31:17,"[2025-03-03 04:31:17] git remote -v,True,False,False,False,False,False,False,False,False,False,False",6.616666666666666,Other
+13850,2025-03-01 04:34:17,"[2025-03-01 04:34:17] gcloud init,True,False,False,False,False,False,False,False,False,False,False",6.6,Other
+21680,2025-03-10 05:50:03,"[2025-03-10 05:50:03] vi ~/bazinga-claude-connector.sh,True,False,False,False,False,False,False,False,False,False,False",6.583333333333333,Other
+9029,2025-02-22 14:41:52,"[2025-02-22 14:41:52] # Check integration status,True,False,False,False,False,False,False,False,False,False,False",6.55,Other
+21200,2025-03-10 06:57:19,"[2025-03-10 06:57:19] cleaer,True,False,False,False,False,False,False,False,False,False,False",6.533333333333333,Other
+19901,2025-03-07 12:47:52,"[2025-03-07 12:47:52] tree,True,False,False,False,False,False,False,False,False,False,False",6.533333333333333,Other
+21128,2025-03-10 04:38:10,"[2025-03-10 04:38:10] vi claude-bazinga-mac.sh,True,False,False,False,False,False,False,False,False,False,False",6.516666666666667,Other
+19142,2025-03-02 06:32:03,"[2025-03-02 06:32:03] bazinga,True,False,False,False,False,False,False,False,False,False,False",6.366666666666666,Other
+21340,2025-03-09 13:20:46,"[2025-03-09 13:20:46] cd ../BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",6.333333333333333,Other
+19594,2025-03-06 04:01:10,"[2025-03-06 04:01:10] git checkout platform-service/mlp_service.go,True,False,True,False,False,False,False,False,False,False,False",6.283333333333333,Other
+21853,2025-03-10 06:23:31,"[2025-03-10 06:23:31] sed -i '' 's/python /python3 /g' ~/integration_data/unified_timeline/connect_bazinga.sh,True,False,False,False,False,True,False,False,True,False,False",6.266666666666667,Other
+14650,2025-03-02 10:36:28,"[2025-03-02 10:36:28] bash,True,False,False,False,False,False,False,False,False,False,False",6.2,Other
+13665,2025-03-01 02:29:23,"[2025-03-01 02:29:23] clrar,True,False,False,False,False,False,False,False,False,False,False",6.183333333333334,Other
+19883,2025-03-07 21:15:25,"[2025-03-07 21:15:25] # Create output file,True,False,False,False,False,False,False,False,False,False,False",6.183333333333334,Other
+19904,2025-03-06 03:52:18,"[2025-03-06 03:52:18] cp ../projstat-installer.sh,True,True,False,False,False,False,False,False,False,False,False",6.183333333333334,Other
+8969,2025-02-21 06:27:46,"[2025-02-21 06:27:46] pip install pymongo,True,False,False,True,False,True,False,False,False,False,False",6.133333333333334,Other
+14317,2025-03-01 21:39:10,"""[2025-03-01 21:39:10] python create_video.py scripts/relationshipquantum.txt videos/relationshipquantum.mp4 --title """"RelationshipQuantum"""""",True,False,False,False,False,True,False,False,False,False,False",6.133333333333334,Other
+9012,2025-02-22 14:30:43,"[2025-02-22 14:30:43] mv ~/Downloads/*README* artifacts-chat3/,True,True,False,False,False,False,False,False,False,False,False",6.116666666666666,Other
+7495,2025-02-21 06:50:31,"[2025-02-21 06:50:31] touch from pymongo import MongoClient,True,True,False,False,False,False,False,False,False,False,False",6.1,Other
+2855,2025-02-15 20:00:24,"[2025-02-15 20:00:24] # Install PostgreSQL (if not installed),True,False,False,False,False,False,False,False,False,False,False",6.1,Other
+9004,2025-02-22 14:24:36,"[2025-02-22 14:24:36] # Create active-urls.txt for quick reference,True,False,False,False,False,False,False,False,False,False,False",6.033333333333333,Other
+8613,2025-02-21 22:06:46,"[2025-02-21 22:06:46] ./complete-fix.sh,True,False,False,False,False,False,False,False,False,False,False",6.033333333333333,Other
+16713,2025-02-25 16:55:05,"[2025-02-25 16:55:05] tree src/,True,False,False,False,False,False,False,False,False,False,False",6.033333333333333,Other
+20159,2025-03-08 09:42:15,"[2025-03-08 09:42:15] touch setup_bazinga.sh,True,True,False,False,False,False,False,False,False,False,False",5.966666666666667,Other
+21640,2025-03-10 09:34:00,"[2025-03-10 09:34:00] rm -rf analysis_20250310/,True,True,False,False,False,False,False,False,False,False,False",5.933333333333334,Other
+15510,2025-02-25 14:35:45,"[2025-02-25 14:35:45] source ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",5.916666666666667,Other
+12382,2025-02-25 12:41:56,"[2025-02-25 12:41:56] rm -rf ~/AmsyPycharm/**/node_modules/@next/swc-darwin-arm64,True,True,False,False,False,False,False,False,False,False,False",5.85,Other
+20626,2025-03-08 13:05:34,"[2025-03-08 13:05:34] cd frontend/,True,False,False,False,False,False,False,False,False,False,False",5.85,Other
+11270,2025-02-22 12:45:46,"[2025-02-22 12:45:46] tree,True,False,False,False,False,False,False,False,False,False,False",5.85,Other
+19395,2025-03-05 08:35:58,"[2025-03-05 08:35:58] pyenv versions,True,False,False,False,False,False,False,False,False,False,False",5.833333333333333,Other
+1505,2025-02-21 01:08:07,"[2025-02-21 01:08:07] # Set up poetry/shayari structure,True,False,False,False,False,False,False,False,False,False,False",5.766666666666667,Other
+20593,2025-03-08 12:36:19,"[2025-03-08 12:36:19] export NODE_OPTIONS=--openssl-legacy-provider,True,False,False,False,False,False,False,False,False,False,False",5.733333333333333,Other
+14237,2025-03-01 21:19:09,"""[2025-03-01 21:19:09] python create_video.py scripts/talentorbit.txt videos/talentorbit.mp4 --title """"TalentOrbit: From Interviewing to Discovering"""""",True,False,False,False,False,True,False,False,False,False,False",5.733333333333333,Other
+13924,2025-02-25 15:51:05,"[2025-02-25 15:51:05] cp -r ~/AmsyPycharm/healing-space ~/AmsyPycharm/healing-space-backup-$(date +%Y%m%d-%H%M%S),True,True,False,False,False,False,False,False,False,False,False",5.716666666666667,Other
+21262,2025-03-10 02:32:01,"[2025-03-10 02:32:01] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",5.683333333333334,Other
+21064,2025-03-10 02:42:25,"[2025-03-10 02:42:25] bash,True,False,False,False,False,False,False,False,False,False,False",5.683333333333334,Other
+20156,2025-03-08 09:35:13,"[2025-03-08 09:35:13] treeclean -L3,True,False,False,False,False,False,False,False,False,False,False",5.633333333333334,Other
+13860,2025-03-01 17:06:15,"[2025-03-01 17:06:15] # Check for common CLI tools,True,False,False,False,False,False,False,False,False,False,False",5.633333333333334,Other
+8648,2025-02-21 06:01:57,"[2025-02-21 06:01:57] mongod --version,True,False,False,False,False,False,False,True,False,False,False",5.6,Other
+19131,2025-02-21 11:09:51,"""[2025-02-21 11:09:51] find . -type f -name """"*.go"""""",True,True,False,False,False,False,False,False,True,False,False",5.583333333333333,Other
+18257,2025-03-02 08:26:20,"[2025-03-02 08:26:20] cat utils/api.js,True,False,False,False,False,False,False,False,False,False,False",5.566666666666666,Other
+8958,2025-02-21 06:10:54,"[2025-02-21 06:10:54] bash,True,False,False,False,False,False,False,False,False,False,False",5.55,Other
+21589,2025-03-10 08:49:35,"[2025-03-10 08:49:35] open /Users/abhissrivasta/AmsyPycharm/BAZINGA/analysis_20250310,True,False,False,False,False,False,False,False,False,False,False",5.533333333333333,Other
+14178,2025-03-01 02:36:07,"[2025-03-01 02:36:07] node fix-components.mjs,True,False,False,False,False,False,False,False,False,False,False",5.516666666666667,Other
+22343,2025-03-12 12:27:10,"[2025-03-12 12:27:10] cd AmsyPycharm/BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",5.483333333333333,Other
+18786,2025-03-03 05:34:31,"[2025-03-03 05:34:31] python3 -m venv fresh_venv,True,False,False,False,False,True,False,False,False,False,False",5.45,Other
+20235,2025-03-07 10:47:58,"[2025-03-07 10:47:58] bash,True,False,False,False,False,False,False,False,False,False,False",5.45,Other
+19973,2025-03-07 13:10:25,"[2025-03-07 13:10:25] alias,True,False,False,False,False,False,False,False,False,False,False",5.45,Other
+21087,2025-03-08 19:11:29,"[2025-03-08 19:11:29] /install_dodo_fixed.sh,True,False,False,False,False,False,False,False,False,False,False",5.45,Other
+3686,2025-02-16 08:17:27,"[2025-02-16 08:17:27] tree -L4,True,False,False,False,False,False,False,False,False,False,False",5.433333333333334,Other
+20630,2025-03-08 13:11:30,"[2025-03-08 13:11:30] netlify deploy --prod,True,False,False,False,False,False,False,False,False,False,False",5.433333333333334,Other
+22590,2025-03-13 10:19:16,"[2025-03-13 10:19:16] cat > ~/migration/federated-vault-monitoring/values/values.yaml << 'EOF',True,False,False,False,False,False,False,False,False,False,False",5.433333333333334,Other
+22439,2025-03-12 04:05:52,"[2025-03-12 04:05:52] bazinga status,True,False,False,False,False,False,False,False,False,False,False",5.383333333333334,Other
+15152,2025-02-28 15:34:01,"[2025-02-28 15:34:01] # Copy and save the fix-script.sh content,True,False,False,False,False,False,False,False,False,False,False",5.366666666666666,Other
+9451,2025-02-22 15:34:33,"[2025-02-22 15:34:33] cat > src/components/Dashboard.tsx <<< $(cat /Users/abhissrivasta/Downloads/dashboard.ts),True,False,False,False,False,False,False,False,False,False,False",5.333333333333333,Other
+19251,2025-03-05 05:24:34,"[2025-03-05 05:24:34] mkdir -p BAZINGA/src/generators/output/formatTransformer,True,True,False,False,False,False,False,False,False,False,False",5.333333333333333,Other
+20263,2025-03-08 11:29:57,"[2025-03-08 11:29:57] cd personalised-news-app/newsapp/,True,False,False,False,False,False,False,False,False,False,False",5.316666666666666,Other
+21377,2025-03-10 02:08:53,"[2025-03-10 02:08:53] ls -la  ai-chat-capametabilities.md ai-chat-capametabilities.txt,True,True,False,False,False,False,False,False,False,False,False",5.316666666666666,Other
+9679,2025-02-22 16:32:48,"[2025-02-22 16:32:48] pkill -f server-implementation.py# Navigate to the office system directory,True,False,False,False,False,False,False,False,False,False,False",5.316666666666666,Other
+20990,2025-03-08 21:06:17,"""[2025-03-08 21:06:17] sed -i.tmp 's/<title>Our Journey Together: Words \& Sounds<\/title>/<title>Happy Women'\''s Day, Amrita! ❤️<\/title>/' """"$TEMPLATE_FILE"""""",True,False,False,False,False,False,False,False,True,False,False",5.3,Other
+21683,2025-03-10 05:55:38,"[2025-03-10 05:55:38] # Fix the connect_bazinga.sh syntax error,True,False,False,False,False,False,False,False,False,False,False",5.3,Other
+7486,2025-02-21 06:34:41,"[2025-02-21 06:34:41] pip3 install pymongo,True,False,False,False,False,False,False,False,False,False,False",5.283333333333333,Other
+20150,2025-03-08 08:59:52,"[2025-03-08 08:59:52] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",5.266666666666667,Other
+19714,2025-03-07 12:02:15,"[2025-03-07 12:02:15] ./check-status.sh,True,False,False,False,False,False,False,False,False,False,False",5.266666666666667,Other
+22233,2025-03-12 12:19:24,"""[2025-03-12 12:19:24] find $HOME -type f -name """"*.sh"""" -o -name """"*bazinga*"""" -o -name """"*claude*"""" | xargs grep -l """"history\|extract\|pattern"""" | sort | xargs ls -la"",True,True,False,False,False,False,False,False,True,False,False",5.233333333333333,Other
+22137,2025-03-10 12:15:46,"[2025-03-10 12:15:46] treeclean,True,False,False,False,False,False,False,False,False,False,False",5.216666666666667,Other
+18811,2025-03-03 05:42:22,"""[2025-03-03 05:42:22] sed -i """""""" 's/{new Date(lastMessage\.timestamp).toLocaleTimeString()}/{lastMessage.timestamp ? new Date(lastMessage.timestamp).toLocaleTimeString() : """"Just now""""}/' """"$DOCUMENT_STREAM_PATH"""""",True,False,False,False,False,False,False,False,True,False,False",5.216666666666667,Other
+14511,2025-03-02 03:10:29,"[2025-03-02 03:10:29] reset,True,False,False,False,False,False,False,False,False,False,False",5.2,Other
+15597,2025-03-01 01:42:55,"""[2025-03-01 01:42:55]     BAZINGA_PATH=""""$BAZINGA_INDEED/$dir"""";      if [ -d """"$BAZINGA_PATH"""" ]; then         if [ -L """"$BAZINGA_PATH"""" ]; then             echo """"✅ '$dir' is a SYMLINK in BAZINGA-INDEED → $(readlink """"$BAZINGA_PATH"""")"""";         else             echo """"⚠️ '$dir' exists in BOTH locations as a separate directory."""";         fi;     else         echo """"❌ '$dir' exists in AmsyPycharm but NOT in BAZINGA-INDEED."""";     fi; done"",True,False,False,False,False,False,False,False,False,False,False",5.183333333333334,Other
+11231,2025-02-23 08:24:47,"[2025-02-23 08:24:47] touch scripts/web_interface.py,True,True,False,False,False,False,False,False,False,False,False",5.15,Other
+21378,2025-03-10 02:14:02,"[2025-03-10 02:14:02] alias,True,False,False,False,False,False,False,False,False,False,False",5.15,Other
+10925,2025-02-22 18:17:58,"[2025-02-22 18:17:58] tree,True,False,False,False,False,False,False,False,False,False,False",5.133333333333334,Other
+21908,2025-03-08 20:22:56,"[2025-03-08 20:22:56] bash,True,False,False,False,False,False,False,False,False,False,False",5.133333333333334,Other
+22414,2025-03-12 10:21:48,"[2025-03-12 10:21:48] cd `,True,False,False,False,False,False,False,False,False,False,False",5.133333333333334,Other
+3434,2025-02-15 21:58:40,"[2025-02-15 21:58:40] # Update index.js,True,False,False,False,False,False,False,False,False,False,False",5.083333333333333,Other
+12072,2025-02-25 11:22:34,"[2025-02-25 11:22:34] ls -a,True,True,False,False,False,False,False,False,False,False,False",5.066666666666666,Other
+19188,2025-03-04 15:56:31,"""[2025-03-04 15:56:31] find ~/ -type f -mtime -120 -not -path """"*/\.*"""" | xargs ls -lt | head -50"",True,True,False,False,False,False,False,False,True,False,False",5.066666666666666,Other
+22561,2025-03-13 11:35:57,"""[2025-03-13 11:35:57] {   echo """"# Migration Status Check - $(date)"""";   echo """""""";      echo """"## Directory Structure"""";   echo '```';   find ~/migration-files -type d | sort;   echo '```';   echo """""""";      echo """"## Files Created"""";   echo '```';   find ~/migration-files -type f | sort;   echo '```';   echo """""""";      echo """"## Missing Files Check"""";   echo '```';   for file in """"argo-catalog-pr.yaml"""" """"spinnaker-instructions.md"""" """"post-migration-steps.md"""" """"email-response.md"""" """"verify-migration.sh""""; do     if [ -f ~/migration-files/$file ]; then       echo """"✅ $file exists"""";     else       echo """"❌ $file missing"""";     fi;   done;   echo '```';   echo """""""";      echo """"## Required Actions"""";   echo """"1. Create missing files (argo-catalog PR template, Spinnaker instructions, post-migration steps)"""";   echo """"2. Set up content for placement and values files if not already done"""";   echo """"3. Create PR for permission overrides using template"""";   echo """"4. When cluster access is available, record timestamps"""";   echo """""""";      echo """"## Cleanup Recommendations"""";   echo """"- Temporary files that can be removed:"""";   for file in $(find ~/ -name """"migration*"""" -o -name """"*go-vault*"""" | grep -v """"migration-files""""); do     echo """"  - $file"""";   done;   echo """"- After migration is complete, consider backing up and removing ~/migration-files"""";    } > ~/deleteme.txt"",True,True,False,False,False,False,False,False,True,False,False",5.066666666666666,Other
+19532,2025-03-07 12:23:22,"[2025-03-07 12:23:22] # Try running it again,True,False,False,False,False,False,False,False,False,False,False",5.05,Other
+22242,2025-03-12 12:56:01,"[2025-03-12 12:56:01] bash,True,False,False,False,False,False,False,False,False,False,False",5.0,Other
+11226,2025-02-25 10:46:51,"[2025-02-25 10:46:51] lr ~/AmsyPycharm/BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",5.0,Other
+9084,2025-02-22 13:47:32,"[2025-02-22 13:47:32] bash,True,False,False,False,False,False,False,False,False,False,False",4.983333333333333,Other
+19619,2025-03-07 12:29:57,"[2025-03-07 12:29:57] cd security/vault-toolkit/scripts/,True,False,False,False,False,False,False,False,False,False,False",4.983333333333333,Other
+15242,2025-03-01 00:39:18,"""[2025-03-01 00:39:18] touch """"$SRC_DIR/pages/ThoughtInput/ThoughtInput.css"""""",True,True,False,False,False,False,False,False,False,False,False",4.95,Other
+7494,2025-02-21 06:44:25,"""[2025-02-21 06:44:25] python -c """"import pymongo; print('pymongo is installed')"""""",True,False,False,False,False,True,False,False,False,False,False",4.95,Other
+19266,2025-03-05 05:55:01,"[2025-03-05 05:55:01] # Simple format converter that works with your FormatTransformer class,True,False,False,False,False,False,False,False,False,False,False",4.95,Other
+21823,2025-03-10 06:01:38,"[2025-03-10 06:01:38] # Create the background script,True,False,False,False,False,False,False,False,False,False,False",4.933333333333334,Other
+22535,2025-03-13 11:01:14,"[2025-03-13 11:01:14] vi capture_progress.sh,True,False,False,False,False,False,False,False,False,False,False",4.933333333333334,Other
+20154,2025-03-08 09:28:25,"[2025-03-08 09:28:25] touch Time-Trust-Beyond.md,True,True,False,False,False,False,False,False,False,False,False",4.9,Other
+18186,2025-02-25 16:48:46,"[2025-02-25 16:48:46] tree src/patterns/,True,False,False,False,False,False,False,False,False,False,False",4.883333333333334,Other
+21933,2025-03-08 21:00:59,"[2025-03-08 21:00:59] vi src/core/fractals/FractalNumericalEncoder.ts,True,False,False,False,False,False,False,False,False,False,False",4.883333333333334,Other
+15514,2025-02-25 14:41:25,"[2025-02-25 14:41:25] bazonga,True,False,False,False,False,False,False,False,False,False,False",4.85,Other
+21608,2025-03-10 09:07:04,"""[2025-03-10 09:07:04] grep -r '""""time-trust""""\|""""harmonic""""\|""""relationship""""\|""""mandelbrot""""' src/"",True,False,False,False,False,False,False,False,True,False,False",4.85,Other
+21152,2025-03-10 04:55:00,"[2025-03-10 04:55:00] lpwd,True,False,False,False,False,False,False,False,False,False,False",4.85,Other
+13824,2025-02-28 12:08:00,"[2025-02-28 12:08:00] # Terminal 1,True,False,False,False,False,False,False,False,False,False,False",4.816666666666666,Other
+12025,2025-02-25 11:16:44,"[2025-02-25 11:16:44] # OS details,True,False,False,False,False,False,False,False,False,False,False",4.783333333333333,Other
+21254,2025-03-10 07:57:56,"[2025-03-10 07:57:56] find . -type f -exec file {} +,True,True,False,False,False,False,False,False,True,False,False",4.766666666666667,Other
+22615,2025-03-12 16:07:41,"[2025-03-12 16:07:41] git log --oneline origin/main..origin/pr-20,True,False,False,False,False,False,False,False,False,False,False",4.766666666666667,Other
+22422,2025-03-12 17:40:19,"[2025-03-12 17:40:19] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",4.75,Other
+19305,2025-03-05 07:47:14,"[2025-03-05 07:47:14] cleae,True,False,False,False,False,False,False,False,False,False,False",4.733333333333333,Other
+19132,2025-02-21 11:14:35,"[2025-02-21 11:14:35] make dev,True,False,False,False,False,False,False,False,False,False,False",4.733333333333333,Other
+12014,2025-02-25 11:55:12,"""[2025-02-25 11:55:12] launchctl list | grep -i """"google\|zoom\|dropbox"""""",True,False,False,False,False,False,False,False,True,False,False",4.716666666666667,Other
+21668,2025-03-10 10:04:14,"[2025-03-10 10:04:14] px aux | grep clipboard,True,False,False,False,False,False,False,False,True,False,False",4.716666666666667,Other
+8561,2025-02-21 21:22:23,"[2025-02-21 21:22:23] tree,True,False,False,False,False,False,False,False,False,False,False",4.716666666666667,Other
+19543,2025-03-07 12:38:25,"[2025-03-07 12:38:25] ls -a /Users/abhissrivasta/GolandProjects/tools/security/vault-toolkit/scripts/vault-build/output/vault,True,True,False,False,False,False,False,False,False,False,False",4.65,Other
+20644,2025-03-08 14:16:25,"[2025-03-08 14:16:25] bash,True,False,False,False,False,False,False,False,False,False,False",4.65,Other
+22087,2025-03-10 13:44:59,"[2025-03-10 13:44:59] treeclean,True,False,False,False,False,False,False,False,False,False,False",4.616666666666666,Other
+13928,2025-02-25 16:23:36,"[2025-02-25 16:23:36] bash,True,False,False,False,False,False,False,False,False,False,False",4.583333333333333,Other
+328,2025-02-21 01:31:57,"[2025-02-21 01:31:57] # Create directory if it doesn't exist,True,False,False,False,False,False,False,False,False,False,False",4.583333333333333,Other
+6180,2025-02-21 07:24:06,"[2025-02-21 07:24:06] cat > src/components/journey/gentle/AmritaPath.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",4.583333333333333,Other
+19733,2025-03-07 13:42:31,"[2025-03-07 13:42:31] # Remove the alias from .bashrc,True,False,False,False,False,False,False,False,False,False,False",4.583333333333333,Other
+21388,2025-03-10 02:24:48,"[2025-03-10 02:24:48] cd ..,True,False,False,False,False,False,False,False,False,False,False",4.566666666666666,Other
+21256,2025-03-10 02:00:56,"[2025-03-10 02:00:56] source bin/venv_bazinga/,True,False,False,False,False,False,False,False,False,False,False",4.516666666666667,Other
+14489,2025-03-02 02:58:25,"""[2025-03-02 02:58:25] python -c """"from gtts import gTTS; tts = gTTS('Hello, this is a test.', lang='en'); tts.save('test.mp3')"""""",True,False,False,False,False,True,False,False,False,False,False",4.516666666666667,Other
+19480,2025-03-05 06:58:01,"[2025-03-05 06:58:01] brew install httrack,True,False,False,True,False,False,False,False,False,False,False",4.5,Other
+22541,2025-03-13 11:19:38,"[2025-03-13 11:19:38] vi cleanup-migration.sh,True,False,False,False,False,False,False,False,False,False,False",4.5,Other
+21363,2025-03-09 22:46:31,"[2025-03-09 22:46:31] ..,True,False,False,False,False,False,False,False,False,False,False",4.466666666666667,Other
+19738,2025-03-07 13:46:59,"[2025-03-07 13:46:59] # Edit your .bashrc file,True,False,False,False,False,False,False,False,False,False,False",4.466666666666667,Other
+14344,2025-03-01 21:52:24,"[2025-03-01 21:52:24] ll scripts/,True,False,False,False,False,False,False,False,False,False,False",4.45,Other
+11564,2025-02-22 18:02:14,"[2025-02-22 18:02:14] cat > src/backend/main.py << 'EOL',True,False,False,False,False,False,False,False,False,False,False",4.4,Other
+9086,2025-02-22 13:51:55,"[2025-02-22 13:51:55] cd AmsyPycharm/office_system/,True,False,False,False,False,False,False,False,False,False,False",4.383333333333334,Other
+14041,2025-02-23 06:54:23,"[2025-02-23 06:54:23] # Check which files actually have data,True,False,False,False,False,False,False,False,False,False,False",4.383333333333334,Other
+20771,2025-03-07 16:13:08,"[2025-03-07 16:13:08] ./generate-exec-summary.sh,True,False,False,False,False,False,False,False,False,False,False",4.383333333333334,Other
+13478,2025-03-01 02:06:55,"""[2025-03-01 02:06:55] fix_syntax_errors() {   local file=$1;   echo -e """"${YELLOW}Fixing ${file}...${NC}"""";"",True,False,False,False,False,False,False,False,False,False,False",4.366666666666666,Other
+11148,2025-02-22 19:24:29,"[2025-02-22 19:24:29] mkdir -p uploads logs,True,True,False,False,False,False,False,False,False,False,False",4.366666666666666,Other
+20924,2025-03-08 20:48:48,"[2025-03-08 20:48:48] bash,True,False,False,False,False,False,False,False,False,False,False",4.35,Other
+15111,2025-03-02 19:37:10,"[2025-03-02 19:37:10] ll fr,True,False,False,False,False,False,False,False,False,False,False",4.35,Other
+18192,2025-03-02 03:14:56,"[2025-03-02 03:14:56] reset,True,False,False,False,False,False,False,False,False,False,False",4.3,Other
+22056,2025-03-10 11:42:58,"[2025-03-10 11:42:58] tldr tar,True,False,False,False,False,False,False,False,False,False,False",4.266666666666667,Other
+12001,2025-02-25 11:45:05,"[2025-02-25 11:45:05] system_profiler SPDisplaysDataType,True,False,False,False,False,False,False,False,False,False,False",4.266666666666667,Other
+20488,2025-03-08 14:35:00,"""[2025-03-08 14:35:00] curl -L """"https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Algorithms.mp3"""" -o """"public/audio/revelation.mp3"""""",True,False,False,False,True,False,False,False,False,False,False",4.25,Other
+11985,2025-02-25 11:33:56,"[2025-02-25 11:33:56] pkill -9 epsext,True,False,False,False,False,False,False,False,False,False,False",4.233333333333333,Other
+9146,2025-02-22 13:11:59,"[2025-02-22 13:11:59] cd abhissrivasta/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",4.233333333333333,Other
+15052,2025-03-02 23:52:49,"[2025-03-02 23:52:49] # Update package.json if needed,True,False,False,False,False,False,False,False,False,False,False",4.216666666666667,Other
+20268,2025-03-08 11:34:10,"[2025-03-08 11:34:10] cat middleware/jwt.go,True,False,False,False,False,False,False,False,False,False,False",4.216666666666667,Other
+14991,2025-03-02 23:09:12,"[2025-03-02 23:09:12] ..,True,False,False,False,False,False,False,False,False,False,False",4.216666666666667,Other
+21093,2025-03-10 02:47:39,"[2025-03-10 02:47:39] ll  ~/Downloads/bazinga-code/,True,False,False,False,False,False,False,False,False,False,False",4.2,Other
+13756,2025-03-02 02:28:05,"[2025-03-02 02:28:05] tree -L5,True,False,False,False,False,False,False,False,False,False,False",4.183333333333334,Other
+18266,2025-03-02 08:31:03,"[2025-03-02 08:31:03] # Rebuild with the updated API URL,True,False,False,False,False,False,False,False,False,False,False",4.183333333333334,Other
+21374,2025-03-10 01:46:29,"[2025-03-10 01:46:29] file   ~/Downloads/ai-chat-capametabilities.md,True,False,False,False,False,False,False,False,False,False,False",4.166666666666667,Other
+9936,2025-02-22 17:23:48,"[2025-02-22 17:23:48] # Start backend server,True,False,False,False,False,False,False,False,False,False,False",4.166666666666667,Other
+12311,2025-02-25 10:52:38,"[2025-02-25 10:52:38] bash,True,False,False,False,False,False,False,False,False,False,False",4.15,Other
+21782,2025-03-08 19:15:37,"[2025-03-08 19:15:37] cd ~/AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",4.133333333333334,Other
+19124,2025-03-03 05:57:53,"[2025-03-03 05:57:53] netlify deploy --prod,True,False,False,False,False,False,False,False,False,False,False",4.116666666666666,Other
+22206,2025-03-11 10:06:37,"[2025-03-11 10:06:37] cd ..,True,False,False,False,False,False,False,False,False,False,False",4.083333333333333,Other
+14240,2025-03-01 21:23:14,"[2025-03-01 21:23:14] gpwd,True,False,False,False,False,False,False,False,False,False,False",4.083333333333333,Other
+15548,2025-03-02 07:48:19,"[2025-03-02 07:48:19] # Make sure git is tracking all your changes,True,False,False,False,False,False,False,False,False,False,False",4.083333333333333,Other
+13851,2025-03-01 04:38:22,"[2025-03-01 04:38:22] # List existing projects,True,False,False,False,False,False,False,False,False,False,False",4.083333333333333,Other
+21636,2025-03-10 09:26:33,"[2025-03-10 09:26:33] find . -type f -empty -delete,True,True,False,False,False,False,False,False,True,False,False",4.066666666666666,Other
+1165,2025-02-21 00:37:22,"[2025-02-21 00:37:22] cd ../healing-space/,True,False,False,False,False,False,False,False,False,False,False",4.066666666666666,Other
+19721,2025-03-07 13:35:51,"[2025-03-07 13:35:51] cat ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",4.066666666666666,Other
+22623,2025-03-12 17:32:57,"[2025-03-12 17:32:57] cd ll,True,False,False,False,False,False,False,False,False,False,False",4.05,Other
+18180,2025-02-25 15:11:35,"[2025-02-25 15:11:35] bazinga overview,True,False,False,False,False,False,False,False,False,False,False",4.05,Other
+20772,2025-03-07 16:17:10,"[2025-03-07 16:17:10] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",4.033333333333333,Other
+20919,2025-03-10 05:25:16,"[2025-03-10 05:25:16] cd ~/AmsyPycharm/BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",4.033333333333333,Other
+17135,2025-03-03 01:28:05,"[2025-03-03 01:28:05] pip install pandas fastapi==0.115.11 starlette==0.46.0 uvicorn websockets python-multipart psutil sqlalchemy,True,False,False,True,False,True,False,False,False,False,False",4.033333333333333,Other
+22642,2025-03-12 17:44:21,"[2025-03-12 17:44:21] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",4.033333333333333,Other
+18117,2025-03-03 01:01:02,"[2025-03-03 01:01:02] ./monitoring/monitoring-setup.sj,True,False,False,False,False,False,False,False,False,False,False",4.016666666666667,Other
+13982,2025-02-25 13:06:48,"[2025-02-25 13:06:48] ls ~/Downloads/,True,True,False,False,False,False,False,False,False,False,False",4.0,Other
+21274,2025-03-10 07:01:32,"[2025-03-10 07:01:32] gs,True,False,False,False,False,False,False,False,False,False,False",4.0,Other
+20643,2025-03-08 14:11:46,"""[2025-03-08 14:11:46] sed -i '' 's/This isn'""""'""""'tcoincidence/This isn'""""'""""'t coincidence/g' index.html"",True,False,False,False,False,False,False,False,True,False,False",3.9833333333333334,Other
+12389,2025-02-25 12:48:08,"[2025-02-25 12:48:08] find ~/AmsyPycharm/BAZINGA-INDEED/ -type f ! -type l > dup,True,True,False,False,False,False,False,False,True,False,False",3.9833333333333334,Other
+18706,2025-03-03 04:55:11,"[2025-03-03 04:55:11] ./integrate-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",3.966666666666667,Other
+18673,2025-02-25 14:55:23,"[2025-02-25 14:55:23] bazinga state,True,False,False,False,False,False,False,False,False,False,False",3.966666666666667,Other
+21198,2025-03-10 06:48:57,"[2025-03-10 06:48:57] cat ~/AmsyPycharm/BAZINGA/docs/integration_system.md,True,False,False,False,False,False,False,False,False,False,False",3.95,Other
+20258,2025-03-08 10:07:55,"[2025-03-08 10:07:55] vi dd.sh,True,False,False,False,False,False,False,False,False,False,False",3.95,Other
+20596,2025-03-08 12:43:16,"[2025-03-08 12:43:16] cd ../,True,False,False,False,False,False,False,False,False,False,False",3.933333333333333,Other
+8610,2025-02-21 22:00:11,"[2025-02-21 22:00:11] touch complete-fix.sh,True,True,False,False,False,False,False,False,False,False,False",3.9166666666666665,Other
+14084,2025-02-23 07:58:20,"[2025-02-23 07:58:20] gcloud init,True,False,False,False,False,False,False,False,False,False,False",3.9166666666666665,Other
+20649,2025-03-05 05:38:52,"[2025-03-05 05:38:52] cd ../BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",3.9,Other
+1306,2025-02-21 00:47:39,"[2025-02-21 00:47:39] ccat README.md,True,False,False,False,False,False,False,False,False,False,False",3.8833333333333333,Other
+21590,2025-03-10 08:53:26,"[2025-03-10 08:53:26] file bazinga_code_generator.py,True,False,False,False,False,False,False,False,False,False,False",3.85,Other
+20384,2025-03-08 04:19:46,"[2025-03-08 04:19:46] python3 generate_dashboard.py,True,False,False,False,False,True,False,False,False,False,False",3.85,Other
+15165,2025-02-28 15:44:21,"[2025-02-28 15:44:21] ll artifacts/,True,False,False,False,False,False,False,False,False,False,False",3.85,Other
+13990,2025-02-25 13:12:39,"[2025-02-25 13:12:39] bazinga chat status       # Show status of all chats,True,False,False,False,False,False,False,False,False,False,False",3.85,Other
+20529,2025-03-08 12:05:03,"[2025-03-08 12:05:03] # Run the app,True,False,False,False,False,False,False,False,False,False,False",3.85,Other
+1312,2025-02-21 00:52:05,"[2025-02-21 00:52:05] cat > public/index.html << 'EOL',True,False,False,False,False,False,False,False,False,False,False",3.8,Other
+9138,2025-02-22 13:05:19,"[2025-02-22 13:05:19] chmod +x ~/Downloads/system-integration.sh,True,False,False,False,False,False,False,False,False,False,False",3.75,Other
+19090,2025-03-03 05:13:15,"[2025-03-03 05:13:15] ../..,True,False,False,False,False,False,False,False,False,False,False",3.75,Other
+15051,2025-03-02 23:48:36,"[2025-03-02 23:48:36] ./setup-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",3.716666666666667,Other
+13815,2025-02-28 11:44:39,"[2025-02-28 11:44:39] vi setup.sh,True,False,False,False,False,False,False,False,False,False,False",3.683333333333333,Other
+22486,2025-03-13 15:24:27,"[2025-03-13 15:24:27] ps aux | grep pbboard,True,False,False,False,False,False,False,False,True,False,False",3.6666666666666665,Other
+19932,2025-03-07 21:19:53,"[2025-03-07 21:19:53] npm install -g typescript ts-node,True,False,False,True,False,False,False,False,False,False,False",3.6666666666666665,Other
+20597,2025-03-08 12:46:56,"[2025-03-08 12:46:56] C;EAR,True,False,False,False,False,False,False,False,False,False,False",3.6666666666666665,Other
+19092,2025-03-03 05:17:21,"[2025-03-03 05:17:21] npm run build/,True,False,False,False,False,False,False,False,False,False,False",3.6666666666666665,Other
+9390,2025-02-22 13:37:24,"[2025-02-22 13:37:24] pip install fastapi uvicorn websockets,True,False,False,True,False,True,False,False,False,False,False",3.6666666666666665,Other
+22282,2025-03-11 10:13:46,"[2025-03-11 10:13:46] ./architecture-analysis-script.sh ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",3.6333333333333333,Other
+17501,2025-03-03 01:31:45,"[2025-03-03 01:31:45] # Install dependencies with exact versions to resolve the package requirements warning,True,False,False,False,False,False,False,False,False,False,False",3.6166666666666667,Other
+22255,2025-03-10 14:01:05,"[2025-03-10 14:01:05] # Update markdown files with GitHub links and remove unwanted text,True,False,False,False,False,False,False,False,False,False,False",3.6,Other
+14222,2025-03-01 21:12:44,"[2025-03-01 21:12:44] python3 -m venv venv,True,False,False,False,False,True,False,False,False,False,False",3.6,Other
+21130,2025-03-10 04:42:02,"[2025-03-10 04:42:02] cd ~/Downloads/extracted_takeout/,True,False,False,False,False,False,False,False,False,False,False",3.6,Other
+20829,2025-03-07 16:25:28,"[2025-03-07 16:25:28] cd /Users/abhissrivasta/GolandProjects/eg-internal/vault-security-toolkit,True,False,False,False,False,False,False,False,False,False,False",3.5833333333333335,Other
+18249,2025-03-02 08:19:29,"[2025-03-02 08:19:29] # Let's update your frontend API configuration to point to your backend,True,False,False,False,False,False,False,False,False,False,False",3.566666666666667,Other
+19350,2025-03-05 17:13:15,"[2025-03-05 17:13:15] git remote add origin git@github.expedia.biz:abh0x2/tools.git,True,False,False,False,False,False,False,False,False,False,False",3.566666666666667,Other
+15508,2025-03-02 10:48:36,"[2025-03-02 10:48:36] prj,True,False,False,False,False,False,False,False,False,False,False",3.566666666666667,Other
+13410,2025-03-01 02:02:33,"""[2025-03-01 02:02:33] fix_syntax_errors() {   local file=$1;   echo -e """"${YELLOW}Fixing ${file}...${NC}"""";"",True,False,False,False,False,False,False,False,False,False,False",3.533333333333333,Other
+21765,2025-03-08 18:21:40,"[2025-03-08 18:21:40] bash,True,False,False,False,False,False,False,False,False,False,False",3.5166666666666666,Other
+21133,2025-03-10 04:46:20,"[2025-03-10 04:46:20] cd ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",3.5166666666666666,Other
+21537,2025-03-10 08:25:57,"""[2025-03-10 08:25:57] find """"$BAZINGA_DIR"""" -name """"*.ts"""""",True,True,False,False,False,False,False,False,True,False,False",3.5,Other
+21056,2025-03-10 05:39:33,"[2025-03-10 05:39:33] # Make the connection script executable,True,False,False,False,False,False,False,False,False,False,False",3.4833333333333334,Other
+15539,2025-03-01 17:09:49,"[2025-03-01 17:09:49] # Install dependencies if needed,True,False,False,False,False,False,False,False,False,False,False",3.4833333333333334,Other
+20661,2025-03-07 16:39:36,"[2025-03-07 16:39:36] rm -f dd.sh,True,True,False,False,False,False,False,False,False,False,False",3.466666666666667,Other
+19312,2025-03-05 08:13:01,"[2025-03-05 08:13:01] bash,True,False,False,False,False,False,False,False,False,False,False",3.466666666666667,Other
+21089,2025-03-08 18:18:09,"[2025-03-08 18:18:09] /usr/bin/python3 /Users/abhissrivasta/.vscode/extensions/ms-python.python-2025.2.0-darwin-arm64/python_files/printEnvVariablesToFile.py /Users/abhissrivasta/.vscode/extensions/ms-python.python-2025.2.0-darwin-arm64/python_files/deactivate/bash/envVars.txt,True,False,False,False,False,True,False,False,False,False,False",3.466666666666667,Other
+21125,2025-03-10 04:31:14,"[2025-03-10 04:31:14] open  ~/claude_data/claude_files.txt,True,False,False,False,False,False,False,False,False,False,False",3.45,Other
+6937,2025-02-21 08:04:45,"[2025-02-21 08:04:45] # Create a simple management script,True,False,False,False,False,False,False,False,False,False,False",3.45,Other
+21736,2025-03-10 06:12:40,"[2025-03-10 06:12:40] sed -i '' 's/python /python3 /g' ~/integration_data/unified_timeline/connect_bazinga.sh,True,False,False,False,False,True,False,False,True,False,False",3.433333333333333,Other
+14934,2025-02-25 17:06:19,"[2025-02-25 17:06:19] pip install psutil,True,False,False,True,False,True,False,False,False,False,False",3.433333333333333,Other
+16031,2025-03-01 02:14:38,"""[2025-03-01 02:14:38] if [[ """"$PROJECT_ROOT"""" == *""""/frontend"""" ]]; then     PROJECT_ROOT=$(dirname """"$PROJECT_ROOT""""); fi"",True,False,False,False,False,False,False,False,False,False,False",3.433333333333333,Other
+22577,2025-03-13 10:09:27,"[2025-03-13 10:09:27] which go,True,False,False,False,False,False,False,False,False,False,False",3.433333333333333,Other
+9442,2025-02-22 15:29:13,"""[2025-02-22 15:29:13] cd /Users/abhissrivasta/workspace && echo """"=== Artifact Status ==="""" && ls artifacts-chat*/ && echo """"=== Server Status ==="""" && lsof -i :8000 | grep LISTEN && echo """"=== Frontend Status ==="""" && curl -s http://localhost:5173 > /dev/null && echo """"Frontend: Running"""" || echo """"Frontend: Not Running"""" && echo """"=== API Status ==="""" && curl -s http://localhost:8000/api/documents/process -H """"Content-Type: application/json"""" -d '{""""test"""": true}'"",True,True,False,False,True,False,False,False,True,False,False",3.433333333333333,Other
+7655,2025-02-21 21:39:46,"[2025-02-21 21:39:46] ls -la fix.sh,True,True,False,False,False,False,False,False,False,False,False",3.4166666666666665,Other
+1704,2025-02-16 08:09:16,"[2025-02-16 08:09:16] # 2. Add new transition styles,True,False,False,False,False,False,False,False,False,False,False",3.4166666666666665,Other
+20822,2025-03-07 14:43:58,"[2025-03-07 14:43:58] git add security/vault-toolkit/scripts/vault,True,False,True,False,False,False,False,False,False,False,False",3.4,Other
+21596,2025-03-10 09:02:13,"[2025-03-10 09:02:13] vi src/core/bazinga/pattern_manager.py,True,False,False,False,False,False,False,False,False,False,False",3.4,Other
+13308,2025-03-01 01:03:00,"[2025-03-01 01:03:00] cd frontend,True,False,False,False,False,False,False,False,False,False,False",3.4,Other
+19227,2025-03-04 16:34:24,"[2025-03-04 16:34:24] cat  ~/.bash_functions/proj_navigator.sh | pb,True,False,False,False,False,False,False,False,False,False,False",3.3833333333333333,Other
+19802,2025-03-07 14:10:20,"[2025-03-07 14:10:20] source ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+22440,2025-03-12 04:34:35,"[2025-03-12 04:34:35] ..,True,False,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+20149,2025-03-08 08:54:36,"[2025-03-08 08:54:36] touch docs/CONVERSATIONAL-NUMERICAL-ENCODING.md,True,True,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+21615,2025-03-10 09:10:27,"[2025-03-10 09:10:27] ls -l /Users/abhissrivasta/AmsyPycharm/BAZINGA/src/,True,True,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+21517,2025-03-10 06:05:22,"[2025-03-10 06:05:22] cd ~,True,False,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+21800,2025-03-08 19:49:30,"[2025-03-08 19:49:30] vi bazinga_explore.py,True,False,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+18375,2025-03-03 03:42:57,"[2025-03-03 03:42:57] gs,True,False,False,False,False,False,False,False,False,False,False",3.3666666666666667,Other
+7663,2025-02-21 21:52:16,"[2025-02-21 21:52:16] npm start,True,False,False,False,False,False,False,False,False,False,False",3.35,Other
+19318,2025-03-05 07:32:59,"[2025-03-05 07:32:59] cd AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",3.35,Other
+10932,2025-02-22 18:22:24,"[2025-02-22 18:22:24] awk '{print $1}' ~/.bash_history | uniq -c | sort -k2 | awk '{,True,False,False,False,False,False,False,False,True,False,False",3.35,Other
+21135,2025-03-10 04:49:42,"[2025-03-10 04:49:42] #!/usr/bin/env python3,True,False,False,False,False,True,False,False,False,False,False",3.35,Other
+22344,2025-03-12 12:30:30,"[2025-03-12 12:30:30] cd ThoughtPatternTool/,True,False,False,False,False,False,False,False,False,False,False",3.3333333333333335,Other
+22471,2025-03-12 13:11:45,"[2025-03-12 13:11:45] vi keepit.sh,True,False,False,False,False,False,False,False,False,False,False",3.3333333333333335,Other
+9391,2025-02-22 13:40:43,"[2025-02-22 13:40:43] ls ~/Downloads/,True,True,False,False,False,False,False,False,False,False,False",3.316666666666667,Other
+18395,2025-03-02 12:16:19,"[2025-03-02 12:16:19] cd ttyl/,True,False,False,False,False,False,False,False,False,False,False",3.3,Other
+18121,2025-03-03 01:48:16,"[2025-03-03 01:48:16] npm install,True,False,False,True,False,False,False,False,False,False,False",3.3,Other
+7649,2025-02-21 10:33:56,"[2025-02-21 10:33:56] },True,False,False,False,False,False,False,False,False,False,False",3.3,Other
+8387,2025-02-21 10:09:10,"[2025-02-21 10:09:10] npm install react@18.2.0 react-dom@18.2.0,True,False,False,True,False,False,False,False,False,False,False",3.3,Other
+19608,2025-03-06 04:40:10,"[2025-03-06 04:40:10] make tunnel,True,False,False,False,False,False,False,False,False,False,False",3.2666666666666666,Other
+15225,2025-03-01 00:34:19,"[2025-03-01 00:34:19] touch frontend/src/services/ThirdPartySpeechService.js,True,True,False,False,False,False,False,False,False,False,False",3.2666666666666666,Other
+19836,2025-03-07 16:32:22,"[2025-03-07 16:32:22] mkdir -p /Users/abhissrivasta/GolandProjects/vault-vulnerability-report,True,True,False,False,False,False,False,False,False,False,False",3.25,Other
+12348,2025-02-25 11:03:14,"[2025-02-25 11:03:14] ls -ld ~/AmsyPycharm/healing-space-backup/,True,True,False,False,False,False,False,False,False,False,False",3.25,Other
+13648,2025-03-01 02:11:12,"[2025-03-01 02:11:12] node verify_components.js,True,False,False,False,False,False,False,False,False,False,False",3.25,Other
+7066,2025-02-21 08:18:21,"[2025-02-21 08:18:21] npm run dev,True,False,False,False,False,False,False,False,False,False,False",3.2333333333333334,Other
+11171,2025-02-22 19:12:14,"[2025-02-22 19:12:14] cd AmsyPycharm/office_system/src/frontend/,True,False,False,False,False,False,False,False,False,False,False",3.216666666666667,Other
+11267,2025-02-21 22:51:21,"""[2025-02-21 22:51:21] find . -type f -name """"*.js"""" ! -path """"*/node_modules/*"""" -exec grep -L """"."""" {} \;"",True,True,False,False,False,False,False,False,True,False,False",3.216666666666667,Other
+20422,2025-03-08 08:48:16,"[2025-03-08 08:48:16] # Save the project summary,True,False,False,False,False,False,False,False,False,False,False",3.216666666666667,Other
+22093,2025-03-10 13:48:49,"[2025-03-10 13:48:49] # Create backup/docs directory if it doesn't exist,True,False,False,False,False,False,False,False,False,False,False",3.2,Other
+13845,2025-03-01 01:22:07,"[2025-03-01 01:22:07] ll artifacts/,True,False,False,False,False,False,False,False,False,False,False",3.183333333333333,Other
+6057,2025-02-21 06:58:22,"[2025-02-21 06:58:22] ls -lh ../,True,True,False,False,False,False,False,False,False,False,False",3.183333333333333,Other
+2423,2025-02-15 19:46:35,"[2025-02-15 19:46:35] mkdir -p prisma,True,True,False,False,False,False,False,False,False,False,False",3.1666666666666665,Other
+22583,2025-03-13 10:13:13,"[2025-03-13 10:13:13] brew update,True,False,False,False,False,False,False,False,False,False,False",3.1666666666666665,Other
+22618,2025-03-12 16:11:06,"[2025-03-12 16:11:06] git diff --name-status main...origin/pr-20,True,False,False,False,False,False,False,False,False,False,False",3.1666666666666665,Other
+7361,2025-02-21 08:42:47,"[2025-02-21 08:42:47] cat/build status,True,False,False,False,False,False,False,False,False,False,False",3.15,Other
+11305,2025-02-22 16:14:58,"[2025-02-22 16:14:58] ls -R .,True,True,False,False,False,False,False,False,False,False,False",3.1333333333333333,Other
+21539,2025-03-10 08:29:26,"[2025-03-10 08:29:26] ./analyze_bazinga.sh,True,False,False,False,False,False,False,False,False,False,False",3.1333333333333333,Other
+19605,2025-03-06 04:21:56,"[2025-03-06 04:21:56] git pull origin mlp,True,False,True,False,False,False,False,False,False,False,False",3.1166666666666667,Other
+21534,2025-03-10 08:22:09,"[2025-03-10 08:22:09] cd ~/AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",3.1166666666666667,Other
+14703,2025-03-02 11:29:35,"[2025-03-02 11:29:35] mv generate_enhanced_video.sh generate_enhanced_video.py,True,True,False,False,False,False,False,False,False,False,False",3.1166666666666667,Other
+19713,2025-03-07 11:47:21,"[2025-03-07 11:47:21] ll ../vault-,True,False,False,False,False,False,False,False,False,False,False",3.1,Other
+21890,2025-03-10 06:44:59,"""[2025-03-10 06:44:59] for script in ~/claude-bazinga-fixed.sh ~/bazinga-claude-connector.sh              ~/AmsyPycharm/claude-bazinga-mac.sh ~/AmsyPycharm/claude_android.sh; do   if [[ -f """"$script"""" ]]; then     echo """"  ✓ $script"""";   else     echo """"  ✗ $script (not found)"""";   fi; done"",True,False,False,False,False,False,False,False,False,False,False",3.1,Other
+15149,2025-02-28 12:13:24,"[2025-02-28 12:13:24] ll frontend/,True,False,False,False,False,False,False,False,False,False,False",3.1,Other
+8394,2025-02-21 10:12:20,"""[2025-02-21 10:12:20] """"scripts"""": {"",True,False,False,False,False,False,False,False,False,False,False",3.1,Other
+14851,2025-03-02 06:56:14,"[2025-03-02 06:56:14] # Create the scripts in ~/bin,True,False,False,False,False,False,False,False,False,False,False",3.1,Other
+19460,2025-03-05 05:15:09,"[2025-03-05 05:15:09] cd ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",3.0833333333333335,Other
+19564,2025-03-06 04:47:22,"[2025-03-06 04:47:22] vault login,True,False,False,False,False,False,False,False,False,False,False",3.0833333333333335,Other
+20229,2025-03-08 04:10:31,"[2025-03-08 04:10:31] cd AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",3.0833333333333335,Other
+9627,2025-02-22 16:06:36,"[2025-02-22 16:06:36] bash,True,False,False,False,False,False,False,False,False,False,False",3.066666666666667,Other
+4125,2025-02-16 08:40:34,"""[2025-02-16 08:40:34] echo """"✓ Enhanced animations"""""",True,False,False,False,False,False,False,False,False,False,False",3.05,Other
+22388,2025-03-12 12:46:01,"""[2025-03-12 12:46:01] history | grep -E '(→|∞|\[.*\]|essence|flow)' > """"$OUTPUT_DIR/symbolic_patterns.txt"""""",True,False,False,False,False,False,False,False,True,False,False",3.05,Other
+19205,2025-03-04 16:15:53,"[2025-03-04 16:15:53] exec bash,True,False,False,False,False,False,False,False,False,False,False",3.05,Other
+20892,2025-03-08 17:47:31,"[2025-03-08 17:47:31] cd ~/AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",3.0166666666666666,Other
+21245,2025-03-10 07:51:56,"[2025-03-10 07:51:56] ..,True,False,False,False,False,False,False,False,False,False,False",3.0166666666666666,Other
+8904,2025-02-22 12:59:29,"[2025-02-22 12:59:29] cat amu.sh,True,False,False,False,False,False,False,False,False,False,False",3.0166666666666666,Other
+19896,2025-03-07 21:29:16,"[2025-03-07 21:29:16] cleanup,True,False,False,False,False,False,False,False,False,False,False",3.0,Other
+19477,2025-03-05 06:02:30,"[2025-03-05 06:02:30] cd BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",2.9833333333333334,Other
+14009,2025-02-25 15:45:22,"[2025-02-25 15:45:22] bazinga healingspace status,True,False,False,False,False,False,False,False,False,False,False",2.9833333333333334,Other
+12288,2025-02-25 12:26:25,"[2025-02-25 12:26:25] ls -lr  ~/AmsyPycharm/BAZINGA-INDEED/data/clear,True,True,False,False,False,False,False,False,False,False,False",2.9833333333333334,Other
+14759,2025-03-02 11:42:08,"[2025-03-02 11:42:08] sudo pkill Zscaler,True,False,False,False,False,False,False,False,False,False,False",2.966666666666667,Other
+16772,2025-03-03 01:18:29,"[2025-03-03 01:18:29] touch fix-office-system.sh,True,True,False,False,False,False,False,False,False,False,False",2.966666666666667,Other
+7628,2025-02-21 10:01:16,"[2025-02-21 10:01:16] npm install -D tailwindcss postcss autoprefixer,True,False,False,True,False,False,False,False,False,False,False",2.966666666666667,Other
+9440,2025-02-22 15:25:42,"""[2025-02-22 15:25:42] history | awk -v date=""""$(date -v-1H '+%Y-%m-%d %H')"""" '$2 """" """" $3 >= date'"",True,False,False,False,False,False,False,False,True,False,False",2.966666666666667,Other
+19150,2025-03-04 11:49:48,"[2025-03-04 11:49:48] grep 'export BAZINGA_ROOT' ~/.bashrc,True,False,False,False,False,False,False,False,True,False,False",2.966666666666667,Other
+22553,2025-03-13 11:27:35,"[2025-03-13 11:27:35] vi ~/kubefed-argocd-migrate.sh,True,False,False,False,False,False,False,False,False,False,False",2.966666666666667,Other
+6718,2025-02-21 07:39:20,"[2025-02-21 07:39:20] cat > src/components/Visual/LotusPath.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",2.95,Other
+7609,2025-02-21 09:15:26,"[2025-02-21 09:15:26] # 2. Check export in Visual components,True,False,False,False,False,False,False,False,False,False,False",2.95,Other
+22109,2025-03-10 13:51:45,"[2025-03-10 13:51:45] vi vault-security-toolkit/scripts/,True,False,False,False,False,False,False,False,False,False,False",2.933333333333333,Other
+6608,2025-02-21 07:36:23,"[2025-02-21 07:36:23] # 1. First check and show all current files,True,False,False,False,False,False,False,False,False,False,False",2.933333333333333,Other
+22428,2025-03-11 10:45:50,"[2025-03-11 10:45:50] ..,True,False,False,False,False,False,False,False,False,False,False",2.9166666666666665,Other
+19816,2025-03-07 14:15:38,"[2025-03-07 14:15:38] vi ~/bin/tools-project-cleanup.sh,True,False,False,False,False,False,False,False,False,False,False",2.9166666666666665,Other
+22368,2025-03-12 12:38:26,"[2025-03-12 12:38:26] bazinga,True,False,False,False,False,False,False,False,False,False,False",2.9166666666666665,Other
+19586,2025-03-06 05:04:01,"[2025-03-06 05:04:01] vault login,True,False,False,False,False,False,False,False,False,False,False",2.9166666666666665,Other
+22364,2025-03-12 12:33:25,"""[2025-03-12 12:33:25] echo """"5. Exit"""""",True,False,False,False,False,False,False,False,False,False,False",2.9166666666666665,Other
+3566,2025-02-15 22:33:52,"""[2025-02-15 22:33:52] if pgrep -f """"react-scripts start"""" > /dev/null; then     echo """"Restarting development server..."""";     pkill -f """"react-scripts start"""";     npm start & fi"",True,False,False,False,False,False,False,False,False,False,False",2.9,Other
+21805,2025-03-08 19:53:25,"[2025-03-08 19:53:25] rm bazinga_explore_fixed.py,True,True,False,False,False,False,False,False,False,False,False",2.8833333333333333,Other
+12202,2025-02-25 12:06:10,"[2025-02-25 12:06:10] ..,True,False,False,False,False,False,False,False,False,False,False",2.8833333333333333,Other
+12302,2025-02-22 19:33:19,"[2025-02-22 19:33:19] # 4. In new terminal - Start frontend,True,False,False,False,False,False,False,False,False,False,False",2.8666666666666667,Other
+20758,2025-03-07 16:28:20,"[2025-03-07 16:28:20] ..,True,False,False,False,False,False,False,False,False,False,False",2.8666666666666667,Other
+19483,2025-03-05 05:58:08,"""[2025-03-05 05:58:08] find . -type f -mmin -15 | grep -v """"node_modules"""" | grep -v """".git"""" | sort -r"",True,True,False,False,False,False,False,False,True,False,False",2.8666666666666667,Other
+14007,2025-02-25 15:42:18,"[2025-02-25 15:42:18] ll ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",2.8666666666666667,Other
+9113,2025-02-22 15:03:50,"[2025-02-22 15:03:50] ls ~/AmsyPycharm/workspace,True,True,False,False,False,False,False,False,False,False,False",2.85,Other
+22002,2025-03-10 10:24:23,"[2025-03-10 10:24:23] cd ..,True,False,False,False,False,False,False,False,False,False,False",2.85,Other
+19864,2025-03-07 20:34:10,"[2025-03-07 20:34:10] # Make the script executable,True,False,False,False,False,False,False,False,False,False,False",2.85,Other
+19280,2025-03-05 05:34:58,"[2025-03-05 05:34:58] tree -L3,True,False,False,False,False,False,False,False,False,False,False",2.85,Other
+3031,2025-02-15 21:19:49,"[2025-02-15 21:19:49] # npm audit report,True,False,False,False,False,False,False,False,False,False,False",2.8333333333333335,Other
+16218,2025-03-01 02:20:16,"[2025-03-01 02:20:16] function processFiles() {   let totalFixed = 0;      dirs.forEach(dir => {,True,False,False,False,False,False,False,False,False,False,False",2.8333333333333335,Other
+15260,2025-03-01 01:17:59,"[2025-03-01 01:17:59] touch fix-thought-processor.sh,True,True,False,False,False,False,False,False,False,False,False",2.8333333333333335,Other
+19297,2025-03-05 07:40:46,"[2025-03-05 07:40:46] bash,True,False,False,False,False,False,False,False,False,False,False",2.8333333333333335,Other
+18550,2025-03-04 05:08:57,"""[2025-03-04 05:08:57] sudo log stream --predicate 'subsystem == """"com.apple.security""""' --info"",True,False,False,False,False,False,False,False,False,False,False",2.816666666666667,Other
+14591,2025-03-02 10:51:37,"[2025-03-02 10:51:37] ls script,True,True,False,False,False,False,False,False,False,False,False",2.8,Other
+19956,2025-03-08 03:59:43,"[2025-03-08 03:59:43] treeclean -L5,True,False,False,False,False,False,False,False,False,False,False",2.8,Other
+21406,2025-03-08 18:28:38,"[2025-03-08 18:28:38] bash,True,False,False,False,False,False,False,False,False,False,False",2.8,Other
+13998,2025-02-25 14:58:53,"[2025-02-25 14:58:53] source ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",2.8,Other
+9112,2025-02-22 15:00:41,"[2025-02-22 15:00:41] python3 src/server.py,True,False,False,False,False,True,False,False,False,False,False",2.8,Other
+19397,2025-03-05 08:38:51,"[2025-03-05 08:38:51] chmod +x workspace-analyser.sh,True,False,False,False,False,False,False,False,False,False,False",2.783333333333333,Other
+9584,2025-02-22 16:02:42,"[2025-02-22 16:02:42] bash,True,False,False,False,False,False,False,False,False,False,False",2.783333333333333,Other
+11102,2025-02-22 19:08:59,"[2025-02-22 19:08:59] bash,True,False,False,False,False,False,False,False,False,False,False",2.783333333333333,Other
+9091,2025-02-22 14:02:09,"[2025-02-22 14:02:09] cd office-frontend,True,False,False,False,False,False,False,False,False,False,False",2.7666666666666666,Other
+13713,2025-03-01 21:08:30,"[2025-03-01 21:08:30] bash,True,False,False,False,False,False,False,False,False,False,False",2.7666666666666666,Other
+7365,2025-02-21 08:45:58,"""[2025-02-21 08:45:58] find . -type f -name """"*.js"""" ! -path """"*/node_modules/*"""""",True,True,False,False,False,False,False,False,True,False,False",2.75,Other
+14398,2025-03-02 02:10:33,"[2025-03-02 02:10:33] ls -lh /Users/abhissrivasta/WorkforceOS/fresh_venv/lib/python3.13/site-packages/moviepy/,True,True,False,False,False,True,False,False,False,False,False",2.75,Other
+11990,2025-02-25 11:38:38,"[2025-02-25 11:38:38] ps aux | grep python,True,False,False,False,False,True,False,False,True,False,False",2.75,Other
+22288,2025-03-11 10:17:15,"[2025-03-11 10:17:15] chnod +x /Users/abhissrivasta/GolandProjects/certificate-notification-system-design/architecture-analysis-script.sh,True,False,False,False,False,False,False,False,False,False,False",2.75,Other
+11211,2025-02-22 23:20:35,"[2025-02-22 23:20:35] sudo iostat -d -w 1,True,False,False,False,False,False,False,False,False,False,False",2.7333333333333334,Other
+20167,2025-03-08 06:50:46,"[2025-03-08 06:50:46] # Install Google Identity library,True,False,False,False,False,False,False,False,False,False,False",2.7333333333333334,Other
+20590,2025-03-08 12:27:51,"""[2025-03-08 12:27:51] # Or manually edit tsconfig.json and add """"noImplicitAny"""": false"",True,False,False,False,False,False,False,False,False,False,False",2.7333333333333334,Other
+5462,2025-02-21 04:29:47,"[2025-02-21 04:29:47] git log,True,False,False,False,False,False,False,False,False,False,False",2.7333333333333334,Other
+20406,2025-03-08 07:38:43,"[2025-03-08 07:38:43] vi install_dodo.sh,True,False,False,False,False,False,False,False,False,False,False",2.7333333333333334,Other
+20788,2025-03-07 14:31:16,"[2025-03-07 14:31:16] # Create a temporary cleanup script,True,False,False,False,False,False,False,False,False,False,False",2.716666666666667,Other
+8214,2025-02-21 08:57:29,"[2025-02-21 08:57:29] # Check Node.js and npm versions,True,False,False,False,False,False,False,False,False,False,False",2.716666666666667,Other
+20297,2025-03-08 11:49:25,"[2025-03-08 11:49:25] # Create necessary directories,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+14984,2025-03-02 10:55:31,"[2025-03-02 10:55:31] deactivate,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+14411,2025-03-02 02:19:33,"[2025-03-02 02:19:33] file assets/backgrounds/blue_bg.jpg,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+20961,2025-03-08 19:18:29,"[2025-03-08 19:18:29] node src/tools/analyze.js --input ./data/relationship.json --output ./output --type relationship,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+8602,2025-02-21 21:34:03,"[2025-02-21 21:34:03] git diff --stat,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+20916,2025-03-10 05:20:59,"""[2025-03-10 05:20:59] echo """"Claude data extraction completed. Check ~/claude_data/"""""",True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+9916,2025-02-22 17:11:38,"[2025-02-22 17:11:38] # 3. Resta,True,False,False,False,False,False,False,False,False,False,False",2.7,Other
+16771,2025-03-03 01:15:31,"[2025-03-03 01:15:31] pip install fastapi python-multipart uvicorn aiofiles python-magic,True,False,False,True,False,True,False,False,False,False,False",2.683333333333333,Other
+18581,2025-02-21 11:01:42,"[2025-02-21 11:01:42] tree -L3,True,False,False,False,False,False,False,False,False,False,False",2.683333333333333,Other
+19926,2025-03-07 21:08:55,"[2025-03-07 21:08:55] # Make sure you're in your virtual environment,True,False,False,False,False,False,False,False,False,False,False",2.683333333333333,Other
+20294,2025-03-08 11:46:03,"[2025-03-08 11:46:03] npx create-react-app . --template typescript,True,False,False,False,False,False,False,False,False,False,False",2.683333333333333,Other
+21927,2025-03-08 20:51:32,"[2025-03-08 20:51:32] vi fractal_artifacts_integration.py,True,False,False,False,False,False,False,False,False,False,False",2.6666666666666665,Other
+20775,2025-03-07 16:19:50,"[2025-03-07 16:19:50] rm -rf vault/website vault/ui,True,True,False,False,False,False,False,False,False,False,False",2.6666666666666665,Other
+958,2025-02-21 00:33:18,"[2025-02-21 00:33:18] cd /Users/abhissrivasta/AmsyPycharm/dodo-visual,True,False,False,False,False,False,False,False,False,False,False",2.65,Other
+21674,2025-03-10 05:42:12,"[2025-03-10 05:42:12] # OR if you need to use the virtualenv:,True,False,False,False,False,False,False,False,False,False,False",2.65,Other
+18703,2025-03-03 04:49:50,"""[2025-03-03 04:49:50] git commit -m """"wip"""""",True,False,True,False,False,False,False,False,False,False,False",2.65,Other
+18539,2025-03-02 12:33:39,"[2025-03-02 12:33:39] gcloud auth login,True,False,False,False,False,False,False,False,False,False,False",2.65,Other
+4348,2025-02-16 09:08:29,"[2025-02-16 09:08:29] };,True,False,False,False,False,False,False,False,False,False,False",2.6166666666666667,Other
+21845,2025-03-10 06:15:42,"[2025-03-10 06:15:42] cat > ~/claude_chrome_fix.sh << 'EOF',True,False,False,False,False,False,False,False,False,False,False",2.6166666666666667,Other
+7060,2025-02-21 08:12:17,"[2025-02-21 08:12:17] ./manager.sh,True,False,False,False,False,False,False,False,False,False,False",2.6166666666666667,Other
+13772,2025-03-02 02:37:39,"[2025-03-02 02:37:39] deactivate,True,False,False,False,False,False,False,False,False,False,False",2.6166666666666667,Other
+2611,2025-02-15 19:49:11,"[2025-02-15 19:49:11] # Add constants,True,False,False,False,False,False,False,False,False,False,False",2.5833333333333335,Other
+20280,2025-03-08 11:42:56,"[2025-03-08 11:42:56] mkdir -p /Users/abhissrivasta/AmsyPycharm/news-app,True,True,False,False,False,False,False,False,False,False,False",2.5833333333333335,Other
+19959,2025-03-08 04:03:41,"[2025-03-08 04:03:41] pip install pandas,True,False,False,True,False,True,False,False,False,False,False",2.566666666666667,Other
+21393,2025-03-10 02:35:35,"[2025-03-10 02:35:35] cd ~/AmsyPycharm/BAZINGA,True,False,False,False,False,False,False,False,False,False,False",2.566666666666667,Other
+8701,2025-02-21 20:58:57,"[2025-02-21 20:58:57] cd healing-space-new,True,False,False,False,False,False,False,False,False,False,False",2.566666666666667,Other
+20738,2025-03-07 15:35:19,"[2025-03-07 15:35:19] ll _r,True,False,False,False,False,False,False,False,False,False,False",2.566666666666667,Other
+15251,2025-03-01 00:57:50,"[2025-03-01 00:57:50] git init,True,False,False,False,False,False,False,False,False,False,False",2.566666666666667,Other
+19323,2025-03-05 07:37:46,"[2025-03-05 07:37:46] cd ../Downloads/,True,False,False,False,False,False,False,False,False,False,False",2.566666666666667,Other
+19946,2025-03-08 03:53:34,"[2025-03-08 03:53:34] echo '{,True,False,False,False,False,False,False,False,False,False,False",2.55,Other
+9970,2025-02-22 17:30:57,"[2025-02-22 17:30:57] # Analytics system,True,False,False,False,False,False,False,False,False,False,False",2.55,Other
+9770,2025-02-22 17:14:22,"[2025-02-22 17:14:22] bash,True,False,False,False,False,False,False,False,False,False,False",2.55,Other
+8887,2025-02-21 21:02:50,"[2025-02-21 21:02:50] cleaera,True,False,False,False,False,False,False,False,False,False,False",2.533333333333333,Other
+70,2025-02-15 21:40:28,"[2025-02-15 21:40:28] npm run build,True,False,False,False,False,False,False,False,False,False,False",2.533333333333333,Other
+16375,2025-03-01 03:20:49,"""[2025-03-01 03:20:49] echo -e """"${YELLOW}Starting to fix React component issues...${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",2.5166666666666666,Other
+15582,2025-03-02 08:14:49,"[2025-03-02 08:14:49] netlify deploy --prod,True,False,False,False,False,False,False,False,False,False,False",2.5166666666666666,Other
+18280,2025-03-02 08:56:31,"[2025-03-02 08:56:31] sed -i '' 's|https://thought-process-backend.netlify.app|https://thought-process.netlify.app/.netlify/functions/api|g' frontend/src/utils/api.js,True,False,False,False,False,False,False,False,True,False,False",2.5166666666666666,Other
+19399,2025-03-05 09:07:40,"[2025-03-05 09:07:40] cd AmsyPycharm/BAZINGA-INDEED/,True,False,False,False,False,False,False,False,False,False,False",2.5,Other
+21161,2025-03-10 05:01:39,"[2025-03-10 05:01:39] cat > claude-bazinga-mac.sh << 'ENDSCRIPT',True,False,False,False,False,False,False,False,False,False,False",2.4833333333333334,Other
+7651,2025-02-21 10:36:25,"[2025-02-21 10:36:25] xexport NODE_OPTIONS=--openssl-legacy-provider,True,False,False,False,False,False,False,False,False,False,False",2.4833333333333334,Other
+19129,2025-02-21 11:04:10,"[2025-02-21 11:04:10] ytree,True,False,False,False,False,False,False,False,False,False,False",2.466666666666667,Other
+11359,2025-02-22 17:39:35,"[2025-02-22 17:39:35] yree,True,False,False,False,False,False,False,False,False,False,False",2.466666666666667,Other
+20931,2025-03-07 14:57:08,"[2025-03-07 14:57:08] mkdir -p /Users/abhissrivasta/GolandProjects/eg-internal/vault-security-toolkit,True,True,False,False,False,False,False,False,False,False,False",2.45,Other
+9033,2025-02-22 14:44:19,"[2025-02-22 14:44:19] # Go to workspace,True,False,False,False,False,False,False,False,False,False,False",2.45,Other
+19593,2025-03-06 03:54:53,"[2025-03-06 03:54:53] projstat,True,False,False,False,False,False,False,False,False,False,False",2.45,Other
+16953,2025-03-03 01:23:39,"[2025-03-03 01:23:39] pip install pandas fastapi uvicorn websockets python-multipart psutil,True,False,False,True,False,True,False,False,False,False,False",2.45,Other
+19891,2025-03-07 21:25:10,"[2025-03-07 21:25:10] vi debug_analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",2.433333333333333,Other
+18659,2025-03-02 09:06:07,"""[2025-03-02 09:06:07] grep -r """"mongoose.connect"""" ."",True,False,False,False,False,False,False,False,True,False,False",2.433333333333333,Other
+20373,2025-03-08 04:15:37,"[2025-03-08 04:15:37] vi generate_dashboard.py,True,False,False,False,False,False,False,False,False,False,False",2.433333333333333,Other
+6818,2025-02-21 07:46:26,"[2025-02-21 07:46:26] cleare,True,False,False,False,False,False,False,False,False,False,False",2.433333333333333,Other
+20549,2025-03-08 11:59:14,"[2025-03-08 11:59:14] # Set Node to use the legacy OpenSSL provider,True,False,False,False,False,False,False,False,False,False,False",2.433333333333333,Other
+21352,2025-03-09 14:38:05,"[2025-03-09 14:38:05] treeclean,True,False,False,False,False,False,False,False,False,False,False",2.433333333333333,Other
+22603,2025-03-13 10:22:36,"[2025-03-13 10:22:36] cat > ~/migration-files/federated-vault-monitoring/values/values.yaml << 'EOF',True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+15403,2025-03-02 08:49:45,"""[2025-03-02 08:49:45] netlify env:set MONGODB_URI """"mongodb+srv://bitsabhi:bnPFG1Llu6vjWzB4@cluster0.yeabr.mongodb.net/thought-processor?retryWrites=true&w=majority"""" --scope runtime"",True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+13880,2025-02-25 17:00:03,"[2025-02-25 17:00:03] bash,True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+21727,2025-03-10 06:09:14,"""[2025-03-10 06:09:14] if [[ -f ~/claude_data/claude_integration_code.txt ]]; then   echo """"  Integration code: $(wc -l < ~/claude_data/claude_integration_code.txt 2>/dev/null || echo 0)""""; fi"",True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+20786,2025-03-07 14:18:52,"[2025-03-07 14:18:52] ~/bin/project-analyzer.sh --all /Users/abhissrivasta/GolandProjects/tools,True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+257,2025-02-19 15:50:23,"[2025-02-19 15:50:23] #!/bin/bash,True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+13838,2025-03-01 00:02:18,"[2025-03-01 00:02:18] touch project-stats.sh,True,True,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+21523,2025-03-10 08:00:21,"""[2025-03-10 08:00:21] # First, identify the exact file containing BazingaUniversalTool"",True,False,False,False,False,False,False,False,False,False,False",2.4166666666666665,Other
+1339,2025-02-21 00:54:29,"[2025-02-21 00:54:29] lll,True,False,False,False,False,False,False,False,False,False,False",2.4,Other
+19568,2025-03-06 04:51:23,"[2025-03-06 04:51:23] cat ~/.aws/credentials,True,False,False,False,False,False,False,False,False,False,False",2.4,Other
+6448,2025-02-21 07:29:00,"[2025-02-21 07:29:00] cat audioManager.js,True,False,False,False,False,False,False,False,False,False,False",2.4,Other
+15401,2025-03-02 08:44:06,"[2025-03-02 08:44:06] # Open the Netlify site settings in your browser,True,False,False,False,False,False,False,False,False,False,False",2.4,Other
+20969,2025-03-08 20:56:05,"""[2025-03-08 20:56:05] TEMPLATE_FILE=$(find . -name """"TemplateBindingSystem.html"""")"",True,True,False,False,False,False,False,False,True,False,False",2.3833333333333333,Other
+19965,2025-03-08 04:07:26,"[2025-03-08 04:07:26] ./relationship-analyzer.py --config minimal-config.json --skip-bazinga --skip-quantum,True,False,False,False,False,False,False,False,False,False,False",2.3833333333333333,Other
+9148,2025-02-22 13:14:48,"[2025-02-22 13:14:48] l,True,False,False,False,False,False,False,False,False,False,False",2.3666666666666667,Other
+20180,2025-03-08 06:37:35,"[2025-03-08 06:37:35] cd ~/PycharmProjects/prism-landing/,True,False,False,False,False,False,False,False,False,False,False",2.35,Other
+15595,2025-02-25 10:59:58,"[2025-02-25 10:59:58] # Get all top-level directories in AmsyPycharm (excluding BAZINGA-INDEED itself),True,False,False,False,False,False,False,False,False,False,True",2.35,Other
+14116,2025-03-01 21:05:39,"[2025-03-01 21:05:39],True,False,False,False,False,False,False,False,False,False,False",2.3333333333333335,Other
+11256,2025-02-22 18:07:44,"[2025-02-22 18:07:44] rm -rf backup/,True,True,False,False,False,False,False,False,False,False,False",2.316666666666667,Other
+2961,2025-02-15 21:14:50,"[2025-02-15 21:14:50] npm audit fix --force,True,False,False,False,False,False,False,False,False,False,False",2.316666666666667,Other
+19880,2025-03-07 21:01:37,"[2025-03-07 21:01:37] chmod +x setup_enhancements.sh,True,False,False,False,False,False,False,False,False,False,False",2.316666666666667,Other
+18678,2025-02-25 16:19:01,"[2025-02-25 16:19:01] bazinga chat process,True,False,False,False,False,False,False,False,False,False,False",2.316666666666667,Other
+14709,2025-03-02 11:36:13,"""[2025-03-02 11:36:13] sed -i '' '13,15s/from moviepy.editor import \*/import moviepy\nimport moviepy.editor as mp\nfrom moviepy.video.fx import fadeout, fadein/' generate_enhanced_video.py"",True,False,False,False,False,False,False,False,True,False,False",2.316666666666667,Other
+19488,2025-03-05 06:04:56,"[2025-03-05 06:04:56] chmod +x src/generators/output/formatTransformer/format-converter.sh,True,False,False,False,False,False,False,False,False,False,False",2.316666666666667,Other
+8571,2025-02-21 21:29:03,"""[2025-02-21 21:29:03] find src -name """"*.js"""" -exec sed -i '' '1{/import React from/d;}' {} \;"",True,True,False,False,False,False,False,False,True,False,False",2.3,Other
+14339,2025-03-01 21:44:42,"[2025-03-01 21:44:42] deactivate,True,False,False,False,False,False,False,False,False,False,False",2.3,Other
+14481,2025-03-02 02:49:09,"[2025-03-02 02:49:09] touch generate_video.py,True,True,False,False,False,False,False,False,False,False,False",2.3,Other
+9788,2025-02-22 17:05:32,"[2025-02-22 17:05:32] bash,True,False,False,False,False,False,False,False,False,False,False",2.3,Other
+9080,2025-02-22 15:09:03,"[2025-02-22 15:09:03] cd /Users/abhissrivasta/AmsyPycharm/office_system,True,False,False,False,False,False,False,False,False,False,False",2.3,Other
+14695,2025-03-02 11:24:25,"[2025-03-02 11:24:25] which python3.13,True,False,False,False,False,True,False,False,False,False,False",2.283333333333333,Other
+19849,2025-03-07 16:34:40,"[2025-03-07 16:34:40] rm -rf ~/GolandProjects/vault-vulnerability-report,True,True,False,False,False,False,False,False,False,False,False",2.283333333333333,Other
+4338,2025-02-16 09:02:06,"[2025-02-16 09:02:06] tree -L4 .,True,False,False,False,False,False,False,False,False,False,False",2.2666666666666666,Other
+13757,2025-03-02 02:30:21,"""[2025-03-02 02:30:21] curl -L -o assets/backgrounds/blue_bg.jpg """"https://www.publicdomainpictures.net/pictures/40000/velka/plain-blue-background.jpg"""""",True,False,False,False,True,False,False,False,False,False,False",2.2666666666666666,Other
+19456,2025-03-05 08:02:33,"[2025-03-05 08:02:33] find ~/AmsyPycharm /Users/abhissrivasta/Downloads ~/Documents/Abhiamu -type f -exec md5 {} + | sort | uniq -D -w32,True,True,False,False,False,False,False,False,True,False,False",2.2666666666666666,Other
+1799,2025-02-16 08:45:31,"[2025-02-16 08:45:31] cat src/pages/Home.jsx | pbcopy,True,False,False,False,False,False,False,False,False,False,False",2.2666666666666666,Other
+14704,2025-03-02 11:31:51,"[2025-03-02 11:31:51] ls -l $HOME/.config/gcloud/application_default_credentials.json,True,True,False,False,False,False,False,False,False,False,False",2.2666666666666666,Other
+18116,2025-03-02 21:33:40,"[2025-03-02 21:33:40] ll src/,True,False,False,False,False,False,False,False,False,False,False",2.2666666666666666,Other
+21631,2025-03-10 09:21:47,"[2025-03-10 09:21:47] cpwd,True,False,False,False,False,False,False,False,False,False,False",2.2666666666666666,Other
+11329,2025-02-22 16:48:54,"""[2025-02-22 16:48:54] version = """"0.1.0"""""",True,False,False,False,False,False,False,False,False,False,False",2.25,Other
+18569,2025-03-04 04:54:50,"[2025-03-04 04:54:50] brew install pstree strace coreutils,True,False,False,True,False,False,False,False,False,False,False",2.25,Other
+9523,2025-02-22 15:55:52,"[2025-02-22 15:55:52] cd /Users/abhissrivasta/AmsyPycharm/office_system,True,False,False,False,False,False,False,False,False,False,False",2.2333333333333334,Other
+18120,2025-03-03 01:09:13,"[2025-03-03 01:09:13] cd src/frontend/,True,False,False,False,False,False,False,False,False,False,False",2.2333333333333334,Other
+14192,2025-03-01 03:49:21,"""[2025-03-01 03:49:21] sed -i.bak 's/const \[insights, setInsights\] = useState()/const [insights, setInsights] = useState([])/' src/context/AppContext.jsx"",True,False,False,False,False,False,False,False,True,False,False",2.2333333333333334,Other
+22022,2025-03-10 10:27:45,"[2025-03-10 10:27:45] # Find root go.mod,True,True,False,False,False,False,False,False,True,False,False",2.2333333333333334,Other
+13201,2025-02-25 14:46:12,"[2025-02-25 14:46:12] bazinga patterns | grep healingspace,True,False,False,False,False,False,False,False,True,False,False",2.216666666666667,Other
+21592,2025-03-10 08:57:01,"""[2025-03-10 08:57:01] grep -r """"class BazingaUniversalTool"""" ."",True,False,False,False,False,False,False,False,True,False,False",2.216666666666667,Other
+18372,2025-03-03 03:39:10,"[2025-03-03 03:39:10] git add .,True,False,True,False,False,False,False,False,False,False,False",2.2,Other
+21529,2025-03-10 08:08:29,"[2025-03-10 08:08:29] ~/claude-bazinga-fixed.sh,True,False,False,False,False,False,False,False,False,False,False",2.2,Other
+7257,2025-02-21 08:32:13,"[2025-02-21 08:32:13] cat > src/components/Visual/RoseHeart.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",2.2,Other
+7215,2025-02-21 08:29:33,"[2025-02-21 08:29:33] cat src/components/Visual/RoseHeart.js >> src/components/Visual/RoseHeart.js.tmp,True,False,False,False,False,False,False,False,False,False,False",2.2,Other
+19072,2025-03-03 06:01:49,"[2025-03-03 06:01:49] gb,True,False,False,False,False,False,False,False,False,False,False",2.2,Other
+1340,2025-02-21 00:56:41,"[2025-02-21 00:56:41] llclear,True,False,False,False,False,False,False,False,False,False,False",2.2,Other
+18654,2025-03-02 09:01:44,"[2025-03-02 09:01:44] cd backend/,True,False,False,False,False,False,False,False,False,False,False",2.183333333333333,Other
+18725,2025-03-03 05:19:31,"[2025-03-03 05:19:31] mkdir -p src/frontend/src/services,True,True,False,False,False,False,False,False,False,False,False",2.1666666666666665,Other
+19093,2025-03-03 05:24:41,"[2025-03-03 05:24:41] ..,True,False,False,False,False,False,False,False,False,False,False",2.1666666666666665,Other
+8922,2025-02-21 03:31:25,"[2025-02-21 03:31:25] cd public/,True,False,False,False,False,False,False,False,False,False,False",2.1666666666666665,Other
+16479,2025-03-01 03:24:05,"""[2025-03-01 03:24:05] echo -e """"${YELLOW}Cleaning up and fixing React components...${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",2.1666666666666665,Other
+14057,2025-02-23 07:44:33,"""[2025-02-23 07:44:33] curl -X POST -F """"file=@chat_export.txt"""" http://localhost:5000/analyze"",True,False,False,False,True,False,False,False,False,False,False",2.1666666666666665,Other
+20605,2025-03-08 12:52:06,"[2025-03-08 12:52:06] git init,True,False,False,False,False,False,False,False,False,False,False",2.1666666666666665,Other
+8404,2025-02-21 10:18:44,"[2025-02-21 10:18:44] npm install webpack@4.29.6 --save-dev,True,False,False,True,False,False,False,False,False,False,False",2.15,Other
+3382,2025-02-15 21:44:34,"[2025-02-15 21:44:34] npm install --save   @testing-library/jest-dom@latest   @testing-library/react@latest   @testing-library/user-event@latest   framer-motion@latest   lucide-react@latest   react@latest   react-dom@latest   react-scripts@latest   web-vitals@latest,True,False,False,True,False,False,False,False,False,False,False",2.15,Other
+12179,2025-02-25 06:24:36,"[2025-02-25 06:24:36] cat > ~/workspace/BAZINGA/chat-coordination.md << 'EOF',True,False,False,False,False,False,False,False,False,False,False",2.15,Other
+15998,2025-03-01 01:46:43,"[2025-03-01 01:46:43] mkdir -p backups,True,True,False,False,False,False,False,False,False,False,False",2.15,Other
+11981,2025-02-25 11:29:41,"[2025-02-25 11:29:41] pkill wdavdaemon,True,False,False,False,False,False,False,False,False,False,False",2.15,Other
+20300,2025-03-08 11:51:33,"[2025-03-08 11:51:33] # Create a Node.js script to parse and extract components,True,False,False,False,False,False,False,False,False,False,False",2.1333333333333333,Other
+9732,2025-02-22 16:43:02,"[2025-02-22 16:43:02] pip install -e .,True,False,False,True,False,True,False,False,False,False,False",2.1333333333333333,Other
+22110,2025-03-10 13:53:53,"[2025-03-10 13:53:53] cd vault-security-toolkit/,True,False,False,False,False,False,False,False,False,False,False",2.1333333333333333,Other
+16264,2025-03-01 02:50:20,"[2025-03-01 02:50:20] HISTORY_END=$((HISTORY_END - 1)),True,False,False,False,False,False,False,False,False,False,False",2.1333333333333333,Other
+14859,2025-03-02 07:01:45,"[2025-03-02 07:01:45] proj,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+21641,2025-03-10 09:36:07,"[2025-03-10 09:36:07] cd analy,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+14677,2025-03-02 11:17:25,"""[2025-03-02 11:17:25] python -c """"from google.cloud import texttospeech; print('Google Cloud TTS works\'npm start')"""""",True,False,False,False,False,True,False,False,False,False,False",2.1166666666666667,Other
+21402,2025-03-10 10:06:56,"[2025-03-10 10:06:56] bash,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+18177,2025-02-25 15:27:40,"[2025-02-25 15:27:40] bazinga healingspace,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+22437,2025-03-12 03:57:33,"[2025-03-12 03:57:33] bazinga oveerview,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+3032,2025-02-15 21:21:56,"[2025-02-15 21:21:56] rm -rf node_modules package-lock.json .next,True,True,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+254,2025-02-19 15:45:36,"[2025-02-19 15:45:36] touch am.sh,True,True,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+19521,2025-03-07 12:32:08,"[2025-03-07 12:32:08] tree -L4,True,False,False,False,False,False,False,False,False,False,False",2.1166666666666667,Other
+21331,2025-03-08 21:15:31,"[2025-03-08 21:15:31] treec-L3,True,False,False,False,False,False,False,False,False,False,False",2.1,Other
+20249,2025-03-08 10:01:02,"[2025-03-08 10:01:02] head -n 5 filename.csv,True,False,False,False,False,False,False,False,False,False,False",2.1,Other
+14020,2025-02-23 06:31:09,"[2025-02-23 06:31:09] vi scripts/comprehensive_analysis.py,True,False,False,False,False,False,False,False,False,False,False",2.1,Other
+13393,2025-03-01 01:51:54,"""[2025-03-01 01:51:54] fix_syntax_error() {   local file=$1;   echo -e """"${YELLOW}Fixing ${file}...${NC}"""";"",True,False,False,False,False,False,False,False,False,False,False",2.1,Other
+4129,2025-02-16 08:42:39,"[2025-02-16 08:42:39] # Update ShayariDisplay.js to fix animation issues,True,False,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+14822,2025-03-02 06:45:28,"[2025-03-02 06:45:28] ls prostats.sh,True,True,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+20755,2025-03-07 14:59:32,"[2025-03-07 14:59:32] cat > /Users/abhissrivasta/GolandProjects/tools/security/README.md << 'EOF',True,False,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+6045,2025-02-21 05:54:29,"[2025-02-21 05:54:29] bash,True,False,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+9326,2025-02-22 13:31:56,"[2025-02-22 13:31:56] cat > overview.txt << EOF,True,False,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+12289,2025-02-22 19:26:34,"[2025-02-22 19:26:34] bash,True,False,False,False,False,False,False,False,False,False,False",2.0833333333333335,Other
+21338,2025-03-09 13:13:57,"[2025-03-09 13:13:57] cleae,True,False,False,False,False,False,False,False,False,False,False",2.066666666666667,Other
+14012,2025-02-23 06:28:42,"[2025-02-23 06:28:42] bash,True,False,False,False,False,False,False,False,False,False,False",2.066666666666667,Other
+15120,2025-02-25 14:28:44,"""[2025-02-25 14:28:44] alias ll=""""find . -type d \( -name 'node_modules' -o -name 'dist' -o -name 'build' -o -name '.git' -o -name '__pycache__' \) -prune -o -print | ls -alFh"""""",True,True,False,False,False,False,False,False,True,False,False",2.066666666666667,Other
+12285,2025-02-25 12:22:52,"[2025-02-25 12:22:52] ll -r ~/AmsyPycharm/BAZINGA-INDEED/data/,True,False,False,False,False,False,False,False,False,False,False",2.066666666666667,Other
+21625,2025-03-10 09:17:36,"[2025-03-10 09:17:36] cd BAZINGA,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+13330,2025-03-01 01:30:53,"[2025-03-01 01:30:53] # Replace isDark prop with data-isdark attribute,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+8900,2025-02-22 12:55:31,"[2025-02-22 12:55:31] cd ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+20603,2025-03-08 12:49:53,"[2025-03-08 12:49:53] gpwdclear,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+14343,2025-03-01 21:47:57,"[2025-03-01 21:47:57] open enhanced-create-vids.sh,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+20532,2025-03-08 12:07:06,"[2025-03-08 12:07:06] # Edit the controllers.go file to fix the Order() function call,True,False,False,False,False,False,False,False,False,False,False",2.05,Other
+22565,2025-03-13 11:38:45,"[2025-03-13 11:38:45] ll ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+21277,2025-03-08 20:25:01,"[2025-03-08 20:25:01] - Vulnerability scanning tools,True,False,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+9014,2025-02-22 14:33:30,"""[2025-02-22 14:33:30] mv ~/Downloads/{dashboard.ts,websocket-service.ts,vite-config.js} artifacts-chat2/"",True,True,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+21618,2025-03-10 09:13:19,"[2025-03-10 09:13:19] ls -l /Users/abhissrivasta/AmsyPycharm/BAZINGA/,True,True,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+16714,2025-02-25 16:57:07,"[2025-02-25 16:57:07] clra,True,False,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+184,2025-02-16 08:01:07,"""[2025-02-16 08:01:07] echo """"✓ Full shayari data created"""""",True,False,False,False,False,False,False,False,False,False,False",2.033333333333333,Other
+14034,2025-02-23 06:47:52,"[2025-02-23 06:47:52] ls -la data/Your_Call_Logs__Extracted_from_Your_Side_.csv,True,True,False,False,False,False,False,False,False,False,False",2.0166666666666666,Other
+19416,2025-03-05 08:17:42,"""[2025-03-05 08:17:42] find ~/AmsyPycharm /Users/abhissrivasta/Downloads ~/Documents/Abhiamu   -type f   \( ! -path """"*/node_modules/*""""      ! -path """"*/VNV/*""""      ! -path """"*/.git/*""""      ! -path """"*/.venv/*""""      ! -path """"*/venv/*""""      ! -path """"*/whatsapp-chat-*/Whatsapp_*/*""""   \)   ! -name """"*.code""""   -print0 | xargs -0 fdupes -r -n 2>&1 | grep -v """"could not chdir"""" > ~/ChatGPT-Sucks.txt"",True,True,False,False,False,True,False,False,True,False,False",2.0166666666666666,Other
+4350,2025-02-16 09:10:30,"[2025-02-16 09:10:30] tree src/App.js,True,False,False,False,False,False,False,False,False,False,False",2.0166666666666666,Other
+21809,2025-03-08 19:58:47,"[2025-03-08 19:58:47] vi bazinga_code_generator.py,True,False,False,False,False,False,False,False,False,False,False",2.0166666666666666,Other
+15495,2025-03-02 04:00:25,"[2025-03-02 04:00:25] git branch -M main,True,False,False,False,False,False,False,False,False,False,False",2.0,Other
+6599,2025-02-21 07:31:46,"[2025-02-21 07:31:46] npm install react-router-dom lucide-react,True,False,False,True,False,False,False,False,False,False,False",2.0,Other
+19262,2025-03-05 05:32:07,"[2025-03-05 05:32:07] vi BAZINGA/bin/absyamsy.ts,True,False,False,False,False,False,False,False,False,False,False",2.0,Other
+21926,2025-03-08 20:44:27,"[2025-03-08 20:44:27] vi src/core/fractals/FractalPatternExpansion.ts,True,False,False,False,False,False,False,False,False,False,False",1.9833333333333334,Other
+21055,2025-03-10 05:36:04,"[2025-03-10 05:36:04] ./unified_timeline.py,True,False,False,False,False,False,False,False,False,False,False",1.9833333333333334,Other
+2962,2025-02-15 21:16:49,"[2025-02-15 21:16:49] npm install --save   @testing-library/jest-dom@latest   @testing-library/react@latest   @testing-library/user-event@latest   framer-motion@latest   lucide-react@latest   react@latest   react-dom@latest   react-scripts@latest   web-vitals@latest,True,False,False,True,False,False,False,False,False,False,False",1.9833333333333334,Other
+18774,2025-03-03 05:28:54,"[2025-03-03 05:28:54] # 2. Fix WorkflowStream.tsx - replace completed_at with completed,True,False,False,False,False,False,False,False,False,False,False",1.9666666666666666,Other
+15085,2025-03-02 23:54:56,"[2025-03-02 23:54:56] python3 -m venv venv,True,False,False,False,False,True,False,False,False,False,False",1.9666666666666666,Other
+21154,2025-03-10 04:57:03,"[2025-03-10 04:57:03] vi clear,True,False,False,False,False,False,False,False,False,False,False",1.9666666666666666,Other
+22424,2025-03-12 04:00:24,"[2025-03-12 04:00:24] ..,True,False,False,False,False,False,False,False,False,False,False",1.9666666666666666,Other
+16658,2025-02-25 15:07:04,"[2025-02-25 15:07:04] touch fix_bazinga_healingspace.sh,True,True,False,False,False,False,False,False,False,False,False",1.95,Other
+20116,2025-03-08 08:10:06,"[2025-03-08 08:10:06] treeclean,True,False,False,False,False,False,False,False,False,False,False",1.95,Other
+11987,2025-02-25 11:35:53,"[2025-02-25 11:35:53] launchctl bootout system /Library/LaunchDaemons/com.microsoft.wdav.daemon.plist,True,False,False,False,False,False,False,False,False,False,False",1.95,Other
+20278,2025-03-08 11:40:21,"[2025-03-08 11:40:21] cd ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",1.95,Other
+9104,2025-02-22 14:53:55,"[2025-02-22 14:53:55] ..,True,False,False,False,False,False,False,False,False,False,False",1.95,Other
+14357,2025-03-02 01:53:12,"[2025-03-02 01:53:12] python3 -m moviepy,True,False,False,False,False,True,False,False,False,False,False",1.95,Other
+53,2025-02-15 20:02:20,"[2025-02-15 20:02:20] brew services start postgresql@14,True,False,False,False,False,False,False,False,False,False,False",1.9333333333333333,Other
+9767,2025-02-22 17:03:14,"[2025-02-22 17:03:14] mkdir -p uploads data/analytics,True,True,False,False,False,False,False,False,False,False,False",1.9333333333333333,Other
+19820,2025-03-07 14:23:30,"[2025-03-07 14:23:30] history - 10,True,False,False,False,False,False,False,False,False,False,False",1.9333333333333333,Other
+19938,2025-03-07 21:21:57,"[2025-03-07 21:21:57] # Install only Flask (which was actually needed),True,False,False,False,False,False,False,False,False,False,False",1.9333333333333333,Other
+8381,2025-02-21 10:05:19,"""[2025-02-21 10:05:19] for file in $(find ./src -type f -name """"*.js"""" ! -path """"*/node_modules/*"""" -exec grep -L """"."""" {} \;); do   backup_file=""""backups/20250221_082238/$(basename $file)"""";   if [ -f """"$backup_file"""" ]; then     cp """"$backup_file"""" """"$file"""";     echo """"Restored: $file"""";   else     echo """"No backup found for: $file"""";   fi; done"",True,True,False,False,False,False,False,False,True,False,False",1.9333333333333333,Other
+22444,2025-03-12 04:37:01,"[2025-03-12 04:37:01] cd ..,True,False,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+19351,2025-03-05 17:15:10,"[2025-03-05 17:15:10] #!/bin/bash,True,False,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+19180,2025-03-04 15:49:49,"[2025-03-04 15:49:49] history | tail -100,True,False,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+20025,2025-03-08 03:51:01,"[2025-03-08 03:51:01] bash,True,False,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+19833,2025-03-07 14:27:05,"[2025-03-07 14:27:05] # View the results,True,False,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+12406,2025-02-25 12:54:49,"[2025-02-25 12:54:49] ls -la ~/AmsyPycharm/BAZINGA/,True,True,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+9156,2025-02-22 13:17:58,"[2025-02-22 13:17:58] ls artifacts-amu/,True,True,False,False,False,False,False,False,False,False,False",1.9166666666666667,Other
+21484,2025-03-08 19:55:36,"[2025-03-08 19:55:36] ll src/,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+20097,2025-03-08 08:16:41,"[2025-03-08 08:16:41] project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+20307,2025-03-08 11:54:23,"[2025-03-08 11:54:23] del.sh,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+18598,2025-02-21 04:33:41,"[2025-02-21 04:33:41] make dev,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+13082,2025-03-01 01:13:11,"[2025-03-01 01:13:11] npm install,True,False,False,True,False,False,False,False,False,False,False",1.9,Other
+18681,2025-02-25 15:52:59,"[2025-02-25 15:52:59] bazinga,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+51,2025-02-15 19:43:25,"[2025-02-15 19:43:25] bash,True,False,False,False,False,False,False,False,False,False,False",1.9,Other
+19915,2025-03-07 21:03:33,"[2025-03-07 21:03:33] python3 -m venv venv,True,False,False,False,False,True,False,False,False,False,False",1.9,Other
+19918,2025-03-07 21:05:36,"[2025-03-07 21:05:36] # Make sure you're still in your virtual environment,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+8252,2025-02-21 09:00:55,"[2025-02-21 09:00:55] cp backups/20250221_082238/Visual.js src/components/Visual/Visual.js,True,True,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+11532,2025-02-22 17:51:46,"[2025-02-22 17:51:46] sed -i '' 's/from analytics/from backend.analytics/g' src/backend/main.py,True,False,False,False,False,False,False,False,True,False,False",1.8833333333333333,Other
+15395,2025-03-02 08:38:25,"""[2025-03-02 08:38:25] netlify env:set MONGODB_URI """"mongodb+srv://bitsabhi:bnPFG1Llu6vjWzB4@cluster0.yeabr.mongodb.net/thought-processor?retryWrites=true&w=majority"""" --site thought-process-backend --scope production"",True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+21527,2025-03-10 08:06:08,"[2025-03-10 08:06:08] ../..,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+20081,2025-03-08 08:04:47,"""[2025-03-08 08:04:47] echo """"            return self.state_b"""" >> src/core/dodo/transformation.py"",True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+12238,2025-02-25 12:14:26,"[2025-02-25 12:14:26] source /Users/abhissrivasta/AmsyPycharm/office_system/venv/bin/activate,True,False,False,False,False,True,False,False,False,False,False",1.8833333333333333,Other
+20793,2025-03-07 14:37:08,"[2025-03-07 14:37:08] vi build-vault.sh,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+20801,2025-03-07 14:40:13,"[2025-03-07 14:40:13] NC='\033[0m' # No Color,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+21645,2025-03-10 09:38:29,"[2025-03-10 09:38:29] cd ..,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+19308,2025-03-05 08:08:10,"[2025-03-05 08:08:10] bash,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+22160,2025-03-12 03:49:36,"[2025-03-12 03:49:36] histort -10,True,False,False,False,False,False,False,False,False,False,False",1.8833333333333333,Other
+13657,2025-03-01 02:16:32,"""[2025-03-01 02:16:32] fix_missing_imports() {   local file=$1;   if ! grep -q """"import React"""" """"$file""""; then     echo """"🔧 Adding missing React import in $file..."""";     sed -i '' '1s/^/import React from """"react"""";\n/' """"$file"""";   fi; }"",True,False,False,False,False,False,False,False,True,False,False",1.8666666666666667,Other
+18534,2025-03-02 12:29:14,"[2025-03-02 12:29:14] rm $HOME/.config/gcloud/application_default_credentials.json,True,True,False,False,False,False,False,False,False,False,False",1.8666666666666667,Other
+11360,2025-02-22 17:41:26,"[2025-02-22 17:41:26] npm install @radix-ui/react-alert recharts lucide-react @types/react^C,True,False,False,True,False,False,False,False,False,False,False",1.85,Other
+14507,2025-03-02 02:53:51,"[2025-03-02 02:53:51] bash,True,False,False,False,False,False,False,False,False,False,False",1.85,Other
+15295,2025-03-02 08:33:13,"[2025-03-02 08:33:13] # Check your MongoDB connection code in your backend,True,False,False,False,False,False,False,False,False,False,False",1.85,Other
+493,2025-02-21 00:30:26,"[2025-02-21 00:30:26] cat > js/audio.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",1.85,Other
+1572,2025-02-21 02:15:38,"[2025-02-21 02:15:38] ollama pull mistral,True,False,False,False,False,False,False,False,False,False,False",1.85,Other
+18324,2025-03-02 09:27:31,"[2025-03-02 09:27:31] ..,True,False,False,False,False,False,False,False,False,False,False",1.85,Other
+19459,2025-03-05 05:12:04,"[2025-03-05 05:12:04] bash,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+20424,2025-03-08 14:19:51,"[2025-03-08 14:19:51] bash,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+22548,2025-03-13 11:23:36,"[2025-03-13 11:23:36] ll > lll,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+19596,2025-03-06 04:14:43,"[2025-03-06 04:14:43] ./gh-stats,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+18360,2025-03-03 02:54:55,"[2025-03-03 02:54:55] projstat,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+22367,2025-03-12 12:35:31,"[2025-03-12 12:35:31] bazinga status,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+20108,2025-03-08 08:08:08,"[2025-03-08 08:08:08] chmod +x fix_dodo_init.sh fix_dodo_system.sh fix_harmonic_framework.sh fix_integration.sh fix_states.sh fix_transformation.sh fix_trust_tracker.sh,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+19138,2025-02-21 11:19:15,"[2025-02-21 11:19:15] go run cmd/main.go,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+21199,2025-03-10 06:50:47,"[2025-03-10 06:50:47] cat ~/AmsyPycharm/BAZINGA/docs/integration_system.md | pbcopy,True,False,False,False,False,False,False,False,False,False,False",1.8333333333333333,Other
+14503,2025-03-02 03:04:20,"[2025-03-02 03:04:20] python generate_video.py,True,False,False,False,False,True,False,False,False,False,False",1.8333333333333333,Other
+12004,2025-02-25 11:47:40,"[2025-02-25 11:47:40] sudo launchctl unload -w /Library/LaunchDaemons/com.microsoft.wdav.daemon.plist,True,False,False,False,False,False,False,False,False,False,False",1.8166666666666667,Other
+8457,2025-02-21 21:14:21,"""[2025-02-21 21:14:21] # First, let's properly organize the context exports"",True,False,False,False,False,False,False,False,False,False,False",1.8166666666666667,Other
+14532,2025-03-02 03:21:23,"[2025-03-02 03:21:23] dimport pyttsx3,True,False,False,False,False,False,False,False,False,False,False",1.8166666666666667,Other
+21990,2025-03-10 10:29:35,"[2025-03-10 10:29:35] python bazinga_explore_fixed.py --target=golang-deps --create-substitute,True,False,False,False,False,True,False,False,False,False,False",1.8166666666666667,Other
+7646,2025-02-21 10:30:38,"[2025-02-21 10:30:38] touch src/styles/main.css,True,True,False,False,False,False,False,False,False,False,False",1.8166666666666667,Other
+22609,2025-03-12 16:00:44,"[2025-03-12 16:00:44] sshi,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+10687,2025-02-22 17:36:11,"[2025-02-22 17:36:11] cat > src/main.py << 'EOL',True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+22193,2025-03-12 03:45:02,"[2025-03-12 03:45:02] python3 ../BAZINGA/bazinga_code_generator.py --create-fix-script,True,False,False,False,False,True,False,False,False,False,False",1.8,Other
+14054,2025-02-23 07:42:17,"[2025-02-23 07:42:17] ls -R scripts/,True,True,False,False,False,False,False,False,False,False,False",1.8,Other
+9922,2025-02-22 17:17:57,"[2025-02-22 17:17:57] # Start the server,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+19230,2025-03-04 16:36:24,"[2025-03-04 16:36:24] source ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+18370,2025-03-03 03:35:59,"[2025-03-03 03:35:59] mv requirements.txt src/backend/,True,True,False,False,False,False,False,False,False,False,False",1.8,Other
+9643,2025-02-22 16:17:16,"[2025-02-22 16:17:16] bash,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+14843,2025-03-02 06:51:19,"[2025-03-02 06:51:19] lpwd,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+8618,2025-02-21 22:47:49,"[2025-02-21 22:47:49] #!/bin/bash,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+319,2025-02-21 01:26:45,"[2025-02-21 01:26:45] bazinga analyze --type=transfer,True,False,False,False,False,False,False,False,False,False,False",1.8,Other
+16774,2025-03-03 01:21:12,"""[2025-03-03 01:21:12] echo """"Fixing your Office System - Targeted Fix"""""",True,False,False,False,False,False,False,False,False,False,False",1.7833333333333334,Other
+8568,2025-02-21 21:26:45,"[2025-02-21 21:26:45] nom start,True,False,False,False,False,False,False,False,False,False,False",1.7833333333333334,Other
+15162,2025-02-28 15:40:20,"""[2025-02-28 15:40:20] cat artifacts/final-steps.txt | grep -A 500 """"\/\/ scripts\/seed.js"""" | grep -B 500 """"seedDatabase();"""" > scripts/seed.js"",True,False,False,False,False,False,False,False,True,False,False",1.7833333333333334,Other
+20133,2025-03-08 08:14:12,"[2025-03-08 08:14:12] history | tail -30,True,False,False,False,False,False,False,False,False,False,False",1.7833333333333334,Other
+20135,2025-03-08 08:18:48,"[2025-03-08 08:18:48] ./test_dodo_integration.py,True,False,False,False,False,False,False,False,False,False,False",1.7833333333333334,Other
+21382,2025-03-10 02:18:30,"[2025-03-10 02:18:30] file tf.txt *,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+22281,2025-03-11 10:10:08,"[2025-03-11 10:10:08] cd AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+1175,2025-02-21 02:18:25,"[2025-02-21 02:18:25] cpqd,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+20176,2025-03-08 04:53:35,"[2025-03-08 04:53:35] mv /Users/abhissrivasta/Downloads/del/implementation-guide.md /Users/abhissrivasta/relationship-analyzer/,True,True,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+3368,2025-02-15 21:42:14,"""[2025-02-15 21:42:14] echo -e """"${BLUE}Starting project update...${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+9459,2025-02-22 15:47:12,"[2025-02-22 15:47:12] ckear,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+15160,2025-02-28 15:37:04,"[2025-02-28 15:37:04] ll next-steps-tracker-chatgpt.json,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+18098,2025-03-03 01:51:04,"[2025-03-03 01:51:04] kill -9 61869,True,False,False,False,False,False,False,False,False,False,False",1.7666666666666666,Other
+14620,2025-03-02 11:07:28,"[2025-03-02 11:07:28] pip install numpy pillow moviepy google-cloud-texttospeech google-cloud-storage,True,False,False,True,False,True,False,False,False,False,False",1.75,Other
+20104,2025-03-08 06:34:53,"[2025-03-08 06:34:53] vi setup-feedback.sh,True,False,False,False,False,False,False,False,False,False,False",1.75,Other
+13994,2025-02-25 13:16:49,"[2025-02-25 13:16:49] open  AmsyPycharm/BAZINGA-INDEED/.bazinga_state/workflow.json,True,False,False,False,False,False,False,False,False,False,False",1.75,Other
+7652,2025-02-21 10:38:10,"[2025-02-21 10:38:10] rm -rf node_modules package-lock.json,True,True,False,False,False,False,False,False,False,False,False",1.75,Other
+14618,2025-03-02 11:04:51,"[2025-03-02 11:04:51] cat $HOME/.config/gcloud/application_default_credentials.json,True,False,False,False,False,False,False,False,False,False,False",1.7333333333333334,Other
+14635,2025-03-02 11:13:15,"[2025-03-02 11:13:15] alias python,True,False,False,False,False,True,False,False,False,False,False",1.7333333333333334,Other
+19458,2025-03-05 08:06:17,"[2025-03-05 08:06:17] fdupes -r ~/AmsyPycharm /Users/abhissrivasta/Downloads ~/Documents/Abhiamu,True,False,False,False,False,False,False,False,False,False,False",1.7333333333333334,Other
+19794,2025-03-07 14:06:51,"[2025-03-07 14:06:51] llclean bin,True,False,False,False,False,False,False,False,False,False,False",1.7333333333333334,Other
+19769,2025-03-07 14:03:19,"[2025-03-07 14:03:19] project0status,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+6740,2025-02-21 07:41:03,"[2025-02-21 07:41:03] # First let's confirm our base directory,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+9098,2025-02-22 14:51:33,"[2025-02-22 14:51:33] bash,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+14479,2025-03-02 02:46:26,"[2025-03-02 02:46:26] ll scripts/,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+7614,2025-02-21 09:18:07,"[2025-02-21 09:18:07] NODE_ENV=development npm start --verbose,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+15271,2025-03-01 04:26:22,"[2025-03-01 04:26:22] npm run build,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+20578,2025-03-08 12:24:53,"[2025-03-08 12:24:53] # Remove Ethereum packages from go.mod,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+20751,2025-03-07 16:08:00,"[2025-03-07 16:08:00] ..,True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+7668,2025-02-21 21:53:59,"[2025-02-21 21:53:59] cat > src/components/Experience/MainPortal.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",1.7166666666666666,Other
+13368,2025-03-01 01:48:36,"[2025-03-01 01:48:36] npm install --save date-fns,True,False,False,True,False,False,False,False,False,False,False",1.7166666666666666,Other
+14857,2025-03-02 06:58:14,"[2025-03-02 06:58:14] prj 2,True,False,False,False,False,False,False,False,False,False,False",1.7,Other
+9392,2025-02-22 13:42:25,"[2025-02-22 13:42:25] # Move server implementation,True,False,False,False,False,False,False,False,False,False,False",1.7,Other
+14005,2025-02-25 15:39:21,"[2025-02-25 15:39:21] bazinga chat,True,False,False,False,False,False,False,False,False,False,False",1.7,Other
+14760,2025-03-02 11:43:50,"[2025-03-02 11:43:50] python generate_enhanced_video.py scripts/relationshipquantum.txt --no-upload,True,False,False,False,False,True,False,False,False,False,False",1.7,Other
+19522,2025-03-07 12:41:07,"[2025-03-07 12:41:07] ll -R,True,False,False,False,False,False,False,False,False,False,False",1.6833333333333333,Other
+21044,2025-03-10 05:31:08,"[2025-03-10 05:31:08] cd ~,True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+22401,2025-03-12 13:07:57,"[2025-03-12 13:07:57] cat /Users/abhissrivasta/Library/Application Support/CrashReporter/Finder_47AB37DC-8488-5418-86B8-6368A7C2859D.plist > uff,True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+15396,2025-03-02 08:40:05,"""[2025-03-02 08:40:05] netlify env:set MONGODB_URI """"mongodb+srv://bitsabhi:bnPFG1Llu6vjWzB4@cluster0.yeabr.mongodb.net/thought-processor?retryWrites=true&w=majority"""" --site=thought-process-backend.netlify.app --scope=runtime"",True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+22370,2025-03-12 12:40:24,"[2025-03-12 12:40:24] bazinga overview,True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+12432,2025-02-25 10:54:34,"[2025-02-25 10:54:34] cat ~/AmsyPycharm/BAZINGA-INDEED/.bazinga_state/*,True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+4337,2025-02-16 08:49:39,"[2025-02-16 08:49:39] tree -L3 src/,True,False,False,False,False,False,False,False,False,False,False",1.6666666666666667,Other
+19556,2025-03-05 06:53:10,"[2025-03-05 06:53:10] npm install -D tslib @types/node,True,False,False,True,False,False,False,False,False,False,False",1.65,Other
+11135,2025-02-22 19:19:46,"[2025-02-22 19:19:46] curl http://localhost:8000/api/system-status,True,False,False,False,True,False,False,False,False,False,False",1.65,Other
+22251,2025-03-10 13:56:41,"[2025-03-10 13:56:41] ./enhanced-scanner.sh /Users/abhissrivasta/GolandProjects/certificate-notification-system,True,False,False,False,False,False,False,False,False,False,False",1.65,Other
+21861,2025-03-10 06:25:27,"[2025-03-10 06:25:27] # 1. Extract Claude chat history from Chrome,True,False,False,False,False,False,False,False,False,False,False",1.65,Other
+9668,2025-02-22 16:37:06,"[2025-02-22 16:37:06] pip install -e .,True,False,False,True,False,True,False,False,False,False,False",1.65,Other
+20725,2025-03-07 16:46:00,"[2025-03-07 16:46:00] ./vault-build/vault/scripts/build.sh,True,False,False,False,False,False,False,False,False,False,False",1.65,Other
+15404,2025-03-02 08:51:24,"[2025-03-02 08:51:24] cleare,True,False,False,False,False,False,False,False,False,False,False",1.65,Other
+190,2025-02-16 08:37:22,"[2025-02-16 08:37:22] tree src/,True,False,False,False,False,False,False,False,False,False,False",1.65,Other
+8614,2025-02-21 22:08:24,"[2025-02-21 22:08:24] pm start,True,False,False,False,False,False,False,False,False,False,False",1.6333333333333333,Other
+21164,2025-03-10 05:03:35,"[2025-03-10 05:03:35] ¸pwd,True,False,False,False,False,False,False,False,False,False,False",1.6333333333333333,Other
+20438,2025-03-08 12:39:18,"[2025-03-08 12:39:18] bash,True,False,False,False,False,False,False,False,False,False,False",1.6333333333333333,Other
+19694,2025-03-05 06:39:42,"[2025-03-05 06:39:42] ll src/core/,True,False,False,False,False,False,False,False,False,False,False",1.6333333333333333,Other
+7492,2025-02-21 06:39:23,"""[2025-02-21 06:39:23] mongo --eval """"db.runCommand({ connectionStatus: 1 })"""""",True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+21593,2025-03-10 08:58:38,"[2025-03-10 08:58:38] cd src/core/bazinga,True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+21042,2025-03-10 05:29:24,"[2025-03-10 05:29:24] ./~/claude-bazinga-fixed.sh,True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+391,2025-02-20 23:51:36,"[2025-02-20 23:51:36] open js/audio.js,True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+13981,2025-02-25 13:02:48,"[2025-02-25 13:02:48] bazinga status,True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+19603,2025-03-06 04:18:41,"[2025-03-06 04:18:41] tree -L3,True,False,False,False,False,False,False,False,False,False,False",1.6166666666666667,Other
+16250,2025-03-01 02:23:04,"""[2025-03-01 02:23:04] echo -e """"${BLUE}To verify the fixes run: node verify_components_fixed.mjs${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",1.6,Other
+9338,2025-02-22 13:33:32,"[2025-02-22 13:33:32] pip install pytest-asyncio psutil,True,False,False,True,False,True,False,False,False,False,False",1.6,Other
+19966,2025-03-08 04:12:07,"[2025-03-08 04:12:07] open /Users/abhissrivasta/AmsyPycharm/unified_analysis_output/master_relationship_analysis.html,True,False,False,False,False,False,False,False,False,False,False",1.6,Other
+14346,2025-03-01 21:54:19,"[2025-03-01 21:54:19] ls videos/,True,True,False,False,False,False,False,False,False,False,False",1.6,Other
+14557,2025-03-02 06:36:32,"""[2025-03-02 06:36:32] echo -e """"${BOLD}Uninstalling bazinga command...${NC}"""""",True,False,False,False,False,False,False,False,False,False,False",1.6,Other
+14819,2025-03-02 06:43:08,"[2025-03-02 06:43:08] mv prostats.sh  AmsyPycharm/,True,True,False,False,False,False,False,False,False,False,False",1.6,Other
+20390,2025-03-08 06:57:46,"[2025-03-08 06:57:46] git remote -v,True,False,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+21650,2025-03-10 09:41:55,"[2025-03-10 09:41:55] cd ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+12398,2025-02-25 12:52:18,"[2025-02-25 12:52:18] rm -rf /Users/abhissrivasta/AmsyPycharm//BAZINGA/node_modules/,True,True,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+16749,2025-03-03 01:04:02,"[2025-03-03 01:04:02] python3 -m venv .venv,True,False,False,False,False,True,False,False,False,False,False",1.5833333333333333,Other
+8422,2025-02-21 21:04:52,"[2025-02-21 21:04:52] chmod +x aa.sh,True,False,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+22480,2025-03-12 13:37:24,"[2025-03-12 13:37:24] ~/simplified-jira-connector.py,True,False,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+6035,2025-02-21 04:31:39,"""[2025-02-21 04:31:39] git log --grep=""""MLP"""" --pretty=format:""""%h - %an: %s"""""",True,False,False,False,False,False,False,False,True,False,False",1.5833333333333333,Other
+6765,2025-02-21 07:44:00,"[2025-02-21 07:44:00] # Create the main Visual.js component,True,False,False,False,False,False,False,False,False,False,False",1.5833333333333333,Other
+11980,2025-02-25 10:48:29,"[2025-02-25 10:48:29] ls -r ~/AmsyPycharm/,True,True,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+22294,2025-03-11 10:21:42,"[2025-03-11 10:21:42] bash ~/GolandProjects/certificate-notification-system-design/architecture-analysis-script.sh ~/GolandProjects/vault-root-token/,True,False,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+11116,2025-02-22 19:05:56,"[2025-02-22 19:05:56] bash,True,False,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+18137,2025-03-03 01:54:51,"[2025-03-03 01:54:51] npm install -D tailwindcss postcss autoprefixer,True,False,False,True,False,False,False,False,False,False,False",1.5666666666666667,Other
+14250,2025-03-01 21:26:38,"[2025-03-01 21:26:38] # Set the existing project,True,False,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+11290,2025-02-22 16:23:17,"[2025-02-22 16:23:17] pip install --upgrade --force-reinstall fastapi pydantic uvicorn flask,True,False,False,True,False,True,False,False,False,False,False",1.5666666666666667,Other
+14348,2025-03-01 21:56:08,"""[2025-03-01 21:56:08] python3 create_video.py scripts/relationshipquantum.txt videos/relationshipquantum.mp4 --title """"RelationshipQuantum"""""",True,False,False,False,False,True,False,False,False,False,False",1.5666666666666667,Other
+8996,2025-02-22 14:18:34,"[2025-02-22 14:18:34] # Create a status file,True,False,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+14385,2025-03-02 02:04:45,"[2025-03-02 02:04:45] pip install git+https://github.com/Zulko/moviepy.git,True,False,False,True,False,True,False,False,False,False,False",1.5666666666666667,Other
+6602,2025-02-21 07:33:27,"""[2025-02-21 07:33:27] if [ -f """"$PROJECT_ROOT/package.json"""" ]; then     echo """"✓ File exists"""";     cat """"$PROJECT_ROOT/package.json""""; else     echo """"✗ File missing""""; fi"",True,False,False,False,False,False,False,False,False,False,False",1.5666666666666667,Other
+9642,2025-02-22 16:09:19,"[2025-02-22 16:09:19] open /Users/abhissrivasta/AmsyPycharm/office_system/venv/lib/python3.13/site-packages/analytics/__init__.py,True,False,False,False,False,True,False,False,False,False,False",1.5666666666666667,Other
+20591,2025-03-08 12:29:24,"[2025-03-08 12:29:24] ls -la tsconfig.json,True,True,False,False,False,False,False,False,False,False,False",1.55,Other
+9662,2025-02-22 16:35:08,"[2025-02-22 16:35:08] ls -l,True,True,False,False,False,False,False,False,False,False,False",1.55,Other
+18111,2025-03-03 02:03:34,"[2025-03-03 02:03:34] cd src/frontend/\,True,False,False,False,False,False,False,False,False,False,False",1.55,Other
+7602,2025-02-21 09:10:47,"[2025-02-21 09:10:47] cat backups/20250221_082238/audioManager.js,True,False,False,False,False,False,False,False,False,False,False",1.55,Other
+18601,2025-02-21 04:37:25,"""[2025-02-21 04:37:25] history grep """"aws"""""",True,False,False,False,False,False,False,False,True,False,False",1.55,Other
+13366,2025-03-01 01:37:40,"[2025-03-01 01:37:40] cleaer,True,False,False,False,False,False,False,False,False,False,False",1.55,Other
+8950,2025-02-21 04:27:03,"[2025-02-21 04:27:03] cat ~/bash_prof,True,False,False,False,False,False,False,False,False,False,False",1.55,Other
+21353,2025-03-09 14:39:38,"[2025-03-09 14:39:38] cd BAZINGA,True,False,False,False,False,False,False,False,False,False,False",1.55,Other
+5569,2025-02-16 09:16:37,"[2025-02-16 09:16:37] # Ensure public directory structure exists,True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+15258,2025-03-01 01:15:06,"[2025-03-01 01:15:06] ll backend/,True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+9772,2025-02-22 17:16:06,"[2025-02-22 17:16:06] cd ~/AmsyPycharm/off,True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+20226,2025-03-08 03:48:47,"[2025-03-08 03:48:47] # Fix the second syntax issue with check_symlinks and find_metadata_duplicates,True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+20606,2025-03-08 12:53:38,"[2025-03-08 12:53:38] open .gitignore,True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+20269,2025-03-08 11:35:42,"[2025-03-08 11:35:42] mkdir newsapp-frontend,True,True,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+13362,2025-03-01 01:32:25,"""[2025-03-01 01:32:25] echo -e """"${BLUE}ThoughtInput page implemented successfullyfrontend/src/pages/ThoughtInput.jsx{NC}"""""",True,False,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+20207,2025-03-08 03:45:47,"[2025-03-08 03:45:47] rm -rf enhanced_cleanup.sh,True,True,False,False,False,False,False,False,False,False,False",1.5333333333333334,Other
+12110,2025-02-25 11:11:16,"[2025-02-25 11:11:16] diff -rq ~/AmsyPycharm/healing-space ~/AmsyPycharm/BAZINGA-INDEED/HealingSpace,True,False,False,False,False,False,False,False,False,False,False",1.5166666666666666,Other
+20270,2025-03-08 11:37:13,"[2025-03-08 11:37:13] ls personalised-news-app/,True,True,False,False,False,False,False,False,False,False,False",1.5166666666666666,Other
+16756,2025-03-03 01:06:59,"[2025-03-03 01:06:59] python3 -m venv venv,True,False,False,False,False,True,False,False,False,False,False",1.5166666666666666,Other
+19450,2025-03-05 07:48:58,"[2025-03-05 07:48:58] tree -L2 > dd,True,False,False,False,False,False,False,False,False,False,False",1.5166666666666666,Other
+16557,2025-02-25 15:03:53,"[2025-02-25 15:03:53] # Add healingspace functions to bazinga script,True,False,False,False,False,False,False,False,False,False,False",1.5166666666666666,Other
+12276,2025-02-25 12:17:58,"[2025-02-25 12:17:58] du -sh ~/AmsyPycharm/*/venv,True,False,False,False,False,True,False,False,False,True,False",1.5166666666666666,Other
+3599,2025-02-16 08:05:51,"""[2025-02-16 08:05:51] find . -type f -empty -printf """"%p\n"""""",True,True,False,False,False,False,False,False,True,False,False",1.5166666666666666,Other
+18171,2025-03-03 02:01:39,"[2025-03-03 02:01:39] cleare,True,False,False,False,False,False,False,False,False,False,False",1.5166666666666666,Other
+7625,2025-02-21 09:22:42,"[2025-02-21 09:22:42] npm install react-router-dom@latest,True,False,False,True,False,False,False,False,False,False,False",1.5166666666666666,Other
+19584,2025-03-06 05:00:55,"[2025-03-06 05:00:55] ssh -L 3306:database-1.cm7c7totjbyo.us-west-2.rds.amazonaws.com:3306 ec2-user@\vault-enterprise.us-west-2.secrets.runtime.test-cts.exp-aws.net,True,False,False,False,True,False,False,False,False,False,False",1.5,Other
+9955,2025-02-22 17:28:22,"[2025-02-22 17:28:22] # Kill any existing process on port 8000,True,False,False,False,False,False,False,False,False,False,False",1.5,Other
+22498,2025-03-13 10:24:06,"[2025-03-13 10:24:06] bash,True,False,False,False,False,False,False,False,False,False,False",1.5,Other
+20672,2025-03-07 16:41:32,"[2025-03-07 16:41:32] tree scripts -L3,True,False,False,False,False,False,False,False,False,False,False",1.5,Other
+12307,2025-02-22 19:37:31,"[2025-02-22 19:37:31] curl http://localhost:8000/api/system-status,True,False,False,False,True,False,False,False,False,False,False",1.5,Other
+7521,2025-02-21 07:05:18,"[2025-02-21 07:05:18] ls -lh *.py,True,True,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+16663,2025-02-25 14:18:08,"[2025-02-25 14:18:08] cat ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+21270,2025-03-10 05:05:04,"[2025-03-10 05:05:04] node src/core/fractals/UnifiedFractalGenerator.js --input=~/Downloads/tf.txt --output=tf_analysis.html,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+7064,2025-02-21 08:15:00,"[2025-02-21 08:15:00] ./manager.sh build,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+15161,2025-02-28 15:38:33,"[2025-02-28 15:38:33] ll scripts/,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+19592,2025-03-06 03:46:07,"[2025-03-06 03:46:07] gs,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+20638,2025-03-08 13:50:17,"[2025-03-08 13:50:17] open incom.html,True,False,False,False,False,False,False,False,False,False,False",1.4833333333333334,Other
+8399,2025-02-21 10:15:44,"[2025-02-21 10:15:44] npm install webpack@4.44.2 babel-loader@8.2.3 --save-dev,True,False,False,True,False,False,False,False,False,False,False",1.4666666666666666,Other
+20416,2025-03-08 07:53:46,"[2025-03-08 07:53:46] chmod +x fix_typescript_imports.sh fix_circular_symlinks.sh integrate_dodo_with_typevalidator.sh,True,False,False,False,False,False,False,False,False,False,False",1.4666666666666666,Other
+19679,2025-03-05 06:50:03,"[2025-03-05 06:50:03] apt-get install pandoc,True,False,False,True,False,False,False,False,False,False,False",1.4666666666666666,Other
+8357,2025-02-21 09:24:10,"[2025-02-21 09:24:10] cat > src/components/Visual/LotusPath.js << 'EOL',True,False,False,False,False,False,False,False,False,False,False",1.4666666666666666,Other
+7603,2025-02-21 09:12:15,"[2025-02-21 09:12:15] # 1. Fix imports to match this setup,True,False,False,False,False,False,False,False,False,False,False",1.4666666666666666,Other
+14968,2025-02-25 17:09:04,"[2025-02-25 17:09:04] PYTHONPATH=$PWD python src/backend/main.py &,True,False,False,False,False,True,False,False,False,False,False",1.4666666666666666,Other
+18113,2025-02-25 15:00:57,"[2025-02-25 15:00:57] cat .bazinga_state,True,False,False,False,False,False,False,False,False,False,False",1.4666666666666666,Other
+1923,2025-02-16 08:47:59,"[2025-02-16 08:47:59] # 2. Three.js utilities,True,False,False,False,False,False,False,False,False,False,False",1.4666666666666666,Other
+13752,2025-03-02 02:23:29,"""[2025-03-02 02:23:29] assets/backgrounds/blue_bg.jpg: JPEG image data, ..."",True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+20722,2025-03-07 16:43:59,"[2025-03-07 16:43:59] analyze,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+14873,2025-03-02 07:06:26,"[2025-03-02 07:06:26] ls ~/.bash_functions,True,True,False,False,False,False,False,False,False,False,False",1.45,Other
+8559,2025-02-21 21:16:53,"[2025-02-21 21:16:53] vi ab.sh,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+19955,2025-03-08 03:56:55,"[2025-03-08 03:56:55] wpd,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+18311,2025-03-02 09:03:11,"[2025-03-02 09:03:11] # Build the frontend first,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+7179,2025-02-21 08:24:59,"[2025-02-21 08:24:59] cc;ear,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+3672,2025-02-16 08:10:43,"[2025-02-16 08:10:43] # 5. Add font preload to index.html,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+19181,2025-03-04 15:51:16,"[2025-03-04 15:51:16] last,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+9823,2025-02-22 17:07:04,"[2025-02-22 17:07:04] cleare,True,False,False,False,False,False,False,False,False,False,False",1.45,Other
+9430,2025-02-22 15:20:50,"[2025-02-22 15:20:50] bash,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+13973,2025-02-25 12:57:21,"[2025-02-25 12:57:21] toucb ~/AmsyPycharm/BAZINGA-INDEED/bazinga-chat.sh,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+4665,2025-02-16 09:13:09,"""[2025-02-16 09:13:09] # First, let's remove any existing node_modules and lock files"",True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+21390,2025-03-10 02:26:15,"[2025-03-10 02:26:15] file -m ~/Downloads/,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+20616,2025-03-08 12:58:09,"[2025-03-08 12:58:09] rm -rf frontend/.git,True,True,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+1650,2025-02-16 08:02:50,"[2025-02-16 08:02:50] # Now let's see what's in Home.jsx since that's where we're seeing the routing error,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+20386,2025-03-08 06:55:43,"[2025-03-08 06:55:43] cd ~/PycharmProjects/prism-landing/,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+22556,2025-03-13 11:29:53,"[2025-03-13 11:29:53] cd ~/,True,False,False,False,False,False,False,False,False,False,False",1.4333333333333333,Other
+7340,2025-02-21 08:39:18,"""[2025-02-21 08:39:18] for file in ./src/components/Visual/{DodoFlow,LotusPath,RoseHeart}.js; do   sed -i '' 's/export const/const/g' """"$file"""";   sed -i '' '/^const.*= () =>/a\"",True,False,False,False,False,False,False,False,True,False,False",1.4333333333333333,Other
+9165,2025-02-22 13:20:34,"[2025-02-22 13:20:34] python3 -m venv venv,True,False,False,False,False,True,False,False,False,False,False",1.4333333333333333,Other
+19137,2025-02-21 11:17:25,"""[2025-02-21 11:17:25] curl -H """"Authorization: Bearer $SLACK_BOT_TOKEN""""      """"https://slack.com/api/conversations.history?channel=C01HMLMPB6U"""""",True,False,False,False,True,False,False,False,False,False,False",1.4166666666666667,Other
+21526,2025-03-10 08:04:15,"""[2025-03-10 08:04:15] find . -type f -name """"*.ts"""" -empty"",True,True,False,False,False,False,False,False,True,False,False",1.4166666666666667,Other
+19224,2025-03-04 16:21:40,"[2025-03-04 16:21:40] cat ~/.bash_profile | pbcopy,True,False,False,False,False,False,False,False,False,False,False",1.4166666666666667,Other
+22488,2025-03-13 15:26:18,"""[2025-03-13 15:26:18] history | grep -i """"hcom"""" | grep -n """""""" | tail -20"",True,False,False,False,False,False,False,False,True,False,False",1.4166666666666667,Other
+14858,2025-03-02 06:59:38,"[2025-03-02 06:59:38] vi ~/.bashrc,True,False,False,False,False,False,False,False,False,False,False",1.4,Other
+19957,2025-03-08 04:01:07,"[2025-03-08 04:01:07] # Edit the relationship-analyzer.py file to add the missing import,True,False,False,False,False,False,False,False,False,False,False",1.4,Other
+19719,2025-03-07 13:31:16,"[2025-03-07 13:31:16] vi ~/bin/project-analyzer.sh,True,False,False,False,False,False,False,False,False,False,False",1.4,Other
+11363,2025-02-22 17:43:10,"[2025-02-22 17:43:10] tree,True,False,False,False,False,False,False,False,False,False,False",1.4,Other
+19409,2025-03-05 09:36:44,"[2025-03-05 09:36:44] whois BazingD¬≤Meta,True,False,False,False,False,False,False,False,False,False,False",1.4,Other
+7139,2025-02-21 08:20:43,"""[2025-02-21 08:20:43] cp """"$newest_backup/package-lock.json"""" ./package-lock.json"",True,True,False,False,False,False,False,False,False,False,False",1.3833333333333333,Other
+11969,2025-02-22 18:12:09,"[2025-02-22 18:12:09] [200~source venv/bin/activate~,True,False,False,False,False,True,False,False,False,False,False",1.3833333333333333,Other
+1286,2025-02-21 00:43:46,"[2025-02-21 00:43:46] cat > src/styles/shared.css << 'EOL',True,False,False,False,False,False,False,False,False,False,False",1.3833333333333333,Other
+2038,2025-02-16 08:54:55,"""[2025-02-16 08:54:55] find . -type f -empty -printf """"%p\n"""""",True,True,False,False,False,False,False,False,True,False,False",1.3833333333333333,Other
+19457,2025-03-05 08:04:33,"[2025-03-05 08:04:33] brew install fdupes,True,False,False,True,False,False,False,False,False,False,False",1.3833333333333333,Other
+13837,2025-02-28 23:59:53,"[2025-02-28 23:59:53] ll,True,False,False,False,False,False,False,False,False,False,False",1.3833333333333333,Other
+21623,2025-03-10 09:15:33,"[2025-03-10 09:15:33] lsof -i :8000,True,False,False,False,False,False,False,False,False,False,False",1.3833333333333333,Other
+20765,2025-03-07 14:01:02,"[2025-03-07 14:01:02] llcleanpwd,True,False,False,False,False,False,False,False,False,False,False",1.3833333333333333,Other
+9026,2025-02-22 14:35:19,"[2025-02-22 14:35:19] open .,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+19981,2025-03-08 03:41:57,"[2025-03-08 03:41:57] sed -i '' -e '$a\' enhanced_cleanup.sh,True,False,False,False,False,False,False,False,True,False,False",1.3666666666666667,Other
+19660,2025-03-07 14:28:27,"[2025-03-07 14:28:27] cat > ~/bin/vault-simple-analyzer.sh << 'EOF',True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+12108,2025-02-25 11:09:45,"[2025-02-25 11:09:45] rm -rf ~/AmsyPycharm/BAZINGA-INDEED/HealingSpace,True,True,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+2849,2025-02-15 19:53:27,"[2025-02-15 19:53:27] ./ss.sh,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+3920,2025-02-16 08:20:47,"""[2025-02-16 08:20:47] echo """"✓ Corrected JSON structure"""""",True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+8971,2025-02-21 06:29:24,"[2025-02-21 06:29:24] pip3 install pymongo,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+12009,2025-02-25 11:50:00,"[2025-02-25 11:50:00] /usr/local/bin/wdavcmd --pause,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+9143,2025-02-22 13:07:29,"[2025-02-22 13:07:29] cd ~/AmsyPycharm/,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+14605,2025-03-02 10:59:29,"[2025-03-02 10:59:29] touch generate_enhanced_video.sh,True,True,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+21591,2025-03-10 08:54:48,"[2025-03-10 08:54:48] file src/core/bazinga/bazinga_universal.py,True,False,False,False,False,False,False,False,False,False,False",1.3666666666666667,Other
+22475,2025-03-12 13:35:24,"[2025-03-12 13:35:24] cat /Users/abhissrivasta/pattern_extraction_20250312_131220,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+13869,2025-03-01 19:06:59,"[2025-03-01 19:06:59] ..,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+3542,2025-02-15 22:11:33,"[2025-02-15 22:11:33] npm audit,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+20945,2025-03-08 18:25:47,"[2025-03-08 18:25:47] npm run build,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+14516,2025-03-02 03:16:43,"""[2025-03-02 03:16:43] export PYTHONPATH=""""/Users/abhissrivasta/WorkforceOS/fresh_venv/lib/python3.13/site-packages"""""",True,False,False,False,False,True,False,False,False,False,False",1.35,Other
+10914,2025-02-22 17:53:32,"[2025-02-22 17:53:32] bash,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+8415,2025-02-21 10:40:11,"""[2025-02-21 10:40:11] find ./src -type f -exec grep -l """"framer-motion"""" {} \;"",True,True,False,False,False,False,False,False,True,False,False",1.35,Other
+9258,2025-02-22 13:26:33,"[2025-02-22 13:26:33] # Create __init__.py files in all necessary directories,True,False,False,False,False,False,False,False,False,False,False",1.35,Other
+18181,2025-02-25 16:42:58,"[2025-02-25 16:42:58] ll src/,True,False,False,False,False,False,False,False,False,False,False",1.3333333333333333,Other
+310,2025-02-21 00:41:10,"[2025-02-21 00:41:10] tree,True,False,False,False,False,False,False,False,False,False,False",1.3333333333333333,Other
+14971,2025-02-25 17:10:57,"[2025-02-25 17:10:57] pip install fastapi uvicorn,True,False,False,True,False,True,False,False,False,False,False",1.3333333333333333,Other
+19663,2025-03-07 15:37:17,"[2025-03-07 15:37:17] cd ~,True,False,False,False,False,False,False,False,False,False,False",1.3333333333333333,Other
+21847,2025-03-10 06:17:02,"[2025-03-10 06:17:02] sed -i '' 's/python bazinga_explore_fixed/python3 bazinga_explore_fixed/' ~/integration_data/unified_timeline/connect_bazinga.sh,True,False,False,False,False,True,False,False,True,False,False",1.3333333333333333,Other
+16545,2025-03-01 04:27:41,"[2025-03-01 04:27:41] touch netlify.toml,True,True,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+9828,2025-02-22 17:08:27,"[2025-02-22 17:08:27] # 1. First activate venv (assuming it's in your project directory),True,False,False,False,False,True,False,False,False,False,False",1.3166666666666667,Other
+21518,2025-03-10 06:06:41,"[2025-03-10 06:06:41] chmod +x claude_integration.sh,True,False,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+21119,2025-03-10 04:27:09,"[2025-03-10 04:27:09] open ~/integration/claude_unified/report.txt,True,False,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+21648,2025-03-10 09:40:06,"""[2025-03-10 09:40:06] find /Users/abhissrivasta/AmsyPycharm/BAZINGA/ -type f -name """"*.md""""     ! -path """"*/node_modules/*""""     ! -path """"*/venv_bazinga/*""""     ! -path """"*/dist/*""""     ! -path """"*/generated/*""""     ! -path """"*/tmp/*""""     ! -path """"*/docs/fractals/*"""""",True,True,False,False,False,False,False,False,True,False,False",1.3166666666666667,Other
+6934,2025-02-21 08:01:08,"[2025-02-21 08:01:08] mv am.sh am.sh,True,True,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+2846,2025-02-15 19:52:05,"[2025-02-15 19:52:05] # Setup database,True,False,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+9425,2025-02-22 15:13:02,"[2025-02-22 15:13:02] pip3 install fastapi uvicorn websockets httpx  # Install missing dependencies,True,False,False,False,False,False,False,False,False,False,False",1.3166666666666667,Other
+12079,2025-02-25 11:25:47,"""[2025-02-25 11:25:47] ps -eo pid,pcpu,comm | sort -k2 -nr | head -10"",True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+1610,2025-02-16 08:51:35,"[2025-02-16 08:51:35] cat src/App.jsx,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+1775,2025-02-16 08:12:01,"[2025-02-16 08:12:01] # 3. Restore index.html to original state,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+9652,2025-02-22 16:18:40,"[2025-02-22 16:18:40] npm -v,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+19582,2025-03-06 04:58:46,"[2025-03-06 04:58:46] go build,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+9694,2025-02-22 16:38:38,"[2025-02-22 16:38:38] chmod +x ~/Downloads/setup-py.py,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+4343,2025-02-16 09:03:55,"[2025-02-16 09:03:55] tree -L3,True,False,False,False,False,False,False,False,False,False,False",1.3,Other
+7322,2025-02-21 08:34:51,"[2025-02-21 08:34:51] # Remove duplicate React import from RoseHeart.js,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+18577,2025-03-03 04:24:40,"[2025-03-03 04:24:40] projstat,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+21998,2025-03-09 16:02:48,"[2025-03-09 16:02:48] file *,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+13979,2025-02-25 13:00:10,"[2025-02-25 13:00:10] bazinga overview,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+9268,2025-02-22 13:28:25,"[2025-02-22 13:28:25] # Update main.py with the correct implementation,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+22536,2025-03-13 11:02:31,"[2025-03-13 11:02:31] chmod + capture_progress.sh,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+13078,2025-03-01 00:04:15,"[2025-03-01 00:04:15] touch save_implementation_summary.sh,True,True,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+11288,2025-02-22 16:21:13,"[2025-02-22 16:21:13] python3  main.py,True,False,False,False,False,True,False,False,False,False,False",1.2833333333333334,Other
+21797,2025-03-08 19:45:40,"""[2025-03-08 19:45:40] cat ,gitignore"",True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+13761,2025-03-02 02:32:15,"[2025-03-02 02:32:15] vi relu_video_process.py,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+14334,2025-03-01 21:41:40,"[2025-03-01 21:41:40] open create_video.py,True,False,False,False,False,False,False,False,False,False,False",1.2833333333333334,Other
+16548,2025-02-25 15:02:22,"[2025-02-25 15:02:22] bazinga,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+22400,2025-03-12 12:51:01,"[2025-03-12 12:51:01] ./time-trust-analysis.sh /Users/abhissrivasta/time_trust_analysis_20250312_124601,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+2227,2025-02-15 19:31:05,"[2025-02-15 19:31:05] # vite.config.js,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+13830,2025-02-28 23:56:37,"[2025-02-28 23:56:37] touch integrate_new_artifacts.sh,True,True,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+22613,2025-03-12 16:02:55,"[2025-03-12 16:02:55] git checkout a0aa146a7dd7e6c4d817952d52058e11cd0e1449,True,False,True,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+15253,2025-03-01 00:59:19,"[2025-03-01 00:59:19] git checkout -M main,True,False,True,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+193,2025-02-16 08:57:02,"""[2025-02-16 08:57:02] echo """"=== App.jsx ==="""""",True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+19766,2025-03-07 13:59:39,"[2025-03-07 13:59:39] # Test it,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+7623,2025-02-21 09:20:56,"[2025-02-21 09:20:56] npm outdated,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+6761,2025-02-21 07:42:25,"[2025-02-21 07:42:25] backup_file=$(ls src/utils/audioManager.js.bak.* 2>/dev/null),True,True,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+8303,2025-02-21 09:09:11,"""[2025-02-21 09:09:11] echo """"=== Checking Affected Components ==="""""",True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+18107,2025-03-03 02:00:05,"[2025-03-03 02:00:05] ./stop-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+12277,2025-02-25 12:19:14,"[2025-02-25 12:19:14] rm -rf ~/AmsyPycharm/bazinga-processor/venv/,True,True,False,False,False,True,False,False,False,False,False",1.2666666666666666,Other
+8268,2025-02-21 09:03:44,"[2025-02-21 09:03:44] # 1. Remove framer-motion,True,False,False,False,False,False,False,False,False,False,False",1.2666666666666666,Other
+16757,2025-03-03 01:10:28,"[2025-03-03 01:10:28] pip install python-magic aiofiles python-multipart,True,False,False,True,False,True,False,False,False,False,False",1.25,Other
+15086,2025-03-02 23:56:11,"[2025-03-02 23:56:11] cd AmsyPycharm/office_system/,True,False,False,False,False,False,False,False,False,False,False",1.25,Other
+7657,2025-02-21 21:41:56,"[2025-02-21 21:41:56] cat Users/abhissrivasta/.npm/_logs/2025-02-21T16_11_21_441Z-debug-0.log,True,False,False,False,False,False,False,False,False,False,False",1.25,Other
+12073,2025-02-25 11:23:49,"[2025-02-25 11:23:49] ls -lh ~/workspace/,True,True,False,False,False,False,False,False,False,False,False",1.25,Other
+15297,2025-03-02 08:34:28,"[2025-03-02 08:34:28] # Find where your MongoDB connection is configured,True,True,False,False,False,False,False,False,True,False,False",1.25,Other
+12388,2025-02-25 12:44:09,"""[2025-02-25 12:44:09] find ~/AmsyPycharm/breakthrough-analysis -type f | grep -i """"whatsapp"""""",True,True,False,False,False,False,False,False,True,False,False",1.25,Other
+3367,2025-02-15 21:37:56,"[2025-02-15 21:37:56] # 5. Start dev server,True,False,False,False,False,False,False,False,False,False,False",1.25,Other
+22434,2025-03-12 03:47:19,"[2025-03-12 03:47:19] bazinga start,True,False,False,False,False,False,False,False,False,False,False",1.25,Other
+8599,2025-02-21 21:30:43,"[2025-02-21 21:30:43] gs,True,False,False,False,False,False,False,False,False,False,False",1.25,Other
+14936,2025-03-03 01:02:27,"[2025-03-03 01:02:27] deactivate,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+19384,2025-03-05 17:54:01,"[2025-03-05 17:54:01] rm -rf .git/,True,True,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+18123,2025-03-03 01:52:57,"[2025-03-03 01:52:57] npm fund,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+21381,2025-03-10 02:16:44,"[2025-03-10 02:16:44] file * tf.txt,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+11303,2025-02-22 16:10:33,"[2025-02-22 16:10:33] rm -rf venv/,True,True,False,False,False,True,False,False,False,False,False",1.2333333333333334,Other
+19578,2025-03-06 04:56:17,"[2025-03-06 04:56:17] GOARCH=amd64 GOOS=linux go build -o main main.go,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+20567,2025-03-08 12:18:44,"[2025-03-08 12:18:44] ./frontend-fixes.sh,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+7376,2025-02-21 08:47:34,"[2025-02-21 08:47:34] # 1. Check Node version,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+20641,2025-03-08 14:07:44,"[2025-03-08 14:07:44] sed -i '' '347s/card\.querySelector(\x27::before\x27)\.style\.opacity = \x270\x27;/card.classList.add(\x27revealed\x27);/' index.html,True,False,False,False,False,False,False,False,True,False,False",1.2333333333333334,Other
+9107,2025-02-22 14:55:48,"[2025-02-22 14:55:48] ls -R ~/workspace/ > workspace,True,True,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+237,2025-02-19 15:47:41,"[2025-02-19 15:47:41] create,True,False,False,False,False,False,False,False,False,False,False",1.2333333333333334,Other
+21524,2025-03-10 08:02:50,"[2025-03-10 08:02:50] # Add the method to the file,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+11252,2025-02-22 18:05:07,"[2025-02-22 18:05:07] tree,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+8607,2025-02-21 21:56:01,"[2025-02-21 21:56:01] touch final-fix.sh,True,True,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+14068,2025-02-22 19:38:44,"[2025-02-22 19:38:44] cleaer,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+9137,2025-02-22 13:01:34,"[2025-02-22 13:01:34] touch amu.sh,True,True,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+1216,2025-02-21 00:42:23,"[2025-02-21 00:42:23] ll ..,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+13847,2025-03-01 01:36:04,"[2025-03-01 01:36:04] ll artifacts/artiifacts2/,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+14607,2025-03-02 11:00:45,"[2025-03-02 11:00:45] chmod +x generate_enhanced_video.sh,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+22521,2025-03-13 10:26:41,"[2025-03-13 10:26:41] kubectl version --client --short,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+13834,2025-02-28 23:58:14,"[2025-02-28 23:58:14] tree,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+13819,2025-02-28 11:46:25,"[2025-02-28 11:46:25] lr,True,False,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+9109,2025-02-22 14:57:18,"[2025-02-22 14:57:18] ls -R ~/AmsyPycharm/office_system | less,True,True,False,False,False,False,False,False,False,False,False",1.2166666666666666,Other
+19879,2025-03-07 20:59:18,"[2025-03-07 20:59:18] history | tail -30,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+19254,2025-03-05 05:29:49,"[2025-03-05 05:29:49] ../mkdir -p BAZINGA/src/generators/output/formatTransformer/templates,True,True,False,False,False,False,False,False,False,False,False",1.2,Other
+13725,2025-03-02 02:21:27,"[2025-03-02 02:21:27] bash,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+14295,2025-03-01 21:30:10,"""[2025-03-01 21:30:10] echo """"python create_video.py scripts/ecosystem_intro.txt videos/ecosystem_intro.mp4 --title \""""WorkforceOS Ecosystem\"""""""""",True,False,False,False,False,True,False,False,False,False,False",1.2,Other
+18790,2025-03-03 05:37:07,"[2025-03-03 05:37:07] ./stop-office-system.sh,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+15484,2025-02-25 14:24:37,"""[2025-02-25 14:24:37] echo 'alias tree=""""tree -I '\''node_modules|.git|.idea|.vscode|dist|build|target|__pycache__|*.log|*.iml|*.jar|.gradle|.DS_Store'\''""""' >> ~/.bashrc"",True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+14588,2025-03-02 10:37:49,"[2025-03-02 10:37:49] chmod +x generate_video.sh,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+1487,2025-02-21 01:02:08,"[2025-02-21 01:02:08] cd ..,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+11381,2025-02-22 17:45:52,"[2025-02-22 17:45:52] # 1. Create directories if they don't exist,True,False,False,False,False,False,False,False,False,False,False",1.2,Other
+7078,2025-02-21 08:51:17,"[2025-02-21 08:51:17] [200~# A. Clear and reinstall,True,False,False,False,False,False,False,False,False,False,False",1.2,Other

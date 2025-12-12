@@ -1,0 +1,52 @@
+#!/bin/bash
+# bazinga - Central command interface for BAZINGA framework
+
+BAZINGA_DIR=${BAZINGA_DIR:-"$HOME/AmsyPycharm/BAZINGA"}
+SCRIPTS_DIR="$BAZINGA_DIR/scripts"
+BIN_DIR="$BAZINGA_DIR/bin"
+
+# Find and run script
+find_script() {
+ for dir in "$BIN_DIR" "$SCRIPTS_DIR" "$BAZINGA_DIR"; do
+   if [ -f "$dir/$1" ]; then
+     "$dir/$1" "${@:2}"
+     return 0
+   fi
+   
+   script=$(find "$dir" -type f -name "*$1*" 2>/dev/null | head -1)
+   if [ -n "$script" ]; then
+     "$script" "${@:2}"
+     return 0
+   fi
+ done
+ 
+ echo "No script found matching: $1"
+ return 1
+}
+
+# Self-correct this script if needed
+if grep -q "unexpected EOF" "$0" 2>/dev/null || grep -q "syntax error" "$0" 2>/dev/null; then
+ curl -s https://raw.githubusercontent.com/user/bazinga/main/bazinga.sh > "$0.new" 2>/dev/null
+ if [ $? -eq 0 ] && [ -s "$0.new" ]; then
+   mv "$0.new" "$0"
+   chmod +x "$0"
+   echo "Self-corrected script. Running again..."
+   exec "$0" "$@"
+ fi
+fi
+
+# Main command handling
+if [ $# -eq 0 ]; then
+ echo "Usage: $(basename "$0") <command> [args]"
+ echo "Commands: run, visualize, trust, glance, generate, optimize"
+ exit 0
+fi
+
+case "$1" in
+ run) find_script "$2" "${@:3}" ;;
+ visualize) find_script "*visual*" "${@:2}" ;;
+ trust) find_script "*trust*" "${@:2}" ;;
+ glance) find_script "*glance*" "${@:2}" ;;
+ clean) find "$BAZINGA_DIR" -name "*.bak" -o -name "*~" -delete ;;
+ *) find_script "$1" "${@:2}" ;;
+esac

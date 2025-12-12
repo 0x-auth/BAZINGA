@@ -1,0 +1,550 @@
+{
+  "project": "BAZINGA",
+  "version": "2.0.0",
+  "description": "Pattern-based recognition system for relationship analysis with integrated medical correlation framework",
+  "architecture": {
+    "directoryStructure": {
+      "root": "/",
+      "core": {
+        "path": "/src/core",
+        "components": [
+          "BazingaEngine.ts",
+          "PatternManager.ts",
+          "TemporalAnalyzer.ts",
+          "EncodingSystem.ts",
+          "RecognitionEngine.ts",
+          "IntegrationService.ts"
+        ],
+        "purpose": "Core system functionality and business logic"
+      },
+      "scripts": {
+        "path": "/scripts",
+        "categories": {
+          "setup": {
+            "path": "/scripts/setup",
+            "files": [
+              "install_dependencies.sh",
+              "setup_environment.sh",
+              "configure_bazinga.sh"
+            ]
+          },
+          "execution": {
+            "path": "/scripts/execution",
+            "files": [
+              "run_analysis.sh",
+              "extract_patterns.sh",
+              "generate_report.sh"
+            ]
+          },
+          "maintenance": {
+            "path": "/scripts/maintenance",
+            "files": [
+              "fix_symlinks.sh",
+              "cleanup.sh",
+              "backup_data.sh"
+            ]
+          }
+        },
+        "purpose": "Organized scripts for system operations"
+      },
+      "data": {
+        "path": "/data",
+        "subDirectories": [
+          "input",
+          "processed",
+          "references",
+          "temp"
+        ],
+        "purpose": "Data storage and management"
+      },
+      "analysis": {
+        "path": "/analysis",
+        "subDirectories": [
+          "reports",
+          "visualizations",
+          "patterns",
+          "metrics"
+        ],
+        "purpose": "Consolidated analysis outputs"
+      },
+      "frameworks": {
+        "path": "/src/frameworks",
+        "components": [
+          "MedicalCorrelation.ts",
+          "WhatsAppAnalyzer.ts",
+          "SSRITimeline.ts",
+          "ContextDependency.ts",
+          "PatternRecognition.ts"
+        ],
+        "purpose": "Specialized analysis frameworks"
+      },
+      "utils": {
+        "path": "/src/utils",
+        "components": [
+          "Logger.ts",
+          "FileSystem.ts",
+          "DataValidator.ts",
+          "ConfigLoader.ts",
+          "Visualizer.ts"
+        ],
+        "purpose": "Common utilities and helper functions"
+      },
+      "models": {
+        "path": "/src/models",
+        "components": [
+          "Pattern.ts",
+          "Timeline.ts",
+          "Observation.ts",
+          "Relationship.ts",
+          "MedicationEffect.ts"
+        ],
+        "purpose": "Data models and type definitions"
+      },
+      "config": {
+        "path": "/config",
+        "files": [
+          "system.json",
+          "analysis.json",
+          "encoding.json",
+          "patterns.json",
+          "visualization.json"
+        ],
+        "purpose": "Configuration files for different system aspects"
+      },
+      "tests": {
+        "path": "/tests",
+        "categories": [
+          "unit",
+          "integration",
+          "e2e"
+        ],
+        "purpose": "Test suites for system verification"
+      },
+      "docs": {
+        "path": "/docs",
+        "categories": [
+          "api",
+          "user",
+          "developer",
+          "patterns"
+        ],
+        "purpose": "System documentation"
+      }
+    },
+    "moduleIntegration": {
+      "core": {
+        "BazingaEngine": {
+          "description": "Main system orchestrator",
+          "responsibilities": [
+            "Initialize system components",
+            "Manage execution flow",
+            "Coordinate pattern recognition",
+            "Handle system state"
+          ],
+          "dependsOn": [
+            "PatternManager",
+            "TemporalAnalyzer",
+            "EncodingSystem",
+            "IntegrationService"
+          ]
+        },
+        "PatternManager": {
+          "description": "Manages pattern definitions and detection",
+          "responsibilities": [
+            "Define pattern structures",
+            "Detect patterns in data",
+            "Calculate pattern relevance",
+            "Store pattern instances"
+          ],
+          "dependsOn": [
+            "EncodingSystem",
+            "RecognitionEngine"
+          ]
+        },
+        "TemporalAnalyzer": {
+          "description": "Performs time-based analysis",
+          "responsibilities": [
+            "Align events on timeline",
+            "Detect temporal correlations",
+            "Track pattern evolution",
+            "Generate temporal visualizations"
+          ],
+          "dependsOn": [
+            "RecognitionEngine",
+            "IntegrationService"
+          ]
+        },
+        "EncodingSystem": {
+          "description": "Handles pattern encoding and decoding",
+          "responsibilities": [
+            "Encode patterns numerically",
+            "Decode numerical patterns",
+            "Manage encoding rules",
+            "Versioning of encoding schemes"
+          ],
+          "dependsOn": []
+        },
+        "RecognitionEngine": {
+          "description": "Implements pattern recognition algorithms",
+          "responsibilities": [
+            "Detect patterns in data",
+            "Calculate pattern confidence",
+            "Track pattern evolution",
+            "Implement recognition strategies"
+          ],
+          "dependsOn": [
+            "EncodingSystem"
+          ]
+        },
+        "IntegrationService": {
+          "description": "Manages external integrations",
+          "responsibilities": [
+            "Connect with data sources",
+            "Handle WhatsApp data",
+            "Integrate medical timelines",
+            "Synchronize with AI systems"
+          ],
+          "dependsOn": []
+        }
+      },
+      "frameworks": {
+        "MedicalCorrelation": {
+          "description": "Correlates medical events with behavior",
+          "responsibilities": [
+            "Track medication timelines",
+            "Correlate symptoms with medication",
+            "Generate medical reports",
+            "Visualize medical impact"
+          ],
+          "dependsOn": [
+            "TemporalAnalyzer",
+            "SSRITimeline"
+          ]
+        },
+        "WhatsAppAnalyzer": {
+          "description": "Analyzes WhatsApp conversation data",
+          "responsibilities": [
+            "Process WhatsApp exports",
+            "Analyze message content",
+            "Track communication patterns",
+            "Detect message sentiment"
+          ],
+          "dependsOn": [
+            "PatternRecognition",
+            "TemporalAnalyzer"
+          ]
+        },
+        "SSRITimeline": {
+          "description": "Tracks SSRI medication effects over time",
+          "responsibilities": [
+            "Define medication periods",
+            "Track known SSRI effects",
+            "Correlate symptoms with timeline",
+            "Generate medication reports"
+          ],
+          "dependsOn": [
+            "TemporalAnalyzer"
+          ]
+        },
+        "ContextDependency": {
+          "description": "Analyzes behavior across different contexts",
+          "responsibilities": [
+            "Track context-specific behavior",
+            "Compare in-person vs. remote patterns",
+            "Calculate context dependency metrics",
+            "Visualize context shifts"
+          ],
+          "dependsOn": [
+            "PatternRecognition",
+            "TemporalAnalyzer"
+          ]
+        },
+        "PatternRecognition": {
+          "description": "Specialized pattern recognition for relationship data",
+          "responsibilities": [
+            "Detect communication patterns",
+            "Identify behavioral markers",
+            "Track pattern evolution",
+            "Generate pattern reports"
+          ],
+          "dependsOn": [
+            "RecognitionEngine"
+          ]
+        }
+      }
+    },
+    "executionFlow": {
+      "initialization": {
+        "steps": [
+          "Load configuration files",
+          "Initialize core components",
+          "Connect to data sources",
+          "Load existing patterns",
+          "Setup logging and monitoring"
+        ],
+        "responsible": "BazingaEngine"
+      },
+      "dataProcessing": {
+        "steps": [
+          "Import raw data",
+          "Validate and clean data",
+          "Structure and normalize data",
+          "Prepare for analysis",
+          "Store processed data"
+        ],
+        "responsible": "IntegrationService"
+      },
+      "patternAnalysis": {
+        "steps": [
+          "Apply pattern detection algorithms",
+          "Calculate pattern confidence",
+          "Encode detected patterns",
+          "Store pattern instances",
+          "Track pattern evolution"
+        ],
+        "responsible": "PatternManager"
+      },
+      "temporalAnalysis": {
+        "steps": [
+          "Align events on timeline",
+          "Identify critical transition points",
+          "Correlate events with medication",
+          "Calculate temporal metrics",
+          "Generate timeline visualizations"
+        ],
+        "responsible": "TemporalAnalyzer"
+      },
+      "frameworkAnalysis": {
+        "steps": [
+          "Apply specialized frameworks",
+          "Generate framework-specific insights",
+          "Combine insights across frameworks",
+          "Validate framework results",
+          "Store framework outputs"
+        ],
+        "responsible": "BazingaEngine"
+      },
+      "reportGeneration": {
+        "steps": [
+          "Compile analysis results",
+          "Generate visualizations",
+          "Format reports",
+          "Export to specified formats",
+          "Archive results"
+        ],
+        "responsible": "BazingaEngine"
+      }
+    },
+    "refactoringPriorities": [
+      {
+        "component": "Directory Structure",
+        "currentIssues": [
+          "Scattered analysis directories",
+          "Inconsistent script locations",
+          "Redundant analysis outputs",
+          "Unorganized configuration files"
+        ],
+        "solution": "Implement the standardized directory structure defined above",
+        "priority": "HIGH"
+      },
+      {
+        "component": "Core Modules",
+        "currentIssues": [
+          "Duplicate functionality",
+          "Unclear responsibility boundaries",
+          "Missing integration between components",
+          "Inconsistent coding standards"
+        ],
+        "solution": "Refactor into clear module structure with defined responsibilities",
+        "priority": "CRITICAL"
+      },
+      {
+        "component": "Data Flow",
+        "currentIssues": [
+          "Inconsistent data formats",
+          "Redundant data processing",
+          "Missing validation steps",
+          "Inefficient data transformation"
+        ],
+        "solution": "Standardize data flow with clear processing stages",
+        "priority": "HIGH"
+      },
+      {
+        "component": "Configuration Management",
+        "currentIssues": [
+          "Hardcoded configuration values",
+          "Scattered configuration files",
+          "Inconsistent configuration formats",
+          "Missing documentation"
+        ],
+        "solution": "Centralize configuration in /config with standard formats",
+        "priority": "MEDIUM"
+      },
+      {
+        "component": "Error Handling",
+        "currentIssues": [
+          "Inconsistent error handling",
+          "Missing error recovery",
+          "Poor error logging",
+          "Unhelpful error messages"
+        ],
+        "solution": "Implement standardized error handling across system",
+        "priority": "MEDIUM"
+      },
+      {
+        "component": "Testing",
+        "currentIssues": [
+          "Incomplete test coverage",
+          "Manual testing processes",
+          "Missing integration tests",
+          "Inconsistent test approaches"
+        ],
+        "solution": "Develop comprehensive test suite with automation",
+        "priority": "HIGH"
+      }
+    ],
+    "migrationStrategy": {
+      "phases": [
+        {
+          "name": "Analysis and Planning",
+          "tasks": [
+            "Document current system state",
+            "Identify critical components",
+            "Map dependencies",
+            "Create detailed migration plan"
+          ],
+          "duration": "1-2 weeks"
+        },
+        {
+          "name": "Directory Restructuring",
+          "tasks": [
+            "Create new directory structure",
+            "Move files to appropriate locations",
+            "Update references",
+            "Verify system functionality"
+          ],
+          "duration": "1 week"
+        },
+        {
+          "name": "Core Refactoring",
+          "tasks": [
+            "Refactor core modules",
+            "Implement clear interfaces",
+            "Remove duplicate functionality",
+            "Add comprehensive unit tests"
+          ],
+          "duration": "2-3 weeks"
+        },
+        {
+          "name": "Framework Integration",
+          "tasks": [
+            "Refactor specialized frameworks",
+            "Integrate with core system",
+            "Standardize API interfaces",
+            "Update documentation"
+          ],
+          "duration": "2 weeks"
+        },
+        {
+          "name": "Testing and Validation",
+          "tasks": [
+            "Execute comprehensive test suite",
+            "Perform integration testing",
+            "Validate with real-world data",
+            "Fix identified issues"
+          ],
+          "duration": "1-2 weeks"
+        },
+        {
+          "name": "Documentation and Finalization",
+          "tasks": [
+            "Update all documentation",
+            "Create developer guides",
+            "Document architecture",
+            "Provide migration notes"
+          ],
+          "duration": "1 week"
+        }
+      ],
+      "approaches": {
+        "refactoring": "Incremental refactoring with frequent testing",
+        "testing": "Maintain test coverage throughout migration",
+        "rollback": "Maintain versioned backups for potential rollback",
+        "prioritization": "Focus on critical functionality first"
+      }
+    },
+    "technicalDebt": {
+      "currentIssues": [
+        "Inconsistent module structure",
+        "Duplicate functionality",
+        "Poor error handling",
+        "Insufficient documentation",
+        "Scattered configuration",
+        "Inefficient data processing",
+        "Limited test coverage"
+      ],
+      "resolutionPlan": {
+        "immediate": [
+          "Directory restructuring",
+          "Core module refactoring",
+          "Configuration centralization"
+        ],
+        "shortTerm": [
+          "Framework integration",
+          "Error handling standardization",
+          "Documentation updates"
+        ],
+        "longTerm": [
+          "Comprehensive test suite",
+          "Performance optimization",
+          "Scalability improvements"
+        ]
+      }
+    }
+  },
+  "recommendations": {
+    "designPrinciples": [
+      "Single Responsibility Principle for all modules",
+      "Dependency Injection for component integration",
+      "Interface-based design for flexibility",
+      "Event-driven architecture for loose coupling",
+      "Configuration over convention for clarity"
+    ],
+    "bestPractices": [
+      "Standardized error handling across all components",
+      "Comprehensive logging for debugging and auditing",
+      "Automated testing for all functionality",
+      "Clear documentation for all public interfaces",
+      "Version control for all configuration and patterns"
+    ],
+    "tools": [
+      {
+        "name": "TypeScript",
+        "purpose": "Type-safe development for core system"
+      },
+      {
+        "name": "Python",
+        "purpose": "Data processing and analysis scripts"
+      },
+      {
+        "name": "Docker",
+        "purpose": "Containerization for consistent environments"
+      },
+      {
+        "name": "Jest",
+        "purpose": "Testing framework for TypeScript"
+      },
+      {
+        "name": "Pytest",
+        "purpose": "Testing framework for Python"
+      }
+    ],
+    "processImprovements": [
+      "Clear ownership for each component",
+      "Code review process for all changes",
+      "Automated testing in CI/CD pipeline",
+      "Regular refactoring sessions",
+      "Documentation requirements for all features"
+    ]
+  }
+}

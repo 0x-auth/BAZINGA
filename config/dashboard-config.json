@@ -1,0 +1,40 @@
+{
+  "tracking": {
+    "commandHistory": true,
+    "filesystemChanges": true,
+    "gitRepositories": true,
+    "claudeArtifacts": true,
+    "scriptExecutions": true
+  },
+  "paths": {
+    "workRepos": [
+      "/Users/abhissrivasta/GolandProjects/federated-vault-monitoring-migration",
+      "/Users/abhissrivasta/GolandProjects/federated-prisma-operator"
+    ],
+    "claudeArtifacts": [
+      "/Users/abhissrivasta/AmsyPycharm/BAZINGA/artifacts/claude_artifacts",
+      "/Users/abhissrivasta/claude_main/artifacts"
+    ],
+    "personalProjects": [
+      "/Users/abhissrivasta/AmsyPycharm/BAZINGA",
+      "/Users/abhissrivasta/AmsyPycharm/BAZINGA-INDEED"
+    ]
+  },
+  "visualization": {
+    "refreshInterval": 3600,
+    "patternThreshold": 3,
+    "maxTimelineItems": 50
+  },
+  "patterns": {
+    "dodo": {
+      "enabled": true,
+      "threshold": 2,
+      "signalAmplification": 1.5
+    },
+    "singular": {
+      "enabled": true,
+      "threshold": 3.5,
+      "decayRate": 0.85
+    }
+  }
+}

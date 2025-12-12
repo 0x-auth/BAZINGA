@@ -1,0 +1,82 @@
+===== BAZINGA SYSTEM EXTRACT =====
+Generated: Sun Mar 16 21:30:53 IST 2025
+
+CORE STRUCTURE:
+----------------
+./src
+./src/core
+./src/core/bazinga
+./src/core/dodo
+./src/core/fractals
+./src/core/interfaces
+./src/core/patterns
+./src/core/quantum
+./src/core/src
+./src/core/token
+./src/examples
+./src/generators
+./src/generators/core
+./src/generators/output
+./src/integrations
+./src/integrations/dodo
+./src/templates
+./src/tools
+./src/utils
+
+KEY CONCEPTS:
+-------------
+
+FRACTAL INTEGRATION:
+-------------------
+./fractal_artifacts_integration.py:    classification: string;
+./fractal_artifacts_integration.py:    classification: string;
+./fractal_artifacts_integration.py:  export class RelationshipFractalAnalyzer {
+./fractal_artifacts_integration.py:  export class UniversalFractalGenerator {
+./fractal_artifacts_integration.py:  export class FractalDeterministicCommunication {
+./fractal_bazinga_integration.py:print("Step 1: Creating Fractal Relationship Analyzer class")
+./fractal_bazinga_integration.py:# Create a mock implementation of the RelationshipFractalAnalyzer class
+./fractal_bazinga_integration.py:class RelationshipFractalAnalyzer:
+./fractal_bazinga_integration.py:            classification = "High gap"
+./fractal_bazinga_integration.py:            classification = "Medium gap"
+
+CODE STATISTICS:
+---------------
+Python files:     3957
+TypeScript files:     2201
+Documentation files:       32
+
+SYSTEM CAPABILITIES:
+-------------------
+./fractal_bazinga_integration.py:    def generate_mandelbrot_signature(self, seed):
+./fractal_bazinga_integration.py:    def generate_bazinga_insight(self, witness_duality, perception_gap, temporal_pattern, signature):
+./fractal_bazinga_integration.py:    def generate_witness_duality_dashboard(self, data):
+./fractal_bazinga_integration.py:    def generate_comprehensive_fractal_dashboard(self, insight_data):
+./artifacts/other/other_shared_data.py:    def generate_etag(self, mtime: datetime, file_size: int, real_filename: str) -> str:
+...
+./fractal_bazinga_integration.py:    def analyze_witness_duality(self, text):
+./fractal_bazinga_integration.py:    def analyze_temporal_patterns(self, text):
+./artifacts/other/other_idtracking.py:    def analyze_node(self, node: nodes.Node, **kwargs: t.Any) -> None:
+./jira-singularity-connector.py:def analyze_patterns_for_singularity(pattern_file):
+
+INTEGRATION POINTS:
+------------------
+./jira-singularity-connector.py:def connect_to_claude():
+./jira-singularity-connector.py:    claude_data = connect_to_claude()
+
+RECENT DEVELOPMENT:
+------------------
+./generated/TimeSpaceIntegrator.ts
+./generated/bazinga_dashboard_launcher.py
+./generated/HarmonicTransformer.ts
+./test_deterministic_vs_quantum.ts
+./fractal_bazinga_integration.py
+./artifacts/other/other_matrix.py
+./artifacts/other/other_min_key.py
+./artifacts/other/other_T_T_F_A_.py
+./artifacts/other/other_exception.py
+./artifacts/other/other_test__monkey_select.py
+
+===== EXTRACT COMPLETE =====
+
+This extract is limited to avoid token overflow.
+For more detailed analysis, run with --comprehensive flag.

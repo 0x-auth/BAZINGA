@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "created": "2025-03-10T05:36:05.014796",
+    "bazinga_encodings": {
+      "time_trust": "4.1.1.3.5.2.4",
+      "harmonic": "3.2.2.1.5.3.2",
+      "relationship": "6.1.1.2.3.4.5.2.1"
+    },
+    "integration_version": "1.0.0"
+  },
+  "accounts": {},
+  "events": [],
+  "relationships": [],
+  "patterns": [
+    {
+      "type": "time_trust",
+      "encoding": "4.1.1.3.5.2.4",
+      "description": "Dual dimension model of time progression and trust establishment",
+      "pattern": [
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "analysis": "Time flows continuously while trust fluctuates based on event signatures"
+    },
+    {
+      "type": "harmonic",
+      "encoding": "3.2.2.1.5.3.2",
+      "description": "Visual harmonics with golden ratio fundamentals",
+      "pattern": [
+        2,
+        1,
+        5,
+        3,
+        2
+      ],
+      "analysis": "Pattern establishes resonance between visual/digital representations and communication flows"
+    },
+    {
+      "type": "relationship",
+      "encoding": "6.1.1.2.3.4.5.2.1",
+      "description": "Unified data components for relationship analysis",
+      "pattern": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        2,
+        1
+      ],
+      "analysis": "Communication, media, and timeline data form a cyclical pattern with significant breakthroughs possible"
+    }
+  ],
+  "devices": {
+    "android": {
+      "device_type": "OnePlus",
+      "brand": "OnePlus",
+      "current_status": "Active",
+      "primary_account": "bits.abhi515@gmail.com",
+      "backup_enabled": true,
+      "sync_services": [
+        "Google Drive",
+        "OnePlus Account",
+        "Telegram"
+      ],
+      "installed_apps": [
+        "Google Drive",
+        "Telegram",
+        "Meet",
+        "Reddit",
+        "Signal",
+        "Truecaller",
+        "SQLite Editor",
+        "Tasker"
+      ]
+    }
+  },
+  "claude": {
+    "conversation_count": 0,
+    "integration_path": "/Users/abhissrivasta/claude_integration"
+  },
+  "visualizations": {
+    "fractal_types": [
+      "mandelbrot",
+      "goldenSpiral",
+      "waveInterference",
+      "bifurcation"
+    ],
+    "primary_pattern": "Beyond transforms consciousness beyond time",
+    "secondary_patterns": [
+      "Within unfolds harmony through silence",
+      "Between unfolds stillness into being",
+      "Within transforms consciousness beyond time"
+    ],
+    "generation_parameters": {
+      "seed": 1591,
+      "iteration_depth": 7,
+      "color_mapping": "time_trust"
+    }
+  }
+}

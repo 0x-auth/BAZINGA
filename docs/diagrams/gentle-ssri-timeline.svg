@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f9f7f4" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="20" text-anchor="middle" fill="#555">Understanding Emotional Changes During Medication</text>
+  
+  <!-- Journey Path -->
+  <path d="M100,220 C150,210 200,230 250,220 S350,190 400,180 S500,150 550,160 S650,190 700,180" fill="none" stroke="#a5c9e5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" />
+  
+  <!-- Milestones -->
+  <circle cx="100" cy="220" r="15" fill="#78a4d4" />
+  <circle cx="250" cy="220" r="15" fill="#78a4d4" />
+  <circle cx="400" cy="180" r="20" fill="#5a81b0" stroke="#fff" stroke-width="3" />
+  <circle cx="550" cy="160" r="15" fill="#78a4d4" />
+  <circle cx="700" cy="180" r="15" fill="#8cc089" />
+  
+  <!-- Timeline Labels -->
+  <text x="100" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">Starting</text>
+  <text x="100" y="278" font-family="Arial" font-size="12" text-anchor="middle" fill="#777">Month 1</text>
+  
+  <text x="250" y="260" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">Early Adjustment</text>
+  <text x="250" y="278" font-family="Arial" font-size="12" text-anchor="middle" fill="#777">Month 3-4</text>
+  
+  <text x="400" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="#555" font-weight="bold">Most Significant Changes</text>
+  <text x="400" y="160" font-family="Arial" font-size="14" text-anchor="middle" fill="#777">Month 6-7</text>
+  
+  <text x="550" y="120" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">Continued Effects</text>
+  <text x="550" y="138" font-family="Arial" font-size="12" text-anchor="middle" fill="#777">Month 9-10</text>
+  
+  <text x="700" y="220" font-family="Arial" font-size="14" text-anchor="middle" fill="#555">Potential Recovery</text>
+  <text x="700" y="238" font-family="Arial" font-size="12" text-anchor="middle" fill="#777">With Support</text>
+  
+  <!-- Experience Cards -->
+  <rect x="50" y="300" width="150" height="80" rx="10" ry="10" fill="#f0f7ff" stroke="#ccc" stroke-width="1" />
+  <text x="125" y="325" font-family="Arial" font-size="13" text-anchor="middle" fill="#555">Beginning Treatment</text>
+  <text x="125" y="350" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">Initial adjustments as</text>
+  <text x="125" y="365" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">medication begins working</text>
+  
+  <rect x="225" y="300" width="150" height="80" rx="10" ry="10" fill="#f0f7ff" stroke="#ccc" stroke-width="1" />
+  <text x="300" y="325" font-family="Arial" font-size="13" text-anchor="middle" fill="#555">Subtle Changes</text>
+  <text x="300" y="350" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">May notice differences in</text>
+  <text x="300" y="365" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">how emotions are processed</text>
+  
+  <rect x="400" y="300" width="150" height="80" rx="10" ry="10" fill="#e6f0f9" stroke="#5a81b0" stroke-width="2" />
+  <text x="475" y="325" font-family="Arial" font-size="13" text-anchor="middle" fill="#555" font-weight="bold">Key Period</text>
+  <text x="475" y="345" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">Research shows emotional</text>
+  <text x="475" y="360" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">processing changes often</text>
+  <text x="475" y="375" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">peak during this time</text>
+  
+  <rect x="575" y="300" width="175" height="80" rx="10" ry="10" fill="#e8f4ea" stroke="#ccc" stroke-width="1" />
+  <text x="662" y="325" font-family="Arial" font-size="13" text-anchor="middle" fill="#555">Moving Forward</text>
+  <text x="662" y="345" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">Understanding these changes</text>
+  <text x="662" y="360" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">can help with better decisions</text>
+  <text x="662" y="375" font-family="Arial" font-size="11" text-anchor="middle" fill="#777">and support</text>
+</svg>

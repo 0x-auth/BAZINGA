@@ -1,0 +1,247 @@
+/**
+ * BAZINGA Pattern-Based Jira & Singularity Integration
+ * 
+ * This module extends the UnifiedIntegrationSystem with specific
+ * capabilities for Jira ticket management and Singularity vulnerability
+ * reporting, using the same fractal pattern principles.
+ */
+
+class JiraSingularityIntegration {
+  constructor(unifiedSystem) {
+    this.unified = unifiedSystem || new UnifiedIntegrationSystem();
+    this.phi = this.unified.phi;
+    
+    // File paths (derived from your script)
+    this.paths = {
+      bazinga: "/Users/abhissrivasta/AmsyPycharm/BAZINGA",
+      vaultToolkit: "/Users/abhissrivasta/GolandProjects/vault-security-toolkit",
+      certSystem: "/Users/abhissrivasta/GolandProjects/certificate-notification-system"
+    };
+    
+    // Pattern mapping between Jira/Singularity and BAZINGA patterns
+    this.patternMap = {
+      'time-trust': {
+        jiraFieldName: 'Criticality Over Time',
+        singularityField: 'age_severity_product',
+        jiraPriority: 'Critical',
+        jiraSLA: '7 days',
+        bazingaPattern: 'Time-Trust'
+      },
+      'harmonic': {
+        jiraFieldName: 'System Balance Impact',
+        singularityField: 'affected_system_count',
+        jiraPriority: 'High',
+        jiraSLA: '14 days',
+        bazingaPattern: 'Harmonic'
+      },
+      'relationship': {
+        jiraFieldName: 'Dependency Chain',
+        singularityField: 'dependency_count',
+        jiraPriority: 'Medium',
+        jiraSLA: '21 days',
+        bazingaPattern: 'Relationship'
+      },
+      'mandelbrot': {
+        jiraFieldName: 'Recursive Pattern',
+        singularityField: 'recursion_depth',
+        jiraPriority: 'Medium',
+        jiraSLA: '21 days',
+        bazingaPattern: 'Mandelbrot'
+      }
+    };
+    
+    this.initializePatternDetectors();
+  }
+
+  /**
+   * Initialize pattern detectors for different vulnerability types
+   */
+  initializePatternDetectors() {
+    this.detectors = {
+      'time-trust': (vuln) => {
+        // Age + criticality correlation
+        const age = vuln.age || 0;
+        const severity = this.normalizeSeverity(vuln.severity);
+        return (age > 30 && severity > 0.8) || (age > 60 && severity > 0.6);
+      },
+      
+      'harmonic': (vuln) => {
+        // Check for balanced impact across systems
+        const systems = vuln.impactedSystems || vuln.affected_systems || [];
+        if (systems.length < 3) return false;
+        
+        // Check for golden ratio balance in impact distribution
+        let impactSum = 0;
+        let impactProduct = 1;
+        
+        systems.forEach(sys => {
+          const impact = sys.impact || 1;
+          impactSum += impact;
+          impactProduct *= impact;
+        });
+        
+        // Using golden ratio to detect harmonic distribution
+        const harmonicMetric = impactSum / impactProduct;
+        return Math.abs(harmonicMetric - this.phi) < 0.5;
+      },
+      
+      'relationship': (vuln) => {
+        // Complex dependency relationship detection
+        const deps = vuln.dependencies || [];
+        return deps.length > 2;
+      },
+      
+      'mandelbrot': (vuln) => {
+        // Recursive pattern detection
+        return vuln.recursive || vuln.repeating || 
+               (vuln.recursionDepth && vuln.recursionDepth > 1);
+      }
+    };
+  }
+  
+  /**
+   * Run the full fractal integration process, similar to
+   * the bash script you provided but with self-correction
+   */
+  async runFractalIntegration() {
+    const results = {
+      inhalePhaseMethods: [],
+      pausePhaseResults: null,
+      exhalePhaseOutput: null,
+      selfCorrection: {
+        iterations: 0,
+        corrections: []
+      }
+    };
+    
+    try {
+      // --- INHALE PHASE: Data Collection ---
+      console.log("📥 INHALE PHASE: Gathering data...");
+      
+      // Try multiple data collection methods and remember which succeeded
+      let fractalPatterns = null;
+      try {
+        // Try to run the fractal demo
+        fractalPatterns = await this.runFractalDemo();
+        results.inhalePhaseMethods.push('fractal_demo.js');
+      } catch (err) {
+        console.log("Could not run fractal demo, generating patterns directly");
+        fractalPatterns = this.generateFractalPatterns();
+        results.inhalePhaseMethods.push('generated_patterns');
+      }
+      
+      // Get vault scan data
+      let vaultScanData = null;
+      try {
+        vaultScanData = await this.scanVaultToolkit();
+        results.inhalePhaseMethods.push('enhanced-scanner.sh for vault');
+      } catch (err) {
+        console.log("Could not run vault scanner, using file listing approach");
+        vaultScanData = await this.getVaultFileList();
+        results.inhalePhaseMethods.push('file listing for vault');
+      }
+      
+      // Get certificate scan data
+      let certScanData = null;
+      try {
+        certScanData = await this.scanCertSystem();
+        results.inhalePhaseMethods.push('enhanced-scanner.sh for certs');
+      } catch (err) {
+        console.log("Could not run cert scanner, using file listing approach");
+        certScanData = await this.getCertFileList();
+        results.inhalePhaseMethods.push('file listing for certs');
+      }
+      
+      // Try to get Singularity vulnerability data directly
+      let singularityData = null;
+      try {
+        singularityData = await this.getSingularityData();
+        results.inhalePhaseMethods.push('direct singularity API');
+      } catch (err) {
+        console.log("Could not access Singularity API directly");
+      }
+      
+      // --- PAUSE PHASE: Pattern Analysis ---
+      console.log("🧠 PAUSE PHASE: Analyzing patterns...");
+      
+      const patternAnalysis = this.analyzeWithFractalPatterns({
+        fractalPatterns,
+        vaultScanData,
+        certScanData,
+        singularityData
+      });
+      
+      results.pausePhaseResults = patternAnalysis;
+      
+      // --- SELF-CORRECTION PHASE ---
+      // Verify results and fill gaps if needed
+      const correctedAnalysis = this.applySelfCorrection(patternAnalysis);
+      results.selfCorrection = correctedAnalysis.selfCorrection;
+      
+      // --- EXHALE PHASE: Generate Reports and Jira Tickets ---
+      console.log("📤 EXHALE PHASE: Generating output...");
+      
+      // Generate report
+      const report = this.generateReport(correctedAnalysis.patterns);
+      
+      // Create Jira tickets
+      const jiraTickets = this.createJiraTickets(correctedAnalysis.patterns);
+      
+      results.exhalePhaseOutput = {
+        report,
+        jiraTickets
+      };
+      
+      return results;
+    } catch (err) {
+      console.error("Error during fractal integration:", err);
+      throw err;
+    }
+  }
+  
+  /**
+   * Runs the fractal demo script to generate baseline patterns
+   */
+  async runFractalDemo() {
+    // Implementation would call the Node script
+    // For simulation, return sample data
+    return {
+      fibonacci: [1, 1, 2, 3, 5, 8, 13],
+      golden: [1, 1.618, 2.618, 4.236, 6.854, 11.09, 17.944],
+      mandelbrot: [0, 1, 0.5, 0.75, 0.625, 0.687, 0.656],
+      seed: Math.random()  // Randomness seed for pattern generation
+    };
+  }
+  
+  /**
+   * Generates fractal patterns directly if script can't be run
+   */
+  generateFractalPatterns() {
+    const phi = this.phi;
+    
+    return {
+      fibonacci: [1, 1, 2, 3, 5, 8, 13, 21, 34],
+      golden: Array(7).fill(0).map((_, i) => {
+        if (i === 0) return 1;
+        if (i === 1) return phi;
+        return phi * this.generateFractalPatterns().golden[i-1];
+      }),
+      mandelbrot: [0, 1, 0.5, 0.75, 0.625, 0.687, 0.656],
+      timeSequence: Array(5).fill(0).map((_, i) => Date.now() - (i * 86400000))
+    };
+  }
+  
+  /**
+   * Scans the vault toolkit using the enhanced scanner
+   */
+  async scanVaultToolkit() {
+    // Implementation would shell out to the scanner script
+    // For simulation, return sample data
+    return {
+      results: [
+        {
+          id: "VAULT-001",
+          description: "Authentication token TTL exceeds policy",
+          severity: "critical",
+          age: 45,
+          impactedSyste

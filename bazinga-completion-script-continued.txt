@@ -1,0 +1,819 @@
+'difference': series.iloc[i] - series.iloc[i-1],
+                    'percent_change': (series.iloc[i] - series.iloc[i-1]) / series.iloc[i-1] * 100 if series.iloc[i-1] != 0 else float('inf'),
+                    'z_score': (series.iloc[i] - rolling_mean.iloc[i-1]) / rolling_std.iloc[i-1] if rolling_std.iloc[i-1] != 0 else 0
+                })
+        
+        return significant_changes
+    
+    def visualize(self, result_type='frequency', output_dir=None):
+        if not output_dir:
+            output_dir = os.path.join(os.getcwd(), 'bazinga_viz')
+        
+        os.makedirs(output_dir, exist_ok=True)
+        
+        if result_type not in self.results:
+            raise ValueError(f"No results found for '{result_type}'. Run the corresponding analysis first.")
+        
+        if result_type == 'frequency':
+            plt.figure(figsize=(12, 6))
+            self.results['frequency'].plot()
+            plt.title('Message Frequency Over Time')
+            plt.xlabel('Date')
+            plt.ylabel('Number of Messages')
+            plt.legend(title='Sender')
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, 'frequency_analysis.png'))
+            
+        elif result_type == 'emotion':
+            emotions = list(self.results['emotion'].keys())
+            senders = list(self.results['emotion'][emotions[0]].index)
+            
+            emotion_data = {}
+            for sender in senders:
+                emotion_data[sender] = [self.results['emotion'][emotion][sender] for emotion in emotions]
+            
+            plt.figure(figsize=(10, 6))
+            bar_width = 0.35
+            index = np.arange(len(emotions))
+            
+            for i, (sender, values) in enumerate(emotion_data.items()):
+                plt.bar(index + i*bar_width, values, bar_width, label=sender)
+            
+            plt.xlabel('Emotion')
+            plt.ylabel('Count')
+            plt.title('Emotion Analysis by Sender')
+            plt.xticks(index + bar_width/2, emotions)
+            plt.legend()
+            plt.tight_layout()
+            plt.savefig(os.path.join(output_dir, 'emotion_analysis.png'))
+        
+        plt.close('all')
+        return os.path.join(output_dir)
+    
+    def generate_report(self, output_file=None):
+        if not output_file:
+            output_file = os.path.join(os.getcwd(), f'bazinga_report_{datetime.now().strftime("%Y%m%d_%H%M%S")}.html')
+        
+        html_content = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>BAZINGA Pattern Analysis Report</title>
+            <style>
+                body {{ font-family: Arial, sans-serif; margin: 20px; }}
+                h1, h2, h3 {{ color: #333; }}
+                .section {{ margin-bottom: 30px; }}
+                .pattern {{ margin-bottom: 15px; padding: 10px; background-color: #f5f5f5; border-radius: 5px; }}
+                table {{ border-collapse: collapse; width: 100%; }}
+                th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
+                th {{ background-color: #f2f2f2; }}
+                tr:nth-child(even) {{ background-color: #f9f9f9; }}
+            </style>
+        </head>
+        <body>
+            <h1>BAZINGA Pattern Analysis Report</h1>
+            <p>Generated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>
+            <p>Data Source: {self.data_path}</p>
+            
+            <div class="section">
+                <h2>Overview</h2>
+                <p>Total Messages: {len(self.data)}</p>
+                <p>Date Range: {self.data['date'].min().strftime("%Y-%m-%d")} to {self.data['date'].max().strftime("%Y-%m-%d")}</p>
+                <p>Senders: {', '.join(self.data['sender'].unique())}</p>
+            </div>
+        """
+        
+        # Add frequency analysis
+        if 'frequency' in self.results:
+            html_content += """
+            <div class="section">
+                <h2>Frequency Analysis</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+            """
+            
+            for sender in self.results['frequency'].columns:
+                html_content += f"<th>{sender}</th>"
+            
+            html_content += "</tr>"
+            
+            for idx, row in self.results['frequency'].iterrows():
+                html_content += f"<tr><td>{idx}</td>"
+                for sender in self.results['frequency'].columns:
+                    html_content += f"<td>{row[sender]}</td>"
+                html_content += "</tr>"
+            
+            html_content += """
+                </table>
+            </div>
+            """
+        
+        # Add pattern detection
+        if 'patterns' in self.results:
+            html_content += """
+            <div class="section">
+                <h2>Detected Patterns</h2>
+            """
+            
+            for pattern_name, changes in self.results['patterns'].items():
+                if changes:
+                    html_content += f"""
+                    <div class="pattern">
+                        <h3>{pattern_name}</h3>
+                        <table>
+                            <tr>
+                                <th>Date</th>
+                                <th>Value</th>
+                                <th>Previous</th>
+                                <th>Difference</th>
+                                <th>Percent Change</th>
+                                <th>Z-Score</th>
+                            </tr>
+                    """
+                    
+                    for change in changes:
+                        html_content += f"""
+                        <tr>
+                            <td>{change['index']}</td>
+                            <td>{change['value']:.2f}</td>
+                            <td>{change['previous']:.2f}</td>
+                            <td>{change['difference']:.2f}</td>
+                            <td>{change['percent_change']:.2f}%</td>
+                            <td>{change['z_score']:.2f}</td>
+                        </tr>
+                        """
+                    
+                    html_content += """
+                        </table>
+                    </div>
+                    """
+            
+            html_content += """
+            </div>
+            """
+        
+        html_content += """
+        </body>
+        </html>
+        """
+        
+        with open(output_file, 'w') as f:
+            f.write(html_content)
+        
+        return output_file
+
+
+if __name__ == "__main__":
+    import argparse
+    import sys
+    
+    parser = argparse.ArgumentParser(description='BAZINGA Pattern Analyzer')
+    parser.add_argument('--file', '-f', required=True, help='Path to the data file (WhatsApp chat or JSON)')
+    parser.add_argument('--output', '-o', help='Output directory for visualizations and reports')
+    parser.add_argument('--analyze', '-a', choices=['frequency', 'emotion', 'period', 'patterns', 'all'], default='all', help='Analysis type to perform')
+    parser.add_argument('--visualize', '-v', action='store_true', help='Generate visualizations')
+    parser.add_argument('--report', '-r', action='store_true', help='Generate HTML report')
+    parser.add_argument('--start-date', help='Start date for period analysis (YYYY-MM-DD)')
+    parser.add_argument('--end-date', help='End date for period analysis (YYYY-MM-DD)')
+    
+    args = parser.parse_args()
+    
+    analyzer = PatternAnalyzer(args.file)
+    try:
+        analyzer.load_data()
+        print(f"Loaded {len(analyzer.data)} records from {args.file}")
+        
+        if args.analyze in ['frequency', 'all']:
+            frequency = analyzer.analyze_frequency()
+            print(f"Performed frequency analysis")
+        
+        if args.analyze in ['emotion', 'all']:
+            emotions = analyzer.analyze_emotion()
+            print(f"Performed emotion analysis")
+        
+        if args.analyze in ['period', 'all'] and args.start_date and args.end_date:
+            period = analyzer.analyze_period(args.start_date, args.end_date)
+            print(f"Performed period analysis from {args.start_date} to {args.end_date}")
+        
+        if args.analyze in ['patterns', 'all']:
+            patterns = analyzer.detect_patterns()
+            print(f"Detected patterns in data")
+        
+        if args.visualize:
+            output_dir = args.output or os.path.join(os.getcwd(), 'bazinga_viz')
+            visualizations = []
+            
+            if 'frequency' in analyzer.results:
+                viz_path = analyzer.visualize('frequency', output_dir)
+                visualizations.append(('frequency', viz_path))
+            
+            if 'emotion' in analyzer.results:
+                viz_path = analyzer.visualize('emotion', output_dir)
+                visualizations.append(('emotion', viz_path))
+            
+            print(f"Generated visualizations in {output_dir}")
+        
+        if args.report:
+            output_file = os.path.join(args.output or os.getcwd(), f'bazinga_report_{datetime.now().strftime("%Y%m%d_%H%M%S")}.html')
+            report_path = analyzer.generate_report(output_file)
+            print(f"Generated report at {report_path}")
+        
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        sys.exit(1)
+    
+    print("Analysis complete")
+EOF
+        bazinga_log \"\${GREEN}Analyzer code generated: \$OUTPUT_FILE\${NC}\"
+        ;;
+        
+      pattern)
+        bazinga_log \"\${CYAN}Generating pattern detection code...\${NC}\"
+        OUTPUT_FILE=\"\${OUTPUT_FILE}.js\"
+        
+        # Generate JavaScript pattern detector
+        cat > \"\$OUTPUT_FILE\" << EOF
+/**
+ * BAZINGA Pattern Detector
+ * Auto-generated by BAZINGA System
+ */
+
+class PatternDetector {
+  constructor(options = {}) {
+    this.options = {
+      threshold: 1.5,
+      minPatternLength: 3,
+      maxGap: 2,
+      ...options
+    };
+    
+    this.patterns = {
+      detected: [],
+      metadata: {}
+    };
+  }
+  
+  /**
+   * Detect patterns in time series data
+   * @param {Array} data - Array of objects with timestamp and value
+   * @param {string} timeField - Field name for timestamp
+   * @param {string} valueField - Field name for value
+   * @returns {Object} Detected patterns
+   */
+  detectPatterns(data, timeField = 'timestamp', valueField = 'value') {
+    if (!data || !Array.isArray(data) || data.length === 0) {
+      throw new Error('Invalid data provided');
+    }
+    
+    // Sort data by timestamp
+    const sortedData = [...data].sort((a, b) => 
+      new Date(a[timeField]) - new Date(b[timeField])
+    );
+    
+    // Extract values
+    const values = sortedData.map(d => d[valueField]);
+    const timestamps = sortedData.map(d => d[timeField]);
+    
+    // Detect different pattern types
+    const patterns = {
+      trends: this.detectTrends(values, timestamps),
+      cycles: this.detectCycles(values, timestamps),
+      outliers: this.detectOutliers(values, timestamps),
+      shifts: this.detectShifts(values, timestamps)
+    };
+    
+    this.patterns.detected = patterns;
+    this.patterns.metadata = {
+      dataPoints: data.length,
+      timeRange: [timestamps[0], timestamps[timestamps.length - 1]],
+      detectionThreshold: this.options.threshold
+    };
+    
+    return this.patterns;
+  }
+  
+  /**
+   * Detect rising or falling trends
+   */
+  detectTrends(values, timestamps) {
+    const trends = [];
+    
+    // Calculate moving average
+    const windowSize = Math.max(3, Math.floor(values.length / 10));
+    const movingAvgs = this.calculateMovingAverage(values, windowSize);
+    
+    // Calculate slopes
+    const slopes = [];
+    for (let i = 1; i < movingAvgs.length; i++) {
+      slopes.push(movingAvgs[i] - movingAvgs[i-1]);
+    }
+    
+    // Detect consistent upward or downward trends
+    let currentTrend = null;
+    let trendStart = 0;
+    
+    for (let i = 0; i < slopes.length; i++) {
+      const slope = slopes[i];
+      
+      if (currentTrend === null) {
+        // Start new trend
+        if (Math.abs(slope) > this.options.threshold * this.standardDeviation(slopes)) {
+          currentTrend = slope > 0 ? 'rising' : 'falling';
+          trendStart = i;
+        }
+      } else if ((currentTrend === 'rising' && slope < 0) || 
+                 (currentTrend === 'falling' && slope > 0)) {
+        // Trend reversed
+        if (i - trendStart >= this.options.minPatternLength) {
+          trends.push({
+            type: currentTrend,
+            start: timestamps[trendStart],
+            end: timestamps[i],
+            startValue: values[trendStart],
+            endValue: values[i],
+            duration: i - trendStart,
+            strength: Math.abs(values[i] - values[trendStart]) / this.standardDeviation(values)
+          });
+        }
+        
+        // Reset trend
+        currentTrend = null;
+      }
+    }
+    
+    // Check if last trend continues to the end
+    if (currentTrend !== null && (values.length - trendStart >= this.options.minPatternLength)) {
+      trends.push({
+        type: currentTrend,
+        start: timestamps[trendStart],
+        end: timestamps[timestamps.length - 1],
+        startValue: values[trendStart],
+        endValue: values[values.length - 1],
+        duration: values.length - trendStart,
+        strength: Math.abs(values[values.length - 1] - values[trendStart]) / this.standardDeviation(values)
+      });
+    }
+    
+    return trends;
+  }
+  
+  /**
+   * Detect repeating cycles
+   */
+  detectCycles(values, timestamps) {
+    const cycles = [];
+    
+    // Calculate autocorrelation
+    const maxLag = Math.floor(values.length / 3);
+    const autocorr = this.autocorrelation(values, maxLag);
+    
+    // Find peaks in autocorrelation
+    const peaks = this.findPeaks(autocorr, this.options.threshold);
+    
+    // Convert peaks to cycles
+    for (const peak of peaks) {
+      if (peak.index > this.options.minPatternLength) {
+        // Calculate average cycle length in time units
+        const avgCycleLength = (new Date(timestamps[timestamps.length - 1]) - new Date(timestamps[0])) / 
+                              (timestamps.length / peak.index);
+        
+        cycles.push({
+          period: peak.index,
+          strength: peak.value,
+          estimatedTimeLength: avgCycleLength,
+          unit: 'milliseconds'
+        });
+      }
+    }
+    
+    return cycles;
+  }
+  
+  /**
+   * Detect outliers
+   */
+  detectOutliers(values, timestamps) {
+    const outliers = [];
+    
+    // Calculate mean and standard deviation
+    const mean = this.mean(values);
+    const stdDev = this.standardDeviation(values);
+    
+    // Find values beyond threshold * standard deviation
+    for (let i = 0; i < values.length; i++) {
+      const zScore = Math.abs(values[i] - mean) / stdDev;
+      
+      if (zScore > this.options.threshold) {
+        outliers.push({
+          timestamp: timestamps[i],
+          value: values[i],
+          zScore: zScore,
+          deviation: values[i] - mean,
+          direction: values[i] > mean ? 'above' : 'below'
+        });
+      }
+    }
+    
+    return outliers;
+  }
+  
+  /**
+   * Detect shifts in average value
+   */
+  detectShifts(values, timestamps) {
+    const shifts = [];
+    
+    // Calculate moving averages
+    const windowSize = Math.max(3, Math.floor(values.length / 10));
+    const movingAvgs = this.calculateMovingAverage(values, windowSize);
+    
+    // Calculate standard deviation of moving averages
+    const stdDev = this.standardDeviation(movingAvgs);
+    
+    // Detect significant shifts
+    for (let i = windowSize; i < values.length - windowSize; i++) {
+      const before = this.mean(values.slice(i - windowSize, i));
+      const after = this.mean(values.slice(i, i + windowSize));
+      
+      const shiftMagnitude = Math.abs(after - before) / stdDev;
+      
+      if (shiftMagnitude > this.options.threshold) {
+        shifts.push({
+          timestamp: timestamps[i],
+          beforeAvg: before,
+          afterAvg: after,
+          magnitude: shiftMagnitude,
+          direction: after > before ? 'increase' : 'decrease'
+        });
+        
+        // Skip ahead to avoid detecting the same shift multiple times
+        i += windowSize;
+      }
+    }
+    
+    return shifts;
+  }
+  
+  /**
+   * Helper: Calculate moving average
+   */
+  calculateMovingAverage(values, windowSize) {
+    const result = [];
+    
+    for (let i = 0; i < values.length; i++) {
+      if (i < windowSize - 1) {
+        // Not enough values for full window
+        result.push(this.mean(values.slice(0, i + 1)));
+      } else {
+        result.push(this.mean(values.slice(i - windowSize + 1, i + 1)));
+      }
+    }
+    
+    return result;
+  }
+  
+  /**
+   * Helper: Calculate autocorrelation
+   */
+  autocorrelation(values, maxLag) {
+    const result = [];
+    const mean = this.mean(values);
+    const variance = this.variance(values);
+    
+    for (let lag = 0; lag <= maxLag; lag++) {
+      let sum = 0;
+      
+      for (let i = 0; i < values.length - lag; i++) {
+        sum += (values[i] - mean) * (values[i + lag] - mean);
+      }
+      
+      result.push(sum / ((values.length - lag) * variance));
+    }
+    
+    return result;
+  }
+  
+  /**
+   * Helper: Find peaks in a series
+   */
+  findPeaks(values, threshold) {
+    const peaks = [];
+    
+    for (let i = 1; i < values.length - 1; i++) {
+      if (values[i] > values[i-1] && values[i] > values[i+1] && values[i] > threshold) {
+        peaks.push({
+          index: i,
+          value: values[i]
+        });
+      }
+    }
+    
+    return peaks;
+  }
+  
+  /**
+   * Helper: Calculate mean
+   */
+  mean(values) {
+    return values.reduce((sum, value) => sum + value, 0) / values.length;
+  }
+  
+  /**
+   * Helper: Calculate variance
+   */
+  variance(values) {
+    const avg = this.mean(values);
+    return this.mean(values.map(value => Math.pow(value - avg, 2)));
+  }
+  
+  /**
+   * Helper: Calculate standard deviation
+   */
+  standardDeviation(values) {
+    return Math.sqrt(this.variance(values));
+  }
+  
+  /**
+   * Generate HTML report of detected patterns
+   */
+  generateReport() {
+    if (!this.patterns.detected || Object.keys(this.patterns.detected).length === 0) {
+      return '<p>No patterns detected. Run detectPatterns() first.</p>';
+    }
+    
+    let html = '<div class="bazinga-report">';
+    html += '<h2>BAZINGA Pattern Detection Report</h2>';
+    
+    // Metadata
+    html += '<div class="metadata">';
+    html += '<h3>Analysis Metadata</h3>';
+    html += '<ul>';
+    html += `<li>Data Points: ${this.patterns.metadata.dataPoints}</li>`;
+    html += `<li>Time Range: ${new Date(this.patterns.metadata.timeRange[0]).toLocaleDateString()} to ${new Date(this.patterns.metadata.timeRange[1]).toLocaleDateString()}</li>`;
+    html += `<li>Detection Threshold: ${this.patterns.metadata.detectionThreshold}</li>`;
+    html += '</ul>';
+    html += '</div>';
+    
+    // Trends
+    const trends = this.patterns.detected.trends;
+    if (trends && trends.length > 0) {
+      html += '<div class="section">';
+      html += '<h3>Detected Trends</h3>';
+      html += '<table>';
+      html += '<tr><th>Type</th><th>Start</th><th>End</th><th>Duration</th><th>Strength</th></tr>';
+      
+      for (const trend of trends) {
+        html += '<tr>';
+        html += `<td>${trend.type}</td>`;
+        html += `<td>${new Date(trend.start).toLocaleDateString()}</td>`;
+        html += `<td>${new Date(trend.end).toLocaleDateString()}</td>`;
+        html += `<td>${trend.duration}</td>`;
+        html += `<td>${trend.strength.toFixed(2)}</td>`;
+        html += '</tr>';
+      }
+      
+      html += '</table>';
+      html += '</div>';
+    }
+    
+    // Cycles
+    const cycles = this.patterns.detected.cycles;
+    if (cycles && cycles.length > 0) {
+      html += '<div class="section">';
+      html += '<h3>Detected Cycles</h3>';
+      html += '<table>';
+      html += '<tr><th>Period</th><th>Strength</th><th>Estimated Length</th></tr>';
+      
+      for (const cycle of cycles) {
+        html += '<tr>';
+        html += `<td>${cycle.period}</td>`;
+        html += `<td>${cycle.strength.toFixed(2)}</td>`;
+        html += `<td>${(cycle.estimatedTimeLength / (1000 * 60 * 60 * 24)).toFixed(1)} days</td>`;
+        html += '</tr>';
+      }
+      
+      html += '</table>';
+      html += '</div>';
+    }
+    
+    // Outliers
+    const outliers = this.patterns.detected.outliers;
+    if (outliers && outliers.length > 0) {
+      html += '<div class="section">';
+      html += '<h3>Detected Outliers</h3>';
+      html += '<table>';
+      html += '<tr><th>Date</th><th>Value</th><th>Z-Score</th><th>Direction</th></tr>';
+      
+      for (const outlier of outliers) {
+        html += '<tr>';
+        html += `<td>${new Date(outlier.timestamp).toLocaleDateString()}</td>`;
+        html += `<td>${outlier.value.toFixed(2)}</td>`;
+        html += `<td>${outlier.zScore.toFixed(2)}</td>`;
+        html += `<td>${outlier.direction}</td>`;
+        html += '</tr>';
+      }
+      
+      html += '</table>';
+      html += '</div>';
+    }
+    
+    // Shifts
+    const shifts = this.patterns.detected.shifts;
+    if (shifts && shifts.length > 0) {
+      html += '<div class="section">';
+      html += '<h3>Detected Shifts</h3>';
+      html += '<table>';
+      html += '<tr><th>Date</th><th>Before</th><th>After</th><th>Magnitude</th><th>Direction</th></tr>';
+      
+      for (const shift of shifts) {
+        html += '<tr>';
+        html += `<td>${new Date(shift.timestamp).toLocaleDateString()}</td>`;
+        html += `<td>${shift.beforeAvg.toFixed(2)}</td>`;
+        html += `<td>${shift.afterAvg.toFixed(2)}</td>`;
+        html += `<td>${shift.magnitude.toFixed(2)}</td>`;
+        html += `<td>${shift.direction}</td>`;
+        html += '</tr>';
+      }
+      
+      html += '</table>';
+      html += '</div>';
+    }
+    
+    html += '</div>';
+    return html;
+  }
+}
+
+// Export for Node.js or browser
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = PatternDetector;
+} else {
+  window.PatternDetector = PatternDetector;
+}
+EOF
+        bazinga_log \"\${GREEN}Pattern detection code generated: \$OUTPUT_FILE\${NC}\"
+        ;;
+        
+      visualizer)
+        bazinga_log \"\${CYAN}Generating visualizer code...\${NC}\"
+        OUTPUT_FILE=\"\${OUTPUT_FILE}.html\"
+        
+        # Generate HTML/JS visualizer
+        cat > \"\$OUTPUT_FILE\" << EOF
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAZINGA Pattern Visualizer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .control-panel {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    .chart-container {
+      position: relative;
+      height: 500px;
+      margin-bottom: 30px;
+    }
+    .pattern-list {
+      margin-top: 30px;
+    }
+    .pattern-item {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .pattern-item:hover {
+      background-color: #e0e0e0;
+    }
+    .highlighted {
+      background-color: #d0e8ff;
+    }
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .file-drop {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .file-drop.active {
+      border-color: #007bff;
+      background-color: #f0f7ff;
+    }
+    .action-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .action-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>BAZINGA Pattern Visualizer</h1>
+      <p>Upload data and visualize relationship patterns</p>
+    </div>
+    
+    <div class="file-drop" id="fileDrop">
+      <p>Drag & drop your data file here or click to select</p>
+      <input type="file" id="fileInput" style="display: none;" accept=".json,.csv,.txt">
+      <button class="action-button" id="browseButton">Browse Files</button>
+    </div>
+    
+    <div class="control-panel">
+      <div>
+        <label for="dataType">Data Type:</label>
+        <select id="dataType">
+          <option value="whatsapp">WhatsApp Chat</option>
+          <option value="json">JSON Data</option>
+          <option value="csv">CSV Data</option>
+        </select>
+      </div>
+      
+      <div>
+        <label for="visualization">Visualization:</label>
+        <select id="visualization">
+          <option value="timeline">Message Timeline</option>
+          <option value="frequency">Message Frequency</option>
+          <option value="sentiment">Emotional Content</option>
+          <option value="patterns">Detected Patterns</option>
+        </select>
+      </div>
+      
+      <div>
+        <button class="action-button" id="analyzeButton" disabled>Analyze Data</button>
+      </div>
+    </div>
+    
+    <div class="charts-grid">
+      <div class="chart-container">
+        <canvas id="mainChart"></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <canvas id="secondaryChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="pattern-list" id="patternList">
+      <h2>Detected Patterns</h2>
+      <p>Patterns will appear here after analysis</p>
+    </div>
+  </div>
+  
+  <script>
+    // Main visualizer code
+    document.addEventListener('DOMContentLoaded', function() {
+      // Elements
+      const fileDrop = document.getElementById('fileDrop');
+      const fileInput = document.getElementById('fileInput');
+      const browseButton = document.getElementById('brow

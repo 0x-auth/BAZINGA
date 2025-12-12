@@ -1,0 +1,3 @@
+[2025-03-28 00:39:44] Starting Resource Orchestrator
+[2025-03-28 00:39:44] Analyzing available resources...
+[2025-03-28 00:39:44] Local resources: 11 CPU cores, 36 GB RAM

@@ -1,0 +1,18 @@
+[Unit]
+Description=Bazinga Claude Artifact Collector Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /path/to/safe_claude_collector.py --dir /path/to/artifacts
+User=yourusername
+Group=yourusergroup
+WorkingDirectory=/path/to/bazinga
+Restart=on-failure
+RestartSec=30
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=bazinga-collector
+
+[Install]
+WantedBy=multi-user.target

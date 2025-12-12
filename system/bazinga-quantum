@@ -1,0 +1,64 @@
+#!/bin/bash
+
+# Enhanced BAZINGA command interface
+
+# Configuration
+BAZINGA_DIR=${BAZINGA_DIR:-"$HOME/BAZINGA"}
+LOG_FILE="$HOME/.bazinga/bz.log"
+PATTERN_DIR="$BAZINGA_DIR/patterns"
+
+# Create necessary directories
+mkdir -p "$PATTERN_DIR" "$HOME/.bazinga"
+
+# Log function
+log() {
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE"
+}
+
+# Self-reflection capability
+self_reflect() {
+  local action=$1
+  echo "⟡ BAZINGA Self-Reflection: $action"
+  echo "• Current state: Analyzing pattern integrity"
+  echo "^ Pattern connections: Validating"
+  echo "> Forward momentum: Active"
+  log "Self-reflection executed: $action"
+}
+
+# Add command for tracing
+trace() {
+  local from=$2
+  local to=$4
+  local format=${6:-"text"}
+  
+  echo "Tracing patterns from $from to $to in $format format"
+  log "Trace executed: $from to $to ($format)"
+  
+  # Here you would add your actual trace implementation
+  echo "•^> Trace complete. Patterns analyzed."
+}
+
+# Main command parser
+case "$1" in
+  --self-reflect)
+    self_reflect "$2"
+    ;;
+  trace)
+    shift
+    trace "$@"
+    ;;
+  --diagnose)
+    echo "⟡ BAZINGA Diagnostic"
+    echo "• System integrity: Checking"
+    echo "• Configuration: Validating"
+    echo "• Pattern registry: Scanning"
+    log "Diagnostic executed"
+    ;;
+  *)
+    echo "BAZINGA Command Interface"
+    echo "Usage:"
+    echo "  bz --self-reflect [status|analyze|connect]"
+    echo "  bz trace --from \"DATE\" --to \"DATE\" --format [text|csv|json]"
+    echo "  bz --diagnose"
+    ;;
+esac

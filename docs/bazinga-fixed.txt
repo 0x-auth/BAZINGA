@@ -1,0 +1,319 @@
+/**
+ * BAZINGA: Fractal Relationship Analysis System
+ * 
+ * A deterministic system for analyzing the Abhishek-Amrita relationship
+ * based on fractal mathematics rather than probabilistic psychology.
+ */
+
+class BazingaSystem {
+  constructor() {
+    // Mathematical constants that appear in relationship dynamics
+    this.constants = {
+      phi: 1.618033988749895,  // Golden ratio - appears in emotional escalation patterns
+      e: 2.718281828459045,    // Euler's number - appears in emotional decay patterns
+      pi: 3.141592653589793,   // Pi - appears in cyclical relationship patterns
+      goldenAngle: 137.5       // Golden angle - appears in perspective shifts
+    };
+    
+    // Fractal patterns observed in relationship dynamics
+    this.patterns = {
+      fibonacci: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233],
+      golden: [1, 1.618, 2.618, 4.236, 6.854, 11.09, 17.944, 29.034],
+      mandelbrot: [0, 1, 0.5, 0.75, 0.625, 0.687, 0.656, 0.672]
+    };
+    
+    // SSRI-specific behavioral impact patterns
+    this.ssriPatterns = {
+      onsetDelay: 21,         // Days until initial effects
+      fullEffectDelay: 34,    // Days until full effects
+      withdrawalCycle: 13,    // Days of withdrawal symptoms
+      behavioralShiftCycle: 8 // Days between behavioral shifts
+    };
+    
+    // Relationship phases identified in analysis
+    this.relationshipPhases = {
+      stablePhase: {
+        startDate: new Date("2023-01-01"),
+        endDate: new Date("2023-09-15"),
+        witnessDuality: { witnessRatio: 0.45 },
+        perceptionGap: 0.32,
+        mandelbrotSignature: [0.281, 0.563, 0.422, 0.844, 0.633, 0.266, 0.531, 0.398]
+      },
+      medicationPhase: {
+        startDate: new Date("2023-09-16"),
+        endDate: new Date("2023-10-24"),
+        witnessDuality: { witnessRatio: 0.89 },
+        perceptionGap: 0.47,
+        mandelbrotSignature: [0.281, 0.563, 0.422, 0.844, 0.141, 0.281, 0.563, 0.422]
+      },
+      disruptionPhase: {
+        startDate: new Date("2023-10-25"),
+        endDate: new Date("2023-12-31"),
+        witnessDuality: { witnessRatio: 1.58 },
+        perceptionGap: 0.75,
+        mandelbrotSignature: [0.281, 0.563, 0.422, 0.844, 0.141, 0.281, 0.211, 0.105]
+      }
+    };
+    
+    // Core themes from WhatsApp data
+    this.themes = [
+      "technical_discussions", 
+      "relationship_analysis", 
+      "behavioral_patterns", 
+      "contradictions", 
+      "execution_tracking", 
+      "personal_reflections", 
+      "emotional_shifts"
+    ];
+    
+    // Key phrases from WhatsApp extraction
+    this.keyPhrases = {
+      witnessOriented: [
+        "I didn't actually feel betrayal",
+        "first the situation happened, and then it made me the way i am today",
+        "A person is never the doer of actions, but the witness to them",
+        "perception deepens reflects minds connect within forms transmute"
+      ],
+      doerOriented: [
+        "She has this fucking irritating rabbit if thinking that she is right",
+        "Manipulative....made me live with guilt",
+        "Have always blamed me",
+        "Started thinking she was helping me"
+      ],
+      perceptionGap: [
+        "You are not engaging with me as I am today. You are engaging with a version of me",
+        "It's not about physical distance; it's about how our outdated perceptions shape what we believe is real",
+        "She has no-one except me",
+        "Who do I believe?"
+      ]
+    };
+  }
+  
+  /**
+   * Generate a deterministic seed value from a string input
+   */
+  generateSeed(input) {
+    let seed = 0;
+    const text = typeof input === 'string' ? input : JSON.stringify(input);
+    
+    for (let i = 0; i < text.length; i++) {
+      seed += text.charCodeAt(i) * Math.pow(this.constants.phi, i % 3) * (i + 1);
+    }
+    
+    return Math.abs(seed);
+  }
+  
+  /**
+   * Get a deterministic value from a fractal pattern
+   */
+  getFractalValue(pattern, position, seed) {
+    const patternArray = this.patterns[pattern] || this.patterns.fibonacci;
+    const index = (Math.floor(seed + position * this.constants.phi) % patternArray.length);
+    return patternArray[index];
+  }
+  
+  /**
+   * Calculate the witness-doer duality score for text content
+   */
+  calculateWitnessDuality(text) {
+    // Simplified implementation - full version would use NLP
+    const witnessWords = ["observe", "notice", "witness", "aware", "consciousness", "happened"];
+    const doerWords = ["make", "control", "change", "force", "manipulate", "blame"];
+    
+    let witnessCount = 0;
+    let doerCount = 0;
+    
+    witnessWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) witnessCount += matches.length;
+    });
+    
+    doerWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) doerCount += matches.length;
+    });
+    
+    const ratio = doerCount > 0 ? witnessCount / doerCount : witnessCount > 0 ? Infinity : 0;
+    
+    return {
+      witnessCount,
+      doerCount,
+      ratio,
+      orientation: ratio > 1.2 ? "Witness-dominant" : 
+                   ratio < 0.8 ? "Doer-dominant" : 
+                   "Balanced"
+    };
+  }
+  
+  /**
+   * Calculate the perception-reality gap score for text content
+   */
+  calculatePerceptionRealityGap(text) {
+    // Simplified implementation - full version would use NLP
+    const perceptionWords = ["think", "feel", "believe", "imagine", "seems", "appears"];
+    const realityWords = ["is", "actually", "fact", "truth", "real", "concrete"];
+    
+    let perceptionCount = 0;
+    let realityCount = 0;
+    
+    perceptionWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) perceptionCount += matches.length;
+    });
+    
+    realityWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) realityCount += matches.length;
+    });
+    
+    const gapMagnitude = Math.abs(perceptionCount - realityCount) / (perceptionCount + realityCount || 1);
+    
+    return {
+      perceptionCount,
+      realityCount,
+      gapMagnitude,
+      classification: gapMagnitude > 0.5 ? "High gap" : 
+                      gapMagnitude > 0.2 ? "Medium gap" : 
+                      "Low gap"
+    };
+  }
+  
+  /**
+   * Analyze temporal orientation in text content
+   */
+  calculateTemporalOrientation(text) {
+    // Simplified implementation - full version would use NLP
+    const pastWords = ["was", "did", "had", "happened", "before", "previously"];
+    const presentWords = ["is", "am", "are", "now", "currently", "today"];
+    const futureWords = ["will", "going to", "plan", "expect", "soon", "tomorrow"];
+    const cyclicalWords = ["again", "repeat", "cycle", "pattern", "always", "never"];
+    
+    let pastCount = 0;
+    let presentCount = 0;
+    let futureCount = 0;
+    let cyclicalCount = 0;
+    
+    pastWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) pastCount += matches.length;
+    });
+    
+    presentWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) presentCount += matches.length;
+    });
+    
+    futureWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) futureCount += matches.length;
+    });
+    
+    cyclicalWords.forEach(word => {
+      const regex = new RegExp(`\\b${word}\\b`, 'gi');
+      const matches = text.match(regex);
+      if (matches) cyclicalCount += matches.length;
+    });
+    
+    const total = pastCount + presentCount + futureCount + cyclicalCount || 1;
+    
+    const orientation = {
+      past: pastCount / total,
+      present: presentCount / total,
+      future: futureCount / total,
+      cyclical: cyclicalCount / total,
+      dominant: this.getDominantOrientation(pastCount, presentCount, futureCount, cyclicalCount)
+    };
+    
+    return orientation;
+  }
+  
+  /**
+   * Helper to determine dominant temporal orientation
+   */
+  getDominantOrientation(past, present, future, cyclical) {
+    const counts = { past, present, future, cyclical };
+    const maxCount = Math.max(past, present, future, cyclical);
+    
+    return Object.keys(counts).find(key => counts[key] === maxCount);
+  }
+  
+  /**
+   * Generate Mandelbrot signature for a relationship state
+   */
+  generateMandelbrotSignature(seed, iterations = 16) {
+    const signature = [];
+    
+    // Generate a Mandelbrot-based signature
+    // This creates a unique mathematical fingerprint
+    for (let i = 0; i < iterations; i++) {
+      let z = {real: 0, imag: 0};
+      let c = {
+        real: -2 + (seed % 100) / 25, 
+        imag: -1.2 + (seed % 100) / 50
+      };
+      
+      let iteration = 0;
+      const maxIterations = 32;
+      
+      while (iteration < maxIterations) {
+        // z = z² + c
+        const real = z.real * z.real - z.imag * z.imag + c.real;
+        const imag = 2 * z.real * z.imag + c.imag;
+        
+        z.real = real;
+        z.imag = imag;
+        
+        if (real * real + imag * imag > 4) {
+          break;
+        }
+        
+        iteration++;
+      }
+      
+      signature.push(iteration / maxIterations);
+      c.real += 0.1;
+      c.imag += 0.05;
+    }
+    
+    return signature;
+  }
+  
+  /**
+   * Generate the BAZINGA insight based on comprehensive analysis
+   */
+  generateBazingaInsight(witnessDuality, perceptionGap, temporalOrientation, signature) {
+    // Calculate the most significant fractal pattern
+    const witnessRatio = witnessDuality.ratio;
+    const phiApproximation = Math.abs(witnessRatio - this.constants.phi) / this.constants.phi;
+    const eApproximation = Math.abs(perceptionGap.gapMagnitude - (1/this.constants.e)) / (1/this.constants.e);
+    const piApproximation = Math.abs(temporalOrientation.cyclical * 10 - this.constants.pi) / this.constants.pi;
+    
+    const approximations = [
+      { constant: "phi", value: phiApproximation },
+      { constant: "e", value: eApproximation },
+      { constant: "pi", value: piApproximation }
+    ];
+    
+    approximations.sort((a, b) => a.value - b.value);
+    const dominantConstant = approximations[0].constant;
+    
+    // Determine the primary fractal pattern
+    let patternName = "";
+    let patternDescription = "";
+    
+    if (dominantConstant === "phi") {
+      patternName = "Golden Ratio Bifurcation";
+      patternDescription = "The relationship dynamic shows a golden ratio (φ) pattern where witness-doer orientation shifted by approximately φ during the medication phase.";
+    } else if (dominantConstant === "e") {
+      patternName = "Natural Decay Pattern";
+      patternDescription = "The relationship dynamic follows natural exponential decay (e) in perception-reality alignment, typical of SSRI-influenced cognitive processing.";
+    } else {
+      patternName = "Cyclical Boundary Pattern";
+      patternDescription = "The relationship dynamic exhibits

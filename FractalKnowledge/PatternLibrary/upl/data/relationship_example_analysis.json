@@ -1,0 +1,82 @@
+{
+  "pattern": {
+    "name": "Recursive Self-Modification",
+    "binarySignature": "10111",
+    "description": "Systems that modify their own operating rules",
+    "coordinates": {
+      "structure": 0.8,
+      "temporality": 0.2,
+      "contextuality": 0.9,
+      "emergence": 0.8,
+      "metaProperties": 0.9
+    },
+    "phiResonance": 0.91,
+    "similarity": 0.826178703485472
+  },
+  "matchingPatterns": [
+    {
+      "name": "Recursive Self-Modification",
+      "binarySignature": "10111",
+      "description": "Systems that modify their own operating rules",
+      "coordinates": {
+        "structure": 0.8,
+        "temporality": 0.2,
+        "contextuality": 0.9,
+        "emergence": 0.8,
+        "metaProperties": 0.9
+      },
+      "phiResonance": 0.91,
+      "similarity": 0.826178703485472
+    }
+  ],
+  "domain": "relationship_dynamics",
+  "data": {
+    "interactions": [
+      {
+        "timestamp": "2025-04-10T10:30:00Z",
+        "type": "conversation",
+        "sentiment": "positive",
+        "topics": [
+          "project planning",
+          "weekend plans",
+          "shared goals"
+        ],
+        "duration_minutes": 45,
+        "communication_channel": "in-person"
+      },
+      {
+        "timestamp": "2025-04-11T08:15:00Z",
+        "type": "message",
+        "sentiment": "neutral",
+        "topics": [
+          "schedule coordination",
+          "task assignment"
+        ],
+        "duration_minutes": 5,
+        "communication_channel": "text"
+      },
+      {
+        "timestamp": "2025-04-12T19:00:00Z",
+        "type": "shared activity",
+        "sentiment": "very positive",
+        "topics": [
+          "relaxation",
+          "mutual interests",
+          "future plans"
+        ],
+        "duration_minutes": 180,
+        "communication_channel": "in-person"
+      }
+    ],
+    "patterns": {
+      "communication_frequency": "fibonacci-like",
+      "topic_progression": "spiral development",
+      "emotional_resonance": "oscillatory convergence"
+    },
+    "metadata": {
+      "relationship_type": "close",
+      "analysis_date": "2025-04-13",
+      "bazinga_id": "rel-amrita-2025-04"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "project": {
+    "name": "BAZINGA Integration System",
+    "components": {
+      "core": {
+        "patterns": [
+          {"code": "10101", "name": "Divergence/Growth", "lambda": "λx. x + 1"},
+          {"code": "11010", "name": "Convergence/Synthesis", "lambda": "λx. x * 2"},
+          {"code": "01011", "name": "Balance/Refinement", "lambda": "λx. x - 3"},
+          {"code": "10111", "name": "Recency/Distribution", "lambda": "λx. x / 5"},
+          {"code": "01100", "name": "BigPicture/Cycling", "lambda": "λx. x % 7"}
+        ],
+        "encodings": {
+          "time-trust": "4.1.1.3.5.2.4",
+          "harmonic": "3.2.2.1.5.3.2",
+          "relationship": "6.1.1.2.3.4.5.2.1",
+          "mandelbrot": "5.1.1.0.1.0.1"
+        }
+      },
+      "claude_integration": {
+        "accounts": 4,
+        "extraction_tool": "extract_claude_history.py",
+        "history_db": "~/Library/Application Support/Google/Chrome/Default/History",
+        "output_dir": "~/integration_data/claude_unified",
+        "entries_merged": 1314
+      },
+      "dodo_system": {
+        "processing_states": ["2D", "Pattern", "Transition", "Complex"],
+        "dimensions": {
+          "time": {
+            "based_on": "black_hole_model",
+            "harmony_ratio": 1.333333
+          },
+          "trust": {
+            "based_on": "blockchain_model",
+            "final_level": 0.9999999999999999
+          }
+        },
+        "transformations": [
+          {"from": "Complex", "to": "Simple"},
+          {"from": "Pattern", "to": "Chaos"},
+          {"from": "Form", "to": "Void"},
+          {"from": "Mind", "to": "Peace"},
+          {"from": "Past", "to": "Present"}
+        ]
+      }
+    },
+    "directories": {
+      "bazinga": "~/AmsyPycharm/BAZINGA",
+      "bazinga_indeed": "~/AmsyPycharm/BAZINGA-INDEED", 
+      "integration_data": "~/integration_data",
+      "claude_data": "~/claude_data"
+    },
+    "scripts": {
+      "extraction": {
+        "claude_extraction": "~/claude-bazinga-fixed.sh",
+        "claude_android": "~/AmsyPycharm/claude_android.sh"
+      },
+      "execution": {
+        "bazinga_explore": "bazinga_explore_fixed.py",
+        "bazinga_dashboard": "bazinga_dashboard_generator.py",
+        "fix_circular_symlinks": "fix_circular_symlinks.sh"
+      }
+    },
+    "errors": {
+      "fixed": [
+        "Circular symlinks in BAZINGA-INDEED project structure",
+        "Python path issues in connection scripts",
+        "TypeScript import issues in index.ts"
+      ],
+      "pending": [
+        "'BazingaUniversalTool' object has no attribute 'get_pattern_code'"
+      ]
+    }
+  },
+  "analysis": {
+    "timeTrust": {
+      "encoding": "4.1.1.3.5.2.4",
+      "section": "Black Hole & Blockchain Parallels",
+      "subsection": "Time & Trust Dimensions",
+      "attributes": [1, 3, 5, 2, 4],
+      "trustLevel": 0.95
+    },
+    "harmonic": {
+      "encoding": "3.2.2.1.5.3.2",
+      "section": "DODO Visual Pattern Integration",
+      "subsection": "Harmonic Framework",
+      "attributes": [2, 1, 5, 3, 2],
+      "trustLevel": 0.87
+    },
+    "relationship": {
+      "encoding": "6.1.1.2.3.4.5.2.1",
+      "section": "Integration Systems",
+      "subsection": "Relationship Analysis",
+      "attributes": [1, 2, 3, 4, 5, 2, 1],
+      "trustLevel": 0.92
+    },
+    "processingStates": {
+      "pattern": 23,
+      "transition": 15,
+      "complex": 7,
+      "twoD": 11
+    }
+  },
+  "integration_status": {
+    "extracted_data": {
+      "urls": 29,
+      "files": 9,
+      "integration_code": 4
+    },
+    "unified_timeline": {
+      "latest_file": "unified_timeline_20250310061722.json",
+      "created": "Mar 10 06:17:22 2025",
+      "size": 390260
+    },
+    "bazinga_connection": {
+      "status": "connected",
+      "timeline_files": 5
+    }
+  },
+  "next_steps": {
+    "fix_errors": "Add get_pattern_code method to BazingaUniversalTool class",
+    "run_visualization": "python3 bazinga_explore_fixed.py --file=\"~/integration_data/claude_unified/latest.json\" --pattern=\"mandelbrot\" --visualization --output=\"generated/visuals\"",
+    "launch_dashboard": "cd generated/dashboard && python3 -m http.server 8000"
+  }
+}

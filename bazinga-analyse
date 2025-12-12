@@ -1,0 +1,161 @@
+===================================================
+Project Analysis: BAZINGA
+===================================================
+Working directory: /Users/abhissrivasta/AmsyPycharm/BAZINGA
+Date: Wed Mar 19 02:22:20 IST 2025
+
+File statistics:
+-----------------
+Source files: 5586
+
+File types:
+-----------------
+3377 .py
+ 337 .pyi
+  87 .so
+  60 .f90
+  60 .afm
+  41 .ts
+  38 .ttf
+  34 .md
+  33 .csv
+  29 .mplstyle
+
+Directory structure (depth 2):
+-----------------
+.
+├── BAZINGA-guide.md
+├── BAZINGA_STATE
+├── analysis
+│   ├── bazinga_summary.txt
+│   ├── dependencies.dot
+│   ├── dependencies.png
+│   ├── reports
+│   └── system_health.txt
+├── artifacts
+│   ├── abhishek-amrita-execution-system.txt
+│   ├── bazinga-fixed.txt
+│   ├── code
+│   ├── concepts
+│   ├── fractal
+│   ├── framework__framework_compat.py
+│   ├── framework_robotframework.py
+│   ├── generated
+│   ├── json
+│   ├── other
+│   ├── perfect-communication-system.js
+│   ├── visualization
+│   └── wisdom-visualization.js
+├── bazinga-amu-framework.sh
+├── bazinga-analyse
+├── bazinga-architecture.json
+├── bazinga-cleanup.sh
+├── bazinga-completion-script (1).sh
+├── bazinga-completion-script-continued.txt
+├── bazinga-completion-script.sh
+├── bazinga-completion-script.sh.bak
+├── bazinga-completion-tool.sh
+├── bazinga-diagram.mermaid
+├── bazinga-info-extractor.sh
+├── bazinga-installer.sh
+├── bazinga-integrated-script.sh
+├── bazinga-integrator.py
+├── bazinga-jira-singularity-integration.txt
+├── bazinga-master-integration.txt
+├── bazinga-project-data.json
+├── bazinga-relationship-patterns.json
+├── bazinga_code_generator.py
+├── bazinga_dashboard_generator.py
+├── bazinga_explore_fixed.py
+├── bazinga_extract_info.txt
+├── bazingall
+├── consolidated
+│   └── master-completion.sh
+├── data
+│   └── timeline
+├── docs
+│   ├── CONVERSATION-NUMERICAL.MD
+│   ├── DODO-INTEGRATION.md
+│   ├── LICENSE.md
+│   ├── README.md
+│   ├── abhishek-amrita-fractal-analysis.md
+│   ├── api
+│   ├── architecture
+│   ├── bazinga
+│   ├── dodo
+│   ├── east-west-wisdom.md
+│   ├── fractal-poetry.md
+│   ├── fractal_analysis
+│   ├── fractals
+│   ├── guides
+│   ├── index
+│   ├── index.html
+│   ├── integration_system.md
+│   ├── lambda-driven-self-execution-model.html
+│   ├── multilayer_integration.md
+│   ├── prompts
+│   └── relationship-fractal-analysis.md
+├── fix_bazinga_system.sh
+├── fractal_artifacts_integration.py
+├── fractal_bazinga_integration.py
+├── generated
+│   ├── HarmonicTransformer.ts
+│   ├── TimeSpaceIntegrator.ts
+│   ├── bazinga_dashboard_launcher.py
+│   ├── dashboard
+│   └── tsconfig.json
+├── jira-singularity-connector.py
+├── lib
+│   └── python3.13
+├── master_index
+│   └── all_components.txt
+├── master_index.md
+├── package-lock.json
+├── package.json
+├── packages
+├── pyvenv.cfg
+├── scripts
+│   ├── BAZINGA-TOKEN-GEN_INt.sh
+│   ├── analyze_bazinga.sh
+│   ├── cleanup_bazinga_dodo.sh
+│   ├── complete-bazinga.sh
+│   ├── fix_circular_symlinks.sh
+│   ├── fractal_demo.js
+│   ├── install_dodo.sh
+│   ├── install_dodo_fixed.sh
+│   ├── integrate_dodo_with_typevalidator.sh
+│   ├── organize.sh
+│   └── setup_bazinga.sh
+├── src
+│   ├── core
+│   ├── examples
+│   ├── generators
+│   ├── index.ts
+│   ├── integrations
+│   ├── templates
+│   ├── tools
+│   └── utils
+├── test_deterministic_vs_quantum.ts
+├── test_dodo_integration.py
+├── tests
+│   ├── integration
+│   ├── performance
+│   └── unit
+├── try_bazinga.py
+├── tsconfig.json
+└── venv_bazinga
+    ├── bin
+    ├── lib
+    ├── pyvenv.cfg
+    └── share
+
+Recent activity (last 5 changes):
+-----------------
+-rw-r--r--@ 1 abhissrivasta  staff     4527 Mar 19 02:22 ./bazinga-analyse
+-rwxr-xr-x  1 abhissrivasta  staff    12884 Mar 17 09:49 ./bazinga-completion-script.sh
+-rwxr-xr-x  1 abhissrivasta  staff    37603 Mar 17 08:53 ./consolidated/master-completion.sh
+-rw-r--r--  1 abhissrivasta  staff  2176021 Mar 17 08:53 ./master_index/all_components.txt
+-rw-r--r--  1 abhissrivasta  staff     9386 Mar 17 08:47 ./master_index.md
+
+Analysis complete!
+===================================================

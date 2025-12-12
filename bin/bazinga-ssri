@@ -1,0 +1,4 @@
+#!/bin/bash
+# SSRI module for BAZINGA
+
+"/Users/abhissrivasta/AmsyPycharm/BAZINGA/modules/ssri/bazinga-ssri-integration.sh" "$@"

@@ -1,0 +1,74 @@
+{
+  "patterns": {
+    "10101": {
+      "name": "Divergence/Growth",
+      "lambda": "λx. x + 1",
+      "description": "Pattern represents growth, expansion, and divergent thinking"
+    },
+    "11010": {
+      "name": "Convergence/Synthesis",
+      "lambda": "λx. x * 2",
+      "description": "Pattern represents convergence, integration, and synthesis"
+    },
+    "01011": {
+      "name": "Balance/Refinement",
+      "lambda": "λx. x - 3",
+      "description": "Pattern represents balance, refinement, and optimization"
+    },
+    "10111": {
+      "name": "Recency/Distribution",
+      "lambda": "λx. x / 5",
+      "description": "Pattern represents distribution, sharing, and allocation"
+    },
+    "01100": {
+      "name": "BigPicture/Cycling",
+      "lambda": "λx. x % 7",
+      "description": "Pattern represents cycles, recursion, and big-picture thinking"
+    }
+  },
+  
+  "sections": {
+    "1": {"name": "Conversation Structure", "subsections": {
+      "1": {"name": "Opening"},
+      "2": {"name": "Development"},
+      "3": {"name": "Conclusion"}
+    }},
+    "2": {"name": "Knowledge Domain", "subsections": {
+      "1": {"name": "Core Concepts"},
+      "2": {"name": "Related Contexts"}
+    }},
+    "3": {"name": "DODO Visual Pattern Integration", "subsections": {
+      "1": {"name": "Basic Patterns"},
+      "2": {"name": "Harmonic Framework"}
+    }},
+    "7": {"name": "Mathematical Constants", "subsections": {
+      "1": {"name": "Golden Ratio", "value": 1.618033988749895},
+      "2": {"name": "Time Harmonic Ratio"}
+    }},
+    "8": {"name": "Sequences", "subsections": {
+      "1": {"name": "Fibonacci"}
+    }},
+    "9": {"name": "Integration Results", "subsections": {
+      "1": {"name": "Basic Results"},
+      "2": {"name": "Optimized Results"}
+    }}
+  },
+  
+  "constants": {
+    "phi": 1.618033988749895,
+    "e": 2.718281828459045,
+    "tau": 6.283185307179586
+  },
+  
+  "relationshipEncodings": {
+    "separation-reconnection": "3.2.2.1.5.3.2",
+    "communication-patterns": "2.1.1.3.5.2",
+    "emotional-processing": "3.1.1.2.3.1.4"
+  },
+  
+  "aiSystemEncodings": {
+    "training-patterns": "2.1.3.4.1.5",
+    "inference-behavior": "3.2.1.4.2.3",
+    "emergent-properties": "9.2.4.1.6.2.4.8"
+  }
+}

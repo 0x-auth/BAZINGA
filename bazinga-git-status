@@ -1,0 +1,220 @@
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   BAZINGA-guide.md
+	new file:   docs/bazinga/language/complete-doc.md
+	new file:   docs/bazinga/language/integration-guide.md
+	new file:   docs/bazinga/language/visual.md
+	new file:   docs/fractal_analysis/Fractal_Numerical_Encoding_Guide.md
+	deleted:    src/core/blueprint.ts
+	deleted:    src/core/expansion-logic.ts
+	deleted:    src/core/expansion_rule.ts
+	new file:   src/core/pure_pattern_communication.ts
+	new file:   src/core/src/examples/pure-pattern-demo.ts
+	new file:   src/core/src/examples/quantum-bazinga-demo.ts
+	new file:   src/generators/DocumentationGenerator.ts
+	new file:   src/generators/VisualizationGenerator.ts
+	new file:   try_quantum_bazinga.ts
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   BAZINGA-guide.md
+	modified:   README.md
+	modified:   docs/bazinga/language/complete-doc.md
+	modified:   docs/bazinga/language/integration-guide.md
+	modified:   docs/bazinga/language/visual.md
+	modified:   package-lock.json
+	modified:   package.json
+	modified:   src/core/src/examples/pure-pattern-demo.ts
+	deleted:    src/generators/DocumentationGenerator.ts
+	deleted:    src/generators/PatternGenerator.ts
+	deleted:    src/generators/VisualizationGenerator.ts
+	modified:   src/index.ts
+	deleted:    src/tests/PatternGenerator.test.ts
+	deleted:    try_quantum_bazinga.ts
+	modified:   tsconfig.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	.prettierrc
+	.trust_corrector_history.json
+	BAZINGA-INTEGRATION.md
+	BAZINGA_STATE
+	analysis/
+	artifacts/
+	bazi-del.sh
+	bazinga-amu-framework.sh
+	bazinga-analyse
+	bazinga-architecture.json
+	bazinga-claude-integrator.sh
+	bazinga-cleanup.sh
+	bazinga-collector.service
+	bazinga-complete.sh
+	bazinga-completion-script-continued.txt
+	bazinga-completion-script.sh
+	bazinga-completion-tool.sh
+	bazinga-completion.sh
+	bazinga-diagram.mermaid
+	bazinga-enhanced-master.sh
+	bazinga-enhancement.sh
+	bazinga-enhancement.sh.bak
+	bazinga-fixed-master.sh
+	bazinga-git-diff
+	bazinga-git-status
+	bazinga-info-extractor.sh
+	bazinga-installer.sh
+	bazinga-integrated-script.sh
+	bazinga-integrator.py
+	bazinga-jira-singularity-integration.txt
+	bazinga-kubefed-argocd.sh
+	bazinga-master-integration.txt
+	bazinga-migration-integrator.sh
+	bazinga-project-data.json
+	bazinga-project-integrator.sh
+	bazinga-relationship-patterns.json
+	bazinga-ultimate.sh
+	bazinga-ultimate.sh.bak
+	bazinga-unified-implementation.sh
+	bazinga_claude_analyzer.py
+	bazinga_code_generator.py
+	bazinga_dashboard_generator.py
+	bazinga_explore_fixed.py
+	bazinga_extract_info.txt
+	bazinga_integration.sh
+	bin/
+	config/
+	consolidated/
+	data/
+	docs/API_CHANGES.txt
+	docs/AUTHORS.txt
+	docs/BAZINGA-Complete-Usage-Guide.md
+	docs/BAZINGA-Continuation-Prompt.md
+	docs/BAZINGA-DODO-SUMMARY.md
+	docs/BAZINGA-Encoder-Decoder-Guide.md
+	docs/BAZINGA-encoding-guide.md
+	docs/BAZINGA-guide.md
+	docs/BAZINGA-organisation-guide.md
+	docs/CONVERSATION-NUMERICAL.MD
+	docs/DODO-INTEGRATION.md
+	docs/EastWestWisdom.md
+	docs/FinalIntegration.md
+	docs/FractalAnalysis.md
+	docs/FractalPoetry.md
+	docs/Fractal_Numerical_Encoding_Guide.md
+	docs/LICENSE.md
+	docs/LICENSE.txt
+	docs/README.md
+	docs/README.txt
+	docs/RelationshipFractalAnalysis.md
+	docs/Time-Trust-Dimensions.md
+	docs/WisdomPracticeGuide.md
+	docs/abhishek-amrita-execution-system.txt
+	docs/abhishek-amrita-fractal-analysis.md
+	docs/all_components.txt
+	docs/architecture/
+	docs/artifact-usage-guide.md
+	docs/bazinga-completion-script-continued.txt
+	docs/bazinga-fixed.txt
+	docs/bazinga-jira-singularity-integration.txt
+	docs/bazinga-master-integration.txt
+	docs/bazinga-project-structure.md
+	docs/bazinga-system-synthesis.md
+	docs/bazinga/Time-Trust-Dimensions.md
+	docs/bazinga/quantum/
+	docs/bazinga_extract_info.txt
+	docs/bazinga_summary.txt
+	docs/cloudy-extractor-guide.md
+	docs/complete-doc.md
+	docs/data-driven-timeline-guide.md
+	docs/diagrams/
+	docs/dodo/
+	docs/east-west-wisdom.md
+	docs/entry_points.txt
+	docs/federated-prisma-operator-migration.md
+	docs/federated-vault-monitoring-migration.md
+	docs/final-integration.md
+	docs/fix-script.txt
+	docs/fractal-poetry.md
+	docs/fractals/
+	docs/guides/
+	docs/index.html
+	docs/index/
+	docs/integration-guide.md
+	docs/integration.md
+	docs/integration_system.md
+	docs/kubefed-vs-argocd.md
+	docs/lambda-driven-self-execution-model.html
+	docs/master_index.md
+	docs/multilayer_integration.md
+	docs/organization_log_20250319_051709.txt
+	docs/pattern-recognition-essay.md
+	docs/prompts/
+	docs/relationship-fractal-analysis.md
+	docs/script-finder-usage.md
+	docs/system_health.txt
+	docs/table_API_readme.txt
+	docs/timeless-philosophy.md
+	docs/top_level.txt
+	docs/umath-validation-set-README.txt
+	docs/usage-guide-2.md
+	docs/usage-guide.md
+	docs/vendor.txt
+	docs/visual.md
+	docs/wisdom-practice-guide.md
+	enhanced/
+	fix_bazinga_system.sh
+	fix_clipboard.sh
+	fractal_artifacts_integration.py
+	fractal_bazinga_integration.py
+	generated/
+	integration/
+	jira-singularity-connector.py
+	master_index.md
+	master_index/
+	modules/
+	organization_log_20250319_051709.txt
+	organization_log_20250319_064111.txt
+	output/
+	pyvenv.cfg
+	safe_claude_collector.py
+	scripts/
+	src/.gitignore
+	src/bazinga_claude_analyzer.py
+	src/clipboard-fix-script.py
+	src/core/Blueprint.ts
+	src/core/PatternExpansion.ts
+	src/core/TemplateBindingSystem.ts
+	src/core/TimeSpaceIntegrator.ts
+	src/core/TypeValidator.ts
+	src/core/bazinga-token-integration.ts
+	src/core/bazinga/
+	src/core/bazinga_tool.py
+	src/core/dna.ts
+	src/core/dodo/
+	src/core/fractals/
+	src/core/interfaces/
+	src/core/lambda-rules.ts
+	src/core/lambda.ts
+	src/core/patterns.ts
+	src/core/quantum-bazinga.ts
+	src/core/universal_tool.py
+	src/examples/
+	src/generators/OutputGenerators.ts
+	src/generators/core/
+	src/generators/output/
+	src/improved-clipboard-fix.py
+	src/index-json-manager.py
+	src/integration-example.py
+	src/mac-bogus-app-finder.py
+	src/safe_claude_collector.py
+	src/self-correcting-visualization.py
+	src/templates/
+	src/utils/
+	ssri-bazinga-integration.sh
+	test_deterministic_vs_quantum.ts
+	test_dodo_integration.py
+	tmp/
+	try_bazinga.py
+

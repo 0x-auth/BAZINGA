@@ -1,0 +1,38 @@
+{
+  "interactions": [
+    {
+      "timestamp": "2025-04-10T10:30:00Z",
+      "type": "conversation",
+      "sentiment": "positive",
+      "topics": ["project planning", "weekend plans", "shared goals"],
+      "duration_minutes": 45,
+      "communication_channel": "in-person"
+    },
+    {
+      "timestamp": "2025-04-11T08:15:00Z",
+      "type": "message",
+      "sentiment": "neutral",
+      "topics": ["schedule coordination", "task assignment"],
+      "duration_minutes": 5,
+      "communication_channel": "text"
+    },
+    {
+      "timestamp": "2025-04-12T19:00:00Z",
+      "type": "shared activity",
+      "sentiment": "very positive",
+      "topics": ["relaxation", "mutual interests", "future plans"],
+      "duration_minutes": 180,
+      "communication_channel": "in-person"
+    }
+  ],
+  "patterns": {
+    "communication_frequency": "fibonacci-like",
+    "topic_progression": "spiral development",
+    "emotional_resonance": "oscillatory convergence"
+  },
+  "metadata": {
+    "relationship_type": "close",
+    "analysis_date": "2025-04-13",
+    "bazinga_id": "rel-amrita-2025-04"
+  }
+}

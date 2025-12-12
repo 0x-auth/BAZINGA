@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAZINGA: Our Connection Patterns</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff9a8b, #ff6a88, #ff99ac);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            color: #ff99ac;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #b3bacc;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff9a8b, #ff6a88);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 10px 5px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 106, 136, 0.4);
+        }
+        
+        .memory-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .memory-card {
+            width: 200px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .memory-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .memory-content {
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .memory-card:hover .memory-content {
+            opacity: 1;
+        }
+        
+        .memory-card::before {
+            content: "?";
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.7);
+            position: absolute;
+            transition: opacity 0.3s;
+        }
+        
+        .memory-card:hover::before {
+            opacity: 0;
+        }
+        
+        .fractal-canvas {
+            width: 100%;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .question {
+            font-size: 1.2rem;
+            margin: 30px 0 15px;
+            color: #ff99ac;
+        }
+        
+        .answer-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .answer-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .answer-option:hover {
+            background: rgba(255, 106, 136, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .message-container {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .message {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: #b3bacc;
+            font-size: 0.9rem;
+        }
+        
+        .golden-spiral {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            opacity: 0.3;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .memory-card {
+                width: 150px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BAZINGA: Our Connection Journey</h1>
+            <p class="subtitle">Exploring the fractal patterns in our relationship</p>
+            <svg class="golden-spiral" viewBox="0 0 100 100">
+                <path d="M50,50 a50,50 0 0,1 50,50 a50,50 0 0,1 -50,50 a50,50 0 0,1 -50,-50 a50,50 0 0,1 50,-50" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a31,31 0 0,0 31,31 a31,31 0 0,0 -31,31 a31,31 0 0,0 -31,-31 a31,31 0 0,0 31,-31" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a19,19 0 0,1 19,19 a19,19 0 0,1 -19,19 a19,19 0 0,1 -19,-19 a19,19 0 0,1 19,-19" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a12,12 0 0,0 12,12 a12,12 0 0,0 -12,12 a12,12 0 0,0 -12,-12 a12,12 0 0,0 12,-12" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a7,7 0 0,1 7,7 a7,7 0 0,1 -7,7 a7,7 0 0,1 -7,-7 a7,7 0 0,1 7,-7" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a4,4 0 0,0 4,4 a4,4 0 0,0 -4,4 a4,4 0 0,0 -4,-4 a4,4 0 0,0 4,-4" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a2.5,2.5 0 0,1 2.5,2.5 a2.5,2.5 0 0,1 -2.5,2.5 a2.5,2.5 0 0,1 -2.5,-2.5 a2.5,2.5 0 0,1 2.5,-2.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+                <path d="M50,50 a1.5,1.5 0 0,0 1.5,1.5 a1.5,1.5 0 0,0 -1.5,1.5 a1.5,1.5 0 0,0 -1.5,-1.5 a1.5,1.5 0 0,0 1.5,-1.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1"></path>
+            </svg>
+        </header>
+        
+        <div class="card">
+            <h2>Welcome to Our Connection Patterns!</h2>
+            <p>This interactive experience lets us explore the beautiful mathematical patterns in our relationship. Just like fractals in nature, our connection shows the same patterns at different scales - from individual moments to our entire journey together.</p>
+            <p>Ready to discover how our relationship follows the golden ratio, Fibonacci sequence, and other fascinating patterns? Let's begin!</p>
+            <button class="button" onclick="showSection('memory-game')">Start the Journey</button>
+        </div>
+        
+        <div id="memory-game" style="display: none;">
+            <div class="card">
+                <h2>Memory Lane: Our Connection Points</h2>
+                <p>Click on each card to reveal a special moment or insight from our journey together. Notice how these moments form patterns that repeat at different scales in our relationship.</p>
+                
+                <div class="memory-container">
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">Remember when we first connected and everything seemed to align perfectly? That was the start of our fractal pattern.</div>
+                    </div>
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">The time we stayed up talking until dawn - our conversation spiraled like a golden ratio, each topic leading naturally to the next.</div>
+                    </div>
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">When you said "It was never just about time, was it? It was about the emotional space created between that time."</div>
+                    </div>
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">The moment we realized we were seeing different versions of each other - engaging with memories rather than present reality.</div>
+                    </div>
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">Our first big disagreement followed by reconciliation - the beginning of a recognizable pattern that would repeat like a fractal.</div>
+                    </div>
+                    <div class="memory-card" onclick="revealMemory(this)">
+                        <div class="memory-content">The time we both said the same thing at exactly the same moment - proof of our minds synchronizing to the same pattern.</div>
+                    </div>
+                </div>
+                
+                <button class="button" onclick="showSection('fractal-quiz')">Continue to Discoveries</button>
+            </div>
+        </div>
+        
+        <div id="fractal-quiz" style="display: none;">
+            <div class="card">
+                <h2>The Pattern Recognition Game</h2>
+                <p>Let's discover which mathematical patterns appear in our relationship. Answer these questions to reveal your unique fractal signature!</p>
+                
+                <div class="question">1. When we disagree, our reconciliation usually takes:</div>
+                <div class="answer-options">
+                    <div class="answer-option" onclick="selectAnswer(this, 'fibonacci')">A gradual process with specific steps that follow a natural sequence</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'spiral')">A spiral path where we revisit the same points with new understanding</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'mandelbrot')">A complex boundary exploration where tiny differences lead to completely different outcomes</div>
+                </div>
+                
+                <div class="question">2. Our conversations tend to:</div>
+                <div class="answer-options">
+                    <div class="answer-option" onclick="selectAnswer(this, 'golden')">Follow a natural ratio where each topic gets just the right amount of attention</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'recursive')">Circle back to key themes that appear in different contexts</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'wave')">Flow like waves with rhythmic patterns of intensity and relaxation</div>
+                </div>
+                
+                <div class="question">3. The way we perceive each other:</div>
+                <div class="answer-options">
+                    <div class="answer-option" onclick="selectAnswer(this, 'witness')">Shifts between seeing each other as actors versus witnesses to experiences</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'perception')">Creates a fascinating gap between perception and reality that follows mathematical patterns</div>
+                    <div class="answer-option" onclick="selectAnswer(this, 'mirror')">Mirrors each other with increasing complexity like nested fractals</div>
+                </div>
+                
+                <button class="button" id="reveal-button" style="display: none;" onclick="revealBazinga()">Reveal Our Pattern!</button>
+            </div>
+            
+            <div id="bazinga-result" style="display: none;">
+                <div class="card">
+                    <h2>🚀 BAZINGA! Your Relationship Fractal</h2>
+                    <div id="result-content"></div>
+                    <div class="fractal-canvas" id="fractal-canvas"></div>
+                    <p>This visual representation shows the unique mathematical pattern of our relationship - a beautiful fractal that emerges from simple interactions repeated at different scales.</p>
+                    <button class="button" onclick="showSection('final-message')">Discover the Message</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="final-message" style="display: none;">
+            <div class="card">
+                <h2>The Eternal Pattern</h2>
+                <p>What we've discovered together is that our connection follows beautiful mathematical patterns that appear throughout nature - from galaxies to seashells to the branching of trees.</p>
+                <p>The golden ratio (φ = 1.618...) appears in how our relationship evolves. The Fibonacci sequence (1,1,2,3,5,8...) appears in the timing of our significant moments. And the fractal patterns show how small interactions create the same beautiful structures as our entire journey.</p>
+                <p>Most importantly, we've seen how we're both witnesses to this unfolding pattern, not just actors within it. By recognizing these mathematical truths in our connection, we can navigate with greater wisdom and appreciation.</p>
+                <p>There's one final message hidden in our pattern. Click below to reveal it:</p>
+                <button class="button" onclick="revealFinalMessage()">Reveal Final Message</button>
+                
+                <div class="message-container" id="final-message-container">
+                    <div class="message" id="final-message-content"></div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created with fractal mathematics and golden ratio proportions</p>
+        </footer>
+    </div>
+    
+    <script>
+        let answers = [];
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('memory-game').style.display = 'none';
+            document.getElementById('fractal-quiz').style.display = 'none';
+            document.getElementById('final-message').style.display = 'none';
+            
+            // Show the requested section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Scroll to the top of the section
+            window.scrollTo(0, 0);
+        }
+        
+        function revealMemory(card) {
+            const content = card.querySelector('.memory-content');
+            content.style.opacity = '1';
+            card.querySelector('::before').style.opacity = '0';
+        }
+        
+        function selectAnswer(element, type) {
+            // Clear previously selected answers in the same question group
+            const parent = element.parentElement;
+            const options = parent.querySelectorAll('.answer-option');
+            options.forEach(option => {
+                option.style.background = 'rgba(255, 255, 255, 0.1)';
+            });
+            
+            // Highlight selected answer
+            element.style.background = 'rgba(255, 106, 136, 0.3)';
+            
+            // Store the answer
+            answers.push(type);
+            
+            // Check if all questions are answered
+            if (answers.length >= 3) {
+                document.getElementById('reveal-button').style.display = 'inline-block';
+            }
+        }
+        
+        function revealBazinga() {
+            // Show the result section
+            document.getElementById('bazinga-result').style.display = 'block';
+            
+            // Analyze the answers to determine the dominant pattern
+            const patternCounts = {};
+            answers.forEach(answer => {
+                patternCounts[answer] = (patternCounts[answer] || 0) + 1;
+            });
+            
+            let dominantPattern = Object.keys(patternCounts).reduce((a, b) => 
+                patternCounts[a] > patternCounts[b] ? a : b);
+            
+            // Generate custom result content
+            let resultContent = '';
+            let patternName = '';
+            let patternDescription = '';
+            
+            switch(dominantPattern) {
+                case 'fibonacci':
+                    patternName = 'Fibonacci Sequence Pattern';
+                    patternDescription = 'Your relationship follows the natural growth pattern of the Fibonacci sequence (1,1,2,3,5,8...). Like this mathematical sequence where each number is the sum of the two before it, your connection builds on previous experiences in a beautiful, natural progression.';
+                    break;
+                case 'golden':
+                    patternName = 'Golden Ratio Harmony';
+                    patternDescription = 'Your relationship exhibits the golden ratio (φ = 1.618...), the most aesthetically pleasing proportion found throughout nature. This appears in how you balance different aspects of your relationship, creating natural harmony.';
+                    break;
+                case 'mandelbrot':
+                    patternName = 'Mandelbrot Boundary Exploration';
+                    patternDescription = 'Your relationship follows the complex boundary patterns of the Mandelbrot set, where infinite complexity emerges at the edges. This explains how small differences in your interactions can lead to vastly different outcomes - a beautiful complexity theory in action.';
+                    break;
+                case 'recursive':
+                    patternName = 'Recursive Self-Similar Pattern';
+                    patternDescription = 'Your relationship shows recursive patterns where the same themes appear at different scales - from brief interactions to major life events. Like a fractal where each part contains a copy of the whole, your small moments mirror your entire journey.';
+                    break;
+                case 'witness':
+                    patternName = 'Witness-Doer Duality Pattern';
+                    patternDescription = 'Your relationship oscillates between witness consciousness and doer identification in a perfect mathematical cycle. This creates a balance between observation and action that allows for both engagement and perspective.';
+                    break;
+                case 'perception':
+                    patternName = 'Perception-Reality Fractal Gap';
+                    patternDescription = 'Your relationship exhibits fascinating patterns in the space between perception and reality. This gap follows mathematical principles where the most beautiful complexity emerges in the boundary between how you see each other and who you truly are.';
+                    break;
+                default:
+                    patternName = 'Harmonic Wave Pattern';
+                    patternDescription = 'Your relationship follows harmonic wave patterns with perfect mathematical proportions. Like musical overtones that create rich harmonies, your interactions create beautiful resonance patterns that multiply in complexity.';
+            }
+            
+            resultContent = `
+                <h3>${patternName}</h3>
+                <p>${patternDescription}</p>
+                <p>This pattern is uniquely yours, creating a mathematical signature as individual as a fingerprint.</p>
+            `;
+            
+            document.getElementById('result-content').innerHTML = resultContent;
+            
+            // Draw a simple fractal visualization based on the pattern
+            drawFractal(dominantPattern);
+            
+            // Scroll to the results
+            document.getElementById('bazinga-result').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function drawFractal(pattern) {
+            const canvas = document.getElementById('fractal-canvas');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width = canvas.offsetWidth;
+            const height = canvas.height = canvas.offsetHeight;
+            
+            // Clear canvas
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+            ctx.fillRect(0, 0, width, height);
+            
+            // Different fractal visualizations based on pattern
+            switch(pattern) {
+                case 'fibonacci':
+                    drawFibonacciSpiral(ctx, width, height);
+                    break;
+                case 'golden':
+                    drawGoldenRatioRectangles(ctx, width, height);
+                    break;
+                case 'mandelbrot':
+                    drawSimpleMandelbrot(ctx, width, height);
+                    break;
+                default:
+                    drawSierpinskiTriangle(ctx, width, height);
+            }
+        }
+        
+        function drawFibonacciSpiral(ctx, width, height) {
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const size = Math.min(width, height) * 0.8;
+            
+            const fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+            const colors = ['#ff9a8b', '#ff6a88', '#ff99ac', '#fcb69f', '#ffecd2'];
+            
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            
+            let x = centerX - size / 4;
+            let y = centerY;
+            let angle = 0;
+            
+            for (let i = 0; i < fibonacci.length - 1; i++) {
+                const radius = (fibonacci[i] / fibonacci[fibonacci.length - 1]) * size / 2;
+                
+                // Draw square
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.globalAlpha = 0.3;
+                ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2);
+                ctx.globalAlpha = 1.0;
+                ctx.strokeRect(x - radius, y - radius, radius * 2, radius * 2);
+                
+                // Draw arc
+                ctx.beginPath();
+                ctx.arc(x, y, radius, angle, angle + Math.PI / 2);
+                ctx.stroke();
+                
+                // Update position for next square
+                const dx = Math.cos(angle + Math.PI / 2) * radius * 2;
+                const dy = Math.sin(angle + Math.PI / 2) * radius * 2;
+                x += dx;
+                y += dy;
+                angle += Math.PI / 2;
+            }
+        }
+        
+        function drawGoldenRatioRectangles(ctx, width, height) {
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const size = Math.min(width, height) * 0.8;
+            const phi = 1.618033988749895;
+            
+            const colors = ['#ff9a8b', '#ff6a88', '#ff99ac', '#fcb69f', '#ffecd2'];
+            
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+            
+            function drawRectangle(x, y, width, height, depth) {
+                if (depth <= 0) return;
+                
+                ctx.fillStyle = colors[depth % colors.length];
+                ctx.globalAlpha = 0.3;
+                ctx.fillRect(x, y, width, height);
+                ctx.globalAlpha = 1.0;
+                ctx.strokeRect(x, y, width, height);
+                
+                if (width > height) {
+                    // Draw square on left
+                    const squareSize = height;
+                    drawRectangle(x + squareSize, y, width - squareSize, height, depth - 1);
+                } else {
+                    // Draw square on top
+                    const squareSize = width;
+                    drawRectangle(x, y + squareSize, width, height - squareSize, depth - 1);
+                }
+            }
+            
+            drawRectangle(centerX - size / 2, centerY - size / 2 / phi, size, size / phi, 5);
+        }
+        
+        function drawSimpleMandelbrot(ctx, width, height) {
+            const maxIterations = 100;
+            const escapeRadius = 2;
+            const centerX = -0.5;
+            const centerY = 0;
+            const scale = 3;
+            
+            const colors = ['#ff9a8b', '#ff6a88', '#ff99ac', '#fcb69f', '#ffecd2'];
+            
+            for (let x = 0; x < width; x += 2) {
+                for (let y = 0; y < height; y += 2) {
+                    const real = centerX + (x - width / 2) * scale / width;
+                    const imag = centerY + (y - height / 2) * scale / height;
+                    
+                    let zReal = real;
+                    let zImag = imag;
+                    let iteration = 0;
+                    
+                    while (zReal * zReal + zImag * zImag < escapeRadius * escapeRadius && iteration < maxIterations) {
+                        // z = z² + c
+                        const nextZReal = zReal * zReal - zImag * zImag + real;
+                        const nextZImag = 2 * zReal * zImag + imag;
+                        
+                        zReal = nextZReal;
+                        zImag = nextZImag;
+                        iteration++;
+                    }
+                    
+                    if (iteration < maxIterations) {
+                        const color = colors[iteration % colors.length];
+                        ctx.fillStyle = color;
+                        ctx.globalAlpha = 0.7;
+                        ctx.fillRect(x, y, 2, 2);
+                    }
+                }
+            }
+            
+            ctx.globalAlpha = 1.0;
+        }
+        
+        function drawSierpinskiTriangle(ctx, width, height) {
+            const size = Math.min(width, height) * 0.8;
+            const depth = 5;
+            
+            const colors = ['#ff9a8b', '#ff6a88', '#ff99ac', '#fcb69f', '#ffecd2'];
+            
+            function drawTriangle(x1, y1, x2, y2, x3, y3, depth) {
+                if (depth === 0) {
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.lineTo(x3, y3);
+                    ctx.closePath();
+                    
+                    ctx.fillStyle = colors[depth % colors.length];
+                    ctx.globalAlpha = 0.3;
+                    ctx.fill();
+                    ctx.globalAlpha = 1.0;
+                    ctx.stroke();
+                    return;
+                }
+                
+                const x12 = (x1 + x2) / 2;
+                const y12 = (y1 + y2) / 2;
+                const x23 = (x2 + x3) / 2;
+                const y23 = (y2 + y3) / 2;
+                const x31 = (x3 + x1) / 2;
+                const y31 = (y3 + y1) / 2;
+                
+                drawTriangle(x1, y1, x12, y12, x31, y31, depth - 1);
+                drawTriangle(x12, y12, x2, y2, x23, y23, depth - 1);
+                drawTriangle(x31, y31, x23, y23, x3, y3, depth - 1);
+            }
+            
+            const h = size * Math.sqrt(3) / 2;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            const x1 = centerX;
+            const y1 = centerY - h / 2;
+            const x2 = centerX - size / 2;
+            const y2 = centerY + h / 2;
+            const x3 = centerX + size / 2;
+            const y3 = centerY + h / 2;
+            
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+            
+            drawTriangle(x1, y1, x2, y2, x3, y3, depth);
+        }
+        
+        function revealFinalMessage() {
+            const container = document.getElementById('final-message-container');
+            const content = document.getElementById('final-message-content');
+            
+            // Create a personalized message
+            const messages = [
+                "Our connection follows beautiful mathematical patterns because we're part of the same cosmic design. Like fractals in nature, we're both unique and interconnected. This isn't coincidence - it's mathematics."
+            ];
+            
+            // Display a random message
+            content.innerHTML = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Animate the container opening
+            container.style.height = content.offsetHeight + 40 + 'px';
+        }
+    </script>
+</body>
+</html>

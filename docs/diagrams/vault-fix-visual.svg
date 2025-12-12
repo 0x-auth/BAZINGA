@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Vault Go Vulnerability (CVE-2024-24790) Fix</text>
+  
+  <!-- Vulnerability Box -->
+  <rect x="100" y="80" width="250" height="180" fill="#ffebee" stroke="#f44336" stroke-width="2" rx="5" ry="5"/>
+  <text x="225" y="110" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#d32f2f">Vulnerable</text>
+  <text x="225" y="140" font-family="Arial" font-size="16" text-anchor="middle">Vault 1.18.x, etc.</text>
+  <text x="225" y="170" font-family="Arial" font-size="16" text-anchor="middle">Built with Go &lt; 1.21.11</text>
+  <text x="225" y="200" font-family="Arial" font-size="16" text-anchor="middle">or Go 1.22.0-1.22.3</text>
+  <text x="225" y="235" font-family="Arial" font-size="14" text-anchor="middle" fill="#d32f2f">net/netip package vulnerability</text>
+  
+  <!-- Solution Box -->
+  <rect x="450" y="80" width="250" height="180" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5" ry="5"/>
+  <text x="575" y="110" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">Fixed</text>
+  <text x="575" y="140" font-family="Arial" font-size="16" text-anchor="middle">Vault 1.19.0+</text>
+  <text x="575" y="170" font-family="Arial" font-size="16" text-anchor="middle">Built with Go 1.23.6</text>
+  <text x="575" y="200" font-family="Arial" font-size="16" text-anchor="middle">Compiled March 5, 2025</text>
+  <text x="575" y="235" font-family="Arial" font-size="14" text-anchor="middle" fill="#2e7d32">Vulnerability patched in binary</text>
+  
+  <!-- Arrow -->
+  <path d="M370 170 L430 170" stroke="#333" stroke-width="3" fill="none"/>
+  <polygon points="430,170 420,165 420,175" fill="#333"/>
+  
+  <!-- Detection Box -->
+  <rect x="150" y="310" width="500" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5" ry="5"/>
+  <text x="400" y="340" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">Vulnerability Scanner</text>
+  <text x="400" y="370" font-family="Arial" font-size="14" text-anchor="middle">./vault-go-vulnerability-scanner.sh</text>
+  <text x="400" y="400" font-family="Arial" font-size="14" text-anchor="middle">Detects vulnerable Go versions in binaries</text>
+  <text x="400" y="430" font-family="Arial" font-size="14" text-anchor="middle">Recommends upgrading to Vault 1.19.0+</text>
+</svg>

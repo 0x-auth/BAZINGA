@@ -1,0 +1,45 @@
+# Logs and backups
+*.log
+*.bak
+*.backup
+*_bak*
+
+# Node/npm
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# System files
+.DS_Store
+
+# Backup directories
+.bazinga-backup-*/
+.analyses_archive/
+# Logs and backups
+*.log
+*.bak
+*_backup
+.bazinga-backup-*
+
+# Node modules and dependencies
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# System files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary and cache files
+.cache/
+*.tmp
+
+# Analysis directories
+.analyses_archive/
+*_20*_*/
+

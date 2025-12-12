@@ -1,0 +1,437 @@
+#!/bin/bash
+# QuantumArchitectureAnalyzer
+# A tool that analyzes codebases through the lens of fractal dimensions and quantum linguistics
+# Usage: ./quantum-architecture-analyzer.sh [URL or local path]
+
+# Colors for output
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+MAGENTA='\033[0;35m'
+CYAN='\033[0;36m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+# Art for banner
+print_banner() {
+  echo -e "${MAGENTA}"
+  echo "  ╭─────────────────────────────────────────────╮"
+  echo "  │ 𝚀𝚞𝚊𝚗𝚝𝚞𝚖 𝙰𝚛𝚌𝚑𝚒𝚝𝚎𝚌𝚝𝚞𝚛𝚎 𝙰𝚗𝚊𝚕𝚢𝚣𝚎𝚛            │"
+  echo "  │ Fractal Dimension & Linguistic Analysis Tool │"
+  echo "  ╰─────────────────────────────────────────────╯"
+  echo -e "${NC}"
+}
+
+# Check arguments
+if [ $# -eq 0 ]; then
+  print_banner
+  echo -e "${RED}Error: Missing argument.${NC}"
+  echo -e "Usage: $0 [URL or local path]"
+  exit 1
+fi
+
+TARGET=$1
+TEMP_DIR=$(mktemp -d)
+ANALYSIS_DIR="quantum_analysis_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$ANALYSIS_DIR"
+
+print_banner
+echo -e "${CYAN}Target:${NC} $TARGET"
+echo -e "${CYAN}Creating analysis in:${NC} $ANALYSIS_DIR"
+
+# Detect if URL or local path
+if [[ $TARGET == http* ]]; then
+  echo -e "${YELLOW}URL detected. Cloning repository...${NC}"
+  git clone "$TARGET" "$TEMP_DIR" 2>/dev/null
+  if [ $? -ne 0 ]; then
+    echo -e "${YELLOW}Git clone failed. Trying to download as archive...${NC}"
+    curl -L "$TARGET/archive/master.zip" -o "$TEMP_DIR/master.zip" 2>/dev/null
+    if [ $? -eq 0 ]; then
+      unzip "$TEMP_DIR/master.zip" -d "$TEMP_DIR" >/dev/null
+      # Find the directory created by unzip
+      CODE_DIR=$(find "$TEMP_DIR" -type d -depth 1 | head -1)
+    else
+      echo -e "${RED}Failed to download code. Exiting.${NC}"
+      exit 1
+    fi
+  else
+    CODE_DIR="$TEMP_DIR"
+  fi
+else
+  echo -e "${YELLOW}Local path detected.${NC}"
+  if [ -d "$TARGET" ]; then
+    CODE_DIR="$TARGET"
+  else
+    echo -e "${RED}Directory not found. Exiting.${NC}"
+    exit 1
+  fi
+fi
+
+echo -e "${GREEN}Analyzing codebase structure...${NC}"
+
+# Function to calculate directory complexity (fractal dimension approximation)
+calculate_fractal_dimension() {
+  local dir=$1
+  local depth=$(find "$dir" -type f | awk -F/ '{print NF-1}' | sort -n | uniq -c | wc -l)
+  local files=$(find "$dir" -type f | wc -l)
+  local dirs=$(find "$dir" -type d | wc -l)
+
+  # Avoid division by zero
+  if [ $dirs -eq 0 ]; then
+    dirs=1
+  fi
+
+  # Calculate approximate fractal dimension based on:
+  # - Depth of directory tree
+  # - Ratio of files to directories
+  # - Distribution of files across directories
+  local fd=$(echo "scale=2; ($depth * l($files/$dirs))/l($dirs)" | bc -l 2>/dev/null)
+
+  # If calculation failed or resulted in invalid value, set a default
+  if [ -z "$fd" ] || [ "$fd" = "0" ] || [[ "$fd" == *"e"* ]]; then
+    fd="1.00"
+  fi
+
+  echo "$fd"
+}
+
+# Analyze hexagonal architecture alignment
+analyze_hexagonal_architecture() {
+  local dir=$1
+  local score=0
+  local max_score=6 # Perfect hexagonal architecture score
+
+  # Check for domain-driven structure
+  if find "$dir" -path "*/domain/*" -o -path "*/core/*" | grep -q .; then
+    ((score++))
+  fi
+
+  # Check for separation of interfaces
+  if find "$dir" -path "*/ports/*" -o -path "*/interfaces/*" -o -name "*Interface.java" -o -name "*Interface.ts" -o -name "*Interface.py" | grep -q .; then
+    ((score++))
+  fi
+
+  # Check for adapters
+  if find "$dir" -path "*/adapters/*" -o -path "*/infrastructure/*" | grep -q .; then
+    ((score++))
+  fi
+
+  # Check for application services
+  if find "$dir" -path "*/application/*" -o -path "*/services/*" -o -path "*/usecases/*" | grep -q .; then
+    ((score++))
+  fi
+
+  # Check for clear dependency inversion
+  if grep -r "interface" --include="*.java" --include="*.ts" --include="*.kt" --include="*.go" "$dir" | grep -q .; then
+    ((score++))
+  fi
+
+  # Check for testability patterns
+  if find "$dir" -path "*/test/*" -o -path "*/tests/*" | grep -q .; then
+    ((score++))
+  fi
+
+  # Calculate percentage
+  local percentage=$(echo "scale=2; ($score/$max_score)*100" | bc)
+  echo "$percentage"
+}
+
+# Generate architecture diagram
+generate_architecture_diagram() {
+  local dir=$1
+  local output_file=$2
+
+  echo "digraph CodeArchitecture {" > "$output_file"
+  echo "  rankdir=LR;" >> "$output_file"
+  echo "  node [shape=hexagon, style=filled, color=lightblue];" >> "$output_file"
+
+  # Find all directories up to 3 levels deep
+  find "$dir" -type d -maxdepth 3 | sort | while read -r directory; do
+    # Get relative path
+    local rel_path=${directory#$dir/}
+    if [ "$rel_path" != "" ]; then
+      # Create node name from path (replace / with _)
+      local node_name=${rel_path//\//_}
+      # Extract parent path
+      local parent_path=$(dirname "$rel_path")
+      local parent_node=${parent_path//\//_}
+
+      # Skip if this is the top-level
+      if [ "$parent_path" != "." ] && [ "$parent_path" != "" ]; then
+        echo "  \"$parent_node\" -> \"$node_name\";" >> "$output_file"
+      fi
+
+      # Add node with file count
+      local file_count=$(find "$directory" -maxdepth 1 -type f | wc -l)
+      echo "  \"$node_name\" [label=\"${rel_path##*/}\\n($file_count files)\"];" >> "$output_file"
+    fi
+  done
+
+  echo "}" >> "$output_file"
+
+  echo -e "${CYAN}Architecture diagram generated:${NC} $output_file"
+  echo -e "${YELLOW}To view the diagram, install Graphviz and run: dot -Tpng $output_file -o architecture.png${NC}"
+}
+
+# Analyze language patterns in code (quantum linguistics)
+analyze_language_patterns() {
+  local dir=$1
+  local output_file=$2
+
+  echo -e "${BLUE}Analyzing linguistic patterns in codebase...${NC}"
+
+  # Extract variable names, function names and comments
+  local variables=$(grep -r -e "var " -e "let " -e "const " --include="*.js" --include="*.java" --include="*.py" --include="*.ts" --include="*.go" "$dir" | sed -E 's/.*?(var|let|const) ([a-zA-Z0-9_]+).*/\2/g' | sort | uniq)
+  local functions=$(grep -r -e "function " -e "def " -e "public void" -e "private void" --include="*.js" --include="*.java" --include="*.py" --include="*.ts" --include="*.go" "$dir" | sed -E 's/.*?(function|def|void) ([a-zA-Z0-9_]+).*/\2/g' | sort | uniq)
+  local comments=$(grep -r -e "//" -e "#" -e "/*" --include="*.js" --include="*.java" --include="*.py" --include="*.ts" --include="*.go" "$dir" | sed 's/[\/\/#\*]//g' | tr -d '[[:punct:]]')
+
+  # Categorize semantic domains
+  echo "# Quantum Linguistic Analysis" > "$output_file"
+  echo "" >> "$output_file"
+  echo "## Semantic Domains" >> "$output_file"
+
+  # Analyze action verbs in function names
+  echo "### Action Verbs (Function Names)" >> "$output_file"
+  echo "```" >> "$output_file"
+  echo "$functions" | grep -e "^get" -e "^set" -e "^update" -e "^create" -e "^delete" -e "^fetch" -e "^save" -e "^load" -e "^send" -e "^receive" | sort | uniq -c | sort -nr | head -10 >> "$output_file"
+  echo "```" >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Analyze entities in variable names
+  echo "### Entity Concepts (Variable Names)" >> "$output_file"
+  echo "```" >> "$output_file"
+  echo "$variables" | grep -e "user" -e "data" -e "config" -e "file" -e "item" -e "node" -e "list" -e "result" | sort | uniq -c | sort -nr | head -10 >> "$output_file"
+  echo "```" >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Calculate semantic coherence (approximation)
+  local verb_count=$(echo "$functions" | grep -e "^get" -e "^set" -e "^update" -e "^create" -e "^delete" -e "^fetch" -e "^save" -e "^load" | wc -l)
+  local domain_terms=$(echo "$variables $functions $comments" | tr ' ' '\n' | grep -e "user" -e "account" -e "profile" -e "customer" -e "product" -e "service" -e "data" -e "document" | wc -l)
+  local tech_terms=$(echo "$variables $functions $comments" | tr ' ' '\n' | grep -e "array" -e "object" -e "string" -e "int" -e "bool" -e "function" -e "class" | wc -l)
+
+  # Calculate semantic coherence score
+  local total_terms=$((verb_count + domain_terms + tech_terms))
+  if [ $total_terms -eq 0 ]; then
+    total_terms=1
+  fi
+  local coherence=$(echo "scale=2; (($domain_terms / $total_terms) * 100)" | bc)
+
+  echo "## Semantic Coherence" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "- Domain-specific terms: $domain_terms" >> "$output_file"
+  echo "- Technical implementation terms: $tech_terms" >> "$output_file"
+  echo "- Action verbs: $verb_count" >> "$output_file"
+  echo "- **Domain Focus Score**: ${coherence}%" >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Semantic interference analysis
+  echo "## Semantic Interference Patterns" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "### Mixed Semantic Domains" >> "$output_file"
+
+  # Look for mixed domain/technical implementation terms
+  echo "```" >> "$output_file"
+  echo "$variables $functions" | tr ' ' '\n' | grep -e "UserArray" -e "CustomerObject" -e "DataString" -e "ItemMap" -e "NodeList" | sort | uniq >> "$output_file"
+  echo "```" >> "$output_file"
+
+  echo -e "${GREEN}Linguistic analysis complete:${NC} $output_file"
+}
+
+# Analyze quantum architecture patterns
+quantum_assessment() {
+  local dir=$1
+  local output_file=$2
+
+  local fd=$(calculate_fractal_dimension "$dir")
+  local hex_score=$(analyze_hexagonal_architecture "$dir")
+
+  echo "# Quantum Architecture Assessment" > "$output_file"
+  echo "" >> "$output_file"
+  echo "## Fractal Dimension" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "**Score: $fd**" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "The fractal dimension measures how the codebase scales across different levels of abstraction." >> "$output_file"
+  echo "" >> "$output_file"
+  echo "- **1.0-1.5**: Linear structure, limited abstraction layers (MVP/simple project)" >> "$output_file"
+  echo "- **1.5-2.0**: Balanced structure with moderate abstraction (well-designed medium project)" >> "$output_file"
+  echo "- **2.0-2.5**: Complex structure with multiple abstraction layers (enterprise project)" >> "$output_file"
+  echo "- **>2.5**: Overly complex structure, potential design issues" >> "$output_file"
+  echo "" >> "$output_file"
+
+  echo "## Hexagonal Architecture Alignment" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "**Score: $hex_score%**" >> "$output_file"
+  echo "" >> "$output_file"
+  echo "Alignment with hexagonal architecture principles:" >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Interpret hexagonal score
+  if (( $(echo "$hex_score < 30" | bc -l) )); then
+    echo "- **Low alignment**: The codebase doesn't follow hexagonal architecture patterns" >> "$output_file"
+    echo "- **Suggestion**: Consider introducing domain boundaries and interfaces" >> "$output_file"
+  elif (( $(echo "$hex_score < 70" | bc -l) )); then
+    echo "- **Moderate alignment**: Some hexagonal architecture patterns present" >> "$output_file"
+    echo "- **Suggestion**: Strengthen separation between domain logic and adapters" >> "$output_file"
+  else
+    echo "- **High alignment**: Strong hexagonal architecture patterns" >> "$output_file"
+    echo "- **Suggestion**: Continue refining dependencies to maintain architecture" >> "$output_file"
+  fi
+
+  echo "" >> "$output_file"
+
+  # Generate summary
+  echo "## Quantum Architecture Summary" >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Determine dimensional balance based on fractal dimension and hexagonal score
+
+  # Interpret fractal dimension
+  local fd_assessment=""
+  if (( $(echo "$fd < 1.5" | bc -l) )); then
+    fd_assessment="simple"
+  elif (( $(echo "$fd < 2.0" | bc -l) )); then
+    fd_assessment="balanced"
+  elif (( $(echo "$fd < 2.5" | bc -l) )); then
+    fd_assessment="complex"
+  else
+    fd_assessment="overly complex"
+  fi
+
+  # Interpret hexagonal score
+  local hex_assessment=""
+  if (( $(echo "$hex_score < 30" | bc -l) )); then
+    hex_assessment="monolithic"
+  elif (( $(echo "$hex_score < 70" | bc -l) )); then
+    hex_assessment="partially modular"
+  else
+    hex_assessment="highly modular"
+  fi
+
+  echo "This codebase is **$fd_assessment** with a **$hex_assessment** structure." >> "$output_file"
+  echo "" >> "$output_file"
+
+  # Dimensional metaphor based on geometric shapes
+  echo "### Dimensional Metaphor" >> "$output_file"
+  echo "" >> "$output_file"
+
+  if [ "$fd_assessment" = "simple" ] && [ "$hex_assessment" = "monolithic" ]; then
+    echo "**Shape: Triangle** - Simple, stable, but limited in extensibility" >> "$output_file"
+  elif [ "$fd_assessment" = "simple" ] && [ "$hex_assessment" = "partially modular" ]; then
+    echo "**Shape: Square** - Stable foundation with some flexibility" >> "$output_file"
+  elif [ "$fd_assessment" = "simple" ] && [ "$hex_assessment" = "highly modular" ]; then
+    echo "**Shape: Pentagon** - Simple core with clean extension points" >> "$output_file"
+  elif [ "$fd_assessment" = "balanced" ] && [ "$hex_assessment" = "monolithic" ]; then
+    echo "**Shape: Rhombus** - Balanced complexity but rigid connections" >> "$output_file"
+  elif [ "$fd_assessment" = "balanced" ] && [ "$hex_assessment" = "partially modular" ]; then
+    echo "**Shape: Hexagon** - Ideal balance of complexity and modularity" >> "$output_file"
+  elif [ "$fd_assessment" = "balanced" ] && [ "$hex_assessment" = "highly modular" ]; then
+    echo "**Shape: Heptagon** - Well-balanced with strong separation of concerns" >> "$output_file"
+  elif [ "$fd_assessment" = "complex" ] && [ "$hex_assessment" = "monolithic" ]; then
+    echo "**Shape: Irregular Polygon** - Complex internals with rigid boundaries" >> "$output_file"
+  elif [ "$fd_assessment" = "complex" ] && [ "$hex_assessment" = "partially modular" ]; then
+    echo "**Shape: Octagon** - Complex yet structured with clear boundaries" >> "$output_file"
+  elif [ "$fd_assessment" = "complex" ] && [ "$hex_assessment" = "highly modular" ]; then
+    echo "**Shape: Nonagon** - Sophisticated structure with excellent separation" >> "$output_file"
+  else
+    echo "**Shape: Fractal** - Possibly over-engineered with recurring patterns" >> "$output_file"
+  fi
+
+  echo "" >> "$output_file"
+
+  # Recommendations based on assessment
+  echo "### Recommendations" >> "$output_file"
+  echo "" >> "$output_file"
+
+  if [ "$fd_assessment" = "simple" ] || [ "$fd_assessment" = "balanced" ]; then
+    if [ "$hex_assessment" = "monolithic" ]; then
+      echo "1. **Introduce domain boundaries** - Separate core logic from infrastructure" >> "$output_file"
+      echo "2. **Create well-defined interfaces** - Define clear contracts between components" >> "$output_file"
+      echo "3. **Implement adapters** - Create boundary layers for external dependencies" >> "$output_file"
+    elif [ "$hex_assessment" = "partially modular" ]; then
+      echo "1. **Strengthen domain model** - Ensure domain logic is free from infrastructure concerns" >> "$output_file"
+      echo "2. **Complete adapter implementations** - Ensure all external dependencies go through adapters" >> "$output_file"
+      echo "3. **Add integration tests** - Verify adapter implementations against interfaces" >> "$output_file"
+    else
+      echo "1. **Maintain architecture vigilance** - Continue enforcing boundaries during evolution" >> "$output_file"
+      echo "2. **Consider domain-driven refinement** - Align code structures with ubiquitous language" >> "$output_file"
+      echo "3. **Implement architectural fitness functions** - Automated tests for architectural compliance" >> "$output_file"
+    fi
+  else
+    if [ "$hex_assessment" = "monolithic" ] || [ "$hex_assessment" = "partially modular" ]; then
+      echo "1. **Simplify complex components** - Break down into smaller, focused modules" >> "$output_file"
+      echo "2. **Reduce abstraction layers** - Eliminate unnecessary indirection" >> "$output_file"
+      echo "3. **Strengthen modular boundaries** - Improve separation of concerns" >> "$output_file"
+    else
+      echo "1. **Evaluate abstraction necessity** - Ensure complexity serves a purpose" >> "$output_file"
+      echo "2. **Document architectural decisions** - Explain the rationale for complex structures" >> "$output_file"
+      echo "3. **Consider consolidation** - Merge closely related components with similar responsibilities" >> "$output_file"
+    fi
+  fi
+
+  echo -e "${GREEN}Quantum architecture assessment complete:${NC} $output_file"
+}
+
+# Main analysis
+ARCHITECTURE_DIAGRAM="$ANALYSIS_DIR/architecture_diagram.dot"
+LINGUISTIC_ANALYSIS="$ANALYSIS_DIR/linguistic_analysis.md"
+QUANTUM_ASSESSMENT="$ANALYSIS_DIR/quantum_assessment.md"
+
+echo -e "${BLUE}Generating architecture diagram...${NC}"
+generate_architecture_diagram "$CODE_DIR" "$ARCHITECTURE_DIAGRAM"
+
+echo -e "${BLUE}Performing linguistic analysis...${NC}"
+analyze_language_patterns "$CODE_DIR" "$LINGUISTIC_ANALYSIS"
+
+echo -e "${BLUE}Generating quantum architecture assessment...${NC}"
+quantum_assessment "$CODE_DIR" "$QUANTUM_ASSESSMENT"
+
+# Create summary report
+SUMMARY_REPORT="$ANALYSIS_DIR/summary.md"
+
+echo "# Quantum Architecture Analysis Summary" > "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+echo "## Target: $TARGET" >> "$SUMMARY_REPORT"
+echo "## Date: $(date)" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+
+# Extract fractal dimension and hexagonal score
+FD=$(grep -A 1 "## Fractal Dimension" "$QUANTUM_ASSESSMENT" | grep "Score" | sed -E 's/.*Score: ([0-9.]+).*/\1/g')
+HEX_SCORE=$(grep -A 1 "## Hexagonal Architecture Alignment" "$QUANTUM_ASSESSMENT" | grep "Score" | sed -E 's/.*Score: ([0-9.]+)%.*/\1/g')
+
+echo "## Key Metrics" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+echo "- **Fractal Dimension**: $FD" >> "$SUMMARY_REPORT"
+echo "- **Hexagonal Architecture Alignment**: $HEX_SCORE%" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+
+# Extract dimensional metaphor
+SHAPE=$(grep -A 1 "### Dimensional Metaphor" "$QUANTUM_ASSESSMENT" | grep "Shape:" | sed -E 's/.*Shape: ([A-Za-z]+).*/\1/g')
+
+echo "## Dimensional Metaphor" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+echo "This codebase resembles a **$SHAPE** in its structural dimensions." >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+
+# Extract top recommendations
+echo "## Top Recommendations" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+grep -A 3 "### Recommendations" "$QUANTUM_ASSESSMENT" | grep "^[0-9]" | head -3 >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+
+echo "## Analysis Files" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+echo "- [Quantum Architecture Assessment](./quantum_assessment.md)" >> "$SUMMARY_REPORT"
+echo "- [Linguistic Analysis](./linguistic_analysis.md)" >> "$SUMMARY_REPORT"
+echo "- [Architecture Diagram](./architecture_diagram.dot)" >> "$SUMMARY_REPORT"
+echo "" >> "$SUMMARY_REPORT"
+
+# Final banner
+echo -e "${GREEN}═════════════════════════════════════════════${NC}"
+echo -e "${CYAN}Quantum Architecture Analysis Complete!${NC}"
+echo -e "${GREEN}═════════════════════════════════════════════${NC}"
+echo -e "${YELLOW}Results available in:${NC} $ANALYSIS_DIR"
+echo -e "${YELLOW}Summary:${NC} $SUMMARY_REPORT"
+
+# Cleanup
+rm -rf "$TEMP_DIR"

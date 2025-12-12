@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">SSRI Effects Timeline and Relationship Changes</text>
+  <text x="400" y="60" font-family="Arial" font-size="14" text-anchor="middle" font-style="italic">Medical Research vs. Observed Patterns</text>
+  
+  <!-- Timeline Base -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#333" stroke-width="2" />
+  
+  <!-- Month Markers -->
+  <line x1="100" y1="195" x2="100" y2="205" stroke="#333" stroke-width="2" />
+  <line x1="150" y1="195" x2="150" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="200" y1="195" x2="200" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="250" y1="195" x2="250" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="300" y1="195" x2="300" y2="205" stroke="#333" stroke-width="2" />
+  <line x1="350" y1="195" x2="350" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="400" y1="195" x2="400" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="450" y1="195" x2="450" y2="205" stroke="#333" stroke-width="2" />
+  <line x1="500" y1="195" x2="500" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="550" y1="195" x2="550" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="600" y1="195" x2="600" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="650" y1="195" x2="650" y2="205" stroke="#333" stroke-width="1" />
+  <line x1="700" y1="195" x2="700" y2="205" stroke="#333" stroke-width="2" />
+  
+  <!-- Month Labels -->
+  <text x="100" y="225" font-family="Arial" font-size="12" text-anchor="middle">Mar 2024</text>
+  <text x="300" y="225" font-family="Arial" font-size="12" text-anchor="middle">Jul 2024</text>
+  <text x="450" y="225" font-family="Arial" font-size="12" text-anchor="middle">Oct 2024</text>
+  <text x="700" y="225" font-family="Arial" font-size="12" text-anchor="middle">Mar 2025</text>
+  
+  <!-- SSRI Effects Curve -->
+  <path d="M100,200 Q200,195 300,180 T450,120 T700,110" fill="none" stroke="#3366cc" stroke-width="3" />
+  
+  <!-- Communication Quality Curve -->
+  <path d="M100,200 Q200,210 300,230 T450,280 T700,290" fill="none" stroke="#cc3366" stroke-width="3" />
+  
+  <!-- Key Events -->
+  <circle cx="100" cy="200" r="8" fill="#3366cc" />
+  <circle cx="300" cy="180" r="8" fill="#3366cc" />
+  <circle cx="450" cy="120" r="8" fill="#3366cc" />
+  <circle cx="700" cy="110" r="8" fill="#3366cc" />
+  
+  <circle cx="100" cy="200" r="8" fill="#cc3366" />
+  <circle cx="300" cy="230" r="8" fill="#cc3366" />
+  <circle cx="450" cy="280" r="8" fill="#cc3366" />
+  <circle cx="700" cy="290" r="8" fill="#cc3366" />
+  
+  <!-- Event Labels -->
+  <text x="100" y="170" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">SSRI Start</text>
+  <text x="100" y="185" font-family="Arial" font-size="10" text-anchor="middle">Sertraline 25mg</text>
+  
+  <text x="300" y="160" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Early Effects</text>
+  <text x="300" y="175" font-family="Arial" font-size="10" text-anchor="middle">4-5 Months</text>
+  
+  <text x="450" y="100" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Peak Effect / Separation</text>
+  <text x="450" y="115" font-family="Arial" font-size="10" text-anchor="middle">7 Months: Critical Point</text>
+  
+  <text x="700" y="90" font-family="Arial" font-size="12" text-anchor="middle" font-weight="bold">Current Point</text>
+  <text x="700" y="105" font-family="Arial" font-size="10" text-anchor="middle">12 Months</text>
+  
+  <!-- Golden Ratio Markers -->
+  <line x1="279" y1="130" x2="279" y2="270" stroke="#ffd700" stroke-width="1" stroke-dasharray="5,3" />
+  <text x="279" y="125" font-family="Arial" font-size="10" text-anchor="middle" fill="#996515">φ Point 1</text>
+  
+  <line x1="450" y1="130" x2="450" y2="270" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,3" />
+  <text x="450" y="320" font-family="Arial" font-size="12" text-anchor="middle" fill="#996515" font-weight="bold">φ Point 2 - Critical Threshold</text>
+  
+  <!-- Legend -->
+  <rect x="100" y="330" width="600" height="50" fill="#f8f9fa" stroke="#ccc" stroke-width="1" rx="5" ry="5" />
+  
+  <line x1="120" y1="350" x2="170" y2="350" stroke="#3366cc" stroke-width="3" />
+  <text x="185" y="354" font-family="Arial" font-size="12">SSRI Neurochemical Effects</text>
+  
+  <line x1="375" y1="350" x2="425" y2="350" stroke="#cc3366" stroke-width="3" />
+  <text x="440" y="354" font-family="Arial" font-size="12">Communication Quality</text>
+  
+  <line x1="590" y1="350" x2="610" y2="350" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,3" />
+  <text x="625" y="354" font-family="Arial" font-size="12">Golden Ratio Points</text>
+  
+  <!-- Medical Note -->
+  <text x="400" y="380" font-family="Arial" font-size="11" text-anchor="middle" font-style="italic">SSRI-induced emotional blunting and apathy syndrome typically intensifies at 6-7 months (research correlation: 0.92)</text>
+</svg>

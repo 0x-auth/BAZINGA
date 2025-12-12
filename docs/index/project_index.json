@@ -1,0 +1,55 @@
+{
+  "last_updated": "2025-03-16 03:50:38",
+  "project": "BAZINGA",
+  "structure": {
+    ".git": {
+      "file_count": 45
+    },
+    ".idea": {
+      "file_count": 9
+    },
+    "analysis": {
+      "file_count": 5
+    },
+    "artifacts": {
+      "file_count": 672
+    },
+    "build": {
+      "file_count": 0
+    },
+    "data": {
+      "file_count": 6
+    },
+    "dist": {
+      "file_count": 39
+    },
+    "docs": {
+      "file_count": 37
+    },
+    "generated": {
+      "file_count": 7
+    },
+    "lib": {
+      "file_count": 829
+    },
+    "node_modules": {
+      "file_count": 10607
+    },
+    "packages": {
+      "file_count": 1
+    },
+    "scripts": {
+      "file_count": 11
+    },
+    "src": {
+      "file_count": 80
+    },
+    "tests": {
+      "file_count": 1
+    },
+    "tmp": {
+      "file_count": 1
+    },
+    "venv_bazinga": {
+      "file_count": 8083
+    }

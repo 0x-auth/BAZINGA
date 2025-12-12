@@ -1,0 +1,57 @@
+#!/bin/bash
+# BAZINGA Unified Command System - Fractal Architecture
+
+FRACTALS=(1 1 2 3 5 8 13 21)
+GOLDEN_RATIO=1.618033988749895
+BAZINGA_DIR=${BAZINGA_DIR:-"$PWD"}
+
+# Self-correction using golden ratio branching
+correct_self() {
+ if grep -q "error" "$0.log" 2>/dev/null; then
+   backup="$0.$(date +%s)"
+   cp "$0" "$backup"
+   sed -i.bak '/unexpected/d; /error/d' "$0"
+   chmod +x "$0"
+   echo "Self-corrected from backup: $backup"
+ fi
+}
+
+# Fibonacci-based command routing
+route_command() {
+ cmd="$1"
+ shift
+ 
+ for dir in system bin scripts .; do
+   for idx in "${FRACTALS[@]}"; do
+     pattern="*${cmd:0:$idx}*"
+     script=$(find "$BAZINGA_DIR/$dir" -name "$pattern" 2>/dev/null | head -1)
+     if [ -n "$script" ] && [ -x "$script" ]; then
+       "$script" "$@" 2> >(tee -a "$0.log" >&2)
+       return $?
+     fi
+   done
+ done
+ 
+ # Fall back to most similar command by pattern
+ similar=$(find "$BAZINGA_DIR" -type f -name "*.sh" | xargs basename | grep -i "${cmd:0:3}" | head -1)
+ if [ -n "$similar" ]; then
+   script=$(find "$BAZINGA_DIR" -name "$similar" | head -1)
+   echo "Using $similar instead of $cmd"
+   "$script" "$@" 2> >(tee -a "$0.log" >&2)
+ else
+   echo "Command not found: $cmd"
+   return 1
+ fi
+}
+
+# Apply corrections
+correct_self
+
+# Main entrypoint
+case "$1" in
+ visualize|visual) route_command visualize "${@:2}" ;;
+ trust|correct) route_command trust "${@:2}" ;;
+ glance|activity) route_command glance "${@:2}" ;;
+ clean|optimize) find "$BAZINGA_DIR" -name "*.bak" -o -name "*~" -delete ;;
+ *) route_command "$@" ;;
+esac

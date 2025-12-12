@@ -1,0 +1,50 @@
+===== BAZINGA SYSTEM EXTRACT =====
+Generated: Fri Mar 28 01:01:55 IST 2025
+
+CORE STRUCTURE:
+----------------
+./src
+./src/core
+./src/core/fractals
+
+KEY CONCEPTS:
+-------------
+
+FRACTAL INTEGRATION:
+-------------------
+
+CODE STATISTICS:
+---------------
+Python files:        6
+TypeScript files:        1
+Documentation files:        0
+
+SYSTEM CAPABILITIES:
+-------------------
+./integration/ssri_20250328_004000/scripts/fractal_pattern_integration.py:    def generate_relationship_map(self):
+./ssri-documentation-script.py:def generate_timeline():
+./ssri-documentation-script.py:def generate_medical_evidence():
+./ssri-documentation-script.py:def generate_legal_options():
+./ssri-documentation-script.py:def generate_communication_analysis():
+...
+./integration/ssri_20250328_004000/scripts/fractal_pattern_integration.py:    def analyze_timeline(self, timeline_file):
+./integration/ssri_20250328_004000/scripts/fractal_pattern_integration.py:    def analyze_communication(self, communication_file):
+./trust_corrector.py:def analyze_input(text: str) -> Dict:
+
+INTEGRATION POINTS:
+------------------
+
+RECENT DEVELOPMENT:
+------------------
+./integration/ssri_20250328_004000/Visualization/generate_timeline_visualization.py
+./integration/ssri_20250328_004000/BAZINGA_integration.py
+./integration/ssri_20250328_004000/scripts/fractal_pattern_integration.py
+./trust_corrector.py
+./ssri-documentation-script.py
+./fractal_artifacts_integration.py
+./src/core/quantum-bazinga.ts
+
+===== EXTRACT COMPLETE =====
+
+This extract is limited to avoid token overflow.
+For more detailed analysis, run with --comprehensive flag.

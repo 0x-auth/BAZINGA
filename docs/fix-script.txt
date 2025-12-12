@@ -1,0 +1,695 @@
+#!/bin/bash
+
+# BAZINGA-DODO Fix Script
+# This script resolves installation issues and fixes the circular src directory structure
+
+# Set color codes for better readability
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}BAZINGA-DODO Fix Script${NC}"
+echo -e "${YELLOW}Fixing directory structure and installation issues...${NC}"
+
+# 1. Fix the circular src directory structure
+echo -e "${YELLOW}Checking for circular directory references...${NC}"
+
+# Remove the circular symlink if it exists
+if [ -L "src/src" ]; then
+    echo -e "${RED}Found circular symlink: src/src -> removing${NC}"
+    rm "src/src"
+    echo -e "${GREEN}Circular symlink removed.${NC}"
+elif [ -d "src/src" ]; then
+    echo -e "${RED}Found nested src directory (not a symlink). This requires manual inspection.${NC}"
+    echo -e "${YELLOW}Contents of src/src:${NC}"
+    ls -la "src/src"
+    
+    # If src/src is a regular directory with content that matches src, it's likely a duplicate
+    if [ "$(ls -A src/src)" == "$(ls -A src)" ]; then
+        echo -e "${YELLOW}src/src appears to be a duplicate of src. Will try to remove...${NC}"
+        rm -rf "src/src"
+        echo -e "${GREEN}Removed src/src directory.${NC}"
+    else
+        echo -e "${RED}The src/src directory contains different files. Please manually inspect and fix.${NC}"
+        echo -e "${RED}You may need to copy important files before removing it.${NC}"
+    fi
+else
+    echo -e "${GREEN}No circular src reference found at the first level.${NC}"
+fi
+
+# Check for deeper nesting
+if [ -d "src/src/src" ]; then
+    echo -e "${RED}Found deeply nested src/src/src directory. This requires more careful handling.${NC}"
+    echo -e "${YELLOW}Recommended action: Back up your project and manually fix the directory structure.${NC}"
+    echo -e "${YELLOW}You may need to reorganize your files to ensure proper imports.${NC}"
+fi
+
+# 2. Fix the head command errors in the installation script
+echo -e "${YELLOW}Fixing installation script for head command compatibility...${NC}"
+
+# Create a corrected version of the install script
+cat > install_dodo_fixed.sh << 'EOL'
+#!/bin/bash
+
+# BAZINGA-DODO Integration Installation Script (Fixed Version)
+# This script installs the DODO integration into the BAZINGA project structure
+
+# Set color codes for better readability
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Current directory should be BAZINGA root
+BAZINGA_ROOT=$(pwd)
+echo -e "${BLUE}Installing DODO integration into BAZINGA project at:${NC} $BAZINGA_ROOT"
+
+# Create DODO integration directory structure
+echo -e "${YELLOW}Creating directory structure...${NC}"
+mkdir -p src/core/dodo
+mkdir -p src/core/dodo/harmonics
+mkdir -p src/core/dodo/time_trust
+mkdir -p src/core/dodo/integration
+
+# Move the file from temporary location
+if [ -f "tmp/bazinga-dodo-implementation.py" ]; then
+    echo -e "${YELLOW}Moving implementation file...${NC}"
+    
+    # Split the file into appropriate modules
+    echo -e "${BLUE}Creating modular structure from the implementation...${NC}"
+    
+    # Extract HarmonicFramework class
+    echo "# harmonics.py - Implementation of DODO Visual Pattern's Harmonic Framework" > src/core/dodo/harmonics/harmonics.py
+    echo "import math" >> src/core/dodo/harmonics/harmonics.py
+    echo "from typing import Dict, List" >> src/core/dodo/harmonics/harmonics.py
+    echo "" >> src/core/dodo/harmonics/harmonics.py
+    grep -A 500 "class HarmonicFramework" tmp/bazinga-dodo-implementation.py | grep -B 500 "# ==" | grep -v "# ==" >> src/core/dodo/harmonics/harmonics.py
+    
+    # Create __init__.py for harmonics package
+    echo "from .harmonics import HarmonicFramework" > src/core/dodo/harmonics/__init__.py
+    
+    # Extract TransformationPair enum
+    echo "# transformation.py - Transformation Pairs from DODO Visual Pattern" > src/core/dodo/transformation.py
+    echo "from enum import Enum" >> src/core/dodo/transformation.py
+    echo "" >> src/core/dodo/transformation.py
+    grep -A 500 "class TransformationPair" tmp/bazinga-dodo-implementation.py | grep -B 500 "def get_opposite_state" | grep -v "def get_opposite_state" >> src/core/dodo/transformation.py
+    echo "    def get_opposite_state(self, current_state):" >> src/core/dodo/transformation.py
+    echo "        if current_state == self.state_a:" >> src/core/dodo/transformation.py
+    echo "            return self.state_b" >> src/core/dodo/transformation.py
+    echo "        return self.state_a" >> src/core/dodo/transformation.py
+    
+    # Extract ProcessingState enum
+    echo "# states.py - Processing States for DODO System" > src/core/dodo/states.py
+    echo "from enum import Enum" >> src/core/dodo/states.py
+    echo "" >> src/core/dodo/states.py
+    grep -A 10 "class ProcessingState" tmp/bazinga-dodo-implementation.py >> src/core/dodo/states.py
+    
+    # Extract Time and Trust trackers
+    echo "# time_trust.py - Time and Trust dimensions for DODO System" > src/core/dodo/time_trust/time_trust.py
+    echo "import time" >> src/core/dodo/time_trust/time_trust.py
+    echo "from typing import Dict, Any" >> src/core/dodo/time_trust/time_trust.py
+    echo "" >> src/core/dodo/time_trust/time_trust.py
+    grep -A 500 "class TimeTracker" tmp/bazinga-dodo-implementation.py | grep -B 500 "class TrustTracker" | grep -v "class TrustTracker" >> src/core/dodo/time_trust/time_trust.py
+    echo "" >> src/core/dodo/time_trust/time_trust.py
+    grep -A 500 "class TrustTracker" tmp/bazinga-dodo-implementation.py | grep -B 500 "# ==" | grep -v "# ==" >> src/core/dodo/time_trust/time_trust.py
+    
+    # Create __init__.py for time_trust package
+    echo "from .time_trust import TimeTracker, TrustTracker" > src/core/dodo/time_trust/__init__.py
+    
+    # Extract DodoSystem class
+    echo "# dodo_system.py - Core implementation of DODO System" > src/core/dodo/dodo_system.py
+    echo "from typing import Dict, Any, Callable" >> src/core/dodo/dodo_system.py
+    echo "from .harmonics import HarmonicFramework" >> src/core/dodo/dodo_system.py
+    echo "from .states import ProcessingState" >> src/core/dodo/dodo_system.py
+    echo "from .transformation import TransformationPair" >> src/core/dodo/dodo_system.py
+    echo "from .time_trust import TimeTracker, TrustTracker" >> src/core/dodo/dodo_system.py
+    echo "" >> src/core/dodo/dodo_system.py
+    grep -A 500 "class DodoSystem" tmp/bazinga-dodo-implementation.py | grep -B 500 "class TimeTracker" | grep -v "class TimeTracker" >> src/core/dodo/dodo_system.py
+    
+    # Extract BazingaDodoIntegration class
+    echo "# bazinga_integration.py - Integration with BAZINGA components" > src/core/dodo/integration/bazinga_integration.py
+    echo "from typing import Dict, Any" >> src/core/dodo/integration/bazinga_integration.py
+    echo "from ..dodo_system import DodoSystem" >> src/core/dodo/integration/bazinga_integration.py
+    echo "from ..states import ProcessingState" >> src/core/dodo/integration/bazinga_integration.py
+    echo "" >> src/core/dodo/integration/bazinga_integration.py
+    grep -A 500 "class BazingaDodoIntegration" tmp/bazinga-dodo-implementation.py | grep -B 500 "# ==" | grep -v "# ==" >> src/core/dodo/integration/bazinga_integration.py
+    
+    # Create __init__.py for integration package
+    echo "from .bazinga_integration import BazingaDodoIntegration" > src/core/dodo/integration/__init__.py
+    
+    # Create example usage file
+    echo "# example_usage.py - Example of how to use BAZINGA-DODO integration" > src/core/dodo/example_usage.py
+    echo "from .integration import BazingaDodoIntegration" >> src/core/dodo/example_usage.py
+    echo "from .states import ProcessingState" >> src/core/dodo/example_usage.py
+    echo "" >> src/core/dodo/example_usage.py
+    grep -A 500 "def example_usage" tmp/bazinga-dodo-implementation.py | grep -B 500 "if __name__" | grep -v "if __name__" >> src/core/dodo/example_usage.py
+    echo "" >> src/core/dodo/example_usage.py
+    echo "if __name__ == \"__main__\":" >> src/core/dodo/example_usage.py
+    echo "    example_usage()" >> src/core/dodo/example_usage.py
+    
+    # Create main __init__.py for dodo package
+    echo "# DODO System Integration for BAZINGA" > src/core/dodo/__init__.py
+    echo "from .dodo_system import DodoSystem" >> src/core/dodo/__init__.py
+    echo "from .states import ProcessingState" >> src/core/dodo/__init__.py
+    echo "from .transformation import TransformationPair" >> src/core/dodo/__init__.py
+    echo "from .harmonics import HarmonicFramework" >> src/core/dodo/__init__.py
+    echo "from .time_trust import TimeTracker, TrustTracker" >> src/core/dodo/__init__.py
+    echo "from .integration import BazingaDodoIntegration" >> src/core/dodo/__init__.py
+    
+    echo -e "${GREEN}Successfully created modular implementation!${NC}"
+else
+    echo -e "${RED}Error: Implementation file not found at tmp/bazinga-dodo-implementation.py${NC}"
+    exit 1
+fi
+
+# Create integration test script
+echo -e "${YELLOW}Creating integration test script...${NC}"
+cat > test_dodo_integration.py << 'EOL'
+#!/usr/bin/env python3
+"""
+Test script for BAZINGA-DODO integration
+"""
+
+import sys
+import os
+
+# Add the project root to the Python path
+sys.path.insert(0, os.path.abspath('.'))
+
+from src.core.dodo import DodoSystem, BazingaDodoIntegration, ProcessingState
+
+def main():
+    """Test the DODO integration with BAZINGA"""
+    print("Testing BAZINGA-DODO Integration")
+    print("-" * 50)
+    
+    # Initialize DODO system
+    dodo_system = DodoSystem()
+    
+    # Test harmonic calculations
+    print("Harmonic Time Spacing Example:")
+    time_spacing = dodo_system.harmonics.calculate_time_spacing(1.0, 5)
+    print(f"Time Harmonic Spacing: {time_spacing}")
+    
+    print("\nVisual Spacing Example:")
+    visual_spacing = dodo_system.harmonics.calculate_visual_spacing(10, 5)
+    print(f"Visual Harmonic Spacing: {visual_spacing}")
+    
+    # Test pattern breaking
+    print("\nPattern Breaking Example:")
+    for state in ProcessingState:
+        print(f"\nState: {state.value}")
+        pattern = dodo_system.apply_pattern_breaking(state)
+        for key, value in pattern.items():
+            print(f"  {key}: {value}")
+    
+    # Test BAZINGA integration
+    print("\nBAZINGA Integration Example:")
+    
+    # Create mock BAZINGA components
+    bazinga_components = {
+        "ExecutionEngine": type('', (), {"execution_cycle_times": [], "resource_allocation_ratios": []}),
+        "CommunicationHub": type('', (), {"visualization_spacing": [], "notification_intervals": []}),
+        "InsightsJourney": type('', (), {"transformation_mapping": {}, "pattern_recognition_model": None}),
+        "WorkArchive": type('', (), {"storage_pattern": [], "ui_spacing": []}),
+        "ThoughtPatternTool": type('', (), {"state_recognition": None, "pattern_breaking": None, "cognitive_bridges": {}})
+    }
+    
+    # Create integration
+    integration = BazingaDodoIntegration()
+    
+    # Integrate DODO System with BAZINGA components
+    integrated_components = integration.integrate_with_bazinga(bazinga_components)
+    
+    # Print results
+    print("Integration Results:")
+    for component_name, component in integrated_components.items():
+        print(f"\n{component_name}:")
+        for attr_name, attr_value in vars(component).items():
+            if isinstance(attr_value, (list, dict)) and len(str(attr_value)) > 100:
+                print(f"  {attr_name}: [Complex data structure]")
+            else:
+                print(f"  {attr_name}: {attr_value}")
+    
+    print("\nBAZINGA-DODO Integration Test Complete!")
+
+if __name__ == "__main__":
+    main()
+EOL
+chmod +x test_dodo_integration.py
+
+# Create TypeScript interface file for TypeValidator.ts integration
+echo -e "${YELLOW}Creating TypeScript interface file for integration with TypeValidator.ts...${NC}"
+mkdir -p src/core/interfaces
+
+cat > src/core/interfaces/DodoInterface.ts << 'EOL'
+/**
+ * DodoInterface.ts
+ * TypeScript interfaces for DODO System integration with BAZINGA
+ */
+
+export interface HarmonicValues {
+  goldenRatio: number;
+  timeHarmonicRatio: number;
+  baseFrequency: number;
+}
+
+export interface TransformationPair {
+  id: number;
+  stateA: string;
+  stateB: string;
+}
+
+export interface ProcessingState {
+  id: string;
+  description: string;
+}
+
+export interface VisualHarmonics {
+  baseRatio: number;
+  spacingSequence: number[];
+  patternBreaks: number[];
+  infoChunks: number[];
+}
+
+export interface TimeHarmonics {
+  baseRatio: number;
+  processingBreaks: number[];
+  patternCycles: number[];
+}
+
+export interface PatternBreakingStrategy {
+  pathType: string;
+  complexity: string;
+  steps?: number[];
+  timing: number[];
+  breakPoints?: number[];
+  transformPairs?: [string, string][];
+  rhythm?: string;
+}
+
+export interface DodoSystemConfig {
+  harmonics: {
+    visual: VisualHarmonics;
+    time: TimeHarmonics;
+  };
+  transformationPairs: TransformationPair[];
+  constants: HarmonicValues;
+}
+
+/**
+ * Integration with TypeValidator.ts
+ * Add these methods to TypeValidator class
+ */
+export interface DodoTypeValidatorExtension {
+  /**
+   * Applies harmonic spacing based on the Golden Ratio
+   */
+  applyHarmonicSpacing(baseSize: number, elements: number): number[];
+  
+  /**
+   * Creates a visual rhythm pattern for information display
+   */
+  createVisualRhythmPattern(containerWidth: number): {
+    primaryElements: number[],
+    secondaryElements: number[],
+    breakPoints: number[]
+  };
+  
+  /**
+   * Validate with harmonic timing
+   */
+  validateWithHarmonicTiming<T>(value: T, validator: (val: T) => boolean): {
+    isValid: boolean,
+    timing: number,
+    harmonicTiming: number
+  };
+}
+EOL
+
+# Create a configuration file for the DODO system
+echo -e "${YELLOW}Creating DODO system configuration file...${NC}"
+cat > src/core/dodo/dodo_config.json << 'EOL'
+{
+  "harmonics": {
+    "goldenRatio": 1.618033988749895,
+    "timeHarmonicRatio": 1.333333,
+    "baseFrequency": 432
+  },
+  "transformationPairs": [
+    { "id": 1, "stateA": "Complex", "stateB": "Simple" },
+    { "id": 2, "stateA": "Pattern", "stateB": "Chaos" },
+    { "id": 3, "stateA": "Form", "stateB": "Void" },
+    { "id": 4, "stateA": "Mind", "stateB": "Peace" },
+    { "id": 5, "stateA": "Past", "stateB": "Present" }
+  ],
+  "processingStates": [
+    { "id": "2D", "description": "Linear thinking, direct processing" },
+    { "id": "PATTERN", "description": "Pattern recognition state" },
+    { "id": "TRANSITION", "description": "Moving between states" },
+    { "id": "COMPLEX", "description": "Multi-dimensional thinking" }
+  ],
+  "implementationPatterns": {
+    "integrationFlow": [1, 2, 3, 5, 8, 13],
+    "componentConnections": [3, 1, 4, 2, 5, 7],
+    "dataFlowPattern": [5, 2, 7, 1, 8, 3]
+  },
+  "systemIntegration": {
+    "ExecutionEngine": {
+      "priority": 3,
+      "connectsTo": ["CommunicationHub", "InsightsJourney"]
+    },
+    "CommunicationHub": {
+      "priority": 1,
+      "connectsTo": ["InsightsJourney", "WorkArchive"]
+    },
+    "InsightsJourney": {
+      "priority": 4,
+      "connectsTo": ["WorkArchive", "ThoughtPatternTool"]
+    },
+    "WorkArchive": {
+      "priority": 2,
+      "connectsTo": ["ThoughtPatternTool", "ExecutionEngine"]
+    },
+    "ThoughtPatternTool": {
+      "priority": 5,
+      "connectsTo": ["ExecutionEngine", "CommunicationHub"]
+    }
+  }
+}
+EOL
+
+# Create a documentation file
+echo -e "${YELLOW}Creating documentation...${NC}"
+cat > DODO-INTEGRATION.md << 'EOL'
+# BAZINGA-DODO Integration
+
+This document describes the integration of the DODO system with the BAZINGA project.
+
+## Overview
+
+The DODO System is a conceptual framework that models the interaction between Time and Trust using principles derived from both blockchain and black hole systems. It integrates with BAZINGA's component architecture to provide:
+
+1. Harmonic execution timing based on natural ratios
+2. Pattern-based data processing
+3. Visual harmonics for UI components
+4. Transformation pairs for data analysis
+5. Time and Trust dimensions for tracking state changes
+
+## Key Components
+
+### 1. Harmonic Framework
+- Uses Golden Ratio (1.618033988749895) for visual spacing
+- Applies Time Harmonic Ratio (1.333333) for execution cycles
+- Implements Sound Harmonics with base frequency 432 Hz
+
+### 2. Transformation Pairs
+- Complex ↔️ Simple
+- Pattern ↔️ Chaos
+- Form ↔️ Void
+- Mind ↔️ Peace
+- Past ↔️ Present
+
+### 3. Processing States
+- 2D: Linear thinking and direct processing
+- PATTERN: Pattern recognition and organization
+- TRANSITION: Moving between states
+- COMPLEX: Multi-dimensional thinking
+
+### 4. Time and Trust Dimensions
+- Time dimension tracks events and their progression
+- Trust dimension tracks system consistency and validation
+
+## Integration with BAZINGA Components
+
+### ExecutionEngine
+- Applies time harmonics to execution cycles
+- Uses golden ratio for resource allocation
+
+### CommunicationHub
+- Implements harmonic spacing in data visualization
+- Applies pattern breaking in notifications
+
+### InsightsJourney
+- Maps data insights to transformation pairs
+- Uses pattern recognition for insight discovery
+
+### WorkArchive
+- Applies golden ratio to data storage patterns
+- Implements visual rhythm in UI components
+
+### ThoughtPatternTool
+- Direct implementation of state recognition
+- Applies pattern breaking techniques
+- Builds cognitive bridges between states
+
+## Usage
+
+```python
+# Example usage
+from src.core.dodo import DodoSystem, BazingaDodoIntegration
+
+# Initialize DODO system
+dodo_system = DodoSystem()
+
+# Create BAZINGA components (or import existing ones)
+bazinga_components = {
+    "ExecutionEngine": your_execution_engine,
+    "CommunicationHub": your_communication_hub,
+    # ...other components
+}
+
+# Create integration
+integration = BazingaDodoIntegration()
+
+# Integrate DODO System with BAZINGA components
+integrated_components = integration.integrate_with_bazinga(bazinga_components)
+
+# Use integrated components
+execution_engine = integrated_components["ExecutionEngine"]
+# Now execution_engine has harmonic timing applied
+```
+
+## TypeScript Integration
+
+The `DodoInterface.ts` file provides TypeScript interfaces for integration with the BAZINGA TypeScript components, particularly for use with `TypeValidator.ts`.
+
+## Running Tests
+
+To test the integration:
+
+```bash
+./test_dodo_integration.py
+```
+
+## Mathematical Constants
+
+- Golden Ratio: 1.618033988749895
+- Time Harmonic Ratio: 1.333333
+- Base Frequency: 432 Hz
+
+These constants are used throughout the system to create natural harmonies and patterns in both data processing and visual representation.
+EOL
+
+# Set permissions
+echo -e "${YELLOW}Setting permissions...${NC}"
+chmod -R 755 src/core/dodo
+chmod +x test_dodo_integration.py
+
+# Clean up
+echo -e "${YELLOW}Cleaning up...${NC}"
+# Only remove the temp file if the installation was successful
+if [ -d "src/core/dodo" ]; then
+    rm -f tmp/bazinga-dodo-implementation.py
+fi
+
+echo -e "${GREEN}Installation Complete!${NC}"
+echo -e "${BLUE}The DODO system has been integrated into your BAZINGA project.${NC}"
+echo -e "${BLUE}Documentation: ${NC}DODO-INTEGRATION.md"
+echo -e "${BLUE}Test the integration: ${NC}./test_dodo_integration.py"
+echo -e "${BLUE}Main module: ${NC}src/core/dodo"
+echo -e "${YELLOW}Don't forget to add appropriate imports to your existing files to use the DODO system.${NC}"
+EOL
+
+chmod +x install_dodo_fixed.sh
+echo -e "${GREEN}Created fixed installation script: install_dodo_fixed.sh${NC}"
+
+# 3. Create a script to integrate DODO with TypeValidator.ts
+echo -e "${YELLOW}Creating TypeValidator integration script...${NC}"
+
+cat > integrate_dodo_with_typevalidator.sh << 'EOL'
+#!/bin/bash
+
+# Integration script for DODO with TypeValidator.ts
+# This script will modify TypeValidator.ts to add DODO harmonic methods
+
+# Set color codes for better readability
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}Integrating DODO with TypeValidator.ts${NC}"
+
+# Check if TypeValidator.ts exists
+if [ ! -f "src/core/TypeValidator.ts" ]; then
+    echo -e "${RED}Error: src/core/TypeValidator.ts not found${NC}"
+    echo -e "${YELLOW}Please check the path and try again.${NC}"
+    exit 1
+fi
+
+# Create backup
+echo -e "${YELLOW}Creating backup of TypeValidator.ts...${NC}"
+cp "src/core/TypeValidator.ts" "src/core/TypeValidator.ts.backup"
+echo -e "${GREEN}Backup created at src/core/TypeValidator.ts.backup${NC}"
+
+# Check if DodoInterface.ts exists
+if [ ! -f "src/core/interfaces/DodoInterface.ts" ]; then
+    echo -e "${RED}Error: src/core/interfaces/DodoInterface.ts not found${NC}"
+    echo -e "${YELLOW}Please run install_dodo_fixed.sh first to create the interface file.${NC}"
+    exit 1
+fi
+
+# Now modify TypeValidator.ts to add DODO harmonic methods
+echo -e "${YELLOW}Modifying TypeValidator.ts to integrate DODO harmonic methods...${NC}"
+
+# Add import statement at the top
+sed -i.temp '1s/^/import { DodoTypeValidatorExtension } from ".\/interfaces\/DodoInterface";\n/' "src/core/TypeValidator.ts"
+
+# Find the class declaration line and modify it to implement DodoTypeValidatorExtension
+sed -i.temp 's/export class TypeValidator {/export class TypeValidator implements DodoTypeValidatorExtension {/' "src/core/TypeValidator.ts"
+
+# Add constants for DODO harmonics
+sed -i.temp '/export class TypeValidator/a \
+  // DODO System Constants\n\
+  private readonly GOLDEN_RATIO = 1.618033988749895;\n\
+  private readonly TIME_HARMONIC_RATIO = 1.333333;' "src/core/TypeValidator.ts"
+
+# Add DODO harmonic methods to the end of the class (before the last closing brace)
+# Find the last closing brace
+LAST_LINE=$(grep -n "}" "src/core/TypeValidator.ts" | tail -1 | cut -d ":" -f 1)
+
+# Insert DODO methods before the last closing brace
+sed -i.temp "${LAST_LINE}i\\
+  // DODO Harmonic Methods\\
+\\
+  /**\\
+   * Applies harmonic spacing based on the Golden Ratio\\
+   */\\
+  applyHarmonicSpacing(baseSize: number, elements: number): number[] {\\
+    const spacings: number[] = [];\\
+    let currentSize = baseSize;\\
+    \\
+    for (let i = 0; i < elements; i++) {\\
+      spacings.push(currentSize);\\
+      \\
+      // Alternate between multiplication and division to create balanced rhythm\\
+      if (i % 2 === 0) {\\
+        currentSize = currentSize * this.GOLDEN_RATIO;\\
+      } else {\\
+        currentSize = currentSize / (this.GOLDEN_RATIO - 1);\\
+      }\\
+    }\\
+    \\
+    return spacings;\\
+  }\\
+  \\
+  /**\\
+   * Creates a visual rhythm pattern for information display\\
+   */\\
+  createVisualRhythmPattern(containerWidth: number): {\\
+    primaryElements: number[],\\
+    secondaryElements: number[],\\
+    breakPoints: number[]\\
+  } {\\
+    const baseUnit = containerWidth / this.GOLDEN_RATIO;\\
+    \\
+    // Calculate primary element sizes using golden ratio\\
+    const primaryElements = [\\
+      baseUnit,\\
+      baseUnit * this.GOLDEN_RATIO,\\
+      baseUnit * this.GOLDEN_RATIO * this.GOLDEN_RATIO\\
+    ];\\
+    \\
+    // Calculate secondary element sizes\\
+    const secondaryElements = primaryElements.map(size => size / this.GOLDEN_RATIO);\\
+    \\
+    // Calculate break points for pattern interruption\\
+    const breakPoints = [\\
+      containerWidth * (1 / this.GOLDEN_RATIO),\\
+      containerWidth * (1 - 1 / this.GOLDEN_RATIO),\\
+      containerWidth / 2\\
+    ];\\
+    \\
+    return {\\
+      primaryElements,\\
+      secondaryElements,\\
+      breakPoints\\
+    };\\
+  }\\
+  \\
+  /**\\
+   * Validate with harmonic timing\\
+   */\\
+  validateWithHarmonicTiming<T>(value: T, validator: (val: T) => boolean): {\\
+    isValid: boolean,\\
+    timing: number,\\
+    harmonicTiming: number\\
+  } {\\
+    const startTime = performance.now();\\
+    const isValid = validator(value);\\
+    const timing = performance.now() - startTime;\\
+    \\
+    return {\\
+      isValid,\\
+      timing,\\
+      harmonicTiming: timing * this.TIME_HARMONIC_RATIO\\
+    };\\
+  }\\
+" "src/core/TypeValidator.ts"
+
+# Remove temp file
+rm "src/core/TypeValidator.ts.temp"
+
+echo -e "${GREEN}Successfully integrated DODO with TypeValidator.ts${NC}"
+echo -e "${BLUE}New methods added:${NC}"
+echo -e "  - applyHarmonicSpacing()"
+echo -e "  - createVisualRhythmPattern()"
+echo -e "  - validateWithHarmonicTiming()"
+echo -e "${YELLOW}Note: The changes will not affect existing functionality.${NC}"
+EOL
+
+chmod +x integrate_dodo_with_typevalidator.sh
+echo -e "${GREEN}Created TypeValidator integration script: integrate_dodo_with_typevalidator.sh${NC}"
+
+# 4. Create an example TypeScript implementation file
+echo -e "${YELLOW}Creating example TypeScript implementation...${NC}"
+
+mkdir -p src/core/dodo/typescript
+cat > src/core/dodo/typescript/DodoSystem.ts << 'EOL'
+/**
+ * DodoSystem.ts
+ * TypeScript implementation of the DODO System
+ */
+
+import { 
+  HarmonicValues, 
+  TransformationPair,
+  ProcessingState,
+  VisualHarmonics,
+  TimeHarmonics,
+  PatternBreakingStrategy,
+  DodoSystemConfig
+} from '../../interfaces/DodoInterface';
+
+export class HarmonicFramework {
+  // Constants from numerical encoding
+  private readonly GOLDEN_RATIO: number = 1.618033988749895;  // 7.1.X
+  private readonly TIME_HARMONIC_RATIO: number = 1.333333;    // 7.2.X
+  private readonly BASE_FREQUENCY: number = 432;              // 7.3.X
+  
+  private visualHar

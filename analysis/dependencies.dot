@@ -1,0 +1,19 @@
+digraph BAZINGA {
+  rankdir=LR;
+  node [shape=box, style=filled, fillcolor=lightblue];
+  
+  // Core components
+  BAZINGA [fillcolor=gold];
+  SSRI_Framework [fillcolor=lightgreen];
+  WhatsApp_Analysis [fillcolor=lightcoral];
+  Pattern_Recognition [fillcolor=lightsalmon];
+  Visualization [fillcolor=lightcyan];
+  
+  // Dependencies
+  BAZINGA -> SSRI_Framework;
+  BAZINGA -> WhatsApp_Analysis;
+  BAZINGA -> Pattern_Recognition;
+  SSRI_Framework -> Visualization;
+  WhatsApp_Analysis -> Visualization;
+  Pattern_Recognition -> Visualization;
+}
