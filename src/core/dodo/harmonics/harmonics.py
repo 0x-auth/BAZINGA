@@ -8,6 +8,7 @@ class HarmonicFramework:
     def __init__(self):
         self.base_frequency = 1.0
         self.harmonic_cache = {}
+        self.phi = 1.618033988749895  # Golden ratio
 
     def calculate(self, data: Dict[str, Any]) -> Dict[str, float]:
         """Calculate harmonics for the given data"""
@@ -30,6 +31,9 @@ class HarmonicFramework:
 
         # Calculate resonance
         result["resonance"] = self._calculate_resonance(values)
+
+        # Calculate phi_ratio (golden ratio resonance)
+        result["phi_ratio"] = self._calculate_phi_ratio(values)
 
         return result
 
@@ -70,3 +74,20 @@ class HarmonicFramework:
             start + (duration * 0.618),  # Golden ratio second point
             start + (duration * 0.5)     # Midpoint
         ]
+
+    def _calculate_phi_ratio(self, values: List[float]) -> float:
+        """Calculate golden ratio resonance from values"""
+        if not values:
+            return 0.5
+
+        # Calculate how close the ratio of consecutive values is to phi
+        phi_distances = []
+        for i in range(len(values) - 1):
+            if values[i] != 0:
+                ratio = abs(values[i + 1] / values[i])
+                distance = abs(ratio - self.phi)
+                phi_distances.append(1.0 / (1.0 + distance))
+
+        if phi_distances:
+            return sum(phi_distances) / len(phi_distances)
+        return 0.5
