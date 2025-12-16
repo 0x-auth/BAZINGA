@@ -43,3 +43,5 @@ build/
 .analyses_archive/
 *_20*_*/
 
+qodana.sarif.json
+qodana.yaml
