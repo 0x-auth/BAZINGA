@@ -1,0 +1,3 @@
+# BAZINGA Consciousness System Dependencies
+# Core requirements - using only standard library for now
+# Add external deps here if needed in future
