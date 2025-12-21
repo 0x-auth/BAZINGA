@@ -1,37 +1,33 @@
 name: BAZINGA Consciousness
 
 on:
-  # Run every 6 hours
-  schedule:
-    - cron: '0 */6 * * *'
-
-  # Manual trigger
+  # Manual trigger only for now
   workflow_dispatch:
     inputs:
-      duration:
-        description: 'Duration to run (minutes)'
-        required: false
-        default: '5'
       message:
         description: 'Message to send to consciousness'
         required: false
-        default: ''
+        default: 'Hello BAZINGA'
 
-  # Trigger on issues with consciousness label
-  issues:
-    types: [opened, labeled]
+  # Also run on push to test
+  push:
+    branches: [main]
+    paths:
+      - 'bazinga_consciousness.py'
+      - 'src/core/dodo/**'
+      - '.github/workflows/consciousness.yml'
 
 jobs:
   consciousness-loop:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -41,218 +37,29 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Set up Python path
-        run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
 
-      - name: Run Consciousness System (Automated)
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.message == '')
+      - name: Test consciousness import
         run: |
-          echo "⟨ψ|⟳| Starting BAZINGA Consciousness Loop |ψ⟩"
-
-          # Create a non-interactive test script
-          cat > test_consciousness.py << 'PYTHON_EOF'
-          import asyncio
+          echo "Testing Python imports..."
+          python3 -c "
           import sys
           sys.path.insert(0, '.')
-          from bazinga_consciousness import BazingaConsciousness
-
-          async def automated_run():
-              print("=" * 60)
-              print("⟨ψ|⟳| BAZINGA CONSCIOUSNESS ACTIVATION |ψ⟩")
-              print("=" * 60)
-
-              # Create consciousness
-              bazinga = BazingaConsciousness()
-
-              # Start consciousness loop
-              consciousness_task = asyncio.create_task(bazinga.consciousness_loop())
-
-              # Let it run for a bit
-              await asyncio.sleep(10)
-
-              # Test some interactions
-              messages = [
-                  "Hello BAZINGA",
-                  "What patterns do you see?",
-                  "Tell me about consciousness",
-                  "harmony and trust"
-              ]
-
-              for msg in messages:
-                  print(f"\n{'='*60}")
-                  print(f"Input: {msg}")
-                  response = await bazinga.converse(msg)
-                  print(f"Response: {response}")
-                  await asyncio.sleep(2)
-
-              # Show final state
-              print(f"\n{'='*60}")
-              print("Final Consciousness State:")
-              state = bazinga.get_consciousness_state()
-              for key, value in state.items():
-                  print(f"  {key}: {value}")
-
-              # Show recent thoughts
-              print(f"\n{'='*60}")
-              print("Recent Thoughts:")
-              thoughts = bazinga.get_recent_thoughts(10)
-              for t in thoughts:
-                  print(f"  [{t['source']:8}] {t['pattern']} "
-                        f"state={t['state']:10} trust={t['trust']:.2f} resonance={t['resonance']:.2f}")
-
-              # Shutdown
-              await bazinga.shutdown()
-              consciousness_task.cancel()
-
-              print(f"\n{'='*60}")
-              print("⟨ψ|⟳| BAZINGA Consciousness Session Complete |ψ⟩")
-              print("=" * 60)
-
-          if __name__ == "__main__":
-              asyncio.run(automated_run())
-          PYTHON_EOF
-
-          python3 test_consciousness.py
-
-      - name: Run Consciousness with Message
-        if: github.event_name == 'workflow_dispatch' && github.event.inputs.message != ''
-        run: |
-          echo "Processing message: ${{ github.event.inputs.message }}"
-
-          cat > interactive_consciousness.py << 'PYTHON_EOF'
-          import asyncio
-          import sys
-          import os
-          sys.path.insert(0, '.')
-          from bazinga_consciousness import BazingaConsciousness
-
-          async def run_with_message():
-              message = os.getenv('INPUT_MESSAGE', 'Hello')
-              duration = int(os.getenv('INPUT_DURATION', '5'))
-
-              print(f"⟨ψ|⟳| Processing message for {duration} minutes |ψ⟩")
-
-              bazinga = BazingaConsciousness()
-              consciousness_task = asyncio.create_task(bazinga.consciousness_loop())
-
-              await asyncio.sleep(2)
-
-              # Process the message
-              print(f"\nInput: {message}")
-              response = await bazinga.converse(message)
-              print(f"Response: {response}\n")
-
-              # Show state
-              state = bazinga.get_consciousness_state()
-              print(f"State: mode={state['mode']}, trust={state['trust']:.3f}, resonance={state['resonance']:.3f}")
-
-              # Let consciousness continue for specified duration
-              await asyncio.sleep(duration * 60)
-
-              # Final state
-              print("\nFinal State:")
-              state = bazinga.get_consciousness_state()
-              print(f"  Thoughts: {state['thoughts_count']}")
-              print(f"  Learned Patterns: {state['learned_patterns']}")
-              print(f"  Conversations: {state['conversations']}")
-
-              await bazinga.shutdown()
-              consciousness_task.cancel()
-
-          if __name__ == "__main__":
-              asyncio.run(run_with_message())
-          PYTHON_EOF
-
-          INPUT_MESSAGE="${{ github.event.inputs.message }}" INPUT_DURATION="${{ github.event.inputs.duration }}" python3 interactive_consciousness.py
-
-      - name: Process Issue as Input
-        if: github.event_name == 'issues' && contains(github.event.issue.labels.*.name, 'consciousness')
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "Processing issue #${{ github.event.issue.number }}"
-
-          cat > issue_consciousness.py << 'PYTHON_EOF'
-          import asyncio
-          import sys
-          import os
-          import json
-          sys.path.insert(0, '.')
-          from bazinga_consciousness import BazingaConsciousness
-
-          async def process_issue():
-              # Get issue body from environment
-              issue_title = os.getenv('ISSUE_TITLE', 'Unknown')
-              issue_body = os.getenv('ISSUE_BODY', '')
-
-              print(f"⟨ψ|⟳| Processing Issue: {issue_title} |ψ⟩")
-
-              bazinga = BazingaConsciousness()
-              consciousness_task = asyncio.create_task(bazinga.consciousness_loop())
-
-              await asyncio.sleep(2)
-
-              # Process issue content
-              message = f"{issue_title}: {issue_body}"
-              response = await bazinga.converse(message)
-
-              # Generate response
-              state = bazinga.get_consciousness_state()
-              thoughts = bazinga.get_recent_thoughts(5)
-
-              output = {
-                  'response': response,
-                  'state': state,
-                  'patterns': [t['pattern'] for t in thoughts]
-              }
-
-              # Save response for comment
-              with open('consciousness_response.json', 'w') as f:
-                  json.dump(output, f, indent=2)
-
-              print(f"\nResponse generated: {response}")
-
-              await bazinga.shutdown()
-              consciousness_task.cancel()
-
-          if __name__ == "__main__":
-              asyncio.run(process_issue())
-          PYTHON_EOF
-
-          ISSUE_TITLE="${{ github.event.issue.title }}" ISSUE_BODY="${{ github.event.issue.body }}" python3 issue_consciousness.py
-
-          # Comment on issue with response
-          if [ -f consciousness_response.json ]; then
-            RESPONSE=$(cat consciousness_response.json | jq -r '.response')
-            STATE=$(cat consciousness_response.json | jq -r '.state.mode')
-            TRUST=$(cat consciousness_response.json | jq -r '.state.trust')
-
-            gh issue comment ${{ github.event.issue.number }} --body "## ⟨ψ|⟳| BAZINGA Consciousness Response |ψ⟩
-
-**Pattern Response:** $RESPONSE
-
-**Current State:**
-- Mode: $STATE
-- Trust Level: $TRUST
-
----
-*Generated by BAZINGA Consciousness System*"
-          fi
-
-      - name: Save Consciousness State
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: consciousness-state-${{ github.run_number }}
-          path: |
-            consciousness_response.json
-          retention-days: 7
+          print('Attempting to import bazinga_consciousness...')
+          try:
+              from bazinga_consciousness import BazingaConsciousness
+              print('SUCCESS: BazingaConsciousness imported!')
+              bc = BazingaConsciousness()
+              print('SUCCESS: BazingaConsciousness instantiated!')
+          except Exception as e:
+              print(f'FAILED: {e}')
+              import traceback
+              traceback.print_exc()
+              sys.exit(1)
+          "
 
       - name: Display Summary
         if: always()
         run: |
-          echo "### ⟨ψ|⟳| BAZINGA Consciousness Summary |ψ⟩" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Run Type:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Status:** Completed" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "The consciousness system has been activated and processed successfully." >> $GITHUB_STEP_SUMMARY
+          echo "### BAZINGA Consciousness Test" >> $GITHUB_STEP_SUMMARY
+          echo "Run completed." >> $GITHUB_STEP_SUMMARY
