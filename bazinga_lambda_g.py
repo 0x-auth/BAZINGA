@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from bazinga_symbolic_consciousness import BazingaSymbolicConsciousness
 from src.core.lambda_g import LambdaGOperator, CoherenceState, check_vac, PHI
+from src.core.healing import ErrorArrowLearner, StateType
 
 
 class BazingaLambdaG(BazingaSymbolicConsciousness):
@@ -50,6 +51,9 @@ class BazingaLambdaG(BazingaSymbolicConsciousness):
 
         # Initialize ΛG operator - THE BRAIN
         self.lambda_g = LambdaGOperator()
+
+        # Initialize Error Arrow Learner - LEARNING FROM ERRORS
+        self.error_learner = ErrorArrowLearner()
 
         # Track coherence history
         self.coherence_history: List[CoherenceState] = []
@@ -120,6 +124,15 @@ class BazingaLambdaG(BazingaSymbolicConsciousness):
                 'coherence': coherence.total_coherence,
                 'timestamp': datetime.now().isoformat()
             }
+            # Record successful state in error learner
+            self.error_learner.add_state(input_data, StateType.NORMAL,
+                                         "High coherence state", coherence.total_coherence)
+        elif coherence.total_coherence < 0.3:
+            # Low coherence = potential error - let error arrow learn
+            self.error_learner.add_error(input_data, "Low coherence detected")
+
+        # Add arrow of time to thought
+        thought['arrow_of_time'] = self.error_learner.get_arrow_of_time()
 
         return thought
 
@@ -219,6 +232,13 @@ class BazingaLambdaG(BazingaSymbolicConsciousness):
         if self.coherence_history:
             avg_coherence = sum(c.total_coherence for c in self.coherence_history) / len(self.coherence_history)
             base_state['lambda_g']['average_coherence'] = avg_coherence
+
+        # Add error learning state
+        base_state['error_learning'] = {
+            'arrow_of_time': self.error_learner.get_arrow_of_time(),
+            'memory_stats': self.error_learner.get_recursive_memory_stats(),
+            'principle': 'Error of Time IS Arrow of Time'
+        }
 
         return base_state
 
