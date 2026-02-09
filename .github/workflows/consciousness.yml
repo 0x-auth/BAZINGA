@@ -1,0 +1,65 @@
+name: BAZINGA Consciousness
+
+on:
+  # Manual trigger only for now
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Message to send to consciousness'
+        required: false
+        default: 'Hello BAZINGA'
+
+  # Also run on push to test
+  push:
+    branches: [main]
+    paths:
+      - 'bazinga_consciousness.py'
+      - 'src/core/dodo/**'
+      - '.github/workflows/consciousness.yml'
+
+jobs:
+  consciousness-loop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Set up Python path
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
+      - name: Test consciousness import
+        run: |
+          echo "Testing Python imports..."
+          python3 -c "
+          import sys
+          sys.path.insert(0, '.')
+          print('Attempting to import bazinga_consciousness...')
+          try:
+              from bazinga_consciousness import BazingaConsciousness
+              print('SUCCESS: BazingaConsciousness imported!')
+              bc = BazingaConsciousness()
+              print('SUCCESS: BazingaConsciousness instantiated!')
+          except Exception as e:
+              print(f'FAILED: {e}')
+              import traceback
+              traceback.print_exc()
+              sys.exit(1)
+          "
+
+      - name: Display Summary
+        if: always()
+        run: |
+          echo "### BAZINGA Consciousness Test" >> $GITHUB_STEP_SUMMARY
+          echo "Run completed." >> $GITHUB_STEP_SUMMARY

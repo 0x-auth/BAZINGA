@@ -6,3 +6,4 @@ class ProcessingState(Enum):
     PATTERN = "PATTERN"    # Pattern recognition state
     TRANSITION = "TRANSITION"  # Moving between states
     COMPLEX = "COMPLEX"    # Multi-dimensional thinking
+    QUANTUM = "QUANTUM"    # Quantum state processing

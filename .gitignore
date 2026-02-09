@@ -43,3 +43,31 @@ build/
 .analyses_archive/
 *_20*_*/
 
+qodana.sarif.json
+qodana.yaml
+
+# SENSITIVE DATA - NEVER COMMIT
+BAZINGA_STATE
+*.encrypted
+*.key
+.env
+.env.*
+config.json
+secrets.json
+
+# Personal data
+data/whatsapp/
+data/medical/
+data/personal/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Bazinga runtime
+.bazinga/
+healing-space/
