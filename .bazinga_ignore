@@ -1,0 +1,8 @@
+.venv
+bazinga_env
+lib
+bin/bin
+bin/generated
+bin/integration
+__pycache__
+.git

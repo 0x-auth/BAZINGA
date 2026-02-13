@@ -71,3 +71,9 @@ __pycache__/
 # Bazinga runtime
 .bazinga/
 healing-space/
+.venv/
+bazinga_env/
+lib/
+bin/bin/
+bin/generated/
+bin/integration/ssri_*
